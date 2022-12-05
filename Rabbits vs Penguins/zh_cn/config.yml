@@ -1,0 +1,288 @@
+SkillShop:
+  delete_shop:
+    id: BARRIER
+    name: '&c删除商店'
+    slot: 35
+    type: delete_shop
+Config:
+  arena_starting_cooldown: 45
+  arena_time: 360
+  arena_preparation_phase_cooldown: 10
+  arena_ending_phase_cooldown: 10
+  tutorial_item_enabled: true
+  initial_coins: 750
+  item_shop_size: 18
+  skill_shop_size: 36
+  player_spectating_inventory_size: 27
+  coins_earnings_holograms: true
+  damage_holograms: true
+  empty_inventory_to_join: false
+  max_distance_from_player_when_spectating: 90
+  spawn_one_monster_probability: 70
+  monsters_walk_speed: 0.25
+  top_hologram_number_of_players: 5
+  top_hologram_update_time: 300
+  monsters_limit_per_side: 100
+  monsters_limit_per_side_warning_message:
+    enabled: true
+    cooldown: 30
+    min: 80
+    message: '阵营 %team% &e当前共有 &c%amount% &e只僵尸！'
+  choose_team_system: true
+  income:
+    enabled: true
+    coins: 5+(monster_allies*2)
+    delay: 5
+  rabbits_team_head: 717a725b-257f-4172-bdba-5de8506fb6dc;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QxMTY5YjI2OTRhNmFiYTgyNjM2MDk5MjM2NWJjZGE1YTEwYzg5YTNhYTJiNDhjNDM4NTMxZGQ4Njg1YzNhNyJ9fX0=
+  penguins_team_head: 53c01f77-c4bd-458e-8fd8-70f7bb33dd5c;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDNjNTdmYWNiYjNhNGRiN2ZkNTViNWMwZGM3ZDE5YzE5Y2IwODEzYzc0OGNjYzk3MTBjNzE0NzI3NTUxZjViOSJ9fX0=
+  per-arena-chat:
+    enabled: true
+    format: '&f<&8[&7%team%&8]&a%player%&f> %message%'
+  winners_command_rewards:
+    enabled: true
+    rewards:
+    - msg %player% &2&l恭喜你获得胜利，这是你的奖励！
+    - eco give %player% %random_10*kills-25*kills%
+  losers_command_rewards:
+    enabled: true
+    rewards:
+    - msg %player% &2&l抱歉，你已战败……不过同样有奖励！
+    - eco give %player% %random_10*kills-15*kills%
+  tie_command_rewards:
+    enabled: true
+    rewards:
+    - msg %player% &2&l游戏平局，这是你的奖励！
+    - eco give %player% %random_5*kills-20*kills%
+  commands_whitelist:
+  - /rvp leave
+  - /help
+  monster_properties:
+  - 40-70;20;0
+  - 50-80;25;300
+  - 60-90;30;400
+  - 70-100;35;500
+  - 80-110;40;600
+  - 90-120;50;700
+  - 100-130;60;800
+  super_zombie_properties:
+    name_penguin: '&c超级企鹅 &7[等级 %level%]'
+    name_rabbit: '&c超级兔子 &7[等级 %level%]'
+    health: normal_health*3
+    armor: DIAMOND_ARMOR
+  armor_item:
+    name: '&e战士护甲'
+    lore:
+    - '&7你可以在商店中升级护甲！'
+    - ''
+    - '&8» &7升级等级：%level%'
+    upgrades:
+    - 500;LEATHER_ARMOR
+    - 750;GOLDEN_ARMOR
+    - 1000;CHAINMAIL_ARMOR
+    - 1500;IRON_ARMOR
+    - 1750;DIAMOND_ARMOR
+  leave_item_enabled: true
+  play_again_item_enabled: true
+  go_back_item:
+    id: ARROW
+    name: '&7返回'
+  upgrade_sword_item:
+    id: EMERALD
+    name: '&e升级武器'
+    lore:
+    - '&7等级：&a&l%current_level%&8 ➜ &a&l%next_level%'
+    - '&7伤害：&a%current_min%&7-&a%current_max%&8 ➜ &a%next_min%&7-&a%next_max%'
+    - ''
+    - '&7价格：&6%price%'
+    - ''
+    - '&8[点击此处升级]'
+  upgrade_armor_item:
+    id: EMERALD
+    name: '&e升级护甲'
+    lore:
+    - '&7等级：&a&l%current_level%&8 ➜ &a&l%next_level%'
+    - ''
+    - '&7价格：&6%price%'
+    - ''
+    - '&8[点击此处升级]'
+  upgrade_monster_item:
+    id: EMERALD
+    name: '&e升级怪物'
+    lore:
+    - '&7等级：&a&l%current_level%&8 ➜ &a&l%next_level%'
+    - '&7生命：&a%current_health%&8 ➜ &a%next_health%'
+    - ''
+    - '&7价格：&6%price%'
+    - ''
+    - '&8[点击此处升级]'
+  upgrade_sword_error_item:
+    id: REDSTONE
+    name: '&e升级武器'
+    lore:
+    - '&7当前无可用升级……'
+  upgrade_armor_error_item:
+    id: REDSTONE
+    name: '&e升级护甲'
+    lore:
+    - '&7当前无可用升级……'
+  upgrade_monster_error_item:
+    id: REDSTONE
+    name: '&e升级怪物'
+    lore:
+    - '&7当前无可用升级……'
+  upgrade_skill_error_item:
+    id: REDSTONE
+    name: '&a技能 %skill_name% &e升级'
+    lore:
+    - '&7当前无可用升级……'
+  mysql-database:
+    enabled: false
+    host: localhost
+    port: 3306
+    username: root
+    password: root
+    database: rvp
+  skill_no_permission_id: LIGHT_GRAY_DYE
+  rabbits_team_item:
+    name: '&e选择 &7&l兔子阵营'
+    id: BROWN_WOOL
+  penguins_team_item:
+    name: '&e选择 &f&l企鹅阵营'
+    id: WHITE_WOOL
+  main_sword_item:
+    name: '&e战士之剑'
+    lore:
+    - '&7你可以在商店中升级武器！'
+    - ''
+    - '&8» &7伤害：&a%min%&7-&a%max%'
+    - '&8» &7升级等级：%level%'
+    upgrades:
+    - 0;2-5
+    - 250;4-9;STONE_SWORD
+    - 500;8-14;IRON_SWORD
+    - 850;12-17;GOLD_SWORD
+    - 1500;16-22;DIAMOND_SWORD
+    - 3000;21-27;DIAMOND_SWORD
+    id: WOODEN_SWORD
+  tutorial_item:
+    name: '&7[&6&l新手教程&7]'
+    lore:
+    - '&e此游戏的玩法为击杀敌对阵营召唤的僵尸获取硬币。'
+    - '&e游戏内阵营分为你所在的一侧与你敌对的一侧。'
+    - '&e你的阵营每击杀一只敌方的僵尸时，有概率在敌侧'
+    - '&e召唤出一只或多只僵尸盟友。因此你的任务即为迅速'
+    - '&e清理你面前的僵尸以快速生成僵尸盟友击败对方！'
+    - ''
+    - '&b当敌对阵营内的玩家全部阵亡时，你将获得胜利！'
+    id: COMPASS
+  leave_item:
+    name: '&7[&c&l离开游戏&7]'
+    lore:
+    - '&7右键以离开游戏！'
+    id: IRON_DOOR
+  play_again_item:
+    name: '&7[&9&l再玩一次&7]'
+    lore:
+    - '&7右键切换游戏地图开始新一轮游戏！'
+    id: LIGHT_BLUE_DYE
+  spectator_players_item:
+    name: '&7[&5&l玩家传送&7]'
+    lore:
+    - '&7右键以打开玩家传送菜单！'
+    id: COMPASS
+  teleport_to_player_item:
+    name: '&a传送至玩家 &e&l%player%'
+    lore:
+    - '&8» &7阵营：&e%team%'
+    - '&8» &7击杀：&e%kills%'
+    id: PLAYER_HEAD
+  empty_skill_slot_item:
+    name: '&e空技能栏位'
+    lore:
+    - '&7你可以在商店中购买技能！'
+    id: GRAY_DYE
+  cooldown_skill_slot_item:
+    id: GRAY_DYE
+ItemShop:
+  delete_shop:
+    id: BARRIER
+    name: '&c删除商店'
+    slot: 17
+    type: delete_shop
+  main_sword_item:
+    id: DIAMOND_SWORD
+    name: '&a升级武器'
+    slot: 1
+    type: sword_upgrade
+  allies_monsters_item:
+    name: '&a升级怪物'
+    slot: 2
+    type: monster_upgrade
+    id: PLAYER_HEAD
+  armor_item:
+    name: '&a升级护甲'
+    slot: 10
+    type: armor_upgrade
+    id: IRON_CHESTPLATE
+  health_item:
+    name: '&a升级血量上限'
+    lore:
+    - '&7为你的阵营内所有玩家增加 &c+1 ❤ &7生命上限！'
+    lore_error:
+    - '&c你无法再次使用此升级！'
+    slot: 11
+    health: 1
+    type: health_upgrade
+    price: 350;500;650;900;1250
+    id: RED_WOOL
+  potion_1:
+    name: '&a治疗药水 I'
+    lore:
+    - '&7用它恢复自己的生命值吧！'
+    - ''
+    - '&8» &7恢复生命值：&c❤❤❤❤'
+    slot: 6
+    type: individual_potion
+    heal: 4
+    price: 100
+    id: POTION
+  potion_2:
+    name: '&a治疗药水 II'
+    lore:
+    - '&7用它恢复自己的生命值吧！'
+    - ''
+    - '&8» &7恢复生命值：&c❤❤❤❤❤❤'
+    slot: 7
+    type: individual_potion
+    heal: 6
+    price: 200
+    id: POTION
+  potion_3:
+    name: '&a团队治疗药水'
+    lore:
+    - '&7用它恢复所有队友的生命值吧！'
+    - ''
+    - '&8» &7恢复生命值：&c❤❤❤❤❤❤'
+    slot: 15
+    type: team_potion
+    heal: 6
+    price: 350
+    id: POTION
+  boost_item:
+    name: '&a怪物强化'
+    lore:
+    - '&7给予怪物盟友速度 II 与力量 II 效果，'
+    - '&7药水效果将持续 15 秒！'
+    lore_cooldown:
+    - '&c你在 &7%time% &c秒后才能再次使用此增益！'
+    slot: 16
+    effect_particle: VILLAGER_THUNDERCLOUD
+    effect_duration: 15
+    effects:
+    - SPEED;2
+    - INCREASE_DAMAGE;2
+    type: boost
+    price: 1000
+    id: ORANGE_TERRACOTTA
+Sounds:
+  potion_item: ENTITY_GENERIC_DRINK;2;1

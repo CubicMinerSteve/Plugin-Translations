@@ -1,0 +1,213 @@
+Messages:
+  Prefix: '&9[巫术统治] '
+  Join: '&7玩家 %player% &e加入了游戏。 (&7%players%&e/&7%maxplayers%&e)'
+  Left: '&7玩家 %player% &e离开了游戏。 (&7%players%&e/&7%maxplayers%&e)'
+  Chat-Format: '&7%player_name%: &r%message%'
+  Restoring-Period: '&c游戏正在重载，请稍候……'
+  Already-Started: '&c此游戏已经开始！'
+  Already-InGame: '&c你已经在游戏中了！'
+  Game-Not-Found: '&c未找到可用游戏，你已加入等待队列……'
+  No-Permission: '&c你没有权限执行此操作！'
+  No-Permission-Class: '&c你没有权限购买此职业！'
+  Game-Is-Full: '&c此游戏玩家已满！'
+  Starting: '&e游戏将在 &b%time% &e秒后开始。'
+  Command-Failed: '&c你在游玩巫术统治时无法使用此命令！'
+  Countdown-Cancelled: '&c玩家数量不足，倒计时&l取消&c！'
+  Game-Cancelled: '&c当前游戏被管理员强制终止……'
+  Game-Cancelled-Lack-Of-Players: '&c由于玩家数量不足，游戏终止……'
+  Empty: '&7空'
+  Draw: '&c平局'
+  Out-Of-Bounds-Warning: '&c请立刻返回游戏场地区域内！'
+  Out-Of-Bounds: '&c你已离开游戏场地！'
+  Enough-Mana: '&c你的魔法值不足……'
+  Recharged: '&e你的 &c%ability% &e技能已冷却完毕！'
+  Recharged-Action-Bar: '&e你的 &c%ability% &e技能已就绪！'
+  Recharging: '&c技能冷却中，请等待 %time% 秒……'
+  Enough-Money: '&c你没有足够的硬币！'
+  Successful-Purchase: '&a你已成功购买 &9%item% &a！'
+  Click-To-Select: '&a点击选择！'
+  Selected: '&a已选择！'
+  Class-Price: '&7价格：&6%price% 硬币'
+  Successful-Selected: '&a你选择了 &9%item% &a！'
+  Shield-Received: '&a玩家 &b%player% &a为你提供了护盾保护！'
+  Shield-Activated: '&a护盾已成功激活！'
+  Shield-Expired: '&a玩家 &b%player% &c的护盾已失效！'
+  Shield-Deactivated: '&c护盾已失效！'
+  Achievement:
+  - '&7&m---------------&7[&6&l成就&7]&m---------------'
+  - ' '
+  - '%name% - %description%'
+  - ' '
+  - '&7&m----------------------------------'
+  Game-Start:
+  - '&7&m---------------&7[&6&l巫术统治&7]&m---------------'
+  - ' '
+  - '&7先得到 5000 分的队伍获得胜利。'
+  - '&6占领地图上的目标点或击杀敌人以得分！'
+  - ' '
+  - '&7&m----------------------------------'
+  Game-End:
+  - '&7&m---------------&7[&c&l巫术统治&7]&m---------------'
+  - ' '
+  - '&7获胜队伍：%color% %winner%'
+  - ' '
+  - '&e第一名：&b%killer_1% &7- &b%kills_1% &7击杀数'
+  - '&e第二名：&b%killer_2% &7- &b%kills_2% &7击杀数'
+  - '&e第三名：&b%killer_3% &7- &b%kills_3% &7击杀数'
+  - ' '
+  - '&7&m----------------------------------'
+  Player-Stats:
+  - '&7&m---------------&7[&c&l巫术统治 玩家数据&7]&m---------------'
+  - ' '
+  - '&8游戏场次：&b%games_played%'
+  - '&8获胜场次：&b%wins%'
+  - '&8失败场次：&b%losses%'
+  - '&8击杀数：&b%kills%'
+  - '&8助攻数：&b%assists%'
+  - '&8死亡数：&b%deaths%'
+  - '&8恢复生命：&b%healing_done%'
+  - '&8造成伤害：&b%damage_caused%'
+  - '&8受到治疗：&b%healing_received%'
+  - '&8受到伤害：&b%damage_received%'
+  - '&8硬币：&b%balance%'
+  - ' '
+  - '&7&m----------------------------------'
+  TimeUnits:
+    Milliseconds: 毫秒
+    Seconds: 秒
+    Minutes: 分
+    Hours: 时
+    Days: 日
+    Permanent: 永久
+  Portals:
+    ActionBar: '&2速度加成 &6[%s&6]'
+  Kills-Kill-Broadcast: '&b玩家 %player% &e被 &6%killer% &e击杀！'
+  Kills-Death-Broadcast: '&b玩家 %player% &e被击杀！'
+  Kills:
+    Kill-Notification: '&6你击杀了玩家 &6%player% &6！'
+    Death-Notification: '&6你被玩家 &c%killer% &e击杀……'
+    Death-Notification-No-Killer: '&6你已死亡……'
+    Assist-Notification: '&c&l协助击杀！'
+  Teams:
+    Red: '&c红队'
+    Blue: '&9蓝队'
+    Red-Color-Value: '&c'
+    Blue-Color-Value: '&9'
+    Red-ChatColor-Name: 红队
+    Blue-ChatColor-Name: 蓝队
+    Selector:
+      Lore: '%team%：&8%players%&7/&8%maxplayers%'
+    Full: '&c此队伍玩家已满！'
+    Selected: '&6已选择此队伍！'
+    Already-Selected: '&c你已经成为此队伍的一员了！'
+    Full-In-Order-To-Balance: '&c由于队伍玩家人数不均衡，你现在暂时无法加入此队伍！'
+    Menu-Name: '&9选择队伍'
+  Objectives:
+    A: ALPHA
+    B: BETA
+    C: CENTRAL
+    D: EASY
+    E: BAKER
+    F: MEDIUM
+    G: GAMMA
+    Action-Bar-Points: '&a&l每秒 +%points% 分'
+    Titles:
+      Being-Captured: ''
+      Captured: ''
+    SubTitles:
+      Being-Captured: '&r队伍 %color%%team% &r正在占领 %color%%objective% &r目标点！'
+      Captured: '&r队伍 %color%%team% &r占领了 %color%%objective% &r目标点！'
+  Class-Changed: '&a你将以 &c%class% &a职业重生。'
+  Titles:
+    Titles:
+      Join: '&e你正在游玩地图：'
+      Left: '&e你离开了游戏！'
+      Start: '&e你加入了队伍'
+      Respawn: '&c重生倒计时：'
+    Title:
+      Starting: '&e开始倒计时：'
+    Subtitles:
+      Respawn: '&e&l%countdown%'
+      Join: '&b%mapname%'
+      Starting: '&e游戏开始于：'
+      Start: '%color%%team%'
+  Sign:
+    Line:
+      '1': '&7[&c巫术统治&7]'
+      '2': '%state%'
+      '3': '%mapname%'
+      '4': '%players%/%maxplayers%'
+    State:
+      Waiting: '&a等待中'
+      Starting: '&6准备开始'
+      InGame: '&c游戏中'
+      Ending: '&4结束中'
+      Restoring: '&8重载中'
+  Motd:
+    State:
+      Waiting: '&a等待中'
+      Starting: '&6准备开始'
+      InGame: '&c游戏中'
+      Ending: '&4结束中'
+  No-Data: '&7等待中……'
+  Loading-Data: '&7加载中……'
+  Leaderboard:
+    Wins-Format: '&e%position%. &b%player% &7- &e%wins% &7wins'
+  Cannot-Spectate: '&c你现在暂时无法旁观此游戏！'
+  Spectator-Menu: '&9玩家传送'
+  Invalid-Team: '&c检测到无效的队伍！'
+  Team-Full-But-Added: '&c你选择的队伍已满，因此你被分配到人数最少的队伍中。'
+  No-Rejoin-Available: '&c暂无可供你重新连接的游戏，或你的重新连接时限已过……'
+Scoreboard:
+  Lobby-Scoreboard:
+  - ' '
+  - '&f地图：&a%mapname%'
+  - '&f当前玩家：&b%players%/%maxplayers%'
+  - '&f需要玩家：&b%minplayers%'
+  - ' '
+  - '&f状态：%capitalize_state%'
+  - ' '
+  - '&f硬币：&b%balance%'
+  - '&f职业：&b%kit%'
+  - ' '
+  - play.beforever.top
+  Game-Scoreboard:
+  - ' '
+  - '&9蓝队&f：&9%blue_points%&f / &a+%blue_points_per_second%'
+  - '&c红队&f：&c%red_points%&f / &a+%red_points_per_second%'
+  - ' '
+  - '&f剩余时间：&b%formatted_time%'
+  - ' '
+  - '&f击杀数：&a%kills%'
+  - ' '
+  - '%objectives%'
+  Title: '&e&l巫术统治'
+  Uncaptured-Point-Placeholder: '&f&l■ %name%'
+  Objective-Placeholder: '%color%&l■ %name%'
+  Spectator-Scoreboard:
+  - ' '
+  - '&9蓝队&f：&9%blue_points%&f / &a+%blue_points_per_second%'
+  - '&c红队&f：&c%red_points%&f / &a+%red_points_per_second%'
+  - ' '
+  - '&f剩余时间：&b%formatted_time%'
+  - ' '
+  - '%objectives%'
+Leaderboard:
+  Kills-Format: '&e%position%. &b%player% &7- &e%kills% &7击杀数'
+  Damage-Format: '&e%position%. &b%player% &7- &e%damage% &7总伤害'
+  Heal-Format: '&e%position%. &b%player% &7- &e%heal% &7恢复生命值'
+  Exp-Format: '&e%position%. &b%player% &7- &e%exp% &7(%rank%)'
+Items:
+  Potion-Item-Name: '&c治疗药水'
+Skills:
+  Skill: 技能
+  Explosion: 爆炸
+  Spell: 法术
+  Fighter-Punch: 重击
+  Impact: 冲击
+  Tornado: 龙卷风
+  Shield: 魔法护盾
+  Magic: 法术
+Powerups:
+  Default-Pickup-Message: '&9玩家 %player% &7拾起了 &9%powerup% &7道具！'
+  Points-Name: '&a&l+250 点数'

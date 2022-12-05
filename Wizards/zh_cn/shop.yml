@@ -1,0 +1,90 @@
+#-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x#
+#-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x 职业商店配置 x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x#
+#
+#物品配置格式：
+#普通物品 "ID : 数量"
+#带数据物品 "ID:数据 : 数量"
+#附魔物品 "ID : 数量 : enchant:魔咒内部名:魔咒等级"
+#带名称或 Lore 描述物品 "ID : 数量 : name:名称 : lore:Lore 描述"
+#你可以依据自身需求随意组合以上四种格式。
+#
+#你也可以通过编辑名称及 Lore 配置的方式进行相应的更改。
+#
+#-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x#
+
+name: '&9职业商店'
+rows: 6
+
+pyromancer:
+ item: 'GOLDEN_HOE : 1'
+ name: '&6烈焰术士'
+ lore:
+ - '&7发射火焰束，对目标造成 &c2.5❤ &7伤害。'     # 价格 0
+ slot: 1
+herobrine:
+ item: 'GOLDEN_AXE : 1'
+ name: '&6Herobrine'
+ lore:
+ - '&7发射雷电束，对目标造成 &c3.0❤ &7伤害。'     # 价格 1000
+ slot: 3
+wither:
+ item: 'DIAMOND_AXE : 1'
+ name: '&6凋灵法师'
+ lore:
+ - '&7发射凋灵骷髅头颅，对目标造成 &c3.5❤ &7伤害。'     # 价格 1500
+ slot: 5
+aquamancer:
+ item: 'IRON_AXE : 1'
+ name: '&6镜水行者'
+ lore:
+ - '&7使用圣水法术，在造成伤害的同时恢复自身生命值。'     # 价格 500   
+ slot: 7
+mage:
+ item: 'IRON_HOE : 1'
+ name: '&6博学法师'
+ lore:
+ - '&7法术将会自动追踪附近的敌人。'     # 价格 2000
+ slot: 10
+fighter:
+ item: 'DIAMOND_SWORD : 1'
+ name: '&6战斗骑士'
+ lore:
+ - '&7使用技能后，你的下一击将被附魔，'
+ - '&7目标在被击退到墙上时承受额外伤害！'     # 价格 650
+ slot: 12
+enderman:
+ item: 'ENDER_PEARL : 1'
+ name: '&6末影忍者'
+ lore:
+ - '&7技能可对敌人附加负面效果。'
+ - ' '
+ - '&7按下潜行键以使用传送技能。'
+ - '&7使用后可恢复部分生命值和魔力值，'     # 价格 800
+ - '&7并把你传送到上一个位置！'
+ slot: 14
+crusader:
+ item: 'STONE_AXE : 1'
+ name: '&6圣教军士'
+ lore:
+ - '&7生成临时护盾，受到的所有伤害减免 35% 。'     # 价格 3000
+ - ' '
+ - '&7能对周围敌人造成伤害。'
+ slot: 16
+shaman:
+  item: 'IRON_SWORD : 1'
+  name: '&6萨满教徒'
+  lore:
+    - '&7召唤每秒对目标造成伤害的龙卷风，'     # 价格 6500
+    - '&7同时减缓目标的移动速度。'
+  slot: 19
+arcanist:
+  item: 'STONE_SWORD : 1'
+  name: '&6神秘术师'
+  lore:
+    - '&7法术在击中目标后对附近玩家造成伤害。'     # 价格 3000
+  slot: 21
+balance:
+  item: 'EMERALD : 1'
+  name: '&7硬币：&6%balance%'
+  lore: [ ]
+  slot: 49

@@ -1,0 +1,290 @@
+SkillShop:
+  delete_shop:
+    id: BARRIER
+    name: '&cDelete Shop'
+    slot: 35
+    type: delete_shop
+Config:
+  arena_starting_cooldown: 45
+  arena_time: 360
+  arena_preparation_phase_cooldown: 10
+  arena_ending_phase_cooldown: 10
+  tutorial_item_enabled: true
+  initial_coins: 750
+  item_shop_size: 18
+  skill_shop_size: 36
+  player_spectating_inventory_size: 27
+  coins_earnings_holograms: true
+  damage_holograms: true
+  empty_inventory_to_join: false
+  max_distance_from_player_when_spectating: 90
+  spawn_one_monster_probability: 70
+  monsters_walk_speed: 0.25
+  top_hologram_number_of_players: 5
+  top_hologram_update_time: 300
+  monsters_limit_per_side: 100
+  monsters_limit_per_side_warning_message:
+    enabled: true
+    cooldown: 30
+    min: 80
+    message: '%team% &ehave &c%amount% Zombies &eon their side!'
+  choose_team_system: true
+  income:
+    enabled: true
+    coins: 5+(monster_allies*2)
+    delay: 5
+  rabbits_team_head: 717a725b-257f-4172-bdba-5de8506fb6dc;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvN2QxMTY5YjI2OTRhNmFiYTgyNjM2MDk5MjM2NWJjZGE1YTEwYzg5YTNhYTJiNDhjNDM4NTMxZGQ4Njg1YzNhNyJ9fX0=
+  penguins_team_head: 53c01f77-c4bd-458e-8fd8-70f7bb33dd5c;eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZDNjNTdmYWNiYjNhNGRiN2ZkNTViNWMwZGM3ZDE5YzE5Y2IwODEzYzc0OGNjYzk3MTBjNzE0NzI3NTUxZjViOSJ9fX0=
+  per-arena-chat:
+    enabled: true
+    format: '&f<&8[&7%team%&8]&a%player%&f> %message%'
+  winners_command_rewards:
+    enabled: true
+    rewards:
+    - msg %player% &2&lCongrats on winning! Here, take this.
+    - eco give %player% %random_10*kills-25*kills%
+  losers_command_rewards:
+    enabled: true
+    rewards:
+    - msg %player% &2&lYou've lost! Here, take this compensation reward.
+    - eco give %player% %random_10*kills-15*kills%
+  tie_command_rewards:
+    enabled: true
+    rewards:
+    - msg %player% &2&lIt's a tie! Here, take this reward.
+    - eco give %player% %random_5*kills-20*kills%
+  commands_whitelist:
+  - /rvp leave
+  - /help
+  monster_properties:
+  - 40-70;20;0
+  - 50-80;25;300
+  - 60-90;30;400
+  - 70-100;35;500
+  - 80-110;40;600
+  - 90-120;50;700
+  - 100-130;60;800
+  super_zombie_properties:
+    name_penguin: '&cSuper Penguin &7[Level %level%]'
+    name_rabbit: '&cSuper Rabbit &7[Level %level%]'
+    health: normal_health*3
+    armor: DIAMOND_ARMOR
+  armor_item:
+    name: '&eFighter Armor'
+    lore:
+    - '&7You can upgrade it in the shop.'
+    - ''
+    - '&8» &7Upgrade Level: %level%'
+    upgrades:
+    - 500;LEATHER_ARMOR
+    - 750;GOLDEN_ARMOR
+    - 1000;CHAINMAIL_ARMOR
+    - 1500;IRON_ARMOR
+    - 1750;DIAMOND_ARMOR
+  leave_item_enabled: true
+  play_again_item_enabled: true
+  go_back_item:
+    id: ARROW
+    name: '&7Back'
+  upgrade_sword_item:
+    id: EMERALD
+    name: '&eUpgrade your Sword'
+    lore:
+    - '&7Level: &a&l%current_level%&8 ➜ &a&l%next_level%'
+    - '&7Damage: &a%current_min%&7-&a%current_max%&8 ➜ &a%next_min%&7-&a%next_max%'
+    - ''
+    - '&7Price: &6%price%'
+    - ''
+    - '&8[Click to Upgrade]'
+  upgrade_armor_item:
+    id: EMERALD
+    name: '&eUpgrade your Armor'
+    lore:
+    - '&7Level: &a&l%current_level%&8 ➜ &a&l%next_level%'
+    - ''
+    - '&7Price: &6%price%'
+    - ''
+    - '&8[Click to Upgrade]'
+  upgrade_monster_item:
+    id: EMERALD
+    name: '&eUpgrade your Allies'
+    lore:
+    - '&7Level: &a&l%current_level%&8 ➜ &a&l%next_level%'
+    - '&7Health: &a%current_health%&8 ➜ &a%next_health%'
+    - ''
+    - '&7Price: &6%price%'
+    - ''
+    - '&8[Click to Upgrade]'
+  upgrade_sword_error_item:
+    id: REDSTONE
+    name: '&eUpgrade your Sword'
+    lore:
+    - '&7No more Upgrades available'
+  upgrade_armor_error_item:
+    id: REDSTONE
+    name: '&eUpgrade your Armor'
+    lore:
+    - '&7No more Upgrades available'
+  upgrade_monster_error_item:
+    id: REDSTONE
+    name: '&eUpgrade your Allies'
+    lore:
+    - '&7No more Upgrades available'
+  upgrade_skill_error_item:
+    id: REDSTONE
+    name: '&a%skill_name% &eUpgrade'
+    lore:
+    - '&7No more Upgrades available'
+  mysql-database:
+    enabled: false
+    host: localhost
+    port: 3306
+    username: root
+    password: root
+    database: rvp
+  skill_no_permission_id: LIGHT_GRAY_DYE
+  rabbits_team_item:
+    name: '&eChoose &7&lRABBITS'
+    id: BROWN_WOOL
+  penguins_team_item:
+    name: '&eChoose &f&lPENGUINS'
+    id: WHITE_WOOL
+  main_sword_item:
+    name: '&eFighter Sword'
+    lore:
+    - '&7You can upgrade it in the shop.'
+    - ''
+    - '&8» &7Damage: &a%min%&7-&a%max%'
+    - '&8» &7Upgrade Level: %level%'
+    upgrades:
+    - 0;2-5
+    - 250;4-9;STONE_SWORD
+    - 500;8-14;IRON_SWORD
+    - 850;12-17;GOLD_SWORD
+    - 1500;16-22;DIAMOND_SWORD
+    - 3000;21-27;DIAMOND_SWORD
+    id: WOODEN_SWORD
+  tutorial_item:
+    name: '&7[&6&lTutorial&7]'
+    lore:
+    - '&eThe idea of the game is to kill the enemy units and get coins.'
+    - '&eThere are two sides. Your allies side, and your enemies side.'
+    - '&eEvery time your team kills a unit, there is a chance of spawning'
+    - '&e1 or 2 more allies units on the enemy side. So you need to'
+    - '&eclear your area as fast as possible so the enemy''s side could'
+    - '&ebe full of allies units.'
+    - ''
+    - '&bYour team wins if all the enemy players are down.'
+    id: COMPASS
+  leave_item:
+    name: '&7[&c&lLeave&7]'
+    lore:
+    - '&7Right Click to leave the game.'
+    id: IRON_DOOR
+  play_again_item:
+    name: '&7[&9&lPlay Again&7]'
+    lore:
+    - '&7Right Click to play in another map.'
+    id: LIGHT_BLUE_DYE
+  spectator_players_item:
+    name: '&7[&5&lPlayers&7]'
+    lore:
+    - '&7Right Click to teleport to player.'
+    id: COMPASS
+  teleport_to_player_item:
+    name: '&aTeleport to &e&l%player%'
+    lore:
+    - '&8» &7Team: &e%team%'
+    - '&8» &7Kills: &e%kills%'
+    id: PLAYER_HEAD
+  empty_skill_slot_item:
+    name: '&eEmpty Skill Slot'
+    lore:
+    - '&7You can buy Skills in the shop.'
+    id: GRAY_DYE
+  cooldown_skill_slot_item:
+    id: GRAY_DYE
+ItemShop:
+  delete_shop:
+    id: BARRIER
+    name: '&cDelete Shop'
+    slot: 17
+    type: delete_shop
+  main_sword_item:
+    id: DIAMOND_SWORD
+    name: '&aUpgrade your Sword'
+    slot: 1
+    type: sword_upgrade
+  allies_monsters_item:
+    name: '&aUpgrade your Allies'
+    slot: 2
+    type: monster_upgrade
+    id: PLAYER_HEAD
+  armor_item:
+    name: '&aUpgrade your Armor'
+    slot: 10
+    type: armor_upgrade
+    id: IRON_CHESTPLATE
+  health_item:
+    name: '&aUpgrade your Team Max Health'
+    lore:
+    - '&7Gives all your Team &c+1 ❤  &7Health'
+    lore_error:
+    - '&cYou can''t use this again'
+    slot: 11
+    health: 1
+    type: health_upgrade
+    price: 350;500;650;900;1250
+    id: RED_WOOL
+  potion_1:
+    name: '&aSmall Healing Potion'
+    lore:
+    - '&7You can use it to recover health.'
+    - ''
+    - '&8» &7Heal: &c❤❤❤❤'
+    slot: 6
+    type: individual_potion
+    heal: 4
+    price: 100
+    id: POTION
+  potion_2:
+    name: '&aMedium Healing Potion'
+    lore:
+    - '&7You can use it to recover health.'
+    - ''
+    - '&8» &7Heal: &c❤❤❤❤❤❤'
+    slot: 7
+    type: individual_potion
+    heal: 6
+    price: 200
+    id: POTION
+  potion_3:
+    name: '&aTeam Healing Potion'
+    lore:
+    - '&7You can use it to recover health.'
+    - '&7Applies to team players.'
+    - ''
+    - '&8» &7Heal: &c❤❤❤❤❤❤'
+    slot: 15
+    type: team_potion
+    heal: 6
+    price: 350
+    id: POTION
+  boost_item:
+    name: '&aAllies Super Boost'
+    lore:
+    - '&7Gives Speed II and Strength II to'
+    - '&7your Monster Allies for 15 seconds.'
+    lore_cooldown:
+    - '&cYou can use this again in &7%time% &cseconds.'
+    slot: 16
+    effect_particle: VILLAGER_THUNDERCLOUD
+    effect_duration: 15
+    effects:
+    - SPEED;2
+    - INCREASE_DAMAGE;2
+    type: boost
+    price: 1000
+    id: ORANGE_TERRACOTTA
+Sounds:
+  potion_item: ENTITY_GENERIC_DRINK;2;1

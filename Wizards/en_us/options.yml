@@ -1,0 +1,183 @@
+Locations:
+  spawn: '{"world":"lobby","x":9925.5,"y":117.0,"z":-10132.5,"pitch":1.050001,"yaw":180.00017}'
+Storage:
+  Type: SQLite
+  MySQL:
+    Host: localhost
+    Port: '3306'
+    User: user
+    Password: '123456'
+    Database: database
+  Update-Interval: '5'
+Leaderboard:
+  Data-Limit: '10'
+  Refresh-Rate: '15.0'
+Options:
+  Scoreboard-Line-Length-Max: '48'
+  Save-Inventory: 'true'
+  Use-Class-Permission-As-Owned: 'false'
+  Keep-Inventory-When-Joining-A-Game: 'false'
+  Offline-Mode: 'false'
+  Inventory-Protection: 'true'
+  Bungee:
+    Enabled: 'false'
+    Lobby-Server: lobby
+    Server-Name: wz1
+    Enable-Join-When-No-Games: 'false'
+    Join-Next-Available-Game: 'false'
+  Whitelisted-Commands:
+  - sr
+  - tell
+  - r
+  PreStart-Countdown: '35'
+  Time-After-Game: '8'
+  Assist-Expiry-Seconds: '12'
+  Use-Vault: 'false'
+  Use-CoinsAPI: 'false'
+  Toggle-FeatherBoard: 'false'
+  Toggle-AnimatedScoreboard: 'false'
+  ItemBridge: 'false'
+  Disable-Wizards-Damage: 'false'
+  Use-Being-Captured-Sound: 'true'
+  Enable-Rewards: 'true'
+  Use-Kits-Instead-Of-Classes: 'false'
+  Run-JS-Engine: 'false'
+  Per-Arena-Chat: 'true'
+  Use-Titles: 'true'
+  Use-Action-Bar: 'true'
+  Join-While-In-Game: 'false'
+  Reset-Stats-When-Rejoin: 'true'
+  Potions:
+    Jump:
+      Enabled: 'true'
+      Level: '6'
+    Speed:
+      Enabled: 'true'
+      Level: '3'
+  Titles:
+    Fade-In: '8'
+    Stay: '28'
+    Fade-Out: '5'
+  Economy:
+    Coins-Per-Win: '250'
+    Coins-Per-Game: '50'
+    Coins-Per-Kill: '10'
+    Coins-Per-Assist: '5'
+    Coins-Per-Point-Captured: '25'
+  Game:
+    Default-Kit: fighter
+    Warn-When-Leave-Arena-Bounds: 'true'
+    Kill-Player-When-Leave-Arena-Bounds: 'false'
+    Global-Kill-Messages: 'true'
+    Unbreakable-Items: 'true'
+    Unbreakable-Armor: 'true'
+    Respawn-Delay: 'true'
+    Team-Armor:
+      Enabled: 'true'
+      Enable-Helmet: 'true'
+      Enable-Chesplate: 'true'
+      Enable-Leggings: 'true'
+      Enable-Boots: 'true'
+    Explosions: 'true'
+    Spawn-Falling-Blocks: 'true'
+    Spawn-Fireworks: 'true'
+    Double-Jump: 'true'
+    No-Draw-System: 'true'
+    Enable-Game-Point-Indicators: 'false'
+    Double-Jump-Multiplier: '1.8'
+    Double-Jump-Y-Multiplier: '1.9'
+    Double-Jump-Cooldown: '0'
+    Particle-Travel-Speed: '0.5'
+    Particle-View-Distance: '400'
+    Respawn-Delay-Time: '8'
+    Max-Length: '600'
+    Max-Players-Per-Team: '6'
+    Max-Team-Difference-Allowed: '2'
+    Points-To-Win: '3000'
+    Points-Per-Kill: '5'
+    Points-Per-Second: '4'
+    Mana-Update-Type: '75'
+    Max-Potions: '3'
+    Potion-Healing: '5.0'
+    Potion-Splash-Area: '4.0'
+    Potion-Delay: '3'
+    Item-Damage: '1.0'
+    Item-Damage-Min: '1.0'
+    Item-Damage-Max: '1.0'
+    Hand-Damage: '0.5'
+    Protected-Blocks: []
+    Start-Commands: []
+    End-Commands: []
+    Explosion-Max-Radius: '3.5'
+    Objective:
+      Capture-Rate: '1.0'
+      Capture-Max: '24.0'
+    Powerups-Available-Material: GOLD_BLOCK
+    Powerups-Cooldown-Material: IRON_BLOCK
+    Powerups:
+      Points:
+        Amount: '150'
+        Delay: '180000'
+  Change-Class-In-Game: 'false'
+  Use-Level-Bar-Countdown: 'true'
+  Use-Exp-Bar-Countdown: 'false'
+  Leveling-System: 'false'
+  Update-Levels: 'false'
+  Exp:
+    Exp-Per-Win: '15'
+    Exp-Per-Game: '3'
+    Exp-Per-Kill: '10'
+    Exp-Per-Assist: '5'
+    Exp-Per-Point-Captured: '1'
+  Auto-Respawn: 'true'
+  Spectate-When-In-Game: 'false'
+  Rejoin:
+    Enabled: 'false'
+    Time-Out-In-Seconds: '120'
+Sounds:
+  Starting: ENTITY_PLAYER_LEVELUP:1
+  Double-Jump: ENTITY_BAT_TAKEOFF:2
+  Enought-Captured: VILLAGER_NO:1
+  Point-Captured: LEVEL_UP:1
+  Point-Lost: ZOMBIE_UNFECT:1
+  Purchase-Sound: LEVEL_UP:2
+  Selected-Sound: LEVEL_UP:3
+Items:
+  Leave:
+    Item: 'BED : 1 : name:&cLeave'
+    Slot: '9'
+  Locked-Item: 'BARRIER : 1 : name&cYou don''t have this class!'
+  Shop:
+    Item: 'EMERALD : 1 : name:&6Shop'
+    Slot: '5'
+    In-Game-Item: 'NETHER_STAR : 1 : name:&6Class Changer'
+    In-Game-Slot: '8'
+  Team:
+    Team-Selector: 'WOOL : 1 : name:&6Team Selector'
+    Slot: '1'
+  Spectator:
+    Item: 'COMPASS : 1 : name:&cPlayers'
+    Slot: '1'
+Rewards:
+  Win-Commands:
+  - eco give %player% 300
+  Top-Killer:
+  - eco give %player% 200
+  Losers-Commands:
+  - eco give %player% 150
+Boosters:
+  Default-Radius: '3'
+  Default-Initial-Velocity: '3.0'
+  Default-Final-Velocity: '1.0'
+  Default-Boost-Duration: '30'
+  Default-Particle-Amount: '5'
+  Default-Particle-Type: VILLAGER_HAPPY
+Mounts:
+  Enable-Mounts: 'false'
+  Spawn-Item: 'DIAMOND_HORSE_ARMOR : 1 : name:&7Mount'
+  Spawn-Item-Slot: '8'
+  Horse-Variant: HORSE
+  Horse-Speed: '0.3'
+  Horse-Jump: '1.0'
+  Horse-Cooldown: '12.0'
+  Horse-Color: WHITE

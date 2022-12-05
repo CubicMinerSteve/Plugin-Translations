@@ -1,0 +1,819 @@
+Prefix: '&7[&c僵尸末日&7] '
+MySQL:
+  Enabled: true
+  LocalFile: false
+  Hostname: localhost
+  Port: 3306
+  Database: database
+  Username: username
+  Password: password
+MultiArena:
+  Enabled: true
+  SignLayout:
+    Line1: '&b[&8僵尸末日&b]'
+    Line2: '%name%'
+    Line3: '&f%players%&8/&f%maxPlayers%'
+    Line4: '%state%'
+LobbyTimer: 30
+RestartTimer: 20
+RandomMap: true
+StartMap: EnterMapName
+QuitRejoinEnabled: false
+FillEmptySlots: false
+PremiumKickEnabled: false
+ChatFormatEnabled: true
+HidePlayers: true
+HideChat: true
+PowerSwitchUnlockDoors: false
+Commands:
+  Start:
+    Enabled: true
+    Permission: zombies.start
+  Stats:
+    Enabled: true
+    Permission: zombies.stats
+  Leave:
+    Enabled: true
+    Permission: zombies.leave
+MotdDisplay:
+  Enabled: false
+  Custom: true
+  Lobby: '&a&l等待中 &7- &f%players% &7| &f%time%s'
+  InGame: '&c&l游戏中 &7- &f%map% &7| &f%time%'
+  Restarting: '&c&l重置中'
+ChatFormat:
+  Enabled: true
+State:
+  Lobby: '&a等待中'
+  InGame: '&c游戏中'
+  Restarting: '&4重置中'
+Sound:
+  Countdown: BLOCK_NOTE_BLOCK_HAT
+  BreakWindow: ENTITY_WITHER_BREAK_BLOCK
+  RepairWindow: ENTITY_ZOMBIE_ATTACK_WOODEN_DOOR
+  RepairedWindow: BLOCK_ANVIL_LAND
+  KnockedDown: ENTITY_ENDER_DRAGON_GROWL
+  NotEnoughGold: ENTITY_ENDERMAN_TELEPORT
+  WeaponReload: ENTITY_HORSE_GALLOP
+  WeaponCooldown: ENTITY_HORSE_GALLOP
+  ShopItemBought: ENTITY_EXPERIENCE_ORB_PICKUP
+  PowerSwitchActivated: ENTITY_BLAZE_DEATH
+  UltimateMachineUpgrade: ENTITY_EXPERIENCE_ORB_PICKUP
+  PowerupPickup: ENTITY_EXPERIENCE_ORB_PICKUP
+  WeaponsChestRolling: ENTITY_EXPERIENCE_ORB_PICKUP
+  TeamMachinePurchase: ENTITY_EXPERIENCE_ORB_PICKUP
+  WeaponsChestOpen: BLOCK_CHEST_OPEN
+  WeaponsChestClose: BLOCK_CHEST_CLOSE
+  DoorOpen: BLOCK_WOODEN_DOOR_OPEN
+Window:
+  BarrierWall: false
+  RepairDelay: 1500
+Revive:
+  Time: 25.0
+  SneakTime: 1.5
+  Hologram:
+  - '&e■■■■■■■■■■■■■■■'
+  - '&e&l按住潜行键救助队友！'
+  - '&e■■■■■■■■■■■■■■■'
+  - '&c%time%s'
+MapMenuEnabled: true
+BlockCommands:
+  Enabled: false
+  ByPassAllowed: false
+  BlockMessageAllowed: false
+  ByPassPermission: zombies.bypass
+  BlockMessage: '&c你在游玩僵尸末日时无法使用此命令！'
+  AllowedCommands:
+  - /zombies
+Entities:
+  DelayedTeleportTicks: 20
+LocalStats:
+  DelayedUpdateTicks: 1000
+EntitySpawnDelay:
+  Start: 0
+  Round: 0
+GoldStart:
+  Default: 0
+  Permissions:
+    '1':
+      PermissionName: zombies.permissionsGold
+      GoldValue: 0
+    '2':
+      PermissionName: zombies.morePermissionGold
+      GoldValue: 0
+Rewards:
+  Enabled: false
+  GameLoose:
+  - [在此处键入游戏失败后执行的命令]
+  GameWin:
+  - [在此处键入游戏胜利后执行的命令]
+  Rounds:
+    '1':
+    - [在此处键入游戏第 1 轮生存执行的命令]
+    '2':
+    - [在此处键入游戏第 2 轮生存执行的命令]
+SoundPitch:
+  NotEnoughGold: 1.0
+  PowerupPickup: 1.0
+  WeaponShootSound: 4.0
+  WeaponHitSound: 2.0
+  WeaponReloadSound: 0.5
+  WeaponCooldownSound: 0.5
+  ShopItemBought: 2.0
+  PowerSwitchActivated: 2.0
+  TeamMachinePurchase: 2.0
+  UltimateMachineUpgrade: 2.0
+  ReviveKnockedDown: 1.0
+  WeaponsChestOpen: 1.0
+  WeaponsChestClose: 1.0
+  RepairWindow: 1.5
+  RepairedWindow: 4.0
+  BreakWindow: 1.0
+  DoorOpen: 1.0
+Effects:
+  SLOW_DIGGING:
+    Amplifier: 0
+  REGENERATION:
+    Amplifier: 2
+BossBar:
+  Color: PURPLE
+  Style: SOLID
+WeaponBuilder:
+  Damage: ' &8▪ &7伤害：&a%damageValue% HP'
+  Ammo: ' &8▪ &7弹药：&a%ammoValue%'
+  ClipAmmo: ' &8▪ &7弹匣：&a%clipAmmoValue%'
+  FireRate: ' &8▪ &7射速：&a%fireRateValue%s'
+  Reload: ' &8▪ &7装填时间：&a%reloadValue%s'
+  AffectedEnemies: ' &8▪ &7击中目标数：&a%affectedEnemiesValue%'
+  Cooldown: ' &8▪ &7冷却时间：&a%cooldownValue%s'
+  Lores:
+  - '&e点击左键&7以装填弹药。'
+  - '&e点击右键&7以瞄准射击。'
+UltimateWeaponBuilder:
+  Damage: ' &8▪ &7伤害：&8%oldDamageValue% HP ➔ &a%damageValue% HP'
+  Ammo: ' &8▪ &7弹药：&8%oldAmmoValue% ➔ &a%ammoValue%'
+  ClipAmmo: ' &8▪ &7弹匣：&8%oldClipAmmoValue% ➔ &a%clipAmmoValue%'
+  FireRate: ' &8▪ &7射速：&8%oldFireRateValue%s ➔ &a%fireRateValue%s'
+  Reload: ' &8▪ &7装填时间：&8%oldReloadValue%s ➔ &a%reloadValue%s'
+  AffectedEnemies: ' &8▪ &7击中目标数：&8%oldAffectedEnemiesValue%s ➔ &a%affectedEnemiesValue%'
+  Cooldown: ' &8▪ &7冷却时间：&8%oldCooldownValue%s ➔ &a%cooldownValue%s'
+  Lores:
+  - '&e点击左键&7以装填弹药。'
+  - '&e点击右键&7以瞄准射击。'
+Weapon:
+  Knife:
+    DisplayName: '&a短刀'
+    Material: IRON_SWORD
+    Lores: []
+  PracticeGun:
+    DisplayName: '&6训练用枪'
+    UltimateDisplayName: ''
+    Material: WOODEN_HOE
+    Lores:
+    - '&7用这把枪练习射击吧！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_IRON_GOLEM_HURT
+    Particle: CRIT
+    Damage: 0.0
+    Ammo: 0
+    ClipAmmo: 0
+    FireRate: 0
+    Reload: 0
+    UltimateDamage: 0
+    UltimateAmmo: 0
+    UltimateClipAmmo: 0
+    UltimateFireRate: 0
+    UltimateReload: 0
+    WeaponsChest: false
+  Pistol:
+    DisplayName: '&6手枪'
+    UltimateDisplayName: '&6&l精良手枪'
+    Material: WOODEN_HOE
+    Lores:
+    - '&7这是你的初始武器。你需要在之后升级它，'
+    - '&7不然你就只能祈祷 Notch 来救你了……'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_IRON_GOLEM_HURT
+    Particle: CRIT
+    Damage: 6.0
+    Ammo: 300
+    ClipAmmo: 10
+    FireRate: 0.5
+    Reload: 1.5
+    UltimateDamage: 6.0
+    UltimateAmmo: 360
+    UltimateClipAmmo: 12
+    UltimateFireRate: 0.4
+    UltimateReload: 1.0
+    WeaponsChest: false
+  Rifle:
+    DisplayName: '&6步枪'
+    UltimateDisplayName: '&6&l精良步枪'
+    Material: STONE_HOE
+    Lores:
+    - '&7比手枪的射速更快，似乎伤害更低一些……'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_FIREWORK_ROCKET_BLAST
+    Particle: FIREWORKS_SPARK
+    Damage: 4.0
+    Ammo: 256
+    ClipAmmo: 32
+    FireRate: 0.2
+    Reload: 1.5
+    UltimateDamage: 5.0
+    UltimateAmmo: 280
+    UltimateClipAmmo: 35
+    UltimateFireRate: 0.2
+    UltimateReload: 1.0
+    WeaponsChest: false
+  Shotgun:
+    DisplayName: '&6霰弹枪'
+    UltimateDisplayName: '&6&l精良霰弹枪'
+    Material: IRON_HOE
+    Lores:
+    - '&7一次射出大量的子弹，适合近身作战使用！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_GENERIC_EXPLODE
+    Particle: SMOKE_NORMAL
+    Damage: 6.5
+    Bullets: 8
+    Ammo: 65
+    ClipAmmo: 5
+    FireRate: 1.4
+    Reload: 1.5
+    UltimateDamage: 6.5
+    UltimateAmmo: 80
+    UltimateClipAmmo: 5
+    UltimateFireRate: 1.0
+    UltimateReload: 1.0
+    WeaponsChest: false
+  Flamethrower:
+    DisplayName: '&6喷火器'
+    UltimateDisplayName: '&6&l精良喷火器'
+    Material: GOLDEN_HOE
+    Lores:
+    - '&7让僵尸接受火焰的洗礼！'
+    - '&7不过火焰僵尸似乎对此产生了抗性……'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: BLOCK_FIRE_AMBIENT
+    Particle: FLAME
+    Damage: 2.0
+    Ammo: 350
+    ClipAmmo: 50
+    FireRate: 0.1
+    Reload: 3.0
+    UltimateDamage: 2.0
+    UltimateAmmo: 500
+    UltimateClipAmmo: 50
+    UltimateFireRate: 0.1
+    UltimateReload: 1.8
+    WeaponsChest: true
+  ZombieSoaker:
+    DisplayName: '&6僵尸粉碎者'
+    UltimateDisplayName: '&6&l僵尸杀戮者'
+    Material: DIAMOND_HOE
+    Lores:
+    - '&7对僵尸造成额外的伤害！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_SLIME_ATTACK
+    Particle: WATER_DROP
+    Damage: 4.0
+    Ammo: 256
+    ClipAmmo: 32
+    FireRate: 0.3
+    Reload: 1.5
+    UltimateDamage: 4.0
+    UltimateAmmo: 280
+    UltimateClipAmmo: 50
+    UltimateFireRate: 0.1
+    UltimateReload: 1.0
+    WeaponsChest: true
+  RocketLauncher:
+    DisplayName: '&6火箭筒'
+    UltimateDisplayName: '&6&l精良火箭筒'
+    Material: STONE_SHOVEL
+    Lores:
+    - '&7发射在击中时爆炸的火箭！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_ARROW_SHOOT
+    Particle: ''
+    Damage: 15.0
+    Ammo: 20
+    ClipAmmo: 4
+    FireRate: 2.0
+    Reload: 3.0
+    UltimateDamage: 20
+    UltimateAmmo: 32
+    UltimateClipAmmo: 4
+    UltimateFireRate: 1.5
+    UltimateReload: 2.0
+    WeaponsChest: false
+  ElderGun:
+    DisplayName: '&6射线枪'
+    UltimateDisplayName: '&6&l精良射线枪'
+    Material: SHEARS
+    Lores:
+    - '&7发射穿透数只僵尸的激光并眩晕它们！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_LIGHTNING_BOLT_THUNDER
+    Particle: ''
+    Damage: 10.0
+    Ammo: 60
+    ClipAmmo: 4
+    FireRate: 1.0
+    Reload: 2.0
+    UltimateDamage: 15.0
+    UltimateAmmo: 100
+    UltimateClipAmmo: 4
+    UltimateFireRate: 1.0
+    UltimateReload: 2.0
+    WeaponsChest: true
+  BlowDart:
+    DisplayName: '&6吹箭筒'
+    UltimateDisplayName: '&6&l精良吹箭筒'
+    Material: STONE_SHOVEL
+    Lores:
+    - '&7发射毒镖，对敌人附加短暂的中毒和缓慢效果！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_ARROW_SHOOT
+    Particle: SLIME
+    Damage: 10.0
+    Ammo: 100
+    ClipAmmo: 10
+    FireRate: 0.5
+    Reload: 3.0
+    UltimateDamage: 15.0
+    UltimateAmmo: 150
+    UltimateClipAmmo: 5
+    UltimateFireRate: 0.4
+    UltimateReload: 1.5
+    WeaponsChest: true
+  Sniper:
+    DisplayName: '&6狙击枪'
+    UltimateDisplayName: '&6&l精良狙击枪'
+    Material: WOODEN_SHOVEL
+    Lores:
+    - '&7能从远处造成极高的伤害，'
+    - '&7它射出的子弹能穿透多个敌人！'
+    HitSound: ENTITY_EXPERIENCE_ORB_PICKUP
+    ShootSound: ENTITY_FIREWORK_ROCKET_BLAST
+    Particle: FIREWORKS_SPARK
+    Damage: 20.0
+    Ammo: 40
+    ClipAmmo: 4
+    FireRate: 1.0
+    Reload: 2.0
+    UltimateDamage: 30.0
+    UltimateAmmo: 60
+    UltimateClipAmmo: 5
+    UltimateFireRate: 1.0
+    UltimateReload: 1.5
+    WeaponsChest: false
+  ThePuncher:
+    DisplayName: '&a重锤'
+    UltimateDisplayName: '&a&l硬化重锤'
+    Material: DIAMOND_AXE
+    Lores:
+    - '&7对小范围的僵尸造成伤害，'
+    - '&7在冷却结束后攻击能将目标击退！'
+    HitSound: ENTITY_PLAYER_ATTACK_KNOCKBACK
+    ShootSound: ENTITY_FIREWORK_ROCKET_TWINKLE
+    Particle: ''
+    Damage: 5.0
+    Ammo: 0
+    ClipAmmo: 0
+    FireRate: 0.0
+    Reload: 0.0
+    AffectedEnemies: 3
+    Cooldown: 5.0
+    UltimateDamage: 7.0
+    UltimateAmmo: 0
+    UltimateClipAmmo: 0
+    UltimateFireRate: 0.0
+    UltimateReload: 0.0
+    UltimateAffectedEnemies: 5
+    UltimateCooldown: 3.0
+    WeaponsChest: true
+  ZombieZapper:
+    DisplayName: '&6电击枪'
+    UltimateDisplayName: '&6&l精良电击枪'
+    Material: DIAMOND_PICKAXE
+    Lores:
+    - '&7这把枪能电击目标及其周围的僵尸！'
+    HitSound: ENTITY_LIGHTNING_BOLT_THUNDER
+    ShootSound: ENTITY_FIREWORK_ROCKET_BLAST
+    Particle: CRIT
+    Damage: 12.0
+    Ammo: 100
+    ClipAmmo: 10
+    FireRate: 0.5
+    Reload: 2.0
+    UltimateDamage: 18.0
+    UltimateAmmo: 120
+    UltimateClipAmmo: 10
+    UltimateFireRate: 0.5
+    UltimateReload: 1.5
+    WeaponsChest: true
+PerksRemoveCooldownEnabled: false
+PerksRemoveCooldown: 30000
+Perks:
+  Speed:
+    DisplayName: '&9&l速度'
+    Material: SUGAR
+    Lores:
+    - '&7获得速度 I 状态效果。'
+    - ''
+    - '&8&o死亡后失效。'
+  ExtraHealth:
+    DisplayName: '&9&l额外生命'
+    Material: GOLD_NUGGET
+    Lores:
+    - '&7增加 &a10 点生命上限。'
+    - ''
+    - '&8&o死亡后失效。'
+  FastRevive:
+    DisplayName: '&9&l快速救援'
+    Material: COOKIE
+    Lores:
+    - '&7救起队友的速度为原先的 2 倍。'
+    - ''
+    - '&8&o死亡后失效。'
+  FlameBullets:
+    DisplayName: '&9&l火焰弹头'
+    Material: BLAZE_POWDER
+    Lores:
+    - '&7你的所有子弹都会使你的目标着火，'
+    - '&7包括对火焰免疫的敌人。'
+    - ''
+    - '&8&o死亡后失效。'
+  FrozenBullets:
+    DisplayName: '&9&l霜冻弹头'
+    Material: GHAST_TEAR
+    Lores:
+    - '&7你的所有子弹都会使你的目标短暂冻结。'
+    - ''
+    - '&8&o死亡后失效。'
+  ExtraWeapon:
+    DisplayName: '&9&l额外武器'
+    Material: IRON_INGOT
+    Lores:
+    - '&7增加物品栏空间，允许你多持有一把武器。'
+    - ''
+    - '&8&o死亡后失效。'
+  QuickFire:
+    DisplayName: '&9&l快速射击'
+    Material: BLAZE_ROD
+    Lores:
+    - '&7所有武器的射速加快 25% 。'
+    - ''
+    - '&8&o死亡后失效。'
+Powerups:
+  DOUBLE_GOLD:
+    Duration: 30
+    MinRound: 1
+  INSTA_KILL:
+    Duration: 10
+    MinRound: 1
+  SHOPPING_SPREE:
+    Duration: 30
+    MinRound: 1
+  BONUS_GOLD:
+    GoldValue: 1000
+    MinRound: 1
+  MAX_AMMO:
+    MinRound: 1
+  CARPENTER:
+    MinRound: 1
+WeaponsChest:
+  ClaimDuration: 10.0
+  GoldPrice: 1000
+  ShoppingSpree:
+    GoldPrice: 100
+TeamMachine:
+  Price:
+    AmmoSupply: 1000
+    FullRevive: 2000
+    DragonsWrath: 3000
+Messages:
+  PremiumKick: '%prefix%&c一位头衔更高的玩家加入游戏，由于空间不足，你已被移出……'
+  Leaderboard:
+    PlaceRegistered: '&a排名 &7%placeId%&a. &e%player% &7(&c%formattedTime%&7)'
+    PlaceUnregistered: '&a排名 &7%placeId%&a. &e<?> &7(&c%formattedTime%&7)'
+  LeaveArena: '%prefix%&c你离开了游戏场地……'
+  LeaveArenaFailed: '%prefix%&c你不在游戏场地中！'
+  MultiArenaJoinFailed: '%prefix%&c此游戏场地玩家已满！'
+  MultiArenaJoinEndFailed: '%prefix%&c此游戏已经结束！'
+  MultiArenaRejoinFailed: '%prefix%&c当前无可供你重新加入的游戏地图！'
+  MultiArenaMapsFailed: '%prefix%&c当前无可用的地图！'
+  BungeeKickFullArena: '%prefix%&c此游戏场地玩家已满！'
+  ChatFormat:
+    Normal: '%prefix%&a%player%: &f%message%'
+    Spectator: '%prefix%&7(&c旁观者&7) &a%player%: &f%message%'
+  GameStartChatPrefixHigh: '&6'
+  GameStartChatPrefixMedium: '&c'
+  GameStartChatPrefixLow: '&c'
+  GameStartTitlePrefixHigh: '&a'
+  GameStartTitlePrefixMedium: '&e'
+  GameStartTitlePrefixLow: '&c'
+  GameStopChatPrefixHigh: '&c'
+  GameStopChatPrefixLow: '&c'
+  GameStartCountdown: '%prefix%&e游戏将在 %time% &e秒后开始！'
+  GameStopCountdown: '%prefix%&c场地将在 %time% &c秒后重置！'
+  DoorHologram:
+  - '&a&l%doorName%'
+  - '&6需要 %gold% 硬币'
+  NotEnoughGold: '%prefix%&c你没有足够的硬币以解锁！'
+  EarnGold: '%prefix%&6+ %gold% 硬币'
+  WindowRepairInformation: '&e按住潜行键以修复。'
+  WindowRepair: '%prefix%&a正在修复窗户，请保持潜行以继续修复工作……'
+  WindowRepairStopped: '%prefix%&c停止修复窗户，请按住潜行键以继续修复工作……'
+  WindowRepaired: '%prefix%&a你成功修复了这扇窗户！'
+  WindowRepairFailed: '%prefix%&c你不能在附近有敌人时修复窗户！'
+  WeaponReloadInformation: '&c&l装填弹药中……'
+  WeaponCooldownInformation: '&c&l武器冷却中……'
+  Round: '&c&l第 %round% 波'
+  GameOver: '&c&l游戏结束……'
+  OpenDoor: '%prefix%玩家 %displayName% &7打开了 &a&l%doorName% 的门！'
+  EmptyPlayer: '&7无'
+  QuitState: '&c已离线'
+  DeadState: '&c已死亡'
+  ReviveState: '&e需要救援'
+  TitleWin: '&a恭喜！你在末日中得以生存……'
+  SubTitleWin: '&7你坚持到了第 %round% 波怪物！'
+  TitleLoose: '&c游戏结束……'
+  SubTitleLoose: '&7你没能撑过第 %round% 波僵尸的袭击……'
+  BossSpawn: '%prefix%Boss %name% &7已生成！'
+  BossKill: '%prefix%玩家 %displayName% &7击杀了 Boss %name% &7！'
+  BombieName: '&6&l炸弹僵尸'
+  InfernoName: '&c&l下界之焰'
+  TheBroodmotherName: '&5&l蜘蛛之母'
+  KingSlimeName: '&a&l史莱姆王'
+  KingWitherName: '&8&l凋灵王'
+  HerobrineName: '&4&lHerobrine'
+  SantaClausName: '&c&l圣诞僵尸'
+  PennywiseName: '&4&l小丑僵尸'
+  KnockedDownTitle: '&f玩家 %displayName% &7被击倒！'
+  ReviveTitle: '&a你正在被救起……'
+  ReviveActionBar: '&a你将会在 &c%time% 秒后死亡……'
+  Revive: '%prefix%&f玩家 %displayName% &e被 &7%name% &e击倒！你有 &c%time% &e秒的时间将其救起！'
+  Revived: '%prefix%&f玩家 %displayName% &e救起了队友 &f%revivedDisplayName% &e！'
+  ReviveDead: '%prefix%&f玩家 %displayName% &7被 %name% &7击杀！'
+  ReviveDeadUnknown: '%prefix%&f玩家 %displayName% &7被送去了幻♂想♂乡！'
+  DeathTitle: '&c你已死亡……'
+  DeathSubTitle: '&7你将在下一波开始时重生！'
+  OutOfAmmo: '%prefix%&c&l这把武器的弹药已经耗尽！你可以在此武器的购买点或拾取&9&l弹药补给道具&c&l补充弹药！'
+  Spectator:
+    Teleporter:
+      InventoryName: '&7玩家传送器'
+      ItemName: '&7玩家传送器'
+  Shop:
+    Armor:
+      LEATHER:
+        UP: '&a皮革上装'
+        DOWN: '&a皮革下装'
+      GOLD:
+        UP: '&a金质上装'
+        DOWN: '&a金质下装'
+      IRON:
+        UP: '&a铁质上装'
+        DOWN: '&a铁质下装'
+      DIAMOND:
+        UP: '&a钻石上装'
+        DOWN: '&a钻石下装'
+      Unlocked: '&6已解锁'
+      NotUnlocked: '&6需要 %goldValue% 硬币'
+      Purchase: '%prefix%&a你购买了护甲 &9%armorName% &a！'
+      AlreadyWearing: '%prefix%&c你已经装备此护甲了！'
+      Downgrade: '%prefix%&c此护甲的防御能力低于你当前的护甲水平！'
+    Weapon:
+      Name: '&a%weaponName%'
+      NotUnlocked: '&6需要 %goldValue% 硬币'
+      AmmoName: '&a%weaponName% 弹药'
+      Purchase: '%prefix%&a你购买了武器 &9%weaponName% &a！'
+      AlreadyMaxAmmo: '%prefix%&c此武器的弹药已装满！'
+      WrongClick: '%prefix%&c你只能在切换至枪械栏位时购买枪械！'
+      SwapWeapon: '%prefix%&c你已经拥有此武器！切换至此枪械并点击以补充弹药！'
+    Perks:
+      Purchase: '%prefix%&e你激活了技能 &9%perkName% &e！'
+      AlreadyPurchased: '%prefix%&c你已经激活了技能 %perkName% &c！'
+      RequiresPower: '%prefix%&c技能机器需要电力才能正常运作！请先激活&a&l发电厂&c的&6电力输送开关&c！'
+      MaxPerks: '%prefix%&c你同时只能激活最多 3 个技能！请切换至快捷栏的技能栏位，再点击技能机器以替换此技能！'
+      Unlocked: '&6已解锁'
+      HologramHeader: '&b%perkName%'
+      InactiveHologramFooter: '&7&o需要电力！'
+      ActiveHologramFooter: '&6需要 %goldValue% 硬币'
+  PowerSwitch:
+    Title: '玩家 %displayName% &7激活了电力输送开关！'
+    SubTitle: '&7你现在可以使用需要电力的机器了！'
+    HologramHeader: '&6&l电力输送开关'
+    InactiveHologramFooter: '&6需要 %goldValue% 硬币'
+    ActiveHologramFooter: '&7&o已激活！'
+    AlreadyActivated: '%prefix%&c电力输送开关已被激活！'
+  Powerups:
+    DOUBLE_GOLD:
+      Message: '%prefix%玩家 %displayName% &e拾取了持续 &c%duration% &e秒的&6&l双倍硬币&e道具！'
+      Title: '&6双倍硬币'
+      Hologram: '&6&l双倍硬币'
+      BarTag: '&6&l双倍硬币 &7- &a&l%doubleGoldDuration% 秒'
+    MAX_AMMO:
+      Message: '%prefix%玩家 %displayName% &e拾取了&9&l弹药补给&e道具！'
+      Title: '&9弹药补给'
+      Hologram: '&9&l弹药补给'
+    INSTA_KILL:
+      Message: '%prefix%玩家 %displayName% &e拾取了持续 &c%duration% &e秒的&c&l一击必杀&e道具！'
+      Title: '&c一击必杀'
+      Hologram: '&c&l一击必杀'
+      BarTag: '&c&l一击必杀 &7- &a&l%instaKillDuration% 秒'
+    SHOPPING_SPREE:
+      Message: '%prefix%玩家 %displayName% &e拾取了持续 &c%duration% &e秒的&b&l购物狂潮&e道具！'
+      Title: '&b购物狂潮'
+      Hologram: '&b&l购物狂潮'
+      BarTag: '&b&l购物狂潮 &7- &a&l%shoppingSpreeDuration% 秒'
+    BONUS_GOLD:
+      Message: '%prefix%玩家 %displayName% &e拾取了&6&l额外硬币&e道具！'
+      Title: '&6额外硬币'
+      Hologram: '&6&l额外硬币'
+    CARPENTER:
+      Message: '%prefix%玩家 %displayName% &e拾取了&9&l灵巧木匠&e道具！'
+      Title: '&9灵巧木匠'
+      Hologram: '&9&l灵巧木匠'
+  WeaponsChest:
+    Inactive:
+      Hologram:
+      - '&5武器箱'
+      - '&e&l花费 %goldValue% 硬币'
+    Active:
+      Hologram:
+      - '&5武器箱'
+      - '&e&l%displayName% 正在抽取武器……'
+      - '%weaponName%'
+    ActiveFinished:
+      Hologram:
+      - '&c冷却时间 %time% 秒'
+      - ' '
+      - '&5武器箱'
+      - '&e右键点击获取'
+      - '%weaponName%'
+    NotActive: '%prefix%&c此武器箱正在冷却中……'
+    InUse: '%prefix%&c其他玩家正在使用此武器箱，请等待他们抽取结束后再使用！'
+    Moved: '%prefix%&7此&5武器箱&7已移动至新的位置！'
+    FoundWeapon: '%prefix%玩家 %displayName% &7从&5武器箱&7中获得了 %weaponName% ！'
+    PersonalFoundWeapon: '%prefix%&7你从&5武器箱&7中获得了 %weaponName% &7！请迅速领取武器，它将在 &c%claimDuration% &7秒后自动消失！'
+    Claimed: '%prefix%&7你从&5武器箱&7中获得了 %weaponName% ！'
+    WrongClick: '%prefix%&c请切换至枪械栏位点击以领取武器！'
+    AlreadyAvailable: '%prefix%&c你已经拥有此武器了！'
+  UltimateMachine:
+    HologramHeader: '&a&l武器强化机'
+    InactiveHologramFooter: '&7&o需要电力！'
+    ActiveHologramFooter: '&6需要 %goldValue% 硬币'
+    Upgraded: '%prefix%&e你成功将武器 &9%weaponName% &e升级为&9精良武器&e！'
+    AlreadyUpgraded: '%prefix%&e你手持的武器已经为&9精良武器&e了！'
+    HoldingInvalidWeapon: '%prefix%&c请手持待强化武器以使用此机器！'
+    RequiresPower: '%prefix%&c武器强化机需要电力才能正常运作！请先激活&a&l发电厂&c的&6电力输送开关&c！'
+  TeamMachine:
+    HologramHeader: '&a&l团队强化机'
+    InactiveHologramFooter: '&7&o需要电力！'
+    ActiveHologramFooter: '&e点击右键使用！'
+    RequiresPower: '%prefix%&c团队强化机需要电力才能正常运作！请先激活&a&l发电厂&c的&6电力输送开关&c！'
+    InventoryName: 团队强化机
+    AmmoSupply:
+      Purchaseable:
+        DisplayName: '&a弹药补给'
+        Lores:
+        - '&7为你和你队友的武器补充满弹药！'
+        - ' '
+        - '&7花费：&6%ammoSupplyGoldValue% 硬币'
+        - ' '
+        - '&e点击此处购买！'
+      NotPurchaseable:
+        DisplayName: '&c弹药补给'
+        Lores:
+        - '&7为你和你队友的武器补充满弹药！'
+        - ' '
+        - '&7花费：&6%ammoSupplyGoldValue% 硬币'
+        - ' '
+        - '&c你的硬币数量不足！'
+    FullRevive:
+      Purchaseable:
+        DisplayName: '&a全体救援'
+        Lores:
+        - '&7复活所有倒下或死亡的队友！'
+        - ' '
+        - '&7花费：&6%fullReviveGoldValue% 硬币'
+        - ' '
+        - '&e点击此处购买！'
+      NotPurchaseable:
+        DisplayName: '&c全体救援'
+        Lores:
+        - '&7复活所有倒下或死亡的队友！'
+        - ' '
+        - '&7花费：&6%fullReviveGoldValue% 硬币'
+        - ' '
+        - '&c你的硬币数量不足！'
+    DragonsWrath:
+      Purchaseable:
+        DisplayName: '&a巨龙之怒'
+        Lores:
+        - '&7在短暂等待后击杀半径 &a15 &7格内的所有敌人！'
+        - ' '
+        - '&7花费：&6%dragonsWrathGoldValue% 硬币'
+        - ' '
+        - '&e点击此处购买！'
+      NotPurchaseable:
+        DisplayName: '&c巨龙之怒'
+        Lores:
+        - '&7在短暂等待后击杀半径 &a15 &7格内的所有敌人！'
+        - ' '
+        - '&7花费：&6%dragonsWrathGoldValue% 硬币'
+        - ' '
+        - '&c你的硬币数量不足！'
+      KillMessage: '%prefix%&a击杀了 %killedEnemies% 个敌人！'
+    CloseItem:
+      DisplayName: '&c关闭'
+      Lores: []
+    Activate: '%prefix%玩家 %displayName% &7使用&a团队强化机&7触发了 &a&l%purchasedType% &7效果！'
+  StatsHologram:
+    Header:
+    - '&b&l%mapName%'
+    - '&7通关时间'
+    - '  '
+    Players: '&e%placeId%. &7%name% &7- &e%time%'
+  Mode:
+    Endless: '&c无尽模式'
+    Normal: '&a普通模式'
+  Difficulty:
+    Normal: '&a中等'
+    Hard: '&c困难'
+    RIP: '&4末日'
+  MenuInventory:
+    MainInventory:
+      Title: 游玩僵尸末日
+      CloseItemTitle: '&c关闭'
+      CloseItemLores:
+      - '&7点击此处关闭菜单！'
+      BackItemTitle: '&a返回'
+      BackItemLores:
+      - '&7点击此处返回上一界面！'
+      RejoinItemTitle: '&c重新加入'
+      RejoinItemLores:
+      - '&7重新加入你离开但仍未结束的游戏！'
+      RandomJoinItemTitle: '&c随机加入'
+      RandomJoinItemLores:
+      - '&7点击此处随机加入游戏场地！'
+      NormalModeItemTitle: '&a普通模式'
+      NormalModeItemLores:
+      - '&7点击此处选择游戏地图！'
+      - '&7当前共有 %maps% 张可用地图。'
+      EndlessModeItemTitle: '&c无尽模式'
+      EndlessModeItemLores:
+      - '&7点击此处选择游戏地图！'
+      - '&7当前共有 %maps% 张可用地图。'
+      NormalDifficultyItemTitle: '&a普通难度'
+      NormalDifficultyItemLores:
+      - '&7点击此处选择&a普通&7难度！'
+      - '&7当前共有 %maps% 张可用地图。'
+      HardDifficultyItemTitle: '&c困难难度'
+      HardDifficultyItemLores:
+      - '&7点击此处选择&c困难&7难度！'
+      - '&7当前共有 %maps% 张可用地图。'
+      RIPDifficultyItemTitle: '&4末日难度'
+      RIPDifficultyItemLores:
+      - '&7点击此处选择&4末日&7难度！'
+      - '&7当前共有 %maps% 张可用地图。'
+    MapInventory:
+      Title: 选择地图……
+      MapInformation:
+      - ''
+      - '&7玩家数：&e%players%&7/&e%maxPlayers%'
+      - '&7状态：%state%'
+      - '&7时间：&e%time%'
+      - '&7波数：&f%round%'
+      ItemType: LEGACY_STAINED_CLAY
+      DataId:
+        EmptyArena: 5
+        FilledArena: 13
+        FullArena: 1
+        StartedArena: 9
+        StoppedArena: 14
+      Color:
+        EmptyArena: '&a&l'
+        FilledArena: '&2&l'
+        FullArena: '&6&l'
+        StartedArena: '&7&l'
+        StoppedArena: '&c&l'
+  PracticeDummy:
+    Name: '&c练习假人'
+    HologramName: '&e&l点击右键&7射击！'
+  EnemyDetectorActionBar: '&7追踪目标在水平与竖直方向上距离你 &a%xCoordinateDifference% &8/ &a%yCoordinateDifference% &7格。'
+  StartMessages:
+    Enabled: false
+    List:
+    - '&a▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'
+    - '                                &f僵尸末日'
+    - ' '
+    - '             &e与队友一同抵抗潮水般来袭的僵尸与其他危险生物。'
+    - '           &e在地图中购买更精良的武器和护甲避免沦为怪物的晚餐！'
+    - '              &e怪物会随着游戏的进行而升级而变得越来越强大。'
+    - '                 &e尽可能地在僵尸末日中战斗并生存下去吧！'
+    - ' '
+    - '&a▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬'

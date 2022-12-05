@@ -1,0 +1,214 @@
+Messages:
+  Prefix: '&9[Wizards] '
+  Join: '&7%player% &ejoined the game. (&7%players%&e/&7%maxplayers%&e)'
+  Left: '&7%player% &eleft the game. (&7%players%&e/&7%maxplayers%&e)'
+  Chat-Format: '&7%player_name%: &r%message%'
+  Restoring-Period: '&cThis game is restarting, please wait...'
+  Already-Started: '&cThis game already started!'
+  Already-InGame: '&cAlready playing!'
+  Game-Not-Found: '&cNo game found, you are now on the Queue to play.'
+  No-Permission: '&cNo permission!'
+  No-Permission-Class: '&cYou don''t have permission to purchase this class!'
+  Game-Is-Full: '&cThis game is full!'
+  Starting: '&eThe game starts in &b%time% &eseconds.'
+  Command-Failed: '&cYou cannot use commands while playing wizards!'
+  Countdown-Cancelled: '&cNot enough players to start the game, countdown &lCANCELLED.'
+  Game-Cancelled: '&cThe game was cancelled by an Administrator.'
+  Game-Cancelled-Lack-Of-Players: '&cThe game was cancelled due Lack of players.'
+  Empty: '&7empty'
+  Draw: '&cDraw'
+  Out-Of-Bounds-Warning: '&cGet back to the playable area!'
+  Out-Of-Bounds: '&cYou left the playable area!'
+  Enough-Mana: '&cYou don''t have enough of mana!'
+  Recharged: '&eYour &c%ability% ability &eis ready to use!'
+  Recharged-Action-Bar: '&eYour &c%ability% ability &eis ready to use!'
+  Recharging: '&cWait %time% to use this ability.'
+  Enough-Money: '&cYou don''t have enough money to buy this!'
+  Successful-Purchase: '&aYou successfully purchased &9%item%&a.'
+  Click-To-Select: '&aClick To Select!'
+  Selected: '&aSelected!'
+  Class-Price: '&7Cost: &6%price% coins'
+  Successful-Selected: '&aYou selected &9%item%&a.'
+  Shield-Received: '&aShield received from &b%player%&a.'
+  Shield-Activated: '&aShield activated!'
+  Shield-Expired: '&a%player%''s &cshield expired.'
+  Shield-Deactivated: '&cShield deactivated.'
+  Achievement:
+  - '&7&m---------------&7[&6&lACHIEVEMENT&7]&m---------------'
+  - ' '
+  - '%name% - %description%'
+  - ' '
+  - '&7&m----------------------------------'
+  Game-Start:
+  - '&7&m---------------&7[&6&lWIZARDS&7]&m---------------'
+  - ' '
+  - '&7First team to reach 5000 points win!'
+  - '&6Capture the map objectives and kill enimies to score!'
+  - ' '
+  - '&7&m----------------------------------'
+  Game-End:
+  - '&7&m---------------&7[&c&lWIZARDS&7]&m---------------'
+  - ' '
+  - '&7Winner: %color% %winner%'
+  - ' '
+  - '&e1: &b%killer_1% &7with &b%kills_1% &7kills'
+  - '&e2: &b%killer_2% &7with &b%kills_2% &7kills'
+  - '&e3: &b%killer_3% &7with &b%kills_3% &7kills'
+  - ' '
+  - '&7&m----------------------------------'
+  Player-Stats:
+  - '&7&m---------------&7[&c&lWIZARDS STATS&7]&m---------------'
+  - ' '
+  - '&8Games Played: &b%games_played%'
+  - '&8Wins: &b%wins%'
+  - '&8Losses: &b%losses%'
+  - '&8Kills: &b%kills%'
+  - '&8Assists: &b%assists%'
+  - '&8Deaths: &b%deaths%'
+  - '&8Healing Done: &b%healing_done%'
+  - '&8Damage Caused: &b%damage_caused%'
+  - '&8Healing Received: &b%healing_received%'
+  - '&8Damage Received: &b%damage_received%'
+  - '&8Balance: &b%balance%'
+  - ' '
+  - '&7&m----------------------------------'
+  TimeUnits:
+    Milliseconds: Milliseconds
+    Seconds: Seconds
+    Minutes: Milliseconds
+    Hours: Hours
+    Days: Days
+    Permanent: Permanent
+  Portals:
+    ActionBar: '&2Boost &6[%s&6]'
+  Kills-Kill-Broadcast: '&b%player% &ewas killed by &6%killer%&e.'
+  Kills-Death-Broadcast: '&b%player% &ewas killed.'
+  Kills:
+    Kill-Notification: '&6You killed &6%player%&6.'
+    Death-Notification: '&6You were killed by &c%killer%&e.'
+    Death-Notification-No-Killer: '&6You were killed.'
+    Assist-Notification: '&c&lKILL ASSIST!'
+  Teams:
+    Red: '&cRED'
+    Blue: '&9BLUE'
+    Red-Color-Value: '&c'
+    Blue-Color-Value: '&9'
+    Red-ChatColor-Name: RED
+    Blue-ChatColor-Name: BLUE
+    Selector:
+      Lore: '%team%: &8%players%&7/&8%maxplayers%'
+    Full: '&cThis team is full!'
+    Selected: '&6Team selected!'
+    Already-Selected: '&cYou already on this team.'
+    Full-In-Order-To-Balance: '&cYou cannot join this team due the amount of players.'
+    Menu-Name: '&9Team Selector'
+  Objectives:
+    A: ALPHA
+    B: BETA
+    C: CENTRAL
+    D: EASY
+    E: BAKER
+    F: MEDIUM
+    G: GAMMA
+    Action-Bar-Points: '&a&l+%points% Points Per Second'
+    Titles:
+      Being-Captured: ''
+      Captured: ''
+    SubTitles:
+      Being-Captured: '%color%%team% &ris capturing %color%%objective%'
+      Captured: '%color%%team% &rcaptured %color%%objective%'
+  Class-Changed: '&aYou will respawn with the class &c%class%&a.'
+  Titles:
+    Titles:
+      Join: '&eYou are playing on map:'
+      Left: '&eYou left the game'
+      Start: '&eYou are on team'
+      Respawn: '&cRespawn in'
+    Title:
+      Starting: '&eGame starts in:'
+    Subtitles:
+      Respawn: '&e&l%countdown%'
+      Join: '&b%mapname%'
+      Starting: '&eGame starts in:'
+      Start: '%color%%team%'
+  Sign:
+    Line:
+      '1': '&7[&cWizards&7]'
+      '2': '%state%'
+      '3': '%mapname%'
+      '4': '%players%/%maxplayers%'
+    State:
+      Waiting: '&aWAITING'
+      Starting: '&6STARTING'
+      InGame: '&cIN GAME'
+      Ending: '&4ENDING'
+      Restoring: '&8RESTORING'
+  Motd:
+    State:
+      Waiting: '&aWAITING'
+      Starting: '&6STARTING'
+      InGame: '&cIN GAME'
+      Ending: '&4ENDING'
+  No-Data: '&7Waiting...'
+  Loading-Data: '&7Loading...'
+  Leaderboard:
+    Wins-Format: '&e%position%. &b%player% &7- &e%wins% &7wins'
+  Cannot-Spectate: '&cYou cannot spectate this game right now.'
+  Spectator-Menu: '&9Players'
+  Invalid-Team: '&cInvalid team!'
+  Team-Full-But-Added: '&cThe selected team was full so you''ve been added to the
+    smallest team.'
+  No-Rejoin-Available: '&cYou don''t have a game to rejoin or the time to rejoin has
+    expired.'
+Scoreboard:
+  Lobby-Scoreboard:
+  - ' '
+  - '&fMap: &a%mapname%'
+  - '&fPlayers: &b%players%/%maxplayers%'
+  - '&fNeeded: &b%minplayers%'
+  - ' '
+  - '&fState: %capitalize_state%'
+  - ' '
+  - '&fBalance: &b%balance%'
+  - '&fClass: &b%kit%'
+  - ' '
+  - yourserver.com
+  Game-Scoreboard:
+  - ' '
+  - '&9BLUE&f: &9%blue_points%&f / &a+%blue_points_per_second%'
+  - '&cRED&f: &c%red_points%&f / &a+%red_points_per_second%'
+  - ' '
+  - '&fTime: &b%formatted_time%'
+  - ' '
+  - '&fKills: &a%kills%'
+  - ' '
+  - '%objectives%'
+  Title: '&e&lWIZARDS'
+  Uncaptured-Point-Placeholder: '&f&l■ %name%'
+  Objective-Placeholder: '%color%&l■ %name%'
+  Spectator-Scoreboard:
+  - ' '
+  - '&9BLUE&f: &9%blue_points%&f / &a+%blue_points_per_second%'
+  - '&cRED&f: &c%red_points%&f / &a+%red_points_per_second%'
+  - ' '
+  - '&fTime: &b%formatted_time%'
+  - ' '
+  - '%objectives%'
+Leaderboard:
+  Kills-Format: '&e%position%. &b%player% &7- &e%kills% &7kills'
+  Damage-Format: '&e%position%. &b%player% &7- &e%damage% &7damage caused'
+  Heal-Format: '&e%position%. &b%player% &7- &e%heal% &7healing done'
+  Exp-Format: '&e%position%. &b%player% &7- &e%exp% &7(%rank%)'
+Items:
+  Potion-Item-Name: '&cHealing Potion'
+Skills:
+  Skill: Skill
+  Explosion: Explosion
+  Spell: Spell
+  Fighter-Punch: Fighter Punch
+  Impact: Impact
+  Tornado: Shield
+  Magic: Magic
+Powerups:
+  Default-Pickup-Message: '&9%player% &7picked up the &9%powerup% &7powerup!'
+  Points-Name: '&a&l250 POINTS'

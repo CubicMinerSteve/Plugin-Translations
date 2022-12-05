@@ -1,0 +1,295 @@
+prefix: '&7[&b箭与远征&7] '
+
+party-prefix: '&7[&b队伍&7] '
+signs-prefix: '&7[&b箭与远征&7]'
+Messages:
+  Leave-Game: 你离开了游戏！
+  Unknown-Command: 未知指令！输入 /oitb 查看更多指令
+  No-Lobby-Found: 未找到可用大厅！
+  Already-In-Game: 你已经在游戏中了！
+  Not-In-Game: 你还未在游戏中！
+  Coins-Increase: 你的远征币已增加！&a(+%coins%)
+  Coins-Decrease: 你的远征币已减少！&c(%coins%)
+  Modifier-Change: 你的奖励倍率已更改为 %modifier%！
+  Stats-Reset: 你的数据已重置！
+  Receive-Item: 你获得了新的物品！
+  Receive-Perk: 你获得了新的技能！
+  Receive-Case: 你&a成功&7获得了 &b%amount% &7个 %case% 抽奖箱！
+  Party-Create-Deny: 你已经在一个队伍之中了！如果你想新建一个队伍，你必须先解散或退出当前队伍！
+  Party-Create-Party-Exists: 已存在同名队伍！
+  Party-Create-Success: 已&a成功&7创建队伍！队伍名：&b%party%&7
+  No-Party: 你不在一个队伍中！
+  Must-Be-Leader: 你必须是队长才能这样做！
+  No-Player-Found: 无法找到玩家！
+  Player-Already-Invited: 已向该玩家发送邀请！
+  Player-Already-In-Party: 玩家已在你的队伍中！
+  Already-In-Party: 你已经在一个队伍之中了！如果你想新建一个队伍，你必须先解散或退出当前队伍！
+  No-Party-Found: 无法找到该队伍！
+  Not-Invited: 你暂未收到来自这个队伍的邀请！
+  Cant-Leave-Party: 作为队长，你不能退出队伍，请使用解散指令！
+  Party-Unknown-Command: 未知指令！输入 /oitb party 查看更多指令
+  Party-Chat-Enable: 你已&a开启&7队伍聊天！
+  Party-Chat-Disable: 你已&c关闭&7队伍聊天！
+  Party-Disband: 队伍已解散！
+  Party-Invite-Send: 你收到加入 &b%leader%&7 队伍的邀请！使用 /oitb party join &a%party% &7加入队伍！
+  Party-Invite-Send-Expiration-Warn: 邀请将在 30 秒后过期！
+  Party-Invite-Expire: 队伍邀请已过期！
+  Party-Player-Leave: 你离开了队伍！
+  Party-Player-Leave-Broadcast: '&b%player% &7离开了队伍！'
+  Party-Player-Join-Broadcast: '&b%player% &7加入了队伍！'
+  Party-Player-Invited-Notification: '%leader% 邀请 &b%player% &7加入了队伍！'
+  Party-Player-Not-In-Party: 玩家 &b%player% &7不在你的队伍中！
+  Party-Player-Kick-Broadcast: 队长从队伍中移出了 &e%player%
+  Join-Game: 你进入了游戏大厅！
+  Command-Usage: '命令用法：/&aoitb %cmd% %usage%'
+  No-Permission: 你没有权限这么做！
+  Reload-Kick: 插件正在重新加载……
+  No-Lobby-Kick: 无可用大厅！你已退出游戏……
+  Case-Unlock: '&a恭喜！&7你解锁了一个新物品，快去背包看看吧！'
+  Case-Unlock-Fail: '&c出了点小错误…… &7你的背包已满，因此损失了一个抽奖箱……'
+  Map-Join: 你加入了地图: &a%map%&7！
+  Map-Join-Deny: 现在你还不能加入这个地图！
+  Grace-End-Reminder: 伤害保护将在 &c%seconds% &7秒后结束！
+  Grace-Over: 时间到！&c伤害开启！
+  Tournament-End-Reminder: 锦标赛将在 &c%seconds% &7秒后结束！
+  Challenge-End-Reminder: 挑战将在 &cseconds &7秒后结束！
+  Cooldown: 你必须等待 &d%seconds% &7秒后才能这么做！
+  Rankup: '&a恭喜！你已升级到等级 &e%rank% ！'
+  Full-Inventory: '&c出错了！&7背包已满！'
+  Purchase-Error: '&c出错了！&7你现在还不能购买这个技能！'
+  Not-Enough-Coins: '&c出错了！&7远征币不足！'
+  Purchase-Success: 你&a成功&7购买了 %item% ！&7(花费 &b%cost% &7远征币)
+  Already-In-Queue: 你已经在这个队列中了！
+  Queue-Join-Error: 你现在还不能加入这个队列！地图尚未完全设置完毕！
+  Queue-Join: 你已&a加入&7队列中！
+  Challenge-Queue-Remove: 你&c退出&7了挑战队列！
+  Tournament-Queue-Remove: 你&c退出&7了锦标赛队列！
+  No-Tournament-Maps: 暂无可用锦标赛地图！
+  Tournament-Join-Error: 你现在不能加入，锦标赛正在进行当中！
+  Tournament-Countdown: 锦标赛将在 &b%seconds% &7秒后开始！
+  Tournament-Countdown-Cancel: 玩家不足，倒计时取消！
+  Trade-Complete: 交易&a成功&7！
+  Trade-Cancel: 交易被取消！
+  Trade-Error: 你没有更多可用栏位了！
+  Lives-Remaining: 你还剩余 &b%lives% &7条生命！
+  Challenge-Begin: 挑战开始！
+  Player-Win-Challenge: '&a你赢得了挑战！'
+  Player-Win-Challenge-Broadcast: '&6%winners% &e在挑战中战胜了 &7%losers%！'
+  Blue-Team-Join: 你现在在&9蓝&7队！
+  Red-Team-Join: 你现在在&c红&7队！
+  Challenge-Player-Eliminated: '%player% &7已被淘汰！&d(%teamsize%/%maxteamsize%)'
+  Challenge-Cancel: 挑战取消！
+  Tournament-Start: 锦标赛开始！地图选定为：&b%map% &7！
+  Tournament-Cancel: 锦标赛取消！
+  Tournament-Player-Eliminated: '&e%player% &7已被淘汰！剩余 &b%players% &7名玩家！'
+  Player-Win-Tournament: '&a恭喜！&7你赢得了锦标赛！'
+  Player-Win-Tournament-Broadcast: '&6%player% &b赢得了锦标赛！'
+  Zombies-Wave-Countdown: '第 &d%wave% &7波将会在 &b%seconds% &7秒后开始！'
+  Zombie-Wave-Begin: '第 &d%wave% &7波开始！僵尸数量：&b%zombiesAmount% &7僵尸生命/伤害：&b%zombiesHealth%/%zombiesDamage%'
+  Zombies-Game-Countdown-Broadcast: '&b%warning% &c注意 &b%warning% &7僵尸模式地图 &e%map% &7准备开始！'
+  Zombies-Game-Countdown: 游戏将在 &b%seconds% &7秒后开始！
+  Zombies-Game-Begin: 游戏开始！
+  Zombies-Game-Cancel: 玩家不足，游戏已终止！
+  Player-Win-Zombies: '&a你通过了最后一波的考验！'
+  Player-Win-Zombies-Broadcast: '&6%players% &e在僵尸模式中通过了最后一波的考验！'
+  Zombies-Player-Join: 你加入了僵尸模式地图 &d%map% &7的大厅！
+  Zombies-Player-Join-Broadcast: '&e%player% &7加入了大厅！(&d%currentPlayers%&7/&d%maxPlayers%&7)'
+  Zombies-Wave-Survive: 你存活到了第 &d%wave% &7波！
+  Zombies-Wave-New-Record: 你创造了新的个人纪录！最高波数：&d%wave% &7！
+  Zombies-Player-Eliminated: '&e%player% &7被淘汰！剩余 &b%players% &7名玩家！'
+  Zombies-Player-Leave-Lobby: '&e%player% &7离开了大厅！(&d%currentPlayers%&7/&d%maxPlayers%&7)'
+  Classic-Mode-Game-Countdown-Broadcast: '&7地图 &a&l%map% &7准备开始！'
+  Classic-Mode-Game-Countdown: 游戏将在 &b%seconds% &7秒后开始！
+  Classic-Mode-Player-Join-Broadcast: '&e%player% &7加入了大厅！(&d%currentPlayers%&7/&d%maxPlayers%&7)'
+  Classic-Mode-Game-Cancel: 玩家不足，游戏已终止！
+  Classic-Mode-Game-Begin: 游戏开始！
+  Classic-Mode-Player-Win: '&a&l%player% &e在经典模式中胜出！'
+  Classic-Mode-Cancel: 游戏取消！
+  Kill-Message: 你获得了 &b%coins% &7远征币与 &e%exp% &7经验！
+  Sign-Use-Deny: 你必须空手右键点击告示牌！
+  Trade-Invite-Send: 你向 &e%player% &7发送了交易邀请！
+  Trade-Invite-Receive: '&e%player% &7邀请你进行交易！'
+  Trade-Accept-Message: 你接受了 &e%player% &7的交易邀请！
+  Trade-Accept-Message-Receive: '&e%player% &7接受了你的交易邀请！'
+  Player-Equip-Item: 你已&a成功&7装备了新的 &b%item%
+  Light-Level-Increase: 你的战斗力已&a提升！(+%light%)
+  Light-Level-Decrease: 你的战斗力已&c降低！(-%light%)
+  Remove-Perk: 你已&a成功&7卸下这个技能！
+  Player-Sell-Item: 你出售了 %item% &7并获得 &b%price% &7远征币！现在你有 &a%coins% 远征币！
+  Command-Block: 你不能在箭与远征中使用这个指令！
+  Scavenge-Ability: '&a你获得了一支额外箭矢！'
+  Looter-Ability: '&b你额外获得了 %coins% 远征币！'
+  Player-Move: 你移动了！操作&c取消！
+  Player-Movement-Disabled: 请在 &d%seconds% &7秒内不要移动！
+  Trail-Select: '你已选择箭迹: %trail%'
+  Player-Light-Not-In-Range: '&c你的战斗力等级不在地图要求范围内！'
+  Arrow-Hit: '&e%player% &7的生命值：&c%health%%heart%&e！'
+  GUI-Access-Deny: '&c你现在不能打开菜单！'
+  Booster-Activate: '&a&l %owner% 激活了 %duration% 小时的 %modifier% 倍额外奖励！'
+Death-Messages:
+  Suicide: '&c%player% &7认为自我了断方为上策！'
+  Fall: '&c%player% &7感受到了重力势能转化的动能！'
+  Monster: '&c%player% &7被怪物塞入牙缝！'
+  Lava: '&c%player% &7在跳入岩浆前忘了喝抗火药水！'
+  Fire: '&c%player% &7被烤得酥脆，隔壁苦力怕都馋哭了！'
+  Explosion: '&c%player% &7随着一声巨响消失了！'
+  Unknown: '&c%player% &7遭遇了某种未知的降维打击！'
+  Kill:
+  - '&c%player%%playerLight% &e被 &a%killer%%killerLight%&e 击杀！'
+  - '&c%player%%playerLight% &e被 &a%killer%%killerLight%&e 残忍谋杀！'
+  - '&c%player%%playerLight% &e的武器无法抵抗 &a%killer%%killerLight%&e！'
+  - '&a%killer%%killerLight% &e把 &c%player%%playerLight% &e推向死亡边缘！'
+  - '&a%killer%%killerLight% &e无法抵抗杀戮 &c%player%%playerLight% &e的欲望！'
+Items:
+  Quit: 'MAGMA_CREAM : name:&c离开 : lore:&7点我离开游戏！'
+  Play: 'DIAMOND_AXE : name:&6加入 : lore:&7点我加入一个游戏！'
+  Shop: 'EMERALD : name:&a商店 : lore:&7点我购买物品！'
+  Profile: 'SKULL_ITEM:3 : name:&b信息 : lore:&7点我查看你的信息！'
+  Back: 'EYE_OF_ENDER : name:&b返回'
+  Trade: 'BLAZE_ROD : name:&d交易'
+  Confirm: 'STAINED_GLASS:5 : name:&a确认'
+  Cancel: 'STAINED_GLASS:14 : name:&c取消'
+  Trails: 'ENCHANTED_BOOK : name:&e箭迹 &6[VIP] : lore:&7点击选择一款箭迹！'
+  Stats: 'PAPER : name:&数据'
+  Inventory: 'CHEST : name:&背包'
+  Loadout: 'BOW : name:&c装备'
+  Achievements: 'ENDER_CHEST : name:&d成就'
+  Boosters: 'CHEST : name:&a&l额外奖励倍数 : lore:&6点我查看可激活的奖励倍数！'
+Scoreboards:
+  Lobby:
+    Page1:
+      Title: '&e%heart% &b&l箭与远征 &e%heart%'
+      Content:
+      - ' '
+      - '&6~~~~~~~~~~~'
+      - '&b> 击杀/死亡：'
+      - '%player_kills%/%player_deaths%'
+      - ' '
+      - ' &b> 远征币：'
+      - '%player_coins%'
+      - ' '
+      - '&b> 精确度：'
+      - '%player_accuracy%'
+      - ' '
+      - '&b> 经验/等级：'
+      - '%player_exp%/%player_rank%'
+      - '&6~~~~~~~~~~~'
+      - '&a>> 第 1 页'
+    Page2:
+      Title: '&e%heart% &b&l箭与远征 &e%heart%'
+      Content:
+      - ' '
+      - '&6~~~~~~~~~~~'
+      - '&b> 挑战：'
+      - '%challenge_queue_status%'
+      - ' '
+      - '&b> 锦标赛：'
+      - '%tournament_queue_status%'
+      - ' '
+      - '&b> 队伍：'
+      - '%party_status%'
+      - ' '
+      - '&b> 战斗力：'
+      - '%player_light%'
+      - '&6~~~~~~~~~~~'
+      - '&a>> 第 2 页'
+  Freemode:
+    Title: '&a&l自由乱斗'
+    Content:
+    - ' '
+    - '&6~~~~~~~~~~~'
+    - '&b> 击杀/死亡：'
+    - '%player_kills%/%player_deaths%'
+    - ' '
+    - ' &b> 远征币：'
+    - '%player_coins%'
+    - ' '
+    - '&b> 下一等级：'
+    - '%player_next_rank_exp%'
+    - ' '
+    - '&b> 地图：'
+    - '%player_map%'
+    - '&6~~~~~~~~~~~'
+Scoreboard-Content:
+  OITB: '&e%heart% &b&l箭与远征 &e%heart%'
+  Kills-Deaths: 击杀 / 死亡
+  Coins: 远征币
+  Accuracy: 精确度
+  Exp-Rank: 经验 / 等级
+  Light-Level: 战斗力
+  Next-Rank: 下一等级
+  Map: 地图
+  Grace: 伤害保护
+  Players: 玩家
+  Time: 时间
+  Team-1: 队伍 1
+  Team-2: 队伍 2
+  Wave: 波数
+  Freemode: 自由作战
+  Tournament: 锦标赛
+  Challenge: 挑战
+  Zombies: 僵尸模式
+  Party: 队伍
+Signs:
+  Join: '&b加入游戏'
+  Players: '玩家数：'
+  Leave: '&b离开'
+Tags:
+  Tier: 品阶
+  Tiers: 品阶
+  Rarity: 稀有度
+  Defence: 防御
+  Contains: 包含
+  Attack: 攻击
+  KILLS: 击杀数
+  DEATHS: 死亡数
+  KDR: 击杀/死亡
+  COINS: 远征币
+  SHOTS_FIRED: 弹射物发射数
+  HITS: 弹射物击中数
+  ACCURACY: 精确度
+  CHALLENGE_WINS: 获胜的挑战
+  TOURNAMENT_WINS: 获胜的锦标赛
+  MODIFIER: 奖励倍数
+  PLAYER_EXP: 经验
+  RANK: 等级
+  PLAY_TIME: 游戏时间
+  LIGHT: 战斗力
+  ZOMBIE_KILLS: 击杀僵尸数
+  HIGHEST_ZOMBIES_ROUND: 僵尸模式纪录
+Inventories:
+  Game-Mode-Selector: '&9选择要加入的游戏模式'
+  Profile: '&a信息'
+  Quit: '&c确定要退出吗?'
+  Stats: '&9你的数据'
+  Achievements: '&d成就：'
+  Loadout: '&c装备：'
+  Inventory: '&9背包：'
+  Classic-Mode: '&d经典模式地图'
+  Free-Mode: '&a乱斗模式地图'
+  Zombies: '&b僵尸模式地图'
+  Sell-Confirm: '&c确定要出售吗?'
+  Purchase-Confirm: '&a出售成功！'
+  Challenge-Queue: '&c选择要加入的队列'
+  Boosters: 奖励倍数
+Holographic-Stats:
+- '&7&m---&a %player_name% &7数据 &m---'
+- '&b击杀数 &7%arrow% &e%kills%'
+- '&b远征币 &7%arrow% &e%coins%'
+- '&b死亡数 &7%arrow% &e%deaths%'
+- '&b弹射物击中数 &7%arrow% &e%hits%'
+- '&b弹射物发射数 &7%arrow% &e%shots_fired%'
+- '&b获胜的锦标赛 &7%arrow% &e%tournament_wins%'
+- '&b获胜的挑战 &7%arrow% &e%challenge_wins%'
+- '&b经验 &7%arrow% &e%player_exp%'
+- '&b等级 &7%arrow% &e%player_rank%'
+- '&b击杀僵尸数 &7%arrow% &e%zombie_kills%'
+- '&b僵尸模式记录 &7%arrow% &e%highest_zombies_wave%'
+- '&7&m----------------------'
+Holographic-Leaderboard-Styling:
+  Header: '&7&m--&6 %star% &b箭与远征 排行榜 &6%star% &7&m--'
+  Body: '&7#&d1 &b%stat% &7- %player% - &e%score%'
+  Footer: '&7&m-------------------------'
+Stats-Inventory-Styling:
+  Stat: '&a%stat%：'
+  Value: '&e%value%'

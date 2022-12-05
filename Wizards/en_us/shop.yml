@@ -1,0 +1,109 @@
+#-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x#
+#-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x Shop Config x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x#
+#
+#Items:
+#Normal item "ID : AMOUNT"
+#Item with data "ID:DATA : AMOUNT"
+#Item with enchantment "ID : AMOUNT : enchant:ENCHANT_NAME:LEVEL"
+#Item with name and/or lore "ID : AMOUNT : name:name : lore:lore"
+#You can combine all those type of items however you want.
+#
+#You can also set from name and lore config.
+#
+#-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x#
+
+name: '&9Shop'
+rows: 6
+
+pyromancer:
+ item: 'GOLDEN_HOE : 1'
+ name: '&6Pyromancer'
+ lore:
+ - '&7Shots a spell of fire causing'
+ - '&c2.5❤ &7of damage.'
+ slot: 1
+herobrine:
+ item: 'GOLDEN_AXE : 1'
+ name: '&6Herobrine'
+ lore:
+ - '&7Shots a spell of Lightning'
+ - '&7causing with &c3.0❤ &7'
+ - '&7of damage.'
+ slot: 3
+wither:
+ item: 'DIAMOND_AXE : 1'
+ name: '&6Wither'
+ lore:
+ - '&7Shots a wither skull'
+ - '&7causing with &c3.5❤ &7'
+ - '&7of damage.'
+ slot: 5
+aquamancer:
+ item: 'IRON_AXE : 1'
+ name: '&6Aquamancer'
+ lore:
+ - '&7Shots a spell of water'
+ - '&7healing and causing'
+ - '&7damage.'
+ slot: 7
+mage:
+ item: 'IRON_HOE : 1'
+ name: '&6Mage'
+ lore:
+ - '&7Fires a spell that will'
+ - '&7follow nearby enimies.'
+ slot: 10
+fighter:
+ item: 'DIAMOND_SWORD : 1'
+ name: '&6Fighter'
+ lore:
+ - '&7After using your skill'
+ - '&7the next hit will be a'
+ - '&7super punch that can'
+ - '&7cause more damage when'
+ - '&7target impacts on walls!'
+ slot: 12
+enderman:
+ item: 'ENDER_PEARL : 1'
+ name: '&6Enderman'
+ lore:
+ - '&7Fires a spell that cause'
+ - '&7negative effects to'
+ - '&7enemies.'
+ - ' '
+ - '&7Press shift to use recall and'
+ - '&7recover health, mana and '
+ - '&7previous location. '
+ slot: 14
+crusader:
+ item: 'STONE_AXE : 1'
+ name: '&6Crusader'
+ lore:
+ - '&7Creates a temporarily shield'
+ - '&7that reduces all damage'
+ - '&7received by 35%.'
+ - ' '
+ - '&7Causes damage to nearby enemies.'
+ slot: 16
+shaman:
+  item: 'IRON_SWORD : 1'
+  name: '&6Shaman'
+  lore:
+    - '&7Creates a tornado that'
+    - '&7causes damage per second'
+    - '&7and slow effect.'
+  slot: 19
+arcanist:
+  item: 'STONE_SWORD : 1'
+  name: '&6Arcanist'
+  lore:
+    - '&7Shots a instant spell'
+    - '&7that will cause damage'
+    - '&7to nearby players after'
+    - '&7hitting a target.'
+  slot: 21
+balance:
+  item: 'EMERALD : 1'
+  name: '&7Coins &6%balance%'
+  lore: [ ]
+  slot: 49

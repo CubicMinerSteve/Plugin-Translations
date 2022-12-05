@@ -1,0 +1,448 @@
+#    ------------村庄保卫战语言文件------------
+#         支持样式化代码，例如颜色代码 (&)
+#             Translated By WaftingScent
+#
+#                使用 \n 进行换行
+#             职业及职业描述不支持换行
+#       相应内容自动取 40 个字符为一行整体输出
+#
+#           某些文本支持 %player%, %kit% 
+#               作为对应内容的占位符
+
+# 村庄保卫战命令提示
+Commands:
+  Did-You-Mean: "&6未知命令! 是否要输入 &e/%command%&6?"
+  Command-Executed: "&a成功执行命令!"
+  Teleported-To-The-Lobby: "已传送到大厅!"
+  Removed-Game-Instance: "&c成功删除游戏房间!"
+  No-Arena-Like-That: "&c游戏房间不存在!"
+  Look-Sign: "&c你必须对准牌子才能执行此命令!"
+  Type-Arena-Name: "&c请输入游戏房间名称!"
+  Hold-Any-Item: "&c你必须手持物品!"
+  No-Free-Arenas: "&c暂无空闲房间!"
+  Statistics:
+    Type-Name: "&c请输入要查看的数据类型!"
+    Invalid-Name: "&c无效的数据类型! 支持类型: kills - 击杀, deaths - 死亡, games_played - 总场次, highest_wave - 最高波数, level - 等级"
+    Header: "&8&m-------------------[&6 前 10 名 &8&m]-------------------"
+    Format: "&e#%position% %name% - %value% &7%statistic%"
+  Only-By-Player: "&c只能以玩家身份执行此命令!"
+  Not-Playing: "&c你需要在游戏中执行此命令!"
+  No-Permission: "&c你的权限不足!"
+  Invalid-Number: "&c波数必须是数字! 例如 %correct%"
+  Target-Player-Not-Found: "&c目标玩家不存在!"
+  Location-Teleport-Invalid: "&c传送位置无效!"
+  Wrong-Usage: "&c命令格式错误. 正确示例: %correct%"
+  Admin-Commands:
+    Added-Orbs: "&7给予目标玩家金币!"
+    Received-Orbs: "&7你获得了 &a%orbs% 金币&7!"
+    Added-Level: "&7给予目标玩家等级!"
+    Success-Reload: "&a游戏成功重载!"
+    List-Command:
+      Header: "&a村庄保卫战 &6房间:"
+      Format: "&a%arena% &e%status% &6%players%/%maxplayers%"
+      No-Arenas: "&c无可用游戏房间!"
+    Spychat-Command:
+      Toggled: "&a游戏聊天管理模式: &c %value%"
+  Stats-Command:
+    Header: "&l----- 你的数据 -----"
+    Header-Other: "&l----- %player%-----"
+    Footer: "&l--------------------"
+    Kills: "&a击杀僵尸数: &e"
+    Deaths: "&a玩家死亡数: &e"
+    Games-Played: "&a总场次: &e"
+    Highest-Wave: "&a最高波数: &e"
+    Level: "&a等级: &e"
+    Exp: "&a经验: &e"
+    Orbs: "&a金币: &e"
+    Next-Level-Exp: "&a升级所需经验: &e"
+  Main-Command:
+    Header: "&6----------------{村庄保卫战 - 命令}----------"
+    Description: "&a游戏命令:\n
+    &b/vd stats: &7显示玩家数据!\n
+    &b/vd leave: &7离开当前游戏房间!\n
+    &b/vd join <房间名>: &7加入指定游戏房间!\n
+    &b/vd top <数据类型>: &7查看对应数据的前 10 名玩家!\n
+    &b/vd selectkit: &7选择游戏职业!\n
+    &b/vd randomjoin: &7随机加入房间!"
+    Admin-Bonus-Description: "\n&b/vda: &7显示所有管理员指令!"
+    Footer: "&6-------------------------------------------------"
+
+# 游戏内计分板文本
+# 请不要在此使用超过 48 个字符的文字描述! 包含颜色代码!
+# 占位符:
+# %ARENA_NAME% - 返回房间名.
+# %ARENA_ID% - 返回房间ID.
+# %VILLAGERS% - 返回剩余村民数.
+# %PLAYERS_LEFT% - 返回剩余玩家数.
+# %MIN_PLAYERS% - 返回开始游戏的最小玩家数.
+# %PLAYERS% - 返回房间内所有玩家数. (包含已死亡与观战玩家)
+# %ZOMBIES% - 返回当前波数剩余僵尸数.
+# %ROTTEN_FLESH% - 返回献祭腐肉数.
+# %TIME% - 以秒为单位返回时间.
+# %ORBS% - 返回目标玩家当前金币数.
+Scoreboard:
+  Title: "&a&l村庄保卫战"
+  Content:
+    # 波次未结束时计分板内容
+    Playing:
+      - "&f剩余村民: &e%VILLAGERS%"
+      - "&f剩余玩家: &e%PLAYERS_LEFT%"
+      - "&f剩余僵尸: &e%ZOMBIES%"
+      - ""
+      - "&f献祭腐肉: &e%ROTTEN_FLESH%"
+      - "&f金币: &e%ORBS%"
+      - ""
+      - "&eBeForever 小游戏服"
+    # 波次间隔时计分板内容
+    Playing-Waiting:
+      - "&f剩余村民: &e%VILLAGERS%"
+      - "&f剩余玩家: &e%PLAYERS_LEFT%"
+      - ""
+      - "&f下一波: &e%TIME%"
+      - ""
+      - "&f献祭腐肉: &e%ROTTEN_FLESH%"
+      - "&f金币: &e%ORBS%"
+      - ""
+      - "&eBeForever 小游戏服"
+    Waiting:
+      - "&f玩家数: &e%PLAYERS%"
+      - ""
+      - "&f开始人数: &e%MIN_PLAYERS%"
+      - ""
+      - "&eBeForever 小游戏服"
+    Starting:
+      - "&f游戏开始: &e%TIME%"
+      - ""
+      - "&f玩家数: &e%PLAYERS%"
+      - ""
+      - "&f开始人数: &e%MIN_PLAYERS%"
+      - ""
+      - "&eBeForever 小游戏服"
+
+# 当且仅当 boss 血量条在 config.yml 中启用时有效
+Bossbar:
+  Main-Title: "&a&l村庄保卫战 &6- BeForever 小游戏服"
+  Starting-In: "&f&l开始倒计时: &e&l%time%"
+  Waiting-For-Players: "&4&l等待更多玩家..."
+  In-Game-Wave: "&f&l当前波数: &e&l%wave%"
+  In-Game-Info: "&e&l正在 &b&lBeForever 小游戏服 &e&l上游玩 &f&l村庄保卫战 &e&l!"
+  Game-Ended: "&c&l游戏结束! 感谢你游玩 &b&lBeForever 小游戏服 &c&l!"
+
+Kits:
+  Kit-Menu:
+    Title: "职业菜单"
+    Unlocked-Kit-Lore: "&a已解锁!"
+    Locked-Lores:
+      Locked-Lore: "&c未解锁!"
+      Unlock-At-Level: "&a需要等级 %NUMBER% 解锁"
+      Unlock-In-Store: "&b请在商店内解锁此职业!"
+  Not-Unlocked-Message: "&c你还没有解锁职业 &b%KIT% &c!"
+  Choose-Message: "&a你已选择职业 &b%KIT% &a!"
+  Open-Kit-Menu: "打开职业菜单"
+  Ability-Still-On-Cooldown: "&c技能冷却中! 请等待 %COOLDOWN% 秒!"
+  # 职业描述与职业物品自动取 40 个字符为一行且不支持 \n 换行
+  Cleaner:
+    Kit-Name: "&b扫地僧"
+    Kit-Description: "&7看似平凡的僧人，却用有着强大的能力! 这种能力能让数百只僵尸瞬间蒸发，然而花费的精力挺大的……"
+    Game-Item-Name: "&6强大的木棍!"
+    Game-Item-Lore: "&7右键杀死所有僵尸! 冷却时间: 60 秒"
+    Cleaned-Map: "&b玩家 %PLAYER% 清空了地图!"
+    Nothing-To-Clean: "&a地图已被清空!" #警告: 管理员命令执行成功后也将提示此信息!!!
+  Zombie-Teleporter:
+    Kit-Name: "&2僵尸传送师"
+    Kit-Description: "&7把僵尸拉到你周围! 许多人认为这是最没用的职业了! 然而我认为他们大错特错!"
+    Game-Item-Name: "僵尸传送器" #警告: 这也是僵尸传送器的 GUI 名称!
+    Game-Item-Lore: "&7把僵尸拉到你周围!"
+    Zombie-Teleported: "&a已将僵尸弱化并传送至你所在的位置!"
+    No-Available-Zombies: "&c没有僵尸可供传送了!"
+  Knight:
+    Kit-Name: "&2骑士"
+    Kit-Description: "&7这是游戏内仅有的骑士职业! 许多人认为这一点用都没有! 我将证明他们大错特错!"
+  Light-Tank:
+    Kit-Name: "&2轻型坦克"
+    Kit-Description: "&7拥有额外的 3 颗心!"
+  Archer:
+    Kit-Name: "&6弓箭手"
+    Kit-Description: "&7皮革盔甲、木剑，还有一把弓!你知道吗，村民们超爱弓箭手的!"
+  Puncher:
+    Kit-Name: "&6工兵"
+    Kit-Description: "&7用你的铲子打飞那些僵尸! 击退 V 对你来说一点也不稀奇!"
+  Healer:
+    Kit-Name: "&6牧师"
+    Kit-Description: "&7让世间充满爱吧! 你能够治疗队友和村民，每一波还能得到药水补给!"
+  Looter:
+    Kit-Name: "&6掠夺者"
+    Kit-Description: "&7杀死一只僵尸时额外掉落 1 片腐肉!"
+  Runner:
+    Kit-Name: "&6神行太保"
+    Kit-Description: "&7你对奔跑充满热情! 你跑得比香港记者还快，跳的也蛮高的!"
+  Medium-Tank:
+    Kit-Name: "&6中型坦克"
+    Kit-Description: "&7额外的 6 颗心! 别慌，你还有一大堆的生命值没掉完呢!"
+  Worker:
+    Kit-Name: "&6工人"
+    Kit-Description: "&7开局获得 2 扇门，每一波都能再得到 1 扇，修补破损的门成为奸商的爷爷吧!"
+    Game-Item-Place-Message: "&a木门已放置!"
+  Dog-Friend:
+    Kit-Name: "&b狗王"
+    Kit-Description: "&7开局三条狗，装备全靠爆! 每一波得到一条作为补给! "
+  Hardcore:
+    Kit-Name: "&6极限猛男"
+    Kit-Description: "&7你会明白“极限”是什么意思的!"
+  Golem-Friend:
+    Kit-Name: "&6傀儡召唤师"
+    Kit-Description: "&7开局获得 1 只铁傀儡，每 5 波补给一次!"
+  Tornado:
+    Kit-Name: "&b唤风者"
+    Kit-Description: "&7召唤威力巨大的龙卷风!"
+    Game-Item-Name: "龙卷风摧毁停车场"
+    Game-Item-Lore: "&7右键在当前位置生成龙卷风!"
+  Terminator:
+    Kit-Name: "&6终结者"
+    Kit-Description: "&7用你强大的力量碾碎那些僵尸!"
+  Teleporter:
+    Kit-Name: "&b传送师"
+    Kit-Description: "&7传送对于每个人来说都是魔法，除了你! 你能瞬间传送到快断气的村民面前!"
+    Game-Item-Name: "&r传送菜单"
+    Game-Item-Lore: "&7右键打开传送菜单!"
+    Game-Item-Menu-Name: "传送菜单"
+    Teleported-To-Villager: "&a传送完成!"
+    Villager-Warning: "&4未找到指定村民! 这家伙或许已经化成了一缕烟~"
+    Teleported-To-Player: "&a传送至玩家 %PLAYER%"
+    Player-Not-Found: "&c未找到指定玩家! 请重试!"
+  Heavy-Tank:
+    Kit-Name: "&b重型坦克"
+    Kit-Description: "&7全套铁甲再加上额外的一排血量! 你没听错，你将站到最后!(如果没有人在你旁边疯狂按 F 的话)"
+  Shot-Bow:
+    Kit-Name: "&b弓箭大师"
+    Kit-Description: "&7你发明了一把杀伤力极强的弓，猛♂射那些僵尸吧!"
+  Blocker:
+    Kit-Name: "&b护卫"
+    Kit-Description: "&7用你特制的障碍阻挡僵尸的进攻! 放置后 10 秒内有效!"
+    Game-Item-Name: "障碍"
+    Game-Item-Lore: "&7放置障碍阻挡僵尸的进攻! 屏障将持续 10 秒!"
+    Game-Item-Place-Message: "&a障碍已放置!"
+    Game-Item-Place-Fail: "&c无法在此处放置障碍!"
+  Premium-Hardcore:
+    Kit-Name: "&b真男人"
+    Kit-Description: "&7用你的 OP 大宝剑爆杀大部分僵尸! 然而你应该慎重考虑一下! 如果你真的不逊的话可以选它!"
+  Medic:
+    Kit-Name: "&6医疗兵"
+    Kit-Description: "&7你每攻击一次僵尸，就有 10% 的概率治疗你 5 格之内的队友."
+  Wild-Naked:
+    Kit-Name: "&b赤身“棵”体"
+    Kit-Description: "&7你超勇的! 开局手持锋利 VI 亡灵杀手 II 的剑!"
+    Cannot-Wear-Armor: "&c你不能穿戴任何盔甲!"
+  Wizard:
+    Kit-Name: "&b巫师"
+    Kit-Description: "&7你只有一半的生命值! 但为了从不死之族的手中救下村民，你还是决定前来支援! 使用你的暗黑魔法摧毁那些僵尸吧!"
+    Staff-Item-Name: "法杖"
+    Staff-Item-Lore: "&7右键抛射暗物质"
+    Essence-Item-Name: "暗黑精华"
+    Essence-Item-Lore: "&7点击吸收周围物质并生成一个荆棘盾牌! 持续 5 秒!"
+
+In-Game:
+  # 请不要在村民名称中使用空格. 名称长度与名称个数没有限制 :)
+  Villager-Names: "Jagger,Kelsey,Kelton,Haylie,Harlow,Howard,Wulffric,Winfred,Ashley,Bailey,Beckett,Alfredo,Alfred,Adair,Edgar,ED,Eadwig,Edgaras,Buckley,Stanley,Nuffley,Mary,Jeffry,Rosaly,Elliot,Harry,Sam,Rosaline,Tom,Ivan,Kevin,Adam"
+  #游戏内大部分文本.
+  Plugin-Prefix: "&a[村庄保卫战] "
+  Already-Playing: "&c你已经在一个队列中了! 使用 /vd leave 离开当前游戏."
+  Join-No-Permission: "&c你没有 &6%permission% &c权限，无法加入该场地!"
+  Full-Game-No-Permission: "&c你没有加入满人游戏的权限!"
+  No-Slots-For-Premium: "&c抱歉，VIP玩家已满!"
+  Dead-Tag-On-Death: "&8已阵亡"
+  Game-Chat-Format: "&6[&5%level%&6]&6[%kit%&6] %player%: &f%message%"
+  Death-Screen: "&c你已阵亡!"
+  Died-Respawn-In-Next-Wave: "&e&l不要离开! &a波次结束后你将立即重生!"
+  Back-In-Game: "&a你回到了游戏中并不再观战!"
+  You-Are-Spectator: "&c你处于观察者模式! 你可以四处飞行!"
+  You-Leveled-Up: "&7你升级了! 当前等级: %NUMBER%!"
+  Orbs-Pickup: "&6+ %number% 金币"
+  Rotten-Flesh-Level-Up: "&b神明对你们献上的腐肉非常满意! &b他们给予了你额外的血量!"
+  Only-Command-Ingame-Is-Leave: "&c你必须在退出游戏后才能执行其他命令. 当前唯一可用指令 /vd leave!"
+  Spawned-Wolf-Name: "%player% 的狼"
+  Spawned-Wolf-Death: "你的一只狼被击杀!"
+  Spawned-Golem-Name: "%player% 的铁傀儡"
+  # 通过使用 VillageDefense API 的外部插件并取消加入游戏时生效.
+  Join-Cancelled-Via-API: "&c你不能加入该房间!"
+  Join-As-Party-Member: "&c你跟随队长加入了房间 %ARENANAME% !"
+  Arena-Not-Configured: "&c房间未配置! 请联系管理员!"
+  Spectator:
+    Spectator-Menu-Name: "存活玩家: "
+    Target-Player-Health: "&c生命值: &7%health%"
+    Spectator-Warning: "&c你现在是观察者! 在重生前你无法与地图交互!"
+    Settings-Menu:
+      Inventory-Name: "&7观察者设置"
+      Speed-Name: "&a速度"
+  Messages:
+    Lobby-Messages:
+      Start-In: "&7游戏将在 &b%TIME%&7 秒后开始!"
+      Waiting-For-Players: "&7等待更多玩家... 需要至少 &b%MINPLAYERS%&7 名玩家才能开始游戏."
+      Enough-Players-To-Start: "&7拥有足够玩家，游戏即将开始!"
+      Game-Started: "&7游戏开始! 帮助村民抵御重重僵尸的入侵!"
+      Kicked-For-Premium-Slot: "&c%PLAYER% 被一个 VIP 玩家取代了游戏位置!"
+      You-Were-Kicked-For-Premium-Slot: "&c一个 VIP 玩家加入了游戏，你已被移出房间!"
+      Not-Enough-Space-For-Party: "&c你的队伍对于房间 %ARENANAME% 的空余人数过大，无法加入"
+    Join: "&b%PLAYER% &7加入了游戏 (%PLAYERSIZE%/%MAXPLAYERS%)!"
+    Leave: "&b%PLAYER% &7离开了游戏 (%PLAYERSIZE%/%MAXPLAYERS%)!"
+    Death: "&b%PLAYER% &7已阵亡!"
+    Next-Wave-In: "&7下一波将在 &b%NUMBER%&7 秒后开始!"
+    Wave-Started: "&7第 &b%NUMBER%&7 波开始!"
+    Wave-Title:
+      # 标题状态持续时间: 淡入, 停留, 淡出  单位: 游戏刻
+      # %wave%
+      Start:
+        Times: "20, 30, 20"
+        Title: "第 %wave% 波开始"
+        SubTitle: ""
+      End:
+        Times: "20, 30, 20"
+        Title: "第 %wave% 波结束"
+        SubTitle: ""
+    Villager-Died: "&c一位村民已死亡!"
+    You-Feel-Refreshed: "&a你感到容光焕发，生命值全部恢复!"
+    Cant-Ride-Others-Golem: "&c你不能骑乘其他人的铁傀儡!"
+    Golem-Spawned: "&a村庄内已生成铁傀儡!"
+    Wolf-Spawned: "&a村庄内已生成狼!"
+    Zombie-Got-Stuck-In-The-Map: "&c似乎僵尸卡在地图的某个地方. 别担心! 神明帮你清除掉它!"
+    Shop-Messages:
+      Shop-GUI-Name: "&l商店"
+      Golem-Item-Name: "生成铁傀儡"
+      Wolf-Item-Name: "生成狼"
+      Mob-Limit-Reached: "&c无法购买生物! 你已经达到了 %amount% 只生物的上限!"
+      Not-Enough-Orbs: "&c金币不足，你需要更多金币!"
+      Currency-In-Shop: "金币"
+      No-Shop-Defined: "&c未设置商店! 请联系管理员!"
+    Game-End-Messages:
+      Summary-Message:
+        - "&a&m--------------------------------------------------"
+        - "&f&l村庄保卫战"
+        - ""
+        - "%summary%"
+        - ""
+        - ""
+        - "&e&l波数: &7%wave% &8(最高波数 %player_best_wave%)"
+        - "&6&l击杀僵尸数: &7%zombies%"
+        - "&c&l总花费金币: &7%orbs_spent%"
+        - ""
+        - "&a&m--------------------------------------------------"
+      Summary-Players-Died: "&7所有玩家阵亡!"
+      Summary-Villagers-Died: "&7所有村民死亡!"
+      Summary-Win-Game: "&7最后一波结束! 游戏获胜!"
+    Admin-Messages:
+      Set-Starting-In-To-0: "&b管理员将倒计时设置为 0. 游戏开始!"
+      Removed-Villagers: "&b玩家 %PLAYER% 清除了所有的村民!"
+      Removed-Golems: "&b玩家 %PLAYER% 清除了所有的铁傀儡!"
+      Removed-Zombies: "&b玩家 %PLAYER% 清除了所有的僵尸!"
+      Removed-Wolves: "&b玩家 %PLAYER% 清除了所有的狼!"
+      Changed-Wave: "&b管理员将波数更改为第 %NUMBER% 波"
+
+Powerups:
+  Map-Clean-Powerup:
+    Name: "&e&l地图清空"
+    # 以副标题的形式显示
+    Description: "&7地图已被清空!"
+  Double-Damage-Powerup:
+    Name: "&c&l双倍伤害"
+    Description: "&7获得持续 %time% 秒的双倍伤害!"
+  Healing-Powerup:
+    Name: "&6&l生命恢复"
+    Description: "&7获得持续 %time% 秒的生命恢复!"
+  Golem-Raid-Powerup:
+    Name: "&a&l铁人冲击"
+    Description: "&7铁傀儡已支援村庄!"
+  One-Shot-One-Kill-Powerup:
+    Name: "&b&l一击必杀"
+    Description: "&7一击秒杀僵尸!"
+  Powerup-Ended-Title-Message: "&4事件 %powerup% 已结束!"
+
+Signs:
+  Please-Type-Arena-Name: "&c请在第二行输入房间名!"
+  Arena-Doesnt-Exists: "&c游戏房间不存在!"
+  Sign-Created: "&a成功创建牌子!"
+  Sign-Removed: "&a成功移除牌子!"
+  Game-States:
+    Inactive: "&l不可用..."
+    In-Game: "&l游戏中"
+    Starting: "&e&l准备开始"
+    Full-Game: "&4&l玩家已满"
+    Ending: "&l结束中"
+    Restarting: "&c&l重启中"
+  Lines:
+    - "&a&l村庄保卫战"
+    - "%state%"
+    - "%mapname%"
+    - "&5[%playersize%/%maxplayers%]"
+
+Arena-Selector:
+  Inv-Title: "村庄保卫战 > 选择房间"
+  Item:
+    Name: "&f%mapname%"
+    Lore:
+      - "&a村庄保卫战 &f- &e%mapname%"
+      - " "
+      - " "
+      - "  &f玩家数: %playersize%/%maxplayers%"
+      - "  &f状态: %state%"
+      - " "
+      - " "
+      - "&e点击加入房间"
+
+#当且仅当在配置文件中启用升级选项时有效!
+Upgrade-Menu:
+  Title: '&3&l属性升级'
+  Stats-Item:
+    Name: '&3&l当前数据'
+    Description: '&3移动速度: &8%speed%; &3攻击伤害: &8%damage%; &3生命值:
+      &8%current_hp%/%max_hp%'
+  Upgrades:
+    Health:
+      Name: '&3&l生命提升'
+      Description: '&3提升等级至 &8%tier% &3!;&3生命: &8%from% &3-> &8%to%;&3升级花费: &8%cost%;;&8点击升级'
+    Damage:
+      Name: '&3&l伤害加成'
+      Description: '&3提升等级至 &8%tier% &3!;&3伤害: &8%from% &3-> &8%to%;&3升级花费: &8%cost%;;&8点击升级'
+    Speed:
+      Name: '&3&l凌波微步'
+      Description: '&3提升等级至 &8%tier% &3!;&3速度: &8%from% &3-> &8%to%;&3升级花费: &8%cost%;;&8点击升级'
+    Swarm-Awareness:
+      Name: '&3&l群体意识'
+      Description: '&3提升等级至 &8%tier% &3!;&3伤害倍率: &8%from% &3-> &8%to%;&3发动进攻的狼半径 3 格内的狼越多，狼造成的伤害越高;&3升级花费: &8%cost%;;&8点击升级'
+    Final-Defense:
+      Name: '&3&l最后一搏'
+      Description: '&3提升等级至 &8%tier% &3!;&3爆炸半径: &8%from% &3-> &8%to%;&3铁傀儡在死亡后会造成爆炸并击晕所有的僵尸;&3升级花费: &8%cost%;;&8点击升级'
+  Upgraded-Entity: '&3已将属性等级提升至 &8%tier%&3!'
+  Cannot-Afford: '&3金币不足，无法升级!'
+  Max-Tier: '&3已达到最高等级!'
+
+#当且仅当在配置文件中启用全息统计图时有效!
+Leaderboard-Holograms:
+  Header: '&6&l前 %amount% 名 - %statistic%'
+  Format: '&e%place%. &f%nickname% (%value%)'
+  Format-Empty: '&e%place%. &f空 (0)'
+  Unknown-Player: '&f未知玩家'
+  Statistics:
+    Kills: '&e击杀僵尸数'
+    Deaths: '&e玩家死亡数'
+    Games-Played: '&e总场次'
+    Highest-Wave: '&e最高波数'
+    Level: '&e等级'
+    Xp: '&e经验'
+    Orbs: '&e金币'
+
+Validator:
+  Invalid-Arena-Configuration: "[村庄保卫战] 房间 %arena% 配置无效! 缺少节点: %error%"
+  Instance-Started: "[村庄保卫战] 游戏房间 %arena% 正在运行!"
+  No-Instances-Created: "[村庄保卫战] 配置文件中无可用房间!"
+
+Placeholders:
+  Game-States:
+    Waiting: "&l等待更多玩家..."
+    Starting: "&e&l准备开始"
+    In-Game: "&l游戏中"
+    Ending: "&l结束中"
+    Restarting: "&c&l重启中"
+
+# 请不要编辑以下内容，但又有谁拦着你呢? 这是你自己的服务器!
+# 认真的，请不要编辑 ;p
+File-Version-Do-Not-Edit: 19

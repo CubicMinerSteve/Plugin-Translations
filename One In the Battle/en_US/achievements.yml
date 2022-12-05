@@ -1,0 +1,112 @@
+Achievements:
+  kills:
+    '5':
+      description: Get 5 kills!
+      prize-description: Receive 50 coins!
+      executed-command: oitb coins add %player% 50
+    '20':
+      description: Get 20 kills!
+      prize-description: Receive 200 coins!
+      executed-command: oitb coins add %player% 200
+    '50':
+      description: Get 50 kills!
+      prize-description: Receive 500 coins!
+      executed-command: oitb coins add %player% 500
+    '100':
+      description: Get 100 kills!
+      prize-description: Receive 1000 coins!
+      executed-command: oitb coins add %player% 1000
+  bow-hits:
+    '10':
+      description: Shoot 10 players with your bow!
+      prize-description: Receive 100 coins!
+      executed-command: oitb coins add %player% 100
+    '50':
+      description: Shoot 50 players with your bow!
+      prize-description: Receive 500 coins!
+      executed-command: oitb coins add %player% 500
+    '100':
+      description: Shoot 100 players with your bow!
+      prize-description: Receive 1000 coins!
+      executed-command: oitb coins add %player% 1000
+    '200':
+      description: Shoot 200 players with your bow!
+      prize-description: Receive 2000 coins!
+      executed-command: oitb coins add %player% 2000
+  tournament-wins:
+    '1':
+      description: Win a tournament for the first time!
+      prize-description: Receive 300 coins!
+      executed-command: oitb coins add %player% 300
+    '5':
+      description: Win 5 tournaments!
+      prize-description: Receive 1500 coins!
+      executed-command: oitb coins add %player% 1500
+    '20':
+      description: Win 20 tournaments!
+      prize-description: Receive 3000 coins!
+      executed-command: oitb coins add %player% 3000
+    '30':
+      description: Win 30 tournaments!
+      prize-description: Receive 4000 coins!
+      executed-command: oitb coins add %player% 4000
+  challenges-won:
+    '1':
+      description: Win a challenge for the first time!
+      prize-description: Receive 100 coins!
+      executed-command: oitb coins add %player% 100
+    '5':
+      description: Win 5 challenges!
+      prize-description: Receive 500 coins!
+      executed-command: oitb coins add %player% 500
+    '20':
+      description: Win 20 challenges!
+      prize-description: Receive 1000 coins!
+      executed-command: oitb coins add %player% 1000
+    '30':
+      description: Win 30 challenges!
+      prize-description: Receive 2000 coins!
+      executed-command: oitb coins add %player% 2000
+  rankup:
+    '5':
+      description: Reach rank 5!
+      prize-description: Receive 100 coins!
+      executed-command: oitb coins add %player% 100
+    '10':
+      description: Reach rank 10!
+      prize-description: Receive 500 coins!
+      executed-command: oitb coins add %player% 500
+    '15':
+      description: Reach rank 15!
+      prize-description: Receive 1000 coins!
+      executed-command: oitb coins add %player% 1000
+    '20':
+      description: Reach rank 20!
+      prize-description: Receive 1500 coins!
+      executed-command: oitb coins add %player% 1500
+    '25':
+      description: Reach rank 25!
+      prize-description: Receive 2000 coins!
+      executed-command: oitb coins add %player% 2000
+    '30':
+      description: Reach rank 30!
+      prize-description: Receive 3000 coins!
+      executed-command: oitb coins add %player% 3000
+  mobs-killed:
+    '50':
+      description: Kill 50 mob!
+      prize-description: Receive 100 coins!
+      executed-command: oitb coins add %player% 100
+    '200':
+      description: Kill 200 mob!
+      prize-description: Receive 200 coins!
+      executed-command: oitb coins add %player% 200
+    '500':
+      description: Kill 500 mob!
+      prize-description: Receive 500 coins!
+      executed-command: oitb coins add %player% 500
+    '1000':
+      description: Kill 1000 mob!
+      prize-description: Receive 1000 coins!
+      executed-command: oitb coins add %player% 1000
+ 

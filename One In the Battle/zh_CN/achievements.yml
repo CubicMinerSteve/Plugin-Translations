@@ -1,0 +1,112 @@
+Achievements:
+  kills:
+    '5':
+      description: 获得 5 次击杀！
+      prize-description: 奖励 50 枚远征币！
+      executed-command: oitb coins add %player% 50
+    '20':
+      description: 获得 20 次击杀！
+      prize-description: 奖励 200 枚远征币！
+      executed-command: oitb coins add %player% 200
+    '50':
+      description: 获得 50 次击杀！
+      prize-description: 奖励 500 枚远征币！
+      executed-command: oitb coins add %player% 500
+    '100':
+      description: 获得 100 次击杀！
+      prize-description: 奖励 1000 枚远征币！
+      executed-command: oitb coins add %player% 1000
+  bow-hits:
+    '10':
+      description: 用弓击杀玩家 10 次！
+      prize-description: 奖励 100 枚远征币！
+      executed-command: oitb coins add %player% 100
+    '50':
+      description: 用弓击杀玩家 50 次！
+      prize-description: 奖励 500 枚远征币！
+      executed-command: oitb coins add %player% 500
+    '100':
+      description: 用弓击杀玩家 100 次！
+      prize-description: 奖励 1000 枚远征币！
+      executed-command: oitb coins add %player% 1000
+    '200':
+      description: 用弓击杀玩家 200 次！
+      prize-description: 奖励 2000 枚远征币！
+      executed-command: oitb coins add %player% 2000
+  tournament-wins:
+    '1':
+      description: 赢得 1 场锦标赛！
+      prize-description: 奖励 300 枚远征币！
+      executed-command: oitb coins add %player% 300
+    '5':
+      description: 赢得 5 场锦标赛！
+      prize-description: 奖励 1500 枚远征币！
+      executed-command: oitb coins add %player% 1500
+    '20':
+      description: 赢得 20 场锦标赛！
+      prize-description: 奖励 3000 枚远征币！
+      executed-command: oitb coins add %player% 3000
+    '30':
+      description: 赢得 30 场锦标赛！
+      prize-description: 奖励 4000 枚远征币！
+      executed-command: oitb coins add %player% 4000
+  challenges-won:
+    '1':
+      description: 赢得 1 次挑战！
+      prize-description: 奖励 100 枚远征币！
+      executed-command: oitb coins add %player% 100
+    '5':
+      description: 赢得 5 次挑战！
+      prize-description: 奖励 500 枚远征币！
+      executed-command: oitb coins add %player% 500
+    '20':
+      description: 赢得 20 次挑战！
+      prize-description: 奖励 1000 枚远征币！
+      executed-command: oitb coins add %player% 1000
+    '30':
+      description: 赢得 30 次挑战！
+      prize-description: 奖励 2000 枚远征币！
+      executed-command: oitb coins add %player% 2000
+  rankup:
+    '5':
+      description: 达到等级 5 ！
+      prize-description: 奖励 100 枚远征币！
+      executed-command: oitb coins add %player% 100
+    '10':
+      description: 达到等级 10 ！
+      prize-description: 奖励 500 枚远征币！
+      executed-command: oitb coins add %player% 500
+    '15':
+      description: 达到等级 15 ！
+      prize-description: 奖励 1000 枚远征币！
+      executed-command: oitb coins add %player% 1000
+    '20':
+      description: 达到等级 20 ！
+      prize-description: 奖励 1500 枚远征币！
+      executed-command: oitb coins add %player% 1500
+    '25':
+      description: 达到等级 25 ！
+      prize-description: 奖励 2000 枚远征币！
+      executed-command: oitb coins add %player% 2000
+    '30':
+      description: 达到等级 30 ！
+      prize-description: 奖励 3000 枚远征币！
+      executed-command: oitb coins add %player% 3000
+  mobs-killed:
+    '50':
+      description: 击杀 50 只怪物！
+      prize-description: 奖励 100 枚远征币！
+      executed-command: oitb coins add %player% 100
+    '200':
+      description: 击杀 200 只怪物！
+      prize-description: 奖励 200 枚远征币！
+      executed-command: oitb coins add %player% 200
+    '500':
+      description: 击杀 500 只怪物！
+      prize-description: 奖励 500 枚远征币！
+      executed-command: oitb coins add %player% 500
+    '1000':
+      description: 击杀 1000 只怪物！
+      prize-description: 奖励 1000 枚远征币！
+      executed-command: oitb coins add %player% 1000
+ 

@@ -1,0 +1,163 @@
+prefix: '&7[&bOITB&7] '
+
+party-prefix: '&7[&bParty&7] '
+signs-prefix: '&7[&bOITB&7]'
+Messages:
+  Leave-Game: You have left the game!
+  Unknown-Command: Unknown command! please use /oitb for a list of commands
+  No-Lobby-Found: Could not find an available lobby!
+  Already-In-Game: You are already in a game!
+  Not-In-Game: You are not in a game to do this!
+  Coins-Increase: Your coins have increased! &a(+%coins%)
+  Coins-Decrease: Your coins have decreased! &c(%coins%)
+  Modifier-Change: Your modifier has changed to %modifier%!
+  Stats-Reset: Your stats have been reset!
+  Receive-Item: You have received a new item!
+  Receive-Perk: You have received a new perk!
+  Receive-Case: You have &asuccessfully &7received &b%amount%&7x %case% case(s)!
+  Party-Create-Deny: You already have a party! if you want to create a new one, you must disband/leave your current one first!
+  Party-Create-Party-Exists: There is already a party with that name!
+  Party-Create-Success: You have &asuccessfully &7created a new party with the name (&b%party%&7)
+  No-Party: You dont have a party to do this!
+  Must-Be-Leader: You must be the party leader to do this!
+  No-Player-Found: Could not find a player with that name!
+  Player-Already-Invited: You have already sent this player an invitation!
+  Player-Already-In-Party: That player is already in your party!
+  Already-In-Party: You already have a party! if you want to join a new one, you must leave your current one
+  No-Party-Found: Could not find a party with that name!
+  Not-Invited: You are not invited to this party!
+  Cant-Leave-Party: As the leader of the party, you can only disband the party
+  Party-Unknown-Command: Unknown command! please use /oitb party for a list of commands
+  Party-Chat-Enable: You have &aenabled &7party chat!
+  Party-Chat-Disable: You have &cdisabled &7party chat!
+  Party-Disband: Party has been disbanded!
+  Party-Invite-Send: You have been invited to %leader% party! use /oitb party join &a%party% &7to join the party!
+  Party-Invite-Send-Expiration-Warn: The invitation will expire after 30 seconds!
+  Party-Invite-Expire: The party invitation has expired!
+  Party-Player-Leave: You have left the party!
+  Party-Player-Leave-Broadcast: '&b%player% &7has left the party!'
+  Party-Player-Join-Broadcast: '&b%player% &7has joined the party!'
+  Party-Player-Invited-Notification: '%leader% invited &b%player% &7to the party!'
+  Party-Player-Not-In-Party: The player &b%player% &7is not in your party!
+  Party-Player-Kick-Broadcast: The leader has kicked &e%player%
+  Join-Game: You have joined the game lobby!
+  Command-Usage: 'Usage: /&aoitb %cmd% %usage%'
+  No-Permission: You dont have permission to do this!
+  Reload-Kick: You have been sent back to the lobby due to a reload!
+  No-Lobby-Kick: You will be removed from the game due to no available lobby!
+  Case-Unlock: '&aCongratulations! &7you have unlocked a new item and its currently available in your inventory!'
+  Case-Unlock-Fail: '&cError! &7Your inventory was full and due to that your opened case was wasted'
+  Map-Join: You have joined the map &a%map%&7!
+  Map-Join-Deny: You may not join this map!
+  Grace-End-Reminder: Grace is ending in &c%seconds% &7seconds!
+  Grace-Over: Grace is over! &cDamage &7has been enabled!
+  Tournament-End-Reminder: Tournament is ending in &c%seconds% &7seconds!
+  Challenge-End-Reminder: Challenge is ending in &cseconds &7seconds!
+  Cooldown: You must wait &d%seconds% &7seconds until you do this again
+  Rankup: '&aCongratulations! you have ranked up to rank &e%rank%'
+  Full-Inventory: '&cError! &7your inventory is full!'
+  Purchase-Error: '&cError! &7You may not purchase this perk right now!'
+  Not-Enough-Coins: '&cError! &7you dont have enough coins to do this purchase!'
+  Purchase-Success: You have &asuccessfully &7purchased %item% &7for &b%cost% &7coins!
+  Already-In-Queue: You are already in this queue!
+  Queue-Join-Error: You may not join this queue, because there are some maps that aren't fully setup yet!
+  Queue-Join: You have been &aadded &7to the queue!
+  Challenge-Queue-Remove: You have been &cremoved &7from the challenge queue!
+  Tournament-Queue-Remove: You have been &cremoved &7from the tournament queue!
+  No-Tournament-Maps: There are no available tournament maps!
+  Tournament-Join-Error: You can't join right now because the tournament is active!
+  Tournament-Countdown: A tournament is starting in &b%seconds% &7seconds!
+  Tournament-Countdown-Cancel: The tournament count down has been cancelled due to not having enough players!
+  Trade-Complete: The trade has been &asuccessfully &7completed
+  Trade-Cancel: The trade has been cancelled!
+  Trade-Error: You dont have any more open slots!
+  Lives-Remaining: You have &b%lives% &7live(s) remaining!
+  Challenge-Begin: The challenge has begun!
+  Player-Win-Challenge: '&ayou have won the challenge!'
+  Player-Win-Challenge-Broadcast: '&6%winners% &ewon a challenge against &7%losers%!'
+  Blue-Team-Join: You are on the &9BLUE &7team!
+  Red-Team-Join: You are on the &cRED &7team!
+  Challenge-Player-Eliminated: '%player% &7has been eliminated! &d(%teamsize%/%maxteamsize%)'
+  Challenge-Cancel: The challenge has been cancelled!
+  Tournament-Start: The tournament has begun! the map &b%map% &7has been chosen!
+  Tournament-Cancel: The tournament has been cancelled!
+  Tournament-Player-Eliminated: '&e%player% &7has been eliminated! &b%players% &7players remain!'
+  Player-Win-Tournament: '&aCongratulations! &7you have won a tournament!'
+  Player-Win-Tournament-Broadcast: '&6%player% &bhas won the tournament!'
+  Zombies-Wave-Countdown: 'Wave #&d%wave% &7will start in &b%seconds% &7seconds!'
+  Zombie-Wave-Begin: 'Wave #&d%wave% &7has begun! Zombies amount: &b%zombiesAmount% &7Zombies health/damage: &b%zombiesHealth%/%zombiesDamage%'
+  Zombies-Game-Countdown-Broadcast: '&b%warning% &cWARNING &b%warning% &7The zombies map &e%map% &7is about to start!'
+  Zombies-Game-Countdown: The game will begin in &b%seconds% &7seconds!
+  Zombies-Game-Begin: The game has begun!
+  Zombies-Game-Cancel: The game has been ended!
+  Player-Win-Zombies: '&ayou have finished the final round!'
+  Player-Win-Zombies-Broadcast: '&6%players% &ecompleted the FINAL ROUND in the zombies mode!'
+  Zombies-Player-Join: You have joined the zombies map &d%map% &7lobby!
+  Zombies-Player-Join-Broadcast: '&e%player% &7has joined the lobby! (&d%currentPlayers%&7/&d%maxPlayers%&7)!'
+  Zombies-Wave-Survive: You have survived to wave &d%wave%&7!
+  Zombies-Wave-New-Record: You have reached a new record! your new highest survived wave is &d%wave%&7!
+  Zombies-Player-Eliminated: '&e%player% &7has been eliminated! &b%players% &7players are still surviving!'
+  Zombies-Player-Leave-Lobby: '&e%player% &7has left the lobby! (&d%currentPlayers%&7/&d%maxPlayers%&7)!'
+  Kill-Message: You have earned &b%coins% &7coins! and &e%exp% &7exp
+  Sign-Use-Deny: You must have empty hands to use this sign!
+  Trade-Invite-Send: You have sent a trade invitation to &e%player%
+  Trade-Invite-Receive: '&e%player% &7has sent you a trading invitation!'
+  Trade-Accept-Message: You accepted &e%player% &7trade invitation!
+  Trade-Accept-Message-Receive: '&e%player% &7has accepted your invitation!'
+  Player-Equip-Item: You have &asuccessfully &7equipped a new &b%item%
+  Light-Level-Increase: Your light level has &aIncreased! (+%light%)
+  Light-Level-Decrease: Your light level has &cDecreased! (%light%)
+  Remove-Perk: You have &asuccessfully &7removed your perk!
+  Player-Sell-Item: You have sold the item %item% &7for &b%price% &7coins! and now you have &a(%coins%)
+  Command-Block: You may not use this command while in the game!
+  Scavenge-Ability: '&aYou have found an extra arrow!'
+  Looter-Ability: '&bYou have gained extra %coins% coins for killing!'
+  Player-Move: You moved! Task &ccancelled!
+  Player-Movement-Disabled: Do not move for &d%seconds% &7seconds!
+Death-Messages:
+  Suicide: '&c%player% &7thought suiciding is a good option!'
+  Fall: '&c%player% &7has fell to his/her death!'
+  Monster: '&c%player% &7was eaten by a monster!'
+  Lava: '&c%player% &7thought he/she could swim in lava!'
+  Fire: '&c%player% &7burned to death!'
+  Explosion: '&c%player% &7exploded into million pieces!'
+  Unknown: '&c%player% &7has been killed by an unknown object!'
+  Kill:
+  - '&c%player%%playerLight% &ehas been killed by &a%killer%%killerLight%&e!'
+  - '&c%player%%playerLight% &ewas brutally murdered by &a%killer%%killerLight%&e!'
+  - '&c%player%%playerLight% &eweapon could not stand against &a%killer%%killerLight%&e!'
+  - '&a%killer%%killerLight% &egave a helping hand in &c%player%%playerLight% &edeath!'
+  - '&a%killer%%killerLight% &ecould not resist killing &c%player%%playerLight%&e!'
+Items:
+  Quit: 'MAGMA_CREAM : name:&cQuit : lore:&7Click to quit the game!'
+  Play: 'DIAMOND_AXE : name:&6Play : lore:&7Click to join a game!'
+  Shop: 'EMERALD : name:&aShop : lore:&7Click to buy new items!'
+  Profile: 'SKULL_ITEM:3 : name:&bProfile : lore:&7Click to view your profile!'
+  Back: 'EYE_OF_ENDER : name:&bBack'
+  Trade: 'BLAZE_ROD : name:&dTrade'
+  Confirm: 'STAINED_GLASS:5 : name:&aConfirm'
+  Cancel: 'STAINED_GLASS:14 : name:&cCancel'
+  Stats: 'PAPER : name:&aStats'
+  Inventory: 'CHEST : name:&bInventory'
+  Loadout: 'BOW : name:&cLoadout'
+  Achievements: 'ENDER_CHEST : name:&dAchievements'
+Scoreboard-Content:
+  OITB: '&e%heart% &b&lOITB &e%heart%'
+  Kills-Deaths: Kills/Deaths
+  Coins: Coins
+  Accuracy: Accuracy
+  Exp-Rank: Exp/Rank
+  Light-Level: Light level
+  Next-Rank: Next rank
+  Map: Map
+  Grace: Grace
+  Players: Players
+  Time: Time
+  Team-1: Team 1
+  Team-2: Team 2
+  Wave: Wave
+  Freemode: Freemode
+  Tournament: Tournament
+  Challenge: Challenge
+  Zombies: Zombies
+  Party: Party

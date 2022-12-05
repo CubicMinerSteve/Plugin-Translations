@@ -1,0 +1,287 @@
+#============Paintball Language File============
+#
+#             Paintball 语言配置文件
+#     Chinese Translation By WaftingScent
+#                   2022.2.17
+#
+#===============================================
+sign-title: '&8[%theme%彩弹射击&8]'
+command-title: '&l彩弹射击'
+prefix: '&8[&3彩弹射击&8]'
+arena-list-command: '&9场地: %arena%'
+command-arena-info: 显示所有彩弹射击场地设置命令。
+command-create-info: 创建新场地。
+command-setflag-info: 设置场地旗帜。
+command-delflag-info: 删除场地旗帜。
+command-setlocation-info: 设置场地位置。
+command-dellocation-info: 删除场地位置。
+command-setspectate-info: 设置场地旁观位置。
+command-delspectate-info: 删除场地旁观位置。
+command-remove-info: 删除场地。
+command-rename-info: 重命名场地。
+command-setmax-info: 设置最大玩家数。
+command-setmin-info: 设置最小玩家数。
+command-setteams-info: 使用 ChatColors 设置队伍，队伍间使用半角逗号分隔，例如: &1,&b,&c。
+command-steps-info: 显示指定场地的状态。
+command-wager-info: 对某局游戏下注。
+command-addcoin-info: 给予某玩家硬币。
+removed-all-files: 从文件夹中删除所有文件。
+double-coins: 已激活本局双倍硬币奖励！
+command-convert-info: 转换场地模式。
+command-disable-info: 禁用场地。
+command-enable-info: 启用场地。
+command-info-info: 显示场地信息。
+command-reload-info: 重载所有 yml 文件。
+command-reset-info: 重置玩家信息。
+command-start-info: 强制开始游戏。
+command-stop-info: 强制结束游戏。
+command-admin-info: 显示彩弹射击管理员命令。
+command-setholo-info: 创建高分榜全息图。
+command-holo-info: 清除周围的全息图。
+command-kick-info: 从彩弹射击游戏中移出玩家。
+command-join-info: 加入指定、随机的场地，或加入特定的模式与队伍。
+command-leave-info: 离开场地。
+command-list-info: 显示所有场地列表。
+command-spectate-info: 旁观指定游戏。
+command-stats-info: 查看玩家统计数据。
+command-top-info: 查看高分榜。
+download-holo: 请下载 HolographicDisplays 插件使用此功能。
+holo-link: http://dev.bukkit.org/bukkit-plugins/holographic-displays/
+holo-set: 已在当前位置设置高分榜全息图！
+in-arena-to-wager: 你必须在场地中才能下注！
+amount-greater-than-0: 数值必须大于 0 ！
+wager-in-arena: 你必须在场地中才能下注！
+enable-vault: 请启用 Vault 以使用此功能。
+vault-not-enough-money: 雪币不足！
+flying-enabled: 飞行已开启！
+flying-disabled: 飞行已关闭！
+invalid-last-location: 没有可用的上一位置。
+teleporting-to-last-location: 传送至上一位置……
+cannot-use-while-riding: 你在骑乘实体时不能使用物品。
+valid-number: 请输入有效数字！
+holograms-removed: 清除了 &7%amount% &a个全息图。
+no-holograms-removed: 未清除全息图。
+no-arenas: 当前暂无开放场地。
+target-not-in-arena: 目标不在场地中！
+not-in-arena: 你不在场地中。
+cannot-join: '错误: 场地暂时不能加入！'
+cannot-spectate: '错误: 场地暂时不能旁观！'
+left-arena: 成功离开场地。
+arena-not-setup: '场地 %arena% 未完全设置！'
+arena-disabled: '场地 %arena% 已禁用！'
+arena-not-in-progress: '场地 %arena% 未在游戏状态中！'
+not-found: 未找到目标 '%player%' ！
+in-arena: 你已在场地中！
+arena-not-found: 未找到场地 %arena% ！
+page-real-number: 请输入有效的页数！
+page-bigger: 页数不能小于 0 ！
+page-find-error: 无法找到页数 %amount% / %max% ！
+arena-create: '成功创建场地 %arena% ！/n%steps%'
+arena-name-exists: 已存在名称为 %arena% 的场地！
+arena-remove: 场地已删除！
+arena-force-stopped: '强制结束场地 %arena% 的游戏！'
+arena-convert-same-type: '场地 %arena% 的游戏模式已经为 %arena-type% 类型！'
+arena-convert-success: '场地 %arena% 的游戏模式已更改为 %arena-type% 类型！'
+invalid-arena: '场地名 %arena% 无效！'
+invalid-team: '队伍名 %team% 无效，请选择: <%teams%> ！'
+invalid-stat: '统计数据 %stat% 无效，请选择: %stats% ！'
+invalid-command: 未知命令！输入 /paintball 查看命令列表！
+internal-error: '发生内部错误：%error% ！'
+no-permission: 你无权执行此命令！
+no-sign-permission: 你无权点击此告示牌！
+no-console-permission: 控制台无权执行此命令！
+not-enough-arguments: 变量不足！
+too-many-arguments: 变量过多！
+no-teams-set: '场地 %arena% 未设置任何队伍！'
+invalid-arena-type: 场地类型无效，请选择：<%arena-types%> ！
+choose-enable-or-disable: '参数 %command% 无效，请使用：enable/disable'
+disable-success: '场地 %arena% 成功禁用！'
+enable-success: '场地 %arena% 成功启用！'
+arena-enabled: '场地 %arena% 已启用。'
+arena-is-finished: 游戏已结束！
+arena-default-action: 射击
+arena-start-countdown-header: '&a即将开始'
+arena-start-countdown-footer: '&7%time% &a秒！'
+arena-lobby-countdown-header: '&a等待玩家'
+arena-lobby-countdown-footer: '&7%time% &a秒！'
+arena-move-error: 你不能移动背包中的物品！
+core-destroyed: 队伍核心已被摧毁！
+arena-shop-name: '&6硬币商店'
+arena-no-duel-wield: 你不能双持武器！
+teleporting: '&a传送至场地……'
+arena-flag-drop: '&l队伍 %secondary%%team%%theme% 夺取的旗帜已掉落！'
+arena-flag-score: '&l队伍 %secondary%%team%%theme% 成功夺取旗帜！'
+arena-flag-steal: '&l玩家 %secondary%%sender%%theme% &l夺取了队伍 %secondary%%team%%theme% &l的旗帜！'
+arena-join-message: '%team-color%%sender%&a 加入了场地！ &7%amount%/%max%'
+arena-you-joined: '&a你加入了场地！'
+arena-joined: '&a已加入了一个场地！'
+arena-size: '&7%amount%/%max%'
+arena-team-change: '&a你的队伍：%team-color%%team% ！'
+arena-cannot-break-blocks: 你无法在场地中破坏方块！
+arena-command-disabled: 无法在场地中使用此命令！
+arena-die-header: '&4&l你已阵亡！'
+arena-die-footer: '&7准备重生……'
+cannot-attack-own-core: 你不能攻击本队的核心！
+kick-player: '玩家 %player% 已被移出场地 %arena% ！'
+player-not-in-arena: '玩家 %player% 不在场地中！'
+balancing-teams: '%theme%平衡队伍人数……'
+error-parsing: 解析命令时出错！
+space-filled: 抱歉，有其他玩家加入了游戏并取代了你的位置……
+places-not-found: 抱歉，无法在该场地找到有效位置！
+skull-created: 成功创建高分榜！
+valid-4-number: 第 4 行必须为有效数字！
+choose-rank-number: '请输入等级数，例如: 3 ！'
+now-spectating: 正在旁观玩家 &7%player% &a！
+you-are-now-spectating: '&a你正在观战！'
+config-reloaded: 成功重载配置文件。
+paintkillers-on: Paintkillers 已生效！
+not-find-target: 无法找到目标。
+arena-is-fill: '场地 %arena% 玩家已满！'
+scoreboard-title: '%theme%&l  彩弹射击 &f%secondary%%time% '
+scoreboard-coins: 硬币: %secondary%» %amount%
+scoreboard-kills: 击杀: %secondary%» %amount%
+scoreboard-kill-streak: 连杀数: %secondary%» %amount%
+scoreboard-kd: 击杀/死亡比: %secondary%» %amount%
+scoreboard-money: 雪币: %secondary%» %amount%
+scoreboard-line: '&7&m                    '
+scoreboard-status: 状态：%secondary%» %amount%
+scoreboard-lives: 生命数：%secondary%» %amount%
+scoreboard-mode: 模式：%secondary%» %amount%
+scoreboard-health: 生命值：%secondary%» %amount%
+scoreboard-players: 玩家数：%secondary%» %amount%
+scoreboard-team: 队伍：%secondary%» %amount%
+scoreboard-wager: 下注：%secondary%» %amount%
+item-leave-arena: '&c&l点击%secondary% » &4离开场地'
+sign-wrong-syntax: 语法错误，未能创建彩弹射击告示牌！
+sign-autojoin-created: 成功创建自动加入告示牌！
+sign-join-created: 成功创建加入游戏告示牌！
+sign-leave-created: 成功创建离开游戏告示牌！
+sign-spectate-created: 成功创建旁观游戏告示牌！
+sign-leaderboard-removed: 成功创建高分榜告示牌！
+sign-leave-removed: 成功移除离开游戏告示牌！
+sign-autojoin-removed: 成功移除自动加入告示牌！
+sign-join-removed: '成功移除场地 %arena% 的加入游戏告示牌！'
+skull-leaderboard-removed: 成功移除高分榜玩家头颅！
+sign-spectate-removed: '成功移除场地 %arena% 的旁观游戏告示牌！'
+sign-leave: '&c离开游戏'
+sign-spectate: '&a旁观游戏'
+cannot-join-server-type: %server-type% 服务器已禁用加入游戏！
+arena-menu-vote-name: '%theme% 场地投票'
+arena-menu-join-name: '%theme% 加入场地'
+back-to-hub: §c回到大厅
+arena-start-message: 游戏开始
+arena-teams-not-balanced: 队伍人数不平衡，无法加入此队伍！
+kill-confirmed: '&e&l击杀确认！'
+kill-denied: '&c&l击杀取消！'
+ctf-short-name: CTF
+ctf-long-name: 护旗模式
+ctf-description: 取得其他队伍的旗帜并带回基地！
+tdm-short-name: TDM
+tdm-long-name: 团队决斗
+tdm-description: 击杀其他队伍的所有玩家！
+ffa-short-name: FFA
+ffa-long-name: 各自为战
+ffa-description: 没有队友，击杀你看到的任何人！
+dom-short-name: DOM
+dom-long-name: 占领据点
+dom-description: 占领目标点取得分数！
+lts-short-name: LTS
+lts-long-name: 站到最后
+lts-description: 生命数以团队为单位，带领你的队伍站到最后吧！
+rtf-short-name: RTF
+rtf-long-name: 夺旗模式
+rtf-description: 争夺中心旗帜的控制权并把它带回基地！
+dtc-short-name: DTC
+dtc-long-name: 摧毁核心
+dtc-description: 抵达对方的核心，向其开火摧毁它们！
+kc-short-name: KC
+kc-long-name: 击杀确认
+kc-description: 在击倒玩家后，进行确认方可完成击杀！
+higest-kill-streak: 最高连杀
+team-won: %team% 获胜！
+there-was-a-tie-between: '游戏平局'
+won: 获胜
+lost: 失败
+you: 你
+kd: 击杀/死亡比
+kills: 击杀
+deaths: 死亡
+accuracy: 命中率
+shots: 射击数
+hits: 命中数
+games-played: 总场次
+wins: 获胜
+defeats: 失败
+ties: 平局
+flags-captured: 夺取旗帜
+flags-dropped: 掉落旗帜
+time-played: 游戏时间
+game-forfeited: 玩家不足，倒计时取消!
+no-space: 物品栏空间不足!
+arena-join-permission: 你无权加入该场地!
+top-leaderboard-title: '%secondary%&m          %theme% 彩弹射击 %secondary%%page%%theme%
+  高分榜 %secondary%&m          '
+per-leaderboard-title: '%secondary%&m          %theme% 彩弹射击 %stat% 高分榜
+  &7%page%%theme%/&7%max% %secondary%&m          '
+top-leaderboard-layout: '%theme%#%rank% %secondary%%stat% » %theme%%sender% %secondary%-
+  %amount%'
+per-leaderboard-layout: '%theme%#%rank%%secondary% » %theme%%sender% %secondary%-
+  %amount%'
+being-secured: '%theme%%sender%%secondary% 正在被 %theme%%team% 占领……'
+has-secured: '%theme%%sender%%secondary% 占领了 %theme%%team% !'
+you-are-protected: '你正受到保护. 剩余时间: %time% 秒'
+they-are-protected: '该玩家受保护. 剩余时间: %time% 秒'
+hit-player: 击中玩家! %amount%/%max%
+team-full: '&r队伍 %team% 已满!'
+must-be-arena-player: 目标必须是玩家!
+not-setup: 未设置
+waiting: 等待玩家
+disabled: 已禁用
+starting: 准备开始
+stopping: 正在结束
+playing: 游戏中
+removed: 已移除
+expiration-time: '%theme%&l效果失效 » 效果剩余 %secondary%%time%%theme% 秒……'
+expiration-end: '%theme%&l效果失效 » 效果 %secondary%%item%%theme% 已失效……'
+protection-end: '%theme%&l重生保护 » %secondary% 重生保护已失效……'
+protection-time: '%theme%&l重生保护 » %secondary%%time% §3秒……'
+team-switch-time: '%theme%&l队伍交换 » %secondary%%time% §3秒……'
+team-switch-end: '%theme%&l队伍交换 » %secondary%队伍交换已解锁……'
+team-switch-error: '%theme%&l队伍交换 » %secondary%请等待队伍交换冷却结束……'
+team-switch-title: 交换队伍
+gave-coins: 你已给予玩家 &7%player% %amount% &a硬币！
+wager-gain-amount: '%theme%赢得赌注：%secondary%%currency%%amount%'
+missing-team-flag: §4§l错误§7 » §c缺失队伍旗帜！
+game-stats: '%theme% 游戏数据'
+money1: '雪币：'
+kills1: '击杀：'
+deaths1: '死亡：'
+killstreak1: '连杀数: '
+kd1: '击杀死亡比：'
+your-team1: '你的队伍：'
+tied1: 平局
+click: 点击
+join: 加入
+teleporter: 玩家传送器
+teleport-to: '传送到玩家：'
+change-team: 选择队伍
+coin-item-error-1: 你无权使用该物品！
+coin-item-error-2: 硬币不足！
+coin-item-error-3: 雪币不足！
+lore-description: '%theme%描述：'
+lore-lasts: '%theme%时长：'
+lore-cost: '%theme%价格：'
+lore-coins: '%theme%硬币：'
+lore-minutes: 分
+lore-seconds: 秒
+voted-for-arena: 你投票给了: §7%arena% ！
+storage-not-empty: 加入前请清空已存储的物品……
+armour-not-empty: 加入前请清空盔甲栏物品……
+extra-not-empty: 加入前请清空背包栏物品……
+max-uses-per-game: §c已达到物品在本局的使用上限……
+max-uses-per-player: §c已达到物品在此玩家上的使用上限……
+reset-flag: §l%player% 恢复了 %team% 的旗帜！
+shot-player-format: '%team-color%%player%%secondary% %action% %died-team-color%%died%'
+arena-state-check: '场地 %arena% 状态: %state%……'
+stat-title: '%secondary%§m             §r %theme%%player%''s 统计数据 §r %secondary%§m             '
+player-wagered: '%player% 成功下注: %currency%%wager-amount% (%currency%%wager-total%)'

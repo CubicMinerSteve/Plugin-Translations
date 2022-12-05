@@ -1,0 +1,1478 @@
+tournyCmds:
+- ''
+- '&8]&8&m----------+&r&8[ &6&l钓鱼锦标赛 &8]&8&m+-----------&r&8['
+- ''
+- '&6/ft start <比赛类型> [持续时间] &7- 开始指定的锦标赛'
+- '&6/ft stop [是否奖励] &7- 结束锦标赛并给予奖励（若有）'
+- '&6/ft remove <玩家> &7- 从锦标赛中移除玩家'
+- '&e/ft types &7- 显示可用锦标赛类型'
+- '&e/ft info &7- 显示当前锦标赛详细信息'
+- '&e/ft time &7- 显示离下一场锦标赛开始的时间'
+- ''
+- '&8]&m--------------------------------------------&r&8['
+- ''
+Prefix: '&3&l派洛钓鱼 &8➤ '
+ErrorPrefix: '&c&l派洛钓鱼 &8➤ '
+Fish:
+  FishNameColour: '&b&l'
+FishLore:
+- '&a%description%'
+- ''
+- '&6&l详细信息：'
+- '&e➤ &2等级：&a%tier%'
+- '&e➤ &2重量：&a%weight%'
+- '&e➤ &2价格：&a$%price%'
+- '&e➤ &2生物群系：&a%allbiomes%'
+- '   &a★ &d%biome%'
+FirstCaught: '&7你是第一个捕获 %fish% &7的玩家！'
+EatFish: '&b你吃掉了一条 FISHNAME ！'
+GUITitleColour: '&9&l'
+CaughtFish: '&7你捕获了一条 &bFISHNAME &7！'
+SellMessage: '&7你出售了 &bFISHSOLD &7条鱼并获得了 &bMONEYEARNED &7游戏币！'
+SellFish:
+  SpecialFishMoney: '&7你出售了一条特殊鱼并获得了 &bMONEY &7游戏币！'
+ShopTitleInformation: '&a在此出售'
+ShopLoreInformation: '&7请将鱼放置在此处并关闭界面以出售！'
+MainLevelUp: '&a钓鱼等级已提升至 &b%level% &7！'
+NotRequiredLevel: '&4你的等级不足，无法解锁！你的钓鱼等级至少需要达到 &c'
+CaughtFirstFish: '&a你已捕获你的第一条鱼！你可以使用命令 &2/fish menu &a或&3手持鱼竿蹲下并右键&a以打开钓鱼主界面！'
+NotEnoughEntropy: '&7你的海之精华不足！你还需要 &c%entropy% &7点海之精华以升级。'
+CreativeMode: '&7你不能在&c创造模式&7中使用此能力！'
+InvalidItem: '&7检测到无效的钓鱼竿：物品无效或没有配件！'
+KillFish: '&7你击杀了一条 &3FISHTYPE &7，它掉落了 &bFISHNAME &7！'
+PlatinumCatchBroadcast: '&3玩家 %player% &7捕获了一条&3铂金级的 &7%fish% &7！'
+MythicalCatchBroadcast: '&3玩家 %player% &7捕获了一条&5神话级的 &7%fish% &7！'
+GutFish:
+  Entropy: '&7你处理了 &3%fish% &7条鱼并获得了 &3%entropy% &7点海之精华！'
+  NoFish: '&c没有待处理的鱼了！'
+CaughtCrab: '&7你钓到了一只&c螃蟹&7！'
+Scales:
+  SelectRisk: '&7称重前请选择一个风险等级！'
+  RiskSelected: '&7已经选择了这个风险等级！'
+  ScaledFish: '&7你已称重界面中的这条鱼了！'
+Commands:
+  PlayerNotFound: '&7数据库中找不到该玩家！'
+  NoPermission: '&7你没有执行此命令的权限！'
+  InvalidSubCommand: '&7无效的子命令！使用 /fish 显示子命令列表。'
+  InvalidNumber: '&7输入的数据无效。'
+  InvalidArgument: '&7变量无效，使用 /fish 显示子命令列表。'
+  ReloadPlugin: '&3派洛钓鱼&7已成功重载！'
+  InvalidAugment: '&7配件无效，请不要使用空格或下划线！例如：&chotspot&7。'
+  AddedEntropy: '&b玩家 %player% &7现在拥有 &b%entropy% &7点海之精华，他们共有 &b%total% &7点海之精华！'
+  AddedXP: '&b玩家 %player% &7现在拥有 &b%xp% &7点钓鱼经验，他们共有 &b%total% &7点钓鱼经验！'
+  GivenEntropy: '&7你已被给予了 &b%entropy% &7点海之精华，你现在共拥有 &b%total% &7点海之精华！'
+  GivenXP: '&7你已被给予了 &b%xp% &7点经验，你现在共拥有 &b%total% &7点经验！'
+  NotAnItem: '&7输入的物品名称无效……'
+  InvalidUsername: '&7输入的用户名无效……'
+  EntropyBoosterFailed: '&7输入的海之祝福增益数量无效……'
+  CommandList:
+    TitleLine: '&8]&m-----------+&8[ &6&l派洛钓鱼 &8]&m+-----------&8['
+    BottomLine: '&8]&m------------------------------------------&8['
+    PrimaryColour: '&e'
+    SecondaryColour: '&7'
+    AdminColour: '&6'
+  Entropy:
+    Amount: '&7你当前共有 &a%entropy% &7点海之精华。'
+CommandsList:
+- ''
+- '&8]&m-----------+&8[ &6&l派洛钓鱼 &8]&m+-----------&8['
+- ''
+- '&e/fish help &7-  显示通用帮助'
+- '&e/fish menu &7- 打开钓鱼主菜单'
+- '&e/fish codex &7- 打开鱼类图鉴'
+- '&e/fish shop &7- 打开钓鱼商店'
+- '&e/fish stats <玩家名> &7- 显示玩家钓鱼信息'
+- '&e/fish scales &7- 打开称重台界面'
+- '&e/fish bag &7- 打开鱼袋界面'
+- '&e/fish gut &7- 打开转化台界面'
+- '&e/fish deliveries &7- 打开钓鱼任务菜单'
+- '&e/fish augment &7- 打开钓鱼配件菜单'
+- '&e/fish augments &7- 显示所有钓鱼配件'
+- '&e/fish entropy &7- 查看海之精华点数'
+- '&e/fish boosters &7- 查看可用海之祝福增益数'
+- '&e/fish skills &7- 查看钓鱼技能'
+- '&6/fish reload &7- 重载插件'
+- '&6/fish give <鱼类名称> <玩家名> <数量> &7- 给予玩家鱼'
+- '&6/fish giveitem <物品名称> <玩家名> <数量> &7- 给予玩家插件内物品'
+- '&6/fish version &7- 查看插件当前版本'
+- '&6/fish giveaugment <配件名称> <玩家名> <数量> &7- 给予玩家钓鱼配件'
+- '&6/fish addentropy <玩家名> <数量> &7- 给予玩家海之精华'
+- '&6/fish addxp <玩家名> <数量> &7- 给予玩家钓鱼经验'
+- ''
+- '&8]&m------------------------------------------&8['
+- ''
+Lores:
+  ScalesGUI:
+    Information:
+    - §7把钓上来的鱼放到此处，
+    - §7点击铁砧以称重 GUI 中的所有鱼，
+    - §7选择风险等级提高获利的机会吧！
+AntiAFKFisher: '&7检测到疑似挂机钓鱼，请移动至另一位置以继续钓鱼！'
+HelpInChat:
+- '&7--------------------------------------------------'
+- '&7只需蹲下并右键钓鱼竿（基岩版为蹲下并长按）'
+- '&7即可打开钓鱼主菜单，浏览插件内详细信息！'
+- ''
+- '&7你能在钓鱼主菜单里出售、称重与处理你捕获的鱼，'
+- '&7进而在钓鱼的过程中获得各种物品与游戏币。'
+- ''
+- '&7此外，钓鱼插件还提供了&a钓鱼配件&7。'
+- '&7它们相当于自定义附魔，只能由使用炼药锅的自定义合成产出。'
+- '&7若想查看合成配方，请打开钓鱼主菜单并点击“钓鱼配件”。'
+- '&7配件界面将会给出合成配方！'
+- ''
+- '&7你还可以通过升级钓鱼等级来提升技能点数。'
+- '&7使用这些技能点数在钓鱼技能菜单里升级各项技能！'
+- '&7打开技能菜单获取详细信息。（主菜单打开方式见上文）'
+- '&7--------------------------------------------------'
+Augments:
+  NoFishingRod: '&7未检测到钓鱼竿，请在第一格内放入钓鱼竿！'
+  NoAugment: '&7未检测到配件，请在第二格内放入可用钓鱼配件！'
+  AugmentMaxLevel: '&7此配件增强已达到最高等级！'
+  NotHighEnoughLevel: '&7你的钓鱼等级不足，无法合成此配件！'
+  NotValidAugment: '&7此物品不是一个有效的钓鱼配件！'
+  CraftedAugment: '&7你已给钓鱼竿装配钓鱼配件 %augment% &7，等级：&3%amount% &7！'
+  SolarRage: '&7你的&e太阳风暴&7配件给予了你额外的 &e%money% &7游戏币。'
+  AugmentDisabled: '&7此钓鱼配件已被禁用，无法合成……'
+  PrecisionCutting: '&7你的&c精确切割&7钓鱼配件给予了你额外的 &3%entropy% &7点海之精华！'
+  CallOfTheStorm: '&7你的&9风暴召唤&7配件给予了你额外捕获一条鱼的机会。'
+  HotSpot: '&7你的&6热点&7配件给予了你额外捕获一条鱼的机会。'
+  Saturate: '&7你的&3饱和&7配件给予了你短暂的饱和效果。'
+  NoCraftingPermission: '&7你没有&c权限&7合成钓鱼配件：%augment% &7！'
+  Lores:
+    Misc:
+      InfoLine: '&8&m-----------&r&8[%color% 配件信息 &8]&8&m-----------'
+      UseAugment: '&7允许使用：'
+      CraftingPermission: '&7允许合成：'
+      Crafting: '&7合成要求：'
+    sage:
+    - §2智慧
+    - §7当你钓到插件内的自定义鱼时，
+    - §7给予你更多的钓鱼经验值。
+    - §7配件增强等级越高，你得到的经验越多！
+    masterfisherman:
+    - §d钓鱼大师
+    - §7提高你捕获更高等级鱼的概率，
+    - §7此配件类似于一个声望令牌，
+    - §7专为最顶级、最投入的渔夫打造！
+    perception:
+    - §6感知
+    - §7在钓到自定义鱼时给予你更多海之精华，
+    - §7配件增强等级越高，获得的海之精华越多！
+    intellect:
+    - §a博识
+    - §7钓鱼时获得更多的经验量，
+    - §7配件增强等级越高，你得到的额外经验越多！
+    saturate:
+    - §3饱和
+    - §7捕获鱼时有概率恢复你的饱食度，
+    - §7配件增强等级越高，你获得饱食度恢复的概率越大！
+    solarrage:
+    - §e太阳风暴
+    - §7在卖鱼店中出售鱼时，获得更多的游戏币，
+    - §7配件增强等级越高，你得到的游戏币越多！
+    callofthestorm:
+    - §9风暴召唤
+    - §7在下雨时有概率一次钓上多条鱼，
+    - §7配件增强等级越高，钓到多条鱼的概率越大，
+    - §7每次钓鱼捕获的鱼数量也越多。
+    tornado:
+    - §c龙卷风
+    - §7小概率使你附近的鱼群激增，
+    - §7并给予你随机复制的鱼！
+    hotspot:
+    - §6热点
+    - §7有概率一次钓上多条鱼，
+    - §7配件增强等级越高，钓到多条鱼的概率越大，
+    - §7每次钓鱼捕获的鱼数量也越多。
+    trophy:
+    - §e奖杯
+    - §7在称重鱼的时候有更高机会获利，
+    - §7配件增强等级越高，你得到的游戏币越多！
+    precisioncutting:
+    - §c精确切割
+    - §7在转化台上处理鱼时获取更多的海之精华。
+    - §7配件增强等级越高，你得到的海之精华数越多！
+    snowglobe:
+    - §f雪球
+    - §7随机生成一个雪球区域，在其中钓鱼的玩家将获得
+    - §7更多的海之精华与钓鱼经验值，
+    - §7配件增强等级越高，玩家获得的数量越多！
+    - §7对影响范围内的所有钓鱼玩家均生效！
+    crabbait:
+    - §b蟹饵
+    - §7提高钓鱼时钓上螃蟹的概率，
+    - §7更快地获取合成其他配件所需的蟹鳞与蟹爪！
+    biomedisruption:
+    - §2生态扰动
+    - §7钓鱼时有概率捕获来自其他生物群系的鱼类，
+    - §7配件增强等级越高，触发的概率越大！
+    tsunami:
+    - §9海啸
+    - §7有概率让你能够在水中引发海啸，
+    - §7在此海啸中捕获的任何鱼都会提高一级等级，
+    - §7例如：白银 -> 黄金
+    - §7海啸对任何玩家都有效，
+    - §7无论他们的钓鱼竿上是否有此增强配件。
+  Lore:
+  - '&7在你的钓鱼竿上增加一级对应的配件等级。'
+  - '&7打开“钓鱼配件”菜单以添加此配件。'
+  - '&8&m-----------&r&8[%color% 配件信息 &8]&8&m-----------'
+  - '%color%需要钓鱼等级：&8 ➤ &7%requiredlevel%'
+  - '%color%海之精华消耗：&8 ➤ &7%cost%'
+  - '%color%最大增强等级：&8 ➤ &7%maxlevel%'
+  - '%color%可用于：&8 ➤ &7钓鱼竿'
+  - '&8&m-----------&r&8[%color% 配件信息 &8]&8&m-----------'
+  - '%description%'
+  - '&8&m-----------&r&8[%color% 配件信息 &8]&8&m-----------'
+  Misc:
+    Entropy: '&7你无法合成此物品，你还需要 &c%entropy% &7点海之精华！'
+    NoValidRecipe: '&7你扔出的物品与有效的配件合成配方均不符，请核对后重试。'
+    Crafted: '&7你合成了钓鱼配件 %name% &7并花费了 &3%cost% &7点海之精华。'
+    TooManyItems: '&7你扔出的物品数量过多，请捡起一部分物品后重试。'
+    CreativeMode: '&7你无法在&c创造模式&7下合成钓鱼配件。'
+  Cooldown: '&7你需要等待至少 &c1 秒&7才能这么做。'
+  'True': '是'
+  'False': '否'
+  Recipe:
+    COBBLESTONE: 圆石
+    COD: 生鳕鱼
+    LILY_PAD: 睡莲
+    GOLD_BLOCK: 金块
+    BOOK: 书
+    IRON_BLOCK: 铁块
+    OAK_BOAT: 橡木船
+    IRON_AXE: 铁斧
+    BAKED_POTATO: 烤马铃薯
+    GLASS: 玻璃
+    EMERALD_BLOCK: 绿宝石块
+    SNOWBALL: 雪球
+    ANVIL: 铁砧
+    GOLDEN_APPLE: 金苹果
+    NAUTILUS_SHELL: 鹦鹉螺壳
+    CAKE: 蛋糕
+    GLISTERING_MELON_SLICE: 闪烁的西瓜片
+    LAPIS_BLOCK: 青金石块
+    HEART_OF_THE_SEA: 海洋之心
+    DIAMOND_BLOCK: 钻石块
+    GLOWSTONE: 萤石
+    DIAMOND: 钻石
+    DIAMOND_SWORD: 钻石剑
+    GHAST_TEAR: 恶魂之泪
+    REDSTONE: 红石粉
+    WATER_BUCKET: 水桶
+    OAK_LOG: 橡木原木
+    SPONGE: 海绵
+    NETHER_STAR: 下界之星
+    WITHER_SKELETON_SKULL: 凋灵骷髅头颅
+    GUNPOWDER: 火药
+    COOKED_BEEF: 牛排
+    SAND: 沙子
+    EMERALD: 绿宝石
+    KELP: 海带
+    STRING: 线
+    SUGAR: 糖
+    TURTLE_EGG: 海龟蛋
+  Extra:
+    PerItem: '&7- %color%%amount%x %item%'
+NoPermission: '&c你没有权限使用此功能！'
+Tournament:
+  Length:
+    CaughtMessage: '&7你钓上了一条长 &bLENGTHcm &7的 &bFISHNAME &7！'
+    LongestFish: '&7你打破了自己捕获鱼的长度纪录！旧纪录：&3%before%cm &7新纪录：&b%new%cm'
+  NoTournament: '&7当前暂无进行中的锦标赛！'
+Tournaments:
+  AlreadyActive: '&7已经有一个进行中的&3锦标赛&7了！'
+  NoTournament: '&7当前暂无进行中的&c锦标赛&7！'
+  Misc:
+    With: '&7和 '
+  Time:
+    Disabled: '&7此服务器未启用自动举办锦标赛设置！'
+    Time: '&7距下一次锦标赛开始：&3%time%'
+  InvalidArgument: '&c无效的参数，使用 /ft 查看子命令列表。'
+Deliveries:
+  Dismissed: '&7你已成功取消了此钓鱼任务。'
+  CannotDismiss: '&7此钓鱼任务无法取消。'
+  NotEnoughFish: '&7你没有足够的鱼完成此任务。'
+  Started: '&7你开始了来自 &b%name% &7的任务，任务需要 &9%time% &7！'
+  Finished: '&7你完成了来自 &b%name% &7的任务，并获得了 &9%item% &7！'
+  NewDelivery: '&7你接受了一个新任务，使用命令 &b/fish deliveries &7以查看。'
+  NoSpace: '&7你需要至少一个空栏位以接受此任务。'
+Items:
+  SquidTentacle:
+    Name: '&9&l鱿鱼触手'
+    Lore:
+    - '&7击杀鱿鱼获得，'
+    - '&7可用于升级配件与钓鱼图腾。'
+  MythicalLure:
+    Name: '&5&l神话饵料'
+    Lore:
+    - '&7从钓鱼任务或钓鱼市场（&b/fish market&7）获得，'
+    - '&7这将会使你钓到&5神话鱼&7的概率增加 &d250% &7！'
+    - ''
+    - '&a右键&7使用饵料！'
+  PlatinumLure:
+    Name: '&c&l铂金饵料'
+    Lore:
+    - '&7从钓鱼任务或钓鱼市场（&b/fish market&7）获得，'
+    - '&7这将会使你钓到&c铂金鱼&7的概率增加 &d250% &7！'
+    - ''
+    - '&a右键&7使用饵料！'
+  CrabLure:
+    Name: '&b&l螃蟹饵料'
+    Lore:
+    - '&7从钓鱼任务或钓鱼市场（&b/fish market&7）获得，'
+    - '&7这将会使你钓到&b螃蟹&7的概率增加 &d200% &7！'
+    - ''
+    - '&a右键&7使用饵料！'
+  EntropyBooster:
+    Name: '&b&l海之祝福 &8（&3%multi%x&8）'
+    Lore:
+    - '&7从钓鱼任务或钓鱼市场（&b/fish market&7）获得，'
+    - '&7增加捕获鱼时获得的所有海之精华，'
+    - '&7此物品不影响&a转化台&7与&a感知鱼竿配件&7的效果！'
+    - ''
+    - '&7此增益效果将持续 &b30 分钟&7！'
+    - ''
+    - '&a右键&7激活海之祝福！'
+  EtherealOrb:
+    Name: '&3&l以太灵珠'
+    Lore:
+    - '&7从钓鱼任务或钓鱼市场（&b/fish market&7）获得，'
+    - '&7可用于重置你的钓鱼图腾冷却时间。'
+    - ''
+    - '&7只能在你自己的钓鱼图腾上使用！'
+    - ''
+    - '&a右键&7使用物品！'
+  EntropyCrystal:
+    Lore:
+    - '&7点击获得 &d10,000 &7点海之精华，'
+    - '&7'
+    - '&7在 &3/fish augment &7菜单中制作，'
+    - '&7此物品可在玩家间交易流通。'
+    Name: '&b海之晶体 &8（&310,000&8）'
+  CrabScales:
+    Name: '&e&l蟹鳞'
+    Lore:
+    - '&7杀死螃蟹获得的掉落物，'
+    - '&7用于合成钓鱼配件！'
+  DolphinTail:
+    Name: '&3&l海豚尾巴'
+    Lore:
+    - '&7杀死海豚获得的掉落物，'
+    - '&7用于合成钓鱼配件！'
+  CrabClaw:
+    Name: '&9&l蟹爪'
+    Lore:
+    - '&7杀死螃蟹获得的掉落物，'
+    - '&7用于合成钓鱼配件！'
+  Christmas2020:
+    Lore:
+    - '&7来自海洋的礼物，可由钓鱼获得。'
+    - ''
+    - '&f&n物品列表：'
+    - '&7➛ &b海之晶体'
+    - '&7➛ &b蟹鳞'
+    - '&7➛ &b蟹爪'
+    - '&7➛ &b鱿鱼触手'
+    - '&7➛ &b海豚尾巴'
+    - '&7➛ &b海之祝福 &3（1.1x）'
+    - '&7➛ &b海之祝福 &3（1.3x）'
+    - '&7➛ &b海之祝福 &3（1.85x）'
+    - '&7➛ &b蟹饵'
+    - '&7➛ &b铂金饵料'
+    - '&7➛ &b神话饵料'
+    - '&7➛ &b海洋之心'
+    - '&7➛ &b鹦鹉螺壳'
+    - '&7➛ &b随机神话鱼'
+    - '&7➛ &b钓鱼配件 - 雪球'
+    - '&7➛ &b钓鱼配件 - 热点'
+    - '&7➛ &b钓鱼配件 - 生态扰动'
+    - '&7➛ &b钓鱼配件 - 精确切割'
+    - ''
+    - '&f&o点击打开礼物！'
+    Name: '&8&l► &b钓鱼礼物 &8&l◄ &8(&92020年&8)'
+GUINames:
+  Main: '&9&l钓鱼菜单'
+  Shop: '&9&l卖鱼店'
+  Deliveries: '&9&l钓鱼任务'
+  Codex: '&9&l鱼类图鉴'
+  Scales: '&9&l称重台'
+  FishBag: '&9&l鱼袋'
+  GuttingStation: '&9&l转化台'
+  Augments: '&9&l钓鱼配件'
+  Totem: '&9&l钓鱼图腾'
+  Market: '&9&l钓鱼市场'
+  PerCodex: '&9&l鱼类图鉴 &8- &3%tier%'
+  Skills: '&9&l钓鱼技能'
+  TotemStructure: '&9图腾结构'
+  Stats: '&9&l统计数据：&3&l%player%'
+  FishingAugments: '&9&l钓鱼配件'
+  SkillPoints: '&9&l技能点'
+  BaitShop: '&9&l饵料商店'
+GUI:
+  Main:
+    Shop:
+      Name: '&3&l卖鱼店'
+      Lore:
+      - '&7点击打开卖鱼店！'
+      - '&7&o在这里出售你所有的鱼！'
+    Deliveries:
+      Name: '&6&l钓鱼任务'
+      NewLore:
+      - '&7点击显示当前可用的任务！'
+      - '&7&o完成任务赚钱吧！'
+      - ''
+      - '&7你还需要钓到 &3%amount% &7只自定义鱼'
+      - '&7才能接受下一个钓鱼任务！'
+    Codex:
+      Name: '&3&l鱼类图鉴'
+      Lore:
+      - '&7点击查看图鉴！'
+      - '&7&o看看插件里都有什么鱼吧！'
+    Scales:
+      Name: '&b&l称重台'
+      Lore:
+      - '&7点击打开称重界面！'
+      - '&7&o承担风险能获得更多的收益？！'
+    Stats:
+      Name: '&e&l统计数据'
+      Lore:
+      - '&7点击查看你的详细信息！'
+      - '&7&o位列榜首的玩家是你吗？'
+    SkillPoints:
+      Name: '&9技能点'
+      Lore:
+      - '&7点击管理你的技能点！'
+      - '&7&o你要升级什么？'
+      - ''
+      - '&c&o即将到来！'
+    Bag:
+      Name: '&3&l鱼袋'
+      Lore:
+      - '&7点击打开你的鱼袋！'
+      - '&7&o你钓到了什么鱼？'
+    Gut:
+      Name: '&2&l转化台'
+      Lore:
+      - '&7点击打开转化处理台！'
+      - '&7&o处理鱼以获得海之精华或物品！'
+    Augments:
+      Name: '&2&l钓鱼配件'
+      Lore:
+      - '&7点击管理鱼竿上的配件！'
+      - '&7&o你有多少种钓鱼配件呢？'
+    Market:
+      Name: '&6&l钓鱼市场'
+      Lore:
+      - '&7点击浏览钓鱼市场！'
+      - '&7&o你要买什么物品？'
+    Totem:
+      Name: '&b&l钓鱼图腾'
+      Lore:
+      - '&7点击查看你的钓鱼图腾！'
+      - '&7&o你要召唤什么？'
+    NoRod:
+      Name: '&4&l无可用鱼竿'
+      Lore:
+      - '&7你现在未手持鱼竿！'
+    ChristmasEvent:
+      Name: '&3&l圣诞活动'
+      NewPlaceholderLore:
+      - '&7从现在至 &b12 月 31 日'
+      - '&7你每捕获 &3400 条鱼&7，就能获得一份奖励！'
+      - ''
+      - '&7你还需要 &a%fish%&7 条鱼才能获得下一份奖励！'
+    Skills:
+      Name: '&9&l钓鱼技能'
+      Lore:
+      - '&7点击管理你的钓鱼技能！'
+      - '&7&o你要升级什么？'
+    Bait:
+      Name: '&9&l饵料商店'
+      Lore:
+      - '&7点击打开饵料商店！'
+      - '&7&o你将会钓到什么鱼？'
+  Shop:
+    Info:
+      Name: '&a&l如何出售'
+      Lore:
+      - '&7把钓上来的鱼放到此处，关闭窗口以出售鱼类！'
+    Back:
+      Name: '&c&l返回'
+      Lore:
+      - '&7点击返回主菜单！'
+    Prices:
+      Name: '&2&l售价列表'
+      Lore:
+      - '§7以下为各类鱼的售价：'
+      - '§7原版鱼：§3%RawFishMoney%'
+      - '§7青铜鱼：§3%BronzeMoney%'
+      - '§7白银鱼：§3%SilverMoney%'
+      - '§7黄金鱼：§3%GoldMoney%'
+      - '§7钻石鱼：§3%DiamondMoney%'
+      - '§7铂金鱼：§3%PlatinumMoney%'
+      - '§7神话鱼：§3%MythicalMoney%'
+    SpecialFish:
+      Name: '&a&l特殊鱼类'
+      Lore:
+      - §8§m--------------------------
+      - '§7特殊鱼类：'
+      - '§8➤ §7品种：§3%name%'
+      - '§8➤ §7等级: §3%tier%'
+      - '§8➤ §7价格倍率：§3%multiplier%x'
+      - §8§m--------------------------
+      - §7将在 §3%minutes% §7分钟后刷新！
+      - §8§m--------------------------
+  Deliveries:
+    EmptySlot:
+      Name: '&c空栏位'
+      Lore:
+      - '&7此栏位为空，请继续钓鱼或从钓鱼市场中接受一个任务！'
+    LockedSlot:
+      Name: '&4已锁定'
+      Lore:
+      - '&7此栏位已锁定，请升级&e容量增加&7属性以解锁！'
+    Info:
+      Name: '&a&l钓鱼任务'
+      Lore:
+      - '&7完成钓鱼任务是获得金币与&f海之精华&7的一种重要途径！'
+      - '&7每捕获 &6180 &7只自定义鱼你就能自动接受一个任务，'
+      - '&7也可以使用 &c/fish market &7在钓鱼市场上接受任务！'
+      - '&7（等待作者更新此功能……）'
+      - ''
+      - '&7钓鱼任务需要不同种类的鱼，'
+      - '&7玩家之间可以考虑交易以获得所需的鱼！'
+      - ''
+      - '&7在底部有些属性升级，'
+      - '&7它们能帮助你更快地完成任务！'
+      - ''
+      - '&7任务等级：'
+      - '&7- 常见 &8(&e★&7☆☆&8)'
+      - '&7- 少见 &8(&e★★&7☆&8)'
+      - '&7- 稀有 &8(&e★★★&8)'
+      - '&7- 市场常见 &8(&a★&7☆☆&8) （未加入）'
+      - '&7- 市场少见 &8(&a★★&7☆&8) （未加入）'
+      - '&7- 市场稀有 &8(&a★★★&8) （未加入）'
+      - '&7- 史诗 &8(&5★&8)'
+    Upgrade:
+      INCREASE_CAPACITY:
+        Name: '&7属性升级：&e容量增加'
+        Lore:
+        - '&7增加你能同时接受的最大任务量！'
+      OVERCLOCKED:
+        Name: '&7属性升级：&e快速交付'
+        Lore:
+        - '&7减少你交付钓鱼任务所需的时间！'
+      EXPERT_DELIVERER:
+        Name: '&7属性升级：&c任务专家'
+        Lore:
+        - '&7减少你交付钓鱼任务所需的鱼数！'
+        - '&7仅对普通的钓鱼任务有效。'
+      PAY_RISE:
+        Name: '&7属性升级：&3精华提取'
+        Lore:
+        - '&7增加交付钓鱼任务后获得的海之精华数！'
+      LUCKY_CHARM:
+        Name: '&7属性升级：&d幸运护符'
+        Lore:
+        - '&7提高你从钓鱼任务中获得稀有奖励的概率！'
+      LUCKY_CHARM_NEW:
+        Lore:
+        - '&7减少你接受钓鱼任务所需的鱼数！'
+      Lore:
+      - ''
+      - '§7升级数据：'
+      - '§7- 当前等级：§b%level%'
+      - '§7- 下一等级：§9%nextlevel%'
+      - '§7- 升级消耗：§3%cost%'
+      - '§7- 最高等级：§3%maxlevel%'
+      - ''
+      - §7点击此处升级！
+    DeliveryFor: '&3任务对象：&b%name%'
+    Upgrades:
+      Misc:
+        INCREASE_CAPACITY: 额外栏位
+        OVERCLOCKED: '%'
+        EXPERT_DELIVERER: ' 减少条数'
+        PAY_RISE: x 海之精华
+        LUCKY_CHARM_NEW: ' 减少条数'
+        LUCKY_CHARM: '% 稀有奖励概率'
+        MaxLevel: 已满级。
+      Upgraded: '&7你把属性 &e%name% &7升级到了等级：&3%level% &7！'
+      NoEntropy: '&7你没有足够的海之精华以升级此属性，你还需要 &c%entropy% &7点海之精华！'
+    MiddleClick:
+      Failed: '&c取消失败，你无法取消此任务！'
+      Delete: '&9点击鼠标中键&7取消此任务！'
+      NoLonger: '&9正在进行交付，你无法取消此任务！'
+    TimeToDelivery:
+      Ready: '&7交货所需时间：&a准备就绪！'
+      InProgress: '&7交货所需时间：&9%time%'
+    Misc:
+      Entropy: '&7海之精华奖励：&9'
+      Reward: '&7钓鱼任务奖励：&9'
+      Fish: '&7所需鱼类：'
+    Status:
+      InProgress: '&6进行中'
+      NotStarted: '&c未开始'
+      Ready: '&a准备就绪'
+    DeleteDelivery:
+      Delete: '&9按住 Shift 点击鼠标右键&7删除此钓鱼任务。'
+  Augments:
+    Remove:
+      Name: '&4&l移除升级配件'
+      Lore:
+      - '&7这会移除你鱼竿上所有的&b钓鱼配件&7，'
+      - '&7这将会花费 &d25,000 点海之精华&7！'
+      - ''
+      - '&7请保证执行此操作时鱼竿在菜单界面内！'
+      - ''
+      - '&c&o请注意：'
+      - '&c&o点击此按钮后无确认步骤，请谨慎点击！'
+    Withdraw:
+      Name: '&3转换 10,000 点海之精华'
+      Lore:
+      - '&7这将转化你的 &d10,000 点海之精华，'
+      - '&7并给予你一个&3海之晶体&7，'
+      - '&7右键晶体将给予你 &d10,000 点海之精华&7！'
+    Help:
+      Name: '&2&l配件帮助'
+      Lore:
+      - '&7点击查看所有钓鱼配件及其合成配方！'
+      - ''
+      - '&7要想合成钓鱼配件，你需要把所有物品'
+      - '&7扔进一个&b炼药锅&7当中，手持&2钓鱼竿&7左键点击它。'
+      - '&7请确保&b炼药锅&7中盛有水，并且'
+      - '&7你扔进炼药锅中的物品数量&7&o精确无误&7！'
+      - ''
+      - '&7海之精华数：&b%entropy%'
+      - '&7钓鱼等级：&b%level%'
+    FishingRod:
+      Name: '&b&l钓鱼竿'
+      Lore:
+      - '&7请把你待安装配件的钓鱼竿放在此槽位。'
+    Augment:
+      Name: '&b&l钓鱼配件'
+      Lore:
+      - '&7请把你待安装的钓鱼配件放在此槽位。'
+    AcceptAugment:
+      Name: '&a&l确认增强'
+      Lore:
+      - '&7点击黄绿色染色玻璃确认增强操作，'
+      - '&7此操作将消耗你的钓鱼配件！'
+    CancelAugment:
+      Name: '&c&l取消增强'
+      Lore:
+      - '&7点击红色染色玻璃取消增强操作，'
+      - '&7此操作将把钓鱼竿和配件回退至你的背包中！'
+    Confirm:
+      Name: '&a&l确认'
+    Cancel:
+      Name: '&c&l取消'
+    NotEnabled:
+      Lore:
+      - §7此配件已被禁用……
+      Name: '&4&l不可用'
+  Codex:
+    Main:
+      Info1:
+        Name: '&a&l鱼类图鉴（1/2）'
+        Lore:
+        - '&7点击每个等级分类查看该等级的所有鱼类！'
+        - '&7你可以查看在哪些生物群系可以钓到什么鱼。'
+      Info2:
+        Name: '&a&l鱼类图鉴（2/2）'
+        Lore:
+        - '&7你还可以查看谁是第一个捕获某种鱼的玩家，'
+        - '&7或查看此种鱼共被捕获了多少条！'
+      Bronze:
+        Name: '&6&l青铜鱼'
+        Lore:
+        - '&7点击查看所有青铜鱼！'
+      Silver:
+        Name: '&6&l白银鱼'
+        Lore:
+        - '&7点击查看所有白银鱼！'
+      Gold:
+        Name: '&6&l黄金鱼'
+        Lore:
+        - '&7点击查看所有黄金鱼！'
+      Diamond:
+        Name: '&6&l钻石鱼'
+        Lore:
+        - '&7点击查看所有钻石鱼！'
+      Platinum:
+        Name: '&6&l铂金鱼'
+        Lore:
+        - '&7点击查看所有铂金鱼！'
+      Mythical:
+        Name: '&5&l神话鱼'
+        Lore:
+        - '&7点击查看所有神话鱼！'
+    Misc:
+      Sun: 晴天
+      TotalCaught: '&7总捕获量：&a'
+      FoundDuring: '&7发现于：&a'
+      Rain: 雨天
+      Night: 夜晚
+      Day: 白天
+      FirstCaught: '&7首次捕获：&a'
+      FoundBetween: '&7Y 轴生成高度：&a'
+      Bait: '&7需要饵料：&a%bait%'
+    InfoEmerald:
+      Lore:
+      - '&7这些鱼都属于&3%tier%&7级！'
+      - '&7把光标悬停在每种鱼上查看详细信息！'
+      Name: '&a&l鱼类信息'
+    NextPage:
+      Name: '&a&l下一页'
+      Lore:
+      - '&7点击浏览下一页。'
+  Scales:
+    Risk:
+      Lore:
+      - '&7 %risk% 风险程度的称重选项。'
+      - '&7'
+      - '&7详细信息：'
+      - '&8➤ &7盈利概率：&3%profit%%'
+      - '&8➤ &7售价变化：&7最大以基准价变动 &3+-%moneychange%%'
+    LowRisk:
+      Name: '&7&l低'
+    MediumRisk:
+      Name: '&f&l中'
+    HighRisk:
+      Name: '&6&l高'
+    ExtremeRisk:
+      Name: '&b&l极高'
+    ScaleFish:
+      Lore:
+      - '&7点击称重界面内的所有鱼！'
+      Name: '&a&l点击称重'
+    Misc:
+      Selected: '&a已选择'
+    Risks:
+      High: 高
+      Extreme: 极高
+      Low: 低
+      Medium: 中
+  Stats:
+    GeneralStats: '&3&l统计数据'
+    SkillTree: '&b&l技能树'
+    Stat:
+      TotalFishCaught: '&7捕获鱼数：&a'
+      TotalCustomCaught: '&7捕获自定义鱼数：&a'
+      BronzeFishCaught: '&7捕获的青铜鱼：&a'
+      SilverFishCaught: '&7捕获的白银鱼：&a'
+      GoldFishCaught: '&7捕获的黄金鱼：&a'
+      DiamondFishCaught: '&7捕获的钻石鱼：&a'
+      PlatinumFishCaught: '&7捕获的铂金鱼：&a'
+      MythicalFishCaught: '&7捕获的神话鱼：&a'
+      MoneyMade: '&7赚得的金币：&a'
+      CrabsKilled: '&7击杀螃蟹只数：&a'
+      FishGutted: '&7处理的鱼条数：&a'
+      DeliveriesMade: '&7完成任务数：&a'
+      AugmentsCrafted: '&7合成配件数：&a'
+      FishKilled: '&7击杀鱼条数：&a'
+      LongestFish: '&7捕获最长的鱼：&a'
+      TournamentsWon: '&7锦标赛胜场：&a'
+      Level: '&7钓鱼等级：&a'
+      SkillPoints: '&7技能点数：&a'
+      CurrentXP: '&7当前经验：&a'
+      RequiredXP: '&7升级经验：&a'
+      Entropy: '&7海之精华数：&a'
+  Totems:
+    Passives:
+      TreasureHunter:
+        Name: '&6宝藏猎人 &7被动技能'
+        Lore:
+        - '&7在钓鱼时有概率获得随机或稀有的战利品。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      EntropyHorder:
+        Name: '&b精华汇聚 &7被动技能'
+        Lore:
+        - '&7增加在图腾作用范围内钓鱼获得的海之精华数量。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      FishSchool:
+        Name: '&e鱼群吸引 &7被动技能'
+        Lore:
+        - '&7增加钓鱼配件 &6- 热点 - &7的触发概率。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      LittleCritters:
+        Name: '&9小小生物 &7被动技能'
+        Lore:
+        - '&7在图腾作用范围内击杀螃蟹时，'
+        - '&7有更高的概率掉落相应的战利品。'
+        - '&7例如：蟹鳞、蟹饵。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      ExperiencedFisherman:
+        Name: '&a老练渔夫 &7被动技能'
+        Lore:
+        - '&7增加在图腾作用范围内钓鱼获得的&a钓鱼经验值&7。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      StarFall:
+        Name: '&d星陨之力 &7被动技能'
+        Lore:
+        - '&7在钓鱼时有概率召唤一道闪电并生成一条强大的鱼，'
+        - '&7杀死它获得丰富的海之精华以及其他战利品。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      MythicalWaters:
+        Name: '&5神秘之水 &7被动技能'
+        Lore:
+        - '&7有概率将你捕获的鱼上升一个等级。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      RandomDrops:
+        Name: '&2随机掉落 &7被动技能'
+        Lore:
+        - '&7击杀螃蟹时获取鱿鱼触手、海豚尾巴或其他战利品。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+      Misc:
+        Disabled: '&7你已&c禁用&7了被动技能：&b%passive% &7。'
+        PurchasedSlot: '&7你购买了一个&e被动技能栏位&7，你现在拥有 &b%slots% &7个栏位。'
+        MaxSlots: '&7你购买的被动技能栏位数量已达上限。'
+        NotLevel: '&7你的钓鱼等级不足，无法激活。'
+        NoItemsForSlot: '&7你的&5神话鱼&7或&c铂金鱼&7数量不足，无法购买&e被动技能栏位&7。'
+        NoItemsForNewSlot: '&7你的&5神话鱼&7或&c铂金鱼&7数量不足，无法购买&e被动技能栏位&7。'
+        AlreadyActive: '&7此被动技能已启用。'
+        NoSlots: '&7你没有足够的空余技能栏位了。'
+        Activated: '&7你已&a启用&7了被动技能：&b%passive% &7。'
+        Active:
+        - ''
+        - '&a&l已启用'
+    TotemPassives:
+      LittleCritters:
+        Name: '&9小小生物 &7被动技能'
+        Lore:
+        - '&7在图腾作用范围内击杀螃蟹时，'
+        - '&7有更高的概率掉落相应的战利品。'
+        - '&7例如：蟹鳞、蟹饵。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+      TreasureHunter:
+        Name: '&6宝藏猎人 &7被动技能'
+        Lore:
+        - '&7在钓鱼时有概率获得随机或稀有的战利品。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+      ExperiencedFisherman:
+        Name: '&a老练渔夫 &7被动技能'
+        Lore:
+        - '&7增加在图腾作用范围内钓鱼获得的&a钓鱼经验值&7。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%' 
+      StarFall:
+        Name: '&d星陨之力 &7被动技能'
+        Lore:
+        - '&7在钓鱼时有概率召唤闪电并生成一条强大的鱼，'
+        - '&7杀死它获得丰富的海之精华以及其他战利品。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+      MythicalWaters:
+        Name: '&5神秘之水 &7被动技能'
+        Lore:
+        - '&7有概率将你捕获的鱼上升一个等级。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+      EntropyHorder:
+        Name: '&b精华汇聚 &7被动技能'
+        Lore:
+        - '&7增加在图腾作用范围内钓鱼获得的海之精华数量。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+      FishSchool:
+        Name: '&e鱼群吸引 &7被动技能'
+        Lore:
+        - '&7增加钓鱼配件 &6- 热点 - &7的触发概率。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+      RandomDrops:
+        Name: '&2随机掉落 &7被动技能'
+        Lore:
+        - '&7击杀螃蟹时获取鱿鱼触手、海豚尾巴或其他战利品。'
+        - ''
+        - '&8➛  &7所需被动技能栏位：&3%slots%'
+        - '&8➛  &7所需钓鱼等级：&b%level%'
+        - '&8➛  &7当前技能效果：&b%buff%'
+    Activate:
+      Lore:
+      - '&7点击激活你的&a钓鱼图腾&7！'
+      - ''
+      - '&7持续时间：&a%active_time%'
+      - '&7冷却时间：&c%cooldown_time%'
+      - '&7作用半径：&6%radius% 格'
+      Name: '&a点击激活！'
+    Upgrades:
+      COOLDOWN_REDUCTION:
+        Name: '&e冷却缩短 &7图腾升级'
+        Lore:
+        - '&7减少使用图腾后的冷却时间。'
+        - ''
+        - '&7升级数据：'
+        - '&8➛ &7当前等级：&b%level%'
+        - '&8➛ &7当前持续时间：&3%time%'
+        - '&8➛ &7升级花费：&9%upgrade_cost% 海之精华'
+        - '&8➛ &7下一级持续时间：&9%upgrade_time%'
+        - '&8➛ &7最高等级：&9%max_level%'
+      ACTIVE_TIME:
+        Name: '&a长效激活 &7图腾升级'
+        Lore:
+        - '&7延长图腾的激活生效时间。'
+        - ''
+        - '&7升级数据：'
+        - '&8➛ &7当前等级：&b%level%'
+        - '&8➛ &7当前持续时间：&3%time%'
+        - '&8➛ &7升级花费：&9%upgrade_cost% 海之精华'
+        - '&8➛ &7下一级持续时间：&9%upgrade_time%'
+        - '&8➛ &7最高等级：&9%max_level%'
+      RANGE:
+        Name: '&c扩大半径 &7图腾升级'
+        Lore:
+        - '&7扩大图腾能力的作用范围。'
+        - ''
+        - '&7升级数据：'
+        - '&8➛ &7当前等级：&b%level%'
+        - '&8➛ &7当前效果半径：&3%range% 格'
+        - '&8➛ &7升级花费：&9%upgrade_cost% 海之精华'
+        - '&8➛ &7下一级效果半径：&9%upgrade_range% 格'
+        - '&8➛ &7最高等级：&9%max_level%'
+    Misc:
+      BonusChance: 额外概率
+      Times: 概率
+      Chance: 概率
+    Information:
+      Name: '&a详细信息'
+      Lore:
+      - '&3图腾被动技能&7仅在你的&e钓鱼图腾&7被激活时生效。'
+      - ''
+      - '&7在你的&e钓鱼图腾&c冷却&7时，这些技能将&f&n不会&7生效。'
+      - ''
+      - '&7破坏&e钓鱼图腾&7将保存数据，'
+      - '&7并给予你一个特殊物品，'
+      - '&7你可以携带此物品四处移动再将其放下，'
+      - '&7无需担心恢复图腾要花费额外成本。'
+    InUse:
+      Name: '&c图腾已激活 &7| &c%time%'
+      Lore:
+      - '&7你的&c钓鱼图腾&7已被激活……'
+      - '&7持续时间：&c%time%'
+    PassiveSlots:
+      Name: '&3被动技能栏位 - &7栏位增加'
+      Lore:
+      - '&7升级此项目将提升你分配&3被动技能&7的栏位数。'
+      - ''
+      - '&7升级花费：'
+      - '&7- &d%mythicalAmount%x 神话鱼 &n（任何）'
+      - '&r&5或：'
+      - '&7- &d%platinumAmount%x 铂金鱼 &n（任何）'
+      - ''
+      - '&7当前栏位上限：&3%slots%'
+      - '&7已使用的栏位：&b%active_slots%&7/&3%slots%'
+      - ''
+      - '&3点击升级被动技能栏位上限。'
+      NewLore:
+      - '&7升级此项目将提升你分配&3被动技能&7的栏位数。'
+      - ''
+      - '&7升级花费：'
+      - '&7- &d%mythicalAmount%x 神话鱼 &n（任何）'
+      - '&r&5或：'
+      - '&7- &d%platinumAmount%x 铂金鱼 &n（任何）'
+      - ''
+      - '&7当前栏位上限：&3%slots%'
+      - '&7已使用的栏位：&b%active_slots%&7/&3%slots%'
+      - ''
+      - '&3点击升级被动技能栏位上限。'
+    Cooldown:
+      Name: '&e图腾冷却 &7| &e%time%'
+      Lore:
+      - '&7你的&e钓鱼图腾&7正在冷却中……'
+      - '&7剩余时间：&e%time%'
+  Skills:
+    Messages:
+      UpgradedSkill: '&7你把技能 &b%name% &7升级到了 &3%level% &7级！'
+      Skill:
+        BETTER_GUTTING: '&7你处理了 &3%fish% &7鱼并获得 &3%entropy% &7点海之精华！（&7技能 &b+%bonus% &7）'
+        AUGMENT_INFUSION: '&7你的&b配件融合&7技能生效，部分合成材料已返还！'
+      PurchasedSkill: '&7你已解锁了技能 &b%name% &7！'
+      NoPoints: '&7你没有足够的技能点以升级或解锁此技能！'
+      NonUpgradableAlreadyOwned: '&7此技能只能解锁一次，技能等级由你的&c钓鱼等级&7决定！'
+    Skill:
+      DIVINE_JUDGEMENT:
+        Name: '&b海神审判 &7| %unlocked%'
+        Lore:
+        - '&7有概率在钓鱼时产生一场天赐的&b海啸&7，'
+        - '&7在海啸范围内钓鱼的所有玩家获得的渔获翻倍。'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能效果：&3%current%% 触发概率'
+        - ''
+        - '&7此技能每 &9%levelsneeded% &7钓鱼等级增加 &b%bonus%% &7！'
+        - ''
+        - '&7由同一个玩家产生的多个海啸无法共存。'
+        - '&7其他玩家可以从你引发的海啸中获取更多渔获。'
+        - '&7此技能效果不与给予你额外自定义鱼的配件效果叠加，'
+        - '&7例如：&6- 热点 -&7。'
+        - ''
+        - '%cost%'
+      LUCK_OF_THE_CATCH:
+        Name: '&b幸运渔夫 &7| 等级：&9%level%'
+        Lore:
+        - '&7钓上鱼时获取更多的&b海之精华&7。'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能等级：&9%points%'
+        - '&8➵ &7技能效果：&3增加 %current%% 海之精华'
+        - '&8➵ &7下一等级：&b增加 %next%% 海之精华'
+        - ''
+        - '&7此技能效果不与给予你额外自定义鱼的配件效果叠加，'
+        - '&7例如：&6- 热点 -&7。'
+        - ''
+        - '&b点击升级此技能！'
+      BETTER_GUTTING:
+        Name: '&b完美切割 &7| 等级：&9%level%'
+        Lore:
+        - '&7在转化台上处理鱼时获取更多的&b海之精华&7。'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能等级：&9%points%'
+        - '&8➵ &7技能效果：&3增加 %current%% 海之精华'
+        - '&8➵ &7下一等级：&b增加 %next%% 海之精华'
+        - ''
+        - '&7此技能不与钓鱼配件&c- 精确切割 -&7相叠加，'
+        - '&7此技能独立计算增益效果。'
+        - ''
+        - '&b点击升级此技能！'
+      TOTEM_LEADER:
+        Name: '&b图腾领袖 &7| 等级：&9%level%'
+        Lore:
+        - '&7在你捕获自定义鱼时减少&b钓鱼图腾&7的冷却时间！'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能等级：&9%points%'
+        - '&8➵ &7技能效果：&3减少 %current% 秒'
+        - '&8➵ &7下一等级：&b减少 %next% 秒'
+        - ''
+        - '&7此技能效果不与给予你额外自定义鱼的配件效果叠加，'
+        - '&7例如：&6- 热点 -&7。'
+        - ''
+        - '&b点击升级此技能！'
+      COMBO_CATCHER:
+        Name: '&b连续捕获 &7| %unlocked%'
+        Lore:
+        - '&7增加连续捕获的最大次数，提高捕获更稀有鱼类的概率，'
+        - '&7技能等级越高，最高连续捕获次数越大。'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7最大连续次数：&3%current% 次'
+        - '&8➵ &7当前连续次数：&b%combo% 次'
+        - ''
+        - '&7此技能每 &9%levelsneeded% &7钓鱼等级增加 &b%bonus% &7！'
+        - ''
+        - '&7最大连续捕获次数随钓鱼等级缩放，'
+        - '&7每 &d20 次连续捕获&7大致相当于 &d10 &7级的&d钓鱼大师&7，'
+        - '&7如果你在 &a30 秒内&7没有捕获自定义鱼，连续次数将重置为 0 ，'
+        - '&b当前连续次数&7实时更新，以便于你查看自身技能状态！'
+        - ''
+        - '%cost%'
+      AUGMENT_INFUSION:
+        Name: '&b配件融合 &7| %unlocked%'
+        Lore:
+        - '&7在合成配件时有概率返还部分合成物品！'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能效果：&3%current%% 返还概率'
+        - ''
+        - '&7此技能每 &9%levelsneeded% &7钓鱼等级增加 &b%bonus%% &7！'
+        - ''
+        - '&7每个参与合成物品&3独立计算&7返还概率，'
+        - '&7例如 5% 返还概率表示每个物品均有 &b5% 返还概率&7，'
+        - '&7如果某个物品成功返还，则有 50% 的材料得以返还，无视概率。'
+        - ''
+        - '%cost%'
+      TRIBAL_SHOUT:
+        Name: '&b部落呼唤 &7| %unlocked%'
+        Lore:
+        - '&7给予在你&6钓鱼图腾&7作用范围内的玩家'
+        - '&7一定百分比的图腾效果。（参见下文）'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能效果：&3%current%% 图腾效果'
+        - ''
+        - '&7此技能每 &9%levelsneeded%&7 钓鱼等级增加 &b%bonus%% &7！'
+        - ''
+        - '&7此技能与原图腾效果无法叠加，'
+        - '&7你的钓鱼图腾较其他玩家的图腾优先生效。'
+        - '&7（当你同时在自己与其他玩家的图腾范围内时）'
+        - '&7图腾主人将&f不会&7失去其原有的效果。'
+        - ''
+        - '%cost%'
+      MASTER_AUGMENTER:
+        Name: '&b配件大师 &7| 等级：&9%level%'
+        Lore:
+        - '&7减少制作&b钓鱼配件&7的消耗！'
+        - ''
+        - '&7技能数据：'
+        - '&8➵ &7技能等级：&9%points%'
+        - '&8➵ &7技能效果：&3减少 %current%% 消耗'
+        - '&8➵ &7下一等级: &b减少 %next%% 消耗'
+        - ''
+        - '&b点击升级此技能！'
+    Misc:
+      Unlocked: '&a已解锁'
+      Locked: '&4未解锁'
+      Cost: '&7解锁花费：&c%points% 技能点&7。'
+    Info:
+      Lore:
+      - '&7钓鱼技能分为&b升级式&7与&b解锁式&7两种。'
+      - ''
+      - '&B升级式技能&7使用&9技能点&7升级等级，'
+      - '&7投入的技能点越多，技能触发的效果越强！'
+      - ''
+      - '&b解锁式技能&7使用&9多个技能点&7解锁，'
+      - '&7解锁后永久生效，不需要额外技能点升级，'
+      - '&7这些技能的等级取决于你的&9钓鱼等级&7！'
+      - ''
+      - '&7技能点数：&a%points%'
+      - '&7钓鱼等级：&a%level%'
+      Name: '&a&l技能信息'
+    Disabled:
+      Name: '&4技能已禁用'
+      Lore:
+      - '&7此技能已被禁用，无法激活。'
+    Respec:
+      Lore:
+      - '&7点击回退所有的技能等级，'
+      - '&7使你重新分配技能点。'
+      - ''
+      - '&7消耗：&b50,000 点海之精华'
+      Name: '&a&l重置技能点'
+  FishBag:
+    InfoEmerald:
+      Lore:
+      - '&7点击卖出鱼袋中所有的鱼！'
+      Name: '&a&l点我卖鱼'
+    Deliveries:
+      Name: '&3&l鱼袋交付'
+      Status:
+        'false': '&c已禁用'
+        'true': '&a已启用'
+      Lore:
+      - '&7点击切换钓鱼任务交货时'
+      - '&7是否检测鱼袋内的鱼！'
+      - ''
+      - '&7状态：%status%'
+  Totem:
+    Unlock:
+      Unlocked: '&7你已解锁钓鱼图腾。但此功能尚未完善，请在下次更新后查看其功能……'
+      NotLevel: '&7你的钓鱼等级不足，无法理解更高级的结构。请在钓鱼等级达到 &c50 &7级后查看钓鱼图腾！'
+      NotLevelNew: '&7你的钓鱼等级不足，无法理解更高级的结构。请在钓鱼等级达到 &c20 &7级后查看钓鱼图腾！'
+      Required: '&7远古战争中遗落的图腾。如果你能献上以下物品，你或许就可以使用它的能量……'
+      NoItems: '&7你的物品不足，无法激活这个&6钓鱼图腾&7……'
+      Items:
+      - '&8- &c6x 铂金鱼'
+      - '&8- &c64x 蟹鳞'
+      - '&8- &c64x 蟹爪'
+      - '&8- &c32x 海豚尾巴'
+      - '&8- &c32x 鱿鱼触手'
+      NewItems:
+      - '&7需要物品：'
+      - '&8- &c6x 铂金鱼'
+      - '&8- &c16x 蟹鳞'
+      - '&8- &c16x 蟹爪'
+      - '&8- &c16x 海豚尾巴'
+      - '&8- &c16x 鱿鱼触手'
+  TotemsStructure:
+    Info:
+      Lore:
+      - '&7建造右图所示的多方块结构'
+      - '&7建造使用的方块必须&f&n相同&r&7！'
+      - ''
+      - '&7建造完成后，使用&f&n钓鱼竿'
+      - '&7右键点击&f&n第一个&7侦测器。'
+      - ''
+      - '&7你还需要收集一些物品以激活&e钓鱼图腾&7，'
+      - '&7完成物品收集之后，你将拥有'
+      - '&7属于自己的&e钓鱼图腾&7！'
+      - ''
+      - '&7&o每位玩家只允许拥有一个钓鱼图腾！'
+      Name: '&a&l详细信息'
+  Gutting:
+    GutForEntropy:
+      Lore:
+      - §7点击将鱼处理为海之精华！
+      - ''
+      - '§7转换比率：'
+      - '§8➤ §7青铜鱼：§3%bronze%'
+      - '§8➤ §7白银鱼：§3%silver%'
+      - '§8➤ §7黄金鱼：§3%gold%'
+      - '§8➤ §7钻石鱼：§3%diamond%'
+      - '§8➤ §7铂金鱼：§3%platinum%'
+      Name: '&6&l开始处理'
+  Deliveies:
+    Upgrades:
+      MaxLevel: '&7此能力已满级！'
+WithdrawnEntropy: '&7你已转换 &d10,000 海之精华&7并获得了 1 个&b海之晶体&7！'
+RemovedAugments: '&7你已从钓鱼竿上移除了所有的配件！'
+RedeemEntropy: '&7你获取了 &d10,000 点海之精华&7！'
+WithdrawingDisabled: '&7管理员已禁用&b海之精华&7的转换！'
+ReturnToMainMenu: '&7点击返回主菜单！'
+Biomes:
+  CUSTOM: 自定义生物群系
+  PLAINS: 平原
+  SUNFLOWER_PLAINS: 向日葵平原
+  RIVER: 河流
+  BEACH: 沙滩
+  SNOWY_BEACH: 积雪的沙滩
+  SNOWY_TUNDRA: 积雪的冻原
+  SNOWY_PLAINS: 积雪的平原
+  SNOWY_MOUNTAINS: 雪山
+  ICE_SPIKES: 冰刺平原
+  FROZEN_RIVER: 冻河
+  SNOWY_TAIGA: 积雪的针叶林
+  SNOWY_TAIGA_HILLS: 积雪的针叶林丘陵
+  SNOWY_TAIGA_MOUNTAINS: 积雪的针叶林山地
+  MOUNTAINS: 山地
+  WOODED_MOUNTAINS: 繁茂的山地
+  GRAVELLY_MOUNTAINS: 沙砾山地
+  MODIFIED_GRAVELLY_MOUNTAINS: 沙砾山地+
+  WINDSWEPT_HILLS: 风袭丘陵
+  WINDSWEPT_FOREST: 风袭森林
+  WINDSWEPT_GRAVELLY_HILLS: 风袭沙砾丘陵
+  STONE_SHORE: 石岸
+  STONY_SHORE: 石岸
+  MOUNTAIN_EDGE: 山地边缘
+  TAIGA: 针叶林
+  TAIGA_HILLS: 针叶林丘陵
+  TAIGA_MOUNTAINS: 针叶林山地
+  GIANT_TREE_TAIGA: 巨型针叶林
+  OLD_GROWTH_PINE_TAIGA: 原始松木针叶林
+  GIANT_TREE_TAIGA_HILLS: 巨型针叶林丘陵
+  GIANT_SPRUCE_TAIGA: 巨型云杉针叶林
+  OLD_GROWTH_SPRUCE_TAIGA: 原始云杉针叶林
+  GIANT_SPRUCE_TAIGA_HILLS: 巨型云杉针叶林丘陵
+  SWAMP: 沼泽
+  SWAMP_HILLS: 沼泽丘陵
+  FOREST: 森林
+  WOODED_HILLS: 繁茂的丘陵
+  FLOWER_FOREST: 繁花森林
+  BIRCH_FOREST: 桦木森林
+  BIRCH_FOREST_HILLS: 桦木森林丘陵
+  TALL_BIRCH_FOREST: 高大桦木森林
+  TALL_BIRCH_HILLS: 高大桦木森林丘陵
+  OLD_GROWTH_BIRCH_FOREST: 原始桦木森林
+  DARK_FOREST: 黑森林
+  DARK_FOREST_HILLS: 黑森林丘陵
+  SAVANNA: 热带草原
+  SAVANNA_PLATEAU: 热带高原
+  SHATTERED_SAVANNA: 破碎的热带草原
+  WINDSWEPT_SAVANNA: 风袭热带草原
+  SHATTERED_SAVANNA_PLATEAU: 破碎的热带高原
+  DESERT: 沙漠
+  DESERT_HILLS: 沙漠丘陵
+  DESERT_LAKES: 沙漠湖泊
+  BADLANDS: 恶地
+  BADLANDS_PLATEAU: 恶地高原
+  MODIFIED_BADLANDS_PLATEAU: 恶地高原变种
+  WOODED_BADLANDS_PLATEAU: 繁茂的恶地高原
+  MODIFIED_WOODED_BADLANDS_PLATEAU: 繁茂的恶地高原变种
+  WOODED_BADLANDS: 繁茂的恶地
+  ERODED_BADLANDS: 被风蚀的恶地
+  JUNGLE: 丛林
+  JUNGLE_HILLS: 丛林丘陵
+  MODIFIED_JUNGLE: 丛林变种
+  JUNGLE_EDGE: 丛林边缘
+  SPARSE_JUNGLE: 稀疏的丛林
+  MODIFIED_JUNGLE_EDGE: 丛林边缘变种
+  BAMBOO_JUNGLE: 竹林
+  BAMBOO_JUNGLE_HILLS: 竹林丘陵
+  MUSHROOM_FIELDS: 蘑菇岛
+  MUSHROOM_FIELD_SHORE: 蘑菇岛岸
+  OCEAN: 海洋
+  DEEP_OCEAN: 深海
+  FROZEN_OCEAN: 冻洋
+  DEEP_FROZEN_OCEAN: 封冻深海
+  COLD_OCEAN: 冷水海洋
+  DEEP_COLD_OCEAN: 冷水深海
+  LUKEWARM_OCEAN: 温水海洋
+  DEEP_LUKEWARM_OCEAN: 温水深海
+  WARM_OCEAN: 暖水海洋
+  DEEP_WARM_OCEAN: 暖水深海
+  LUSH_CAVES: 繁茂洞穴
+  DRIPSTONE_CAVES: 溶洞
+  MEADOW: 草甸
+  GROVE: 雪林
+  SNOWY_SLOPES: 积雪的山坡
+  FROZEN_PEAKS: 冰封山峰
+  JAGGED_PEAKS: 尖峭山峰
+  STONY_PEAKS: 裸岩山峰
+  THE_VOID: 虚空
+  NETHER: 下界
+  NETHER_WASTES: 下界荒地
+  CRIMSON_FOREST: 绯红森林
+  WARPED_FOREST: 诡异森林
+  SOUL_SAND_VALLEY: 灵魂沙峡谷
+  BASALT_DELTAS: 玄武岩三角洲
+  THE_END: 末地
+  END_BARRENS: 末地荒地
+  SMALL_END_ISLANDS: 末地小型岛屿
+  END_MIDLANDS: 末地内陆
+  END_HIGHLANDS: 末地高地
+
+Boosters:
+  End: '&7你的 %name% &7增益已结束！'
+  InUse: '&7你已经激活了增益 %name% &7，它还将持续 &3%seconds% &7！'
+  Use: '&7你激活了增益 %name% &7，它将持续 &330 &7分钟！'
+  Commands:
+    None: '&7你当前没有可用的饵料或增益！'
+    Entropy: '&8➤ &b海之祝福 &3(%boost%x) &7作用时间剩余 &3%seconds% &7！'
+    List:
+    - ''
+    - '&8]&m--------------+&r&8[&r &6&l增益 &8]&m+--------------&r&8['
+    - ''
+    - '&6增益：%boosters%'
+    - ''
+    - '&8]&m------------------------------------------&r&8['
+    - ''
+    Mythical: '&8➤ &5神话饵料&7作用时间剩余 &3%seconds% &7！'
+    Crab: '&8➤ &b螃蟹饵料&7作用时间剩余 &3%seconds% &7！'
+    Platinum: '&8➤ &c铂金饵料&7作用时间剩余 &3%seconds% &7！'
+TierNames:
+  Bronze: 青铜
+  Silver: 白银
+  Gold: 黄金
+  Diamond: 钻石
+  Platinum: 铂金
+  Mythical: 神话
+Totems:
+  AlreadyOwned: '&7你不能再建造一个&c钓鱼图腾！&7你的图腾坐标&cX：%x%&7, &cY：%y%&7, &cZ：%z%&7'
+  AlreadyOwnedOne: '&7你不能再建造一个&c钓鱼图腾，你已经拥有一个了！'
+  Break:
+    Lore:
+    - '&7蕴含巨大能量的图腾'
+    - ''
+    - '&7图腾信息：'
+    - '&8➛ &7所有者：&a%owner%'
+    - '&8➛ &7工作半径：&a%radius%'
+    - '&8➛ &7激活时间：&a%active_time%'
+    - '&8➛ &7冷却时间：&a%cooldown_time%'
+    - '&8➛ &7最大能力栏位：&a%max_passive_slots%'
+    - ''
+    - '&3请放置我以加载数据！'
+  Placed: '&7你已放置了你的&e钓鱼图腾&7，数据成功加载！为确保它正常工作，请保持多方块结构完好！'
+  MythicalWaters: '&7你在&5神秘之水&7中捕获了一条 %fish% &7，它转变成了 %newfish% &7！'
+  InvalidStructure: '&7检测到无效的多方块结构！请在使用前确保结构完整！'
+  NotEnoughEntropy: '&7你的&c海之精华&7不足，无法升级！'
+  NotYours: '&7这不是你的&c钓鱼图腾&7，它属于玩家 &c%name% &7！'
+  Broken: '&7你已破坏你的&6钓鱼图腾&7！'
+  Upgraded: '&7你已升级了钓鱼图腾的 &3%upgrade% &7能力！'
+  Unlocked: '&7你已注册并解锁了&6钓鱼图腾&7！'
+FishLoreExtra:
+  AllBiomes: 所有生物群系
+  Weight: '&7这条鱼已称重！'
+PartyFishing:
+  Boost: '&3团队钓鱼&7给予了你额外的 &3%entropy% &7海之精华与 &3%xp% &7点经验！'
+MoneyCooldown:
+  Limit: '&7你今天赚取的游戏币已经达到上限！你在 &b%time% &7后才能再次获取游戏币！'
+ChristasEvent:
+  NotReady: '&7你现在还不能领取你的礼物！请在 12 月 25 至 31 日之间领取！'
+Misc:
+  Time:
+    NoHours: '%minutes% 分 %seconds% 秒'
+    Hours: '%hours% 时 %minutes% 分 %seconds% 秒'
+WithdrawEntropyNotEnough: '&7你没有足够的海之精华以转换&c海之晶体&7！'
+FishShopLogging: '[派洛钓鱼] 玩家 %player% 在鱼店卖出了 %fish% 并获得 %money% 游戏币！'
+TotemsDisabled: '&3钓鱼图腾&7在此服务器上已禁用！'
+Skills:
+  Respec:
+    NoEntropy: '&7你没有足够的海之精华以重置技能点！'
+    Done: '&7你的技能已重置，现在你可以重新分配技能点了！'
+Bait:
+  Information:
+    Lore:
+    - '&7钓鱼饵料用于捕捉稀有鱼类，提高捕获它们的概率。'
+    - '&7购买钓鱼饵料需要花费游戏币，且饵料使用次数存在上限。'
+    - ''
+    - '&7你可以查阅鱼类图鉴以获取特定鱼类对饵料的要求。'
+    Name: '&a&l详细信息'
+  Bought: '&7你花费了 &b%cost% &7游戏币并购买了饵料 %bait% &7。'
+  Applied: '&7你已把饵料 %bait% &7钩在了你的钓鱼竿上。'
+  NoVault: '&7未检测到服务器安装经济插件，此功能需要经济插件才能运行！'
+  Shop:
+    Cost:
+    - '&7'
+    - '&7花费：&a$%cost%'
+    NoPermission:
+    - ''
+    - '&c你没有权限购买此物品！'
+    Level: '&c你的钓鱼等级不足，无法使用此饵料！'
+  NoPermission: '&c你没有权限购买此物品！'
+  AlreadyHave: '&7你的钓鱼竿上已经有一种饵料了！'
+  FishingRod: '&7你只能把钓鱼饵料挂在钓鱼竿上！'
+  NotEnoughSpace: '&7你的物品栏空间不足，无法购买此物品！'
+  NotEnoughMoney: '&7你的游戏币不足，无法购买此物品！'
+  NotHighEnoughLevel: '&7你的钓鱼等级不足，无法购买此物品！'
+FishSkills:
+  Names:
+    TOTEM_LEADER: 图腾领袖
+    AUGMENT_INFUSION: 配件融合
+    TRIBAL_SHOUT: 部落呼唤
+    MASTER_AUGMENTER: 配件大师
+    LUCK_OF_THE_CATCH: 幸运渔夫
+    DIVINE_JUDGEMENT: 海神审判
+    COMBO_CATCHER: 连续捕获
+    BETTER_GUTTING: 完美切割
+TotemUpgrades:
+  Names:
+    RANGE: 作用半径
+    ACTIVE_TIME: 持续时间
+    COOLDOWN_REDUCTION: 冷却减少
+TotemPassives:
+  Names:
+    MYTHICAL_WATERS: '&5神秘之水'
+    FISH_SCHOOL: '&e鱼群吸引'
+    ENTROPY_HORDER: '&b精华汇聚'
+    EXPERIENCED_FISHERMAN: '&a老练渔夫'
+    STAR_FALL: '&d星陨之力'
+    RANDOM_DROPS: '&2随机掉落'
+    LITTLE_CRITTERS: '&9小小生物'
+    TREASURE_HUNTER: '&6宝藏猎人'
+DeliveryUpgrades:
+  Names:
+    INCREASE_CAPACITY: 容量增加
+    EXPERT_DELIVERER: 任务专家
+    PAY_RISE: 精华提取
+    LUCKY_CHARM: 幸运护符
+    OVERCLOCKED: 快速交付
+NoOffHandFishing: '&7你不能在副手手持钓鱼竿时钓鱼！'
+FishUpdate:
+  Weighed: '&7请注意此命令无法更新已称重的鱼。你可以把这些鱼卖掉或作为收藏品。'
+  Cooldown: '&7此命令在冷却完毕后才能再次使用。请等待 &c%seconds% &7秒后重试……'
+  Updated: '&7物品栏中的鱼已更新至当前版本，你可以把它们与现在的鱼堆叠了！'
