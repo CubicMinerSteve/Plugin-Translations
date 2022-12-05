@@ -1,0 +1,124 @@
+#    ** AdvancedCrates 消息列表 **
+# Chinese Translation By WaftingScent
+#             2022.2.17
+
+# 同一 IP 的账号已被 giveall 命令给予此物品
+alt_message: "&d&l [抽奖箱] &c你 IP 上的一个账号已被 giveall 命令给予此物品！"
+
+# 服务器当前正在开启的抽奖箱达到上限
+MonthlyCrate_Global_Limit_Message: "&d&l [抽奖箱] &c抱歉，服务器当前正在开启的抽奖箱过多，请稍候再试！"
+
+# 服务器当前正在开启的抽奖袋达到上限
+MonthlyCrate_Global_Pouch_Limit_Message: "&d&l [抽奖箱] &c抱歉，服务器当前正在开启的抽奖袋过多，请稍候再试！"
+
+# 同一玩家同时打开的抽奖箱达到上限
+MonthlyCrate_Player_Limit_Message: "&d&l [抽奖箱] &c你放置了 {opening_crates_now} 个抽奖箱，请等待至少一个开启完毕后再打开抽奖箱！"
+
+# 玩家的背包已满
+Max_Inventory_Reached_Message: "&d&l [抽奖箱] &c你的背包已满，请腾出足够的空间再打开抽奖箱！"
+
+# 玩家离另一个正在打开的抽奖箱过近
+Crate_Radius_Message: "&d&l [抽奖箱] &c你离另一个正在打开的抽奖箱太近了，换个地方打开吧！"
+
+# 玩家被命令给予抽奖箱 (%crate_name% - 箱子名   %amount_given% - 数量)
+Player_Gets_MCrate_Message: "&d&l [抽奖箱] &5你收到了 %amount_given% 个 %crate_name% ！"
+
+# 玩家被命令给予抽奖袋 (%pouch_name% - 箱子名   %amount_given% - 数量)
+Player_Gets_Pouch_Message: "&d&l [抽奖箱] &5你收到了 %amount_given% 个 %pouch_name% ！"
+
+# 玩家被命令 /ac key give 给予抽奖钥匙
+Player_Gets_Key_Message: "&a你收到了 %amount_given% 个 %key_name% ！"
+
+# 玩家在错误地点放下抽奖箱 (仅在配置中使用了 OnlyPlaceableAt: "x,y,z" 时生效)
+Crate_Placed_At_Wrong_Location: "&d&l [抽奖箱] &c你不能在这里放置抽奖箱，使用命令 &f/warp crates &c传送到指定地点！"
+
+# 玩家在错误地点放下抽奖袋 (仅在配置中使用了 OnlyPlaceableAt: "x,y,z" 时生效)
+Pouch_Placed_At_Wrong_Location: "&d&l [抽奖箱] &c你不能在这里放置抽奖袋，使用命令 &f/warp crates &c传送到指定地点！"
+
+# 玩家在打开抽奖箱时使用其他命令
+BlockedCommandMessage: "&d&l [抽奖箱] &c你在打开抽奖箱时不能使用此命令！"
+
+# 玩家对着空气右键抽奖箱显示的信息，留空不显示
+Player_RightClick_Air:
+  - "&d&l [抽奖箱] &f请把抽奖箱放置在地面上以打开它！"
+  
+# 玩家离另一个正在打开的抽奖袋过近
+Pouch_Radius_Message: "&d&l [抽奖箱] &c你离另一个正在打开的抽奖袋太近了，换个地方打开吧！"
+
+# 使用 /reload 成功重载插件
+Reload_Message: "&d&l [抽奖箱] &5成功重载插件配置！"
+
+# 玩家没有使用相应命令的权限
+No_Permission: "&d&l [抽奖箱] &c抱歉，你没有执行此命令的权限！"
+
+# 玩家手持错误钥匙时尝试右键打开抽奖箱 (%crate% - 箱子名)
+No_Key_To_Open_Crate: "&c你需要正确的钥匙才能开启这个箱子！"
+
+# 玩家拥有钥匙不足时尝试右键打开抽奖箱 (%crate% - 箱子名   %has_keys% -拥有钥匙数   %needed_keys% - 需要钥匙数)
+Not_Enough_Keys: "&c你没有足够的钥匙来打开这个箱子！你需要 %needed_keys% 把对应钥匙才能打开它！"
+
+# 玩家正在打开一个抽奖箱时尝试右键打开抽奖箱
+Already_Opening_A_Crate: "&c请等待当前抽奖箱打开完毕后再打开下一个！"
+
+# 玩家被命令 virtualkey give 给予虚拟钥匙 (%key_name% - 钥匙名   %amount_given% - 数量)
+Player_Gets_Virtualkey_Message: "&e&l [抽奖箱] &6你收到了 %amount_given% 个 %key_name% 虚拟钥匙！"
+
+# 玩家成功执行 /ac key gift 命令 (%gifted_amount% - 数量   %gifted_crate_name% - 箱子名   %gifted_player_name% - 受赠玩家)
+Gifted_Keys: "&e&l [抽奖箱] &6你成功把 %gifted_amount% 个 %gifted_crate_name% 钥匙赠予玩家 %gifted_player_name%！"
+
+# 玩家成功收到赠予的礼包 (%gifted_amount% - 数量   %gifted_crate_name% - 箱子名   %gifter_player_name% - 来自玩家)
+Gifted_Keys_Received: "&e&l [抽奖箱] &6你获得了来自玩家 %gifter_player_name% 赠送的 %gifted_amount% 个 %gifted_crate_name% 钥匙！"
+
+# 玩家成功转换虚拟钥匙 (%amount_withdrawn% - 数量   %crate_name% - 箱子名   %player_name% - 玩家名)
+Virtualkey_Withdraw: "&e&l [抽奖箱] &6你转换虚拟钥匙，获得了 %amount_withdrawn% 个 %crate_name% 钥匙！"
+
+# 当抽奖箱的可见性选项设置为全部可见 (All) 时，玩家尝试打开一个正在被其他人打开的抽奖箱
+Crate_Is_Already_Being_Opened: "&e&l [抽奖箱] &c其他玩家正在打开这个抽奖箱，请等待打开完毕后再打开你的吧！"
+
+# 玩家在选择刷新或接受奖励时停留过久 (给定时间 - 90 秒)
+Took_Too_Long_To_Reroll: "&e&l [抽奖箱] &c你花了太长时间作出决定，系统已自动帮你收下奖励！"
+
+Help_Command:
+  - ""
+  - "&5&l&m-----------&5&l< &d&l抽奖箱 &5&l>&5&l&m----------"
+  - ""
+  - " &d/%main_command% list &7- &f显示所有抽奖箱插件子命令"
+  - " &d/%main_command% config &7- &f打开游戏内插件配置菜单"
+  - " &d/%main_command% give &a<玩家> &a<抽奖箱> &3<数量> &7- &f给予玩家指定抽奖箱"
+  - " &d/%main_command% key give &a<玩家> &a<抽奖箱> &3<数量> &7- &f给予玩家指定抽奖箱钥匙"
+  - " &d/%main_command% virtualkey give &a<玩家> &a<抽奖箱> &3<数量> &7- &f给予玩家指定虚拟钥匙"
+  - " &d/%main_command% virtualkeys - &f显示玩家拥有虚拟钥匙的详细信息"
+  - " &d/%main_command% pouch list &7- &f显示可用抽奖袋列表"
+  - " &d/%main_command% pouch give &a<玩家> &a<抽奖袋> &3<数量> &7- &f给予玩家指定抽奖袋"
+  - " &d/%main_command% set &a<抽奖箱> &7- &f把准星对准的箱子设为指定抽奖箱"
+  - " &d/%main_command% remove &7- &f把准星对准的箱子移除抽奖箱功能"
+  - " &d/%main_command% togglemessages &7- &f启用/禁用向该玩家发送抽奖箱消息"
+  - ""
+  - " &a<> &f- 必要变量 ; &3<> &f- 可选变量"
+  - " &f页数 {&d1 &f/ 2} 使用 &d/%main_command% help 2 &f查看更多命令！""
+  - ""
+  - "&5&l&m-----------&5&l< &d&l抽奖箱 &5&l>&5&l&m----------"
+  - ""
+  
+Help_Command2:
+  - ""
+  - "&5&l&m-----------&5&l< &d&l抽奖箱 &5&l>&5&l&m----------"
+  - ""
+  - " &d/%main_command% giveall &a<抽奖箱> &3<数量> &7- &f给予在线的所有玩家指定抽奖箱"
+  - " &d/%main_command% key giveall &a<抽奖箱> &3<数量> &7- &f给予在线的所有玩家指定抽奖箱钥匙"
+  - " &d/%main_command% sgive &a<玩家> &a<抽奖箱> &3<数量> &7- &f给予玩家指定抽奖箱且不通知对方"
+  - " &d/%main_command% virtualkey gift &a<玩家> &a<抽奖箱> &3<数量> &7- &f从当前拥有的虚拟钥匙中赠予对方钥匙"
+  - " &d/%main_command% virtualkey set &a<玩家> &a<抽奖箱> &3<数量> &7- &f设置指定玩家的虚拟钥匙数"
+  - " &d/%main_command% virtualkey giveall &a<抽奖箱> &3<数量> &7- &f给予在线的所有玩家指定虚拟钥匙"
+  - " &d/%main_command% pouch sgive &a<玩家> &a<抽奖袋> &3<数量> &7- &f给予玩家指定抽奖袋且不通知对方"
+  - " &d/%main_command% pouch giveall &a<抽奖袋> &3<数量> &7- &f给予在线的所有玩家指定抽奖袋"
+  - " &d/%main_command% reload &7- &f重载插件所有配置"
+  - " &d/%main_command% errors &7- &f显示抽奖箱配置错误的详细信息"
+  - ""
+  - " &a<> &f- 必要变量 ; &3<> &f- 可选变量"
+  - " &f页数 {&d2 &f/ 2} 使用 &d/%main_command% help 2 &f查看更多命令！"
+  - ""
+  - "&5&l&m-----------&5&l< &d&l抽奖箱 &5&l>&5&l&m----------"
+  - ""
+
+

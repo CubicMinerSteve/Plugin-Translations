@@ -1,0 +1,48 @@
+###################################################### 金币加成 ######################################################
+
+# 每一级抢夺魔咒等级增加的额外金币掉落百分比。例如：LootingMultiplier: 10% = 手持附魔有抢夺 I 武器的玩家将会获得 10% 的额外金币，手持附魔有抢夺 III 武器的玩家将会获得 30% 的额外金币。
+LootingMultiplier: 10%
+
+# 在以下权限组内的玩家将会得到额外的金币，增加量即为同一行右侧的百分比。若需禁用此功能，或者你使用的权限管理插件不基于 Vault ，请将第一行的权限组设置为 NONE 。
+PermissionGroupMultipliers:
+  - PermissionGroup1 5%
+  - PermissionGroup2 10%
+ 
+# 在以下世界中的玩家将会得到额外的金币，增加量即为同一行右侧的百分比。若需禁用此功能，请将第一行的世界名称设置为 NONE 。
+WorldMultipliers:
+  - world1 5%
+  - world2 10%
+
+# 在以下权限组内的玩家将会在死亡时掉落更少的金币，减少量即为同一行右侧的百分比。若需禁用此功能，或者你使用的权限管理插件不基于 Vault ，请将第一行的权限组设置为 NONE 。
+PlayerDeathMultipliers:
+  - PermissionGroup1 5%
+  - PermissionGroup2 10%
+
+# 来自 LorinthsRpgMobs 插件中的怪物被击杀时，对于怪物增加的每一级等级，金币的额外掉落百分比。例如：LorinthsRpgMobsMultiplier: 1% = 等级为 2 的怪物将会额外掉落 1% 的金币，等级为 3 的怪物将会额外掉落 2% 的金币，以此类推……
+LorinthsRpgMobsMultiplier: 1%
+
+# 来自 MythicMobs 插件中的怪物被击杀时，对于怪物增加的每一级等级，金币的额外掉落百分比。例如：MythicMobsLevelsMultiplier: 1% = 等级为 2 的怪物将会额外掉落 1% 的金币，等级为 3 的怪物将会额外掉落 2% 的金币，以此类推……
+MythicMobsLevelsMultiplier: 0%
+
+# 来自 LevelledMobs 插件中的怪物被击杀时，对于怪物增加的每一级等级，金币的额外掉落百分比。例如：LevelledMobsMultiplier: 1% = 等级为 2 的怪物将会额外掉落 1% 的金币，等级为 3 的怪物将会额外掉落 2% 的金币，以此类推……
+LevelledMobsMultiplier: 1%
+
+# 来自 InfernalMobs 插件中的下界怪物（Infernal Mob）被击杀时，金币的额外掉落百分比
+InfernalMobsMultiplier: 10%
+
+# 需要重启服务器以禁用或修改循环式金币加成活动的有关配置
+RepeatingMultiplierEvent:
+  Enabled: false
+  # 此金币加成活动进行之时，金币的额外掉落百分比
+  Multiplier: 100%
+  # 此金币加成活动的持续时间。单位：分钟
+  Duration: 5
+  # 此金币加成活动的循环周期，以上一个活动的开始时刻为零值计算。单位：分钟
+  RepeatDelay: 60
+  # 在服务器重启或使用 /mfmreload 命令后，自动开始金币加成活动的初始延迟量。单位：分钟
+  InitialDelay: 0
+  # 当金币加成活动开始或结束时显示的消息文本
+  EventStartMessage: "&a金币加成活动已开始！在此期间，击杀生物将会掉落 &f100% &a的额外金币。活动持续 5 分钟！"
+  EventEndMessage: "&c金币加成活动已结束！所有生物的金币掉落量已恢复至原先水平！"
+
+

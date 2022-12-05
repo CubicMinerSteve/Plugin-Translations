@@ -1,0 +1,665 @@
+# 是否在 MoneyFromMobs 插件存在可用更新时通知服务器管理员
+UpdateNotification: true
+
+###################################################### 掉落选项 ######################################################
+
+MoneyDropsOnGround:
+  # 若想使金币直接进入玩家账户中，不使用掉落物拾取模式，请将此项改为 false 
+  Enabled: true
+  # 掉落金币的物品类型。支持使用头颅皮肤站的自定义格式，例如： https://minecraft-heads.com/custom-heads 。使用时只需将网站显示的 VALUE 值复制至此处即可，例如： 'CustomHead:eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUxMTM3ZTExNDQzYThmYmIwNWZjZDNjY2MxYWY5YmQyMzAzOTE4ZjM1NDQ4MTg1ZTNlZDk2ZWYxODRkYSJ9fX0='
+  Item: 'EMERALD'
+  # 掉落金币的显示名称。在 1.16 及以上的版本中支持 RGB 格式，例如可使用 #62d180 代替 &a 显示绿色
+  ItemName: '&a$%amount%'
+  # 掉落物品是否拥有附魔光泽
+  Enchanted: true
+  # 物品 NBT 标签的 CustomModelData 值，用以显示自定义材质。仅在 1.14 及以上的版本中生效。原作者对此了解有限，但给出了相关的帮助页面： https://www.planetminecraft.com/forums/communities/texturing/new-1-14-custom-item-models-tuto-578834/
+  CustomModelData: 0
+  # 取消小数点显示，所有非整数将会被取整显示，例如 $3.33 将会显示为 $3
+  DisableDecimal: false
+
+# 某类生物是否会掉落金币
+# 已分裂的史莱姆或岩浆怪不归入“自然生成”或“刷怪笼类别”中
+MoneyDropsFromNaturalMobs: true
+MoneyDropsFromSpawnerMobs: true
+MoneyDropsFromSpawnEggMobs: true
+MoneyDropsFromSplitSlimes: true
+MoneyDropsFromBabyMobs: true
+
+# 在以下列表中添加世界名称以在指定的世界中禁用金币掉落
+# 若想在某个 WorldGuard 区域内禁用金币掉落，仅需把对应区域的 'drop-money' 或 'player-drop-money' 标识设为“禁用”即可。此功能仅在最新版 WorldGuard 插件中生效
+DisabledWorlds:
+  - world1
+  - world2
+  
+# 玩家在 1 分钟内获取掉落金币的上限，若不使用上限请将其设为 0 。
+MaxDropsPerMinute: 0
+
+# 掉落金币数量在上下限间随机取值时，是否使用整数格式，若不使用将自动取小数点后两位有效数字。
+RandomIntegerOnly: false
+
+# 是否自动移除世界中未被拾起且存留过久的金币
+# TimeUntilRemove = 自动移除时间，单位：秒
+# 警告！！此选项在启用时将会造成更多的卡顿，与 ClearLag 插件启用时造成更明显的卡顿同理
+AutoRemoveMoney:
+  Enabled: false
+  TimeUntilRemove: 60
+
+# 总金币掉落量以掉落次数均分或与掉落数量倍乘。
+# 例如，将猪的金币掉落量设为 $10 ，掉落数量设为 2 。将此选项设置为 true 将会掉落 2 x $5 金币，设置为 false 将会掉落 2 x $10 金币
+DivideMoneyBetweenDrops: true
+
+# 创造模式下的玩家在击杀生物后是否掉落金币
+CreativeModeDropsMoney: true
+
+
+###################################################### 拾取选项 ######################################################
+
+# Sound = 拾起金币时播放的音效。若不播放音效请设置为 NONE 。音效列表： https://www.digminecraft.com/lists/sound_list_pc.php
+Sound: entity.item.pickup
+
+# ParticleEffect = 拾起金币时显示的粒子效果。若不显示粒子效果请设置为 NONE 。粒子效果列表： https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+ParticleEffect: VILLAGER_HAPPY
+AmountOfParticles: 5
+
+# 启用此选项后，插件将循环遍历所有玩家，并以数个游戏刻为一周期检查掉落的物品，以确定玩家附近是否有可供拾取的金币。当服务器中玩家数量较多时，启用此选项可能会造成卡顿现象
+# 只需要在不使用 PaperMC 1.13 版本或以上的服务端时开启此功能， PaperMC 允许你在物品栏已满的情况下捡起地上的金币，而无需开启此功能。下载地址： https://papermc.io/downloads
+PickupMoneyWhenInventoryIsFull:
+  Enabled: true
+  # Interval = 插件检查玩家附近物品的时间间隔，单位：游戏刻（20 游戏刻 = 1 秒）。例如： 5 = 每 5 游戏刻检查一次 
+  Interval: 5
+  # Radius = 插件的检查半径，以玩家位置为中心，单位：格
+  Radius: 1
+
+# 若将此选项设置为 true ，则只有击杀生物的玩家才能拾取掉落的金币。玩家在游戏过程中可能会忘记拾取金币，启用此选项将导致金币掉落物散落，从而对其他尝试拾取金币的玩家造成影响
+OnlyKillerCanPickUpMoney: false
+
+# 当漏斗收集到金币掉落物时金币的去向。可选项共有：PLACER、KILLER 与 NONE
+# PLACER = 金币计入漏斗放置者的账户之中。注意，选项必须在服务端安装了 MoneyFromMobs 版本 4.4 及以上之后放置且服务端为 Minecraft 1.13 及以上的版本时才能生效
+# KILLER = 金币计入生物击杀者的账户之中。若未检测到有生物击杀者，金币将不会被收集到漏斗中
+# NONE = 漏斗不收集金币掉落物
+HopperGivesMoneyTo: KILLER
+
+
+###################################################### 消息设置 ######################################################
+
+# 玩家拾取金币时各个位置显示的消息文本。可用占位符有：数量 %amount% 与当前余额 %balance%
+ShowMessageInChat:
+  Enabled: false
+  Message: '&a你拾起了 $%amount% 金币！'
+ShowMessageInActionBar:
+  Enabled: true
+  Message: '&a你拾起了 $%amount% 金币！你当前拥有 $%balance% 金币！'
+ShowMessageAsFloatingText:
+  Enabled: true
+  Message: '&a+ $%amount% !'
+  # 消息文本的显示起始高度，单位：格
+  Height: 2.4
+  # 消息文本向上移动或保持静止
+  Movement: true
+  # 消息文本的显示时间，单位：秒
+  Duration: 1
+
+# 玩家使用命令 /MfmMute 后显示的消息文本
+MuteToggleOnMessage: '&c已停止显示掉落金币拾取的消息文本。'
+MuteToggleOffMessage: '&a已恢复显示掉落金币拾取的消息文本。'
+
+# 玩家使用命令 /MfmClear 后显示的消息文本
+ClearMoneyDropsMessage: '&9已成功移除地面上遗留的 %amount% 个金币掉落物。'
+
+# 玩家使用命令 /MfmReload 后显示的消息文本
+ReloadMessage: '&9Money From Mobs 插件已成功重载！'
+
+# 玩家在每分钟获得金币数达到上限时，击杀生物后显示的消息文本。若不显示消息请设置为 '' （请注意保留前后单引号）
+MaxDropsReachedMessage: '&9你已达到每分钟拾取金币掉落物的数量上限。请暂缓片刻以继续获得金币！'
+
+# 玩家使用命令 /MfmEvent 后显示的消息文本
+EventStart: '&a金币加成活动已开始！在此期间，击杀生物将会掉落 &f{multiplier}% &a的额外金币。活动持续 {hours} 小时 {minutes} 分钟 {seconds} 秒！'
+EventFinish: '&c金币加成活动已结束！所有生物的金币掉落量已恢复至原先水平！'
+EventAlreadyRunningMessage: '&c当前已存在进行中的金币加成活动。'
+NoEventRunningMessage: '&c当前暂无可停止的金币加成活动。'
+
+###################################################### 生物与玩家选项 ######################################################
+
+# DropChance = 玩家获得金币掉落物的概率，单位 % 。例如： 25 = 生物在被击杀后有 25% 的概率掉落金币
+# NumberOfDrops = 获得金币掉落物的数量。请在掉落选项中设置均分或倍乘模式。支持区间格式，例如： 1-3 = 掉落物数量将会在 1 至 3 之间随机取整
+# OnlyOnKill = 生物是否仅在玩家击杀后掉落金币。例如：将此选项设置为 false ，生物将会在摔死后掉落金币
+
+# 所有金币加成倍率均不影响玩家，以防玩家互相刷取，从而迅速产生无限的金币
+# Amount: 10% = 玩家掉落金币占原先其总金币的百分比，不局限于百分比。例如： 10% = 玩家将在死亡时掉落其总金币的 10%
+PLAYER: # 玩家掉落金币与击杀金币奖励为不相同的两部分
+  Enabled: true
+  Amount: 10%
+  DropChance: 100
+  NumberOfDrops: 5
+  OnlyOnKill: true
+  # TakeMoneyFromKilledPlayer: 若将此项设置为 false ，玩家将不会掉落金币，击杀者仍然可以获得金币奖励（常用在职业战争服务器中）
+  TakeMoneyFromKilledPlayer: true
+  # MoneyDrops 若将此项设置为 false ，玩家将不会掉落金币，击杀者将无法获得金币奖励。玩家原先掉落的金币也无法被重新拾取
+  MoneyDrops: true
+  Message: '&c你因死亡而损失了 $%amount% 金币。当前拥有 $%balance% 金币。'
+  
+########## 动物 ##########
+# Min = 掉落金币数量下限
+# Max = 掉落金币数量上限
+CHICKEN: # 鸡
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PIG: # 猪
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SHEEP: # 绵羊
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+COW: # 牛
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+MUSHROOM_COW: # 哞菇
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PARROT: # 鹦鹉
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SQUID: # 鱿鱼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+BAT: # 蝙蝠
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+OCELOT: # 豹猫
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+CAT: # 猫
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PANDA: # 熊猫
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+HORSE: # 马
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SKELETON_HORSE: # 骷髅马
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+ZOMBIE_HORSE: # 僵尸马
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+DONKEY: # 驴
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+MULE: # 骡
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+LLAMA: # 羊驼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+TRADER_LLAMA: # 行商羊驼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+FOX: # 狐狸
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+RABBIT: # 兔子
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+TURTLE: # 海龟
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+POLAR_BEAR: # 北极熊
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+COD: # 鳕鱼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SALMON: # 鲑鱼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PUFFERFISH: # 河豚
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+TROPICAL_FISH: # 热带鱼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+DOLPHIN: # 海豚
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+BEE: # 蜜蜂
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+WOLF: # 狼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SNOWMAN: # 雪傀儡
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+GOAT: # 山羊
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+GLOW_SQUID: # 发光鱿鱼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+AXOLOTL: # 美西螈
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+  
+  
+########## 主世界敌对生物 ##########
+ZOMBIE: # 僵尸
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+ZOMBIE_VILLAGER: # 僵尸村民
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+DROWNED: # 溺尸
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+HUSK: # 尸壳
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+STRAY: # 流浪者
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+GIANT: # 巨人
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SPIDER: # 蜘蛛
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+CAVE_SPIDER: # 洞穴蜘蛛
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SKELETON: # 骷髅
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+GUARDIAN: # 守卫者
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+ELDER_GUARDIAN: # 远古守卫者
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SLIME: # 史莱姆
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SILVERFISH: # 蠹虫
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+WITCH: # 女巫
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+CREEPER: # 苦力怕
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PHANTOM: # 幻翼
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+
+########## 村民与灾厄村民 ##########
+VILLAGER: # 村民
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+WANDERING_TRADER: # 流浪商人
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+IRON_GOLEM: # 铁傀儡
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+VINDICATOR: # 卫道士
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+EVOKER: # 唤魔者
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PILLAGER: # 掠夺者
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+RAVAGER: # 劫掠兽
+  Enabled: true
+  Min: 10
+  Max: 10
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+VEX: # 恼鬼
+  Enabled: true
+  Min: 5
+  Max: 5
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+
+########## 下界生物 ##########
+WITHER_SKELETON: # 凋灵骷髅
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+STRIDER: # 炽足兽
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PIG_ZOMBIE: # 僵尸猪人，供 1.15.2 及先前版本使用以代替僵尸猪灵
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PIGLIN: # 猪灵
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+PIGLIN_BRUTE: # 猪灵蛮兵
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+ZOMBIFIED_PIGLIN: # 僵尸猪灵，供 1.16 及以上版本使用以代替僵尸猪人
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+HOGLIN: # 疣猪兽
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+ZOGLIN: # 僵尸疣猪兽
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+MAGMA_CUBE: # 岩浆怪
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+BLAZE: # 烈焰人
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+GHAST: # 恶魂
+  Enabled: true
+  Min: 15
+  Max: 15
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+
+########## 末地生物 ##########
+ENDERMAN: # 末影人
+  Enabled: true
+  Min: 20
+  Max: 20
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+ENDERMITE: # 末影螨
+  Enabled: true
+  Min: 20
+  Max: 20
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+SHULKER: # 潜影贝
+  Enabled: true
+  Min: 20
+  Max: 20
+  DropChance: 25
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+
+########## BOSS 型生物 ##########
+ENDER_DRAGON: # 末影龙
+  Enabled: true
+  Min: 500
+  Max: 500
+  DropChance: 100
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+WITHER: # 凋灵
+  Enabled: true
+  Min: 500
+  Max: 500
+  DropChance: 100
+  NumberOfDrops: 1-3
+  OnlyOnKill: true

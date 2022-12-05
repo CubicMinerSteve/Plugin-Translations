@@ -1,0 +1,440 @@
+# Please do not touch this. This will simply make sure your config
+# includes the latest changes.
+ConfigVersion: 1.0
+
+# The main plugin configuration file.
+#
+# This file contains all settings which modify the gameplay and plugin
+# behavior.
+#
+# Each setting contains information about the behavior it changes as well as
+# the default/recommended value.
+
+# The arena settings
+ArenaSettings:
+
+  # Whether are players required to have an empty inventory before joining an arena
+  #
+  # Even though the plugin stores the player's inventory and handles their data gracefully,
+  # it might be a good option if you do not want your players to risk it in cases of
+  # server crashes or such.
+  #
+  # Default value: false
+  RequireEmptyInventory: false
+
+  # The game-mode players are put in when they are waiting in a lobby.
+  WaitingGameMode: adventure
+
+  # The scoreboard updating interval in ticks (every x ticks the scoreboard updates its placeholders)
+  #
+  # Default value: 10
+  # 1 second = 20 ticks
+  ScoreboardUpdateInterval: 10
+
+  # The item which players are given when they join an arena, in order to leave
+  # by right clicking.
+  LeaveArenaItem:
+    Slot: 8
+    Type: RED_BED
+    DisplayName: '&c离开游戏'
+    Lore:
+      - '&e右键离开游戏房间'
+
+  # The sign text
+  Signs:
+    - "&7[&2你说&9我做&7]"
+    - "&5{arena}"
+    - "&7(&1{arena_playercount}&8/&4{arena_maximum}&7)"
+    - "{arena_stage}"
+
+  # The text display for the different arena stages. These appear on GUIs
+  # and signs.
+  StagesDisplay:
+    waiting: '&2等待玩家' # Arena is waiting for players
+    countdown: '&1准备开始' # Countdown started
+    active: '&4可用' # Game is active
+    regenerating: '&8重载中' # Arena is regenerating
+    disabled: '&4不可用' # Arena is disabled
+    not_setup: '&4需要设置' # Arena is not fully setup yet
+
+  # Commands to be run for winners in arenas
+  #
+  # They should be defined in the following syntax:
+  # WinnerRewards:
+  #    1: # the player position (1st etc)
+  #      - give {player} diamond 64
+  #      - eco give {player} 50 # list of commands to run for the player
+  #    2:
+  #      - give {player} diamond 32
+  #    3:
+  #      - give {player} diamond 16
+  #
+  WinnerRewards:
+    1:
+      - give {player} dirt 64
+    2:
+      - give {player} dirt 32
+    3:
+      - give {player} dirt 16
+
+  # Similar to above, this allows you to define per-arena rewards
+  ArenaWinnerRewards:
+    anExampleArena: # the arena key here
+      1: # the player position
+        - give {player} dirt 64 # the commands to run
+        - eco give {player} 20
+      2:
+        - give {player} dirt 32
+      3:
+        - give {player} dirt 16
+
+  # Potion effects to give to players.
+  #
+  # These will be given once a player joins, and once the game starts.
+  GivePotionEffects:
+    - Type: REGENERATION
+      Duration: -1 # never expires
+      Amplifier: 1
+
+  # Damage that will be ignored by the game if any player is subjected to it while
+  # waiting in the arena.
+  #
+  # Values are constants:
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  CancelledDamageInWaiting:
+    - FIRE
+    - SUFFOCATION
+    - FALL
+    - ENTITY_ATTACK
+
+  # Damage that will be ignored by the game if any player is subjected to it.
+  #
+  # Values are constants:
+  # https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+  CancelledDamageInGame:
+    - FIRE
+    - SUFFOCATION
+    - FALL
+
+  # Whether should countdown be displayed on exp bars or not.
+  DisplayCountdownOnExpBar: true
+
+  # Commands which players are allowed to run in-game
+  #
+  # Players with permission 'ollozsays.arena.command-exempt' are not
+  # affected by this and will be able to run any command.
+  AllowedCommands:
+    - /ollozsays leave
+
+  # Whether should players be kicked or eliminated from an arena
+  # when they die
+  #
+  # Default value: true
+  KickOnDeath: true
+
+  # Whether should players not be allowed to open containers that were
+  # not placed by them.
+  #
+  # For example, if Player A places an anvil, no one other than Player A
+  # would be able to open it.
+  DisableOpeningContainersFromOtherPlayers: true
+
+  # Whether should players be teleported back to the arena center when they are under it.
+  #
+  # This can be particularly useful to prevent players from going
+  TeleportBackWhenUnderCenter: true
+
+  # The sound to be played when the player finishes their
+  # task successfully. Set to null to disable
+  #
+  # A full list of acceptable values can be found at
+  # https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java
+  SoundOnFinish: entity_arrow_hit_player # the "ding" sound
+
+  # The sound to be played when the player fail their
+  # task. Set to null to disable
+  #
+  # A full list of acceptable values can be found at
+  # https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java
+  SoundOnFail: entity_enderman_teleport
+
+  # The time (in seconds) in which players are given a "break" after they finish
+  # a task.
+  #
+  # In other words, the interval between finishing a task and transitioning
+  # to another
+  BreakBetweenTasks: 3
+
+  # The delay (in seconds) after the game is over and before players
+  # are evicted from the game.
+  #
+  # You can think of it as the time players say "gg" to
+  # each other.
+  DelayAfterGameFinish: 5
+
+  # The rewards given to players who finish the task in the nth place.
+  # For example, '1: 3' will give the player who finishes first 3 points.
+  #
+  # Note: If you want to reward all the players who finished despite not being the
+  # in first 1/2/... players, use the '-1' property.
+  RewardsByOrder:
+    1: 3
+    2: 2
+    -1: 1 # Players who finished the task yet were not the 1st or 2nd.
+
+  # The message(s) used to announce winners after the game is over.
+  #
+  # Use {player_n} to display the player in that position.
+  BroadcastWinners:
+    - 'CENTER:&e&m--------&e[+]&m--------'
+    - 'CENTER:&l你说我做'
+    - ''
+    - 'CENTER:&e&l第 1 名 &7- &a{player_1} &7- &b{player_1_score} 积分'
+    - 'CENTER:&6&l第 2 名 &7- &a{player_2} &7- &b{player_2_score} 积分'
+    - 'CENTER:&c&l第 3 名 &7- &a{player_3} &7- &b{player_3_score} 积分'
+    - ''
+    - 'CENTER:&e&m--------&e[+]&m--------'
+
+  # The displays that appear for the player when they finish as 1st,
+  # 2nd, etc.
+  #
+  # BroadcastBy can be any of the following:
+  # 1. Title
+  # 2. Subtitle
+  # 3. ActionBar
+  # 4. Chat
+  # 5. None
+  #
+  # When using Title or Subtitle, you can define FadeIn, Display and FadeOut to
+  # customize the title/subtitle.
+  #
+  # Predefined numbers:
+  # 0: Used to display to players who finished but were not the 1st/2nd/etc
+  # -1: Used to display to players who did NOT finish the task.
+  DisplayWhenTaskIsOver:
+    1:
+      BroadcastBy: Subtitle
+      Message: '&a你取得了第 1 名!'
+      FadeIn: 0
+      Display: 30
+      FadeOut: 0
+    2:
+      BroadcastBy: Subtitle
+      Message: '&a你取得了第 2 名!'
+      FadeIn: 0
+      Display: 30
+      FadeOut: 0
+    3:
+      BroadcastBy: Subtitle
+      Message: '&a你取得了第 3 名!'
+      FadeIn: 0
+      Display: 30
+      FadeOut: 0
+    0: # Those who finished but not in the first 1/2/etc
+      BroadcastBy: Chat
+      Message: '&f你取得了第 {position} 名.'
+    -1: # Those who failed
+      BroadcastBy: Subtitle
+      Message: '&c你未完成这个任务……'
+      FadeIn: 0
+      Display: 30
+      FadeOut: 0
+
+  # Same as above, this is displayed when the task does not reward by
+  # the order of who finished the task, and instead equally rewards
+  # everyone who finished the task.
+  DisplayWithoutPosition:
+    BroadcastBy: Subtitle
+    Message: '&a你完成了任务!'
+    FadeIn: 0
+    Display: 30
+    FadeOut: 0
+
+  # Custom displays for tasks when the player finishes the task.
+  #
+  # Note that these will only appear when "AnnounceOnFinishOrFail" is set
+  # to true in the task's configuration.
+  BroadcastWhenPlayer:
+
+    # Broadcasted when the player finishes their task
+    Finishes: "&a{player} 完成了任务!"
+
+    # Broadcasted when the player fails to do the task
+    Fails: "&c{player} 没有完成任务……"
+
+  # The scoreboard appearance
+  Scoreboard:
+
+    # When players are still waiting in the lobby (countdown has not started yet)
+    WAITING_IN_LOBBY:
+      Enabled: true
+      Title: '&e&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '玩家数: &a{arena_playercount}/{arena_maximum}'
+        - ''
+        - '等待中……'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+    # When the countdown started, but the arena can still take players (not full yet)
+    COUNTDOWN_AND_WAITING:
+      Enabled: true
+      Title: '&e&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '玩家数: &a{arena_playercount}/{arena_maximum}'
+        - ''
+        - '将在 &e{countdown} &f秒后开始……'
+        - ''
+        - '等待更多玩家加入……'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+    # When the countdown started, and the arena is full (no more players can join)
+    COUNTDOWN_AND_FULL:
+      Enabled: true
+      Title: '&9&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '玩家数: &a{arena_playercount}/{arena_maximum}'
+        - ''
+        - '将在 &e{countdown} &f秒后开始……'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+    # Game is active
+    GAME_ACTIVE:
+      Enabled: true
+      Title: '&9&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '&e{player_1}&f: {player_1_score}'
+        - '&e{player_2}&f: {player_2_score}'
+        - '&e{player_3}&f: {player_3_score}'
+        - ''
+        - '回合: {current_game_number}/{total_games}'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+  # The scoreboard appearance in death match arenas
+  #
+  # Here we just make sure we add Lives to be displayed
+  DeathMatchScoreboard:
+
+    # When players are still waiting in the lobby (countdown has not started yet)
+    WAITING_IN_LOBBY:
+      Enabled: true
+      Title: '&e&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '玩家数: &a{arena_playercount}/{arena_maximum}'
+        - ''
+        - '等待中……'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+    # When the countdown started, but the arena can still take players (not full yet)
+    COUNTDOWN_AND_WAITING:
+      Enabled: true
+      Title: '&e&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '玩家数: &a{arena_playercount}/{arena_maximum}'
+        - ''
+        - '将在 &e{countdown} &f秒后开始……'
+        - ''
+        - '等待更多玩家加入……'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+    # When the countdown started, and the arena is full (no more players can join)
+    COUNTDOWN_AND_FULL:
+      Enabled: true
+      Title: '&9&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '玩家数: &a{arena_playercount}/{arena_maximum}'
+        - ''
+        - '将在 &e{countdown} &秒后开始……'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+    # Game is active
+    GAME_ACTIVE:
+      Enabled: true
+      Title: '&9&l你说我做'
+      Lines:
+        - ''
+        - '模式: &a你说我做'
+        - ''
+        - '&e{player_1}&f: {player_1_score}'
+        - '&e{player_2}&f: {player_2_score}'
+        - '&e{player_3}&f: {player_3_score}'
+        - ''
+        - '&e生命值&f: {lives}'
+        - ''
+        - '回合: {current_game_number}/{total_games}'
+        - ''
+        - '&bwf.creeperkong.ga:8529'
+
+# Countdown settings
+CountdownSettings:
+
+  # The countdown when there are enough players to start
+  # the game.
+  GameCountdown: 20
+
+  # The way numbers of countdown are displayed (whether in chat or titles)
+  CountdownNumberDisplays:
+    20: '&a20'
+    15: '&a15'
+    10: '&e10'
+    5: '&c5'
+    4: '&c4'
+    3: '&c3'
+    2: '&c2'
+    1: '&c1'
+
+  # The countdown title on each of the above numbers
+  #
+  # Note that you don't need to define a 'Title', as it will be the actual countdown.
+  # Defining a 'Subtitle' is optional.
+  CountdownTitle:
+    Enabled: true
+    FadeIn: 5
+    Display: 10
+    FadeOut: 5
+
+  # The sound played when the countdown is equal to any of the above numbers.
+  #
+  # Values can be fetched from the following link:
+  # https://github.com/CryptoMorin/XSeries/blob/master/src/main/java/com/cryptomorin/xseries/XSound.java#L64
+  #
+  # Set to null to disable.
+  CountdownSound: UI_BUTTON_CLICK
+
+# The arena-blocks settings.
+#
+# Arena blocks are unique block locations in which are scanned and saved by the
+# plugin for future use by some tasks.
+#
+# For example, a "Mine a coal ore block"
+ArenaBlocks:
+
+  # The "special" block to scan.
+  SelectionBlock: sponge

@@ -1,0 +1,385 @@
+# Leave this file as it is!
+#
+### !!!Do not change anything here!!!
+#
+### THIS FILE AUTOMATICALLY REGENERATES ON SERVER RESTART
+#
+# Needed as it can be possible that the api is not working
+
+Commands:
+  Did-You-Mean: "&6命令格式错误！是否想输入：&e/%command%&6？"
+  Only-By-Player: "&c你只能以玩家身份执行此命令！"
+  Teleported-To-The-Lobby: "&a你已被传送至大厅！"
+  No-Permission: "&c你无权执行此命令！"
+  No-Arena-Like-That: "&c没有以此为名的游戏场地！"
+  Type-Arena-Name: "&c请输入游戏场地名称！"
+  Arena-Is-Full: "&c抱歉，此场地人数已满！"
+  Arena-Restarting: "&c该游戏场地正在重置中！"
+  No-Playing: "&c你不在游戏内！"
+  Wait-For-Start: "&c你需要等待游戏开始！"
+  Added-Plot: "&a已为场地 &7%ARENA% &a添加玩家建筑区域！"
+  Plugin-Reloaded: "&a成功重载插件及配置文件！"
+  Player-Not-Found: "&c未找到指定的玩家！"
+  Invalid-Args: "&c无效命令参数！请确保命令输入正确！"
+  No-Free-Arenas: "&c当前无空闲场地！"
+  Statistics:
+    Type-Name: "&c请输入待查看的数据类型！"
+    Invalid-Name: "&c数据类型无效！可用类型有：loses, wins, games_played, blocks_broken, blocks_placed, super_votes"
+    Header: "&8&m-------------------[&6 Top 10 玩家&8&m]-------------------"
+    Format: "&e#%position% %name% - %value% &7%statistic%"
+  Admin-Commands:
+    Teleported-To-Player: "&a已传送至目标玩家！"
+    List-Command:
+      Header: "&b建筑战争 &7游戏场地："
+      Format: "&b%arena% &e%status% &7%players%/%maxplayers%"
+      No-Arenas: "&c目前暂无游戏实例！"
+    Theme-Blacklisted: "&c无法在游戏中指定此主题！"
+  Stats-Command:
+    Header: "&l-----你的数据-----"
+    Header-Other: "&l-----玩家 %player% 的数据-----"
+    Footer: "&l--------------------"
+    Wins: "&a胜利：&e"
+    Loses: "&a失败：&e"
+    Games-Played: "&a游玩场次：&e"
+    Highest-Win: "&a单局胜利最高分：&e"
+    Highest-Points: "&a单局结算最高分：&e"
+    Total-Points-Earned: "&a总分：&e"
+    Blocks-Placed: "&a放置方块数：&e"
+    Blocks-Broken: "&a破坏方块数：&e"
+    Particles-Placed: "&a生成粒子数：&e"
+    Super-Votes: "&a超级投票数：&e"
+  Main-Command:
+    Header: "&6----------------{建筑战争 命令列表}----------"
+    Description: "&a游戏命令：\n
+    &b/bb stats: &7显示你的数据！\n
+    &b/bb leave: &7离开当前场地！\n
+    &b/bb join <arena>: &7加入指定场地！\n
+    &b/bb randomjoin <solo/team>: &7随机加入空闲场地！"
+    Admin-Bonus-Description: "\n&b/bba help: &7显示所有管理员命令！"
+    Footer: "&6-------------------------------------------------"
+  Arguments:
+    Super-Votes-Added: "&a你获得了 &b%amount% 次超级投票机会！"
+    Super-Votes-Set: "&a你的&b超级投票&a次数已更改为 &b%amount% &a！"
+    Success: "&a已成功执行命令！"
+
+Bossbar:
+  Waiting-For-Players: "&4&l等待更多玩家加入……"
+  Starting-In: "&f&l开始倒计时：&e&l%time%"
+  Time-Left: "&f&l剩余时间：&e&l%time%"
+  Vote-Time-Left: "&e&l剩余投票时间：&f&e%time%"
+
+Scoreboard:
+  Title: "&b&l建筑战争"
+  Theme-Unknown: "&c???"
+  GTB-Current-Timer:
+    Build-Time: "&f建筑时间：&e%FORMATTED_TIME_LEFT%"
+    Starts-In: "&f倒计时：&e%FORMATTED_TIME_LEFT%"
+  Content:
+    Playing-States:
+      Classic:
+        - "&7经典单人模式"
+        - "&f剩余时间：&e%FORMATTED_TIME_LEFT%"
+        - ""
+        - "&f玩家数：&e%PLAYERS%/%MAX_PLAYERS%"
+        - ""
+        - "&f主题：&e%THEME%"
+        - ""
+        - "&f场地名：&e%ARENA_ID%"
+        - ""
+        - "&ebeforever.top"
+      Teams:
+        - "&7经典团队模式"
+        - "&f剩余时间：&e%FORMATTED_TIME_LEFT%"
+        - ""
+        - "&f主题：&e%THEME%"
+        - ""
+        - "&f场地名：&e%ARENA_ID%"
+        - ""
+        - "&f你的队友："
+        - "&e%TEAMMATE%"
+        - ""
+        - "&ebeforever.top"
+      Guess-The-Build:
+        - "&7你建我猜模式"
+        - "&f建筑师："
+        - "&7%BUILDER%"
+        - ""
+        - "&e&l排行榜："
+        - "&6%1%&e：%1_PTS%"
+        - "&7%2%&e：%2_PTS%"
+        - "&7%3%&e：%3_PTS%"
+        - ""
+        - "%CURRENT_TIMER%"
+        - ""
+        - "&f主题："
+        - "&c%THEME%"
+        - ""
+        - "&ebeforever.top"
+    Starting:
+      - "&f玩家数：&e%PLAYERS%"
+      - ""
+      - "&f需要玩家：&e%MIN_PLAYERS%"
+      - ""
+      - "&f倒计时：&e%TIMER%"
+      - ""
+      - "&ebeforever.top"
+    Ending-States:
+      Classic:
+        - "&7经典单人模式"
+        - "&e&l游戏结束"
+        - ""
+        - "&ebeforever.top"
+      Teams:
+        - "&7经典团队模式"
+        - "&e&l游戏结束"
+        - ""
+        - "&ebeforever.top"
+      Guess-The-Build:
+        - "&7你建我猜模式"
+        - ""
+        - "&e1. &f%1%：&e%1_PTS%"
+        - "&e2. &f%2%：&e%2_PTS%"
+        - "&e3. &f%3%：&e%3_PTS%"
+        - "&e4. &f%4%：&e%4_PTS%"
+        - "&e5. &f%5%：&e%5_PTS%"
+        - "&e6. &f%6%：&e%6_PTS%"
+        - "&e7. &f%7%：&e%7_PTS%"
+        - "&e8. &f%8%：&e%8_PTS%"
+        - "&e9. &f%9%：&e%9_PTS%"
+        - "&e10. &f%10%：&e%10_PTS%"
+        - ""
+        - "&ebeforever.top"
+    Waiting:
+      - "&f玩家数：&e%PLAYERS%"
+      - ""
+      - "&f需要玩家：&e%MIN_PLAYERS%"
+      - ""
+      - "&ebeforever.top"
+
+In-Game:
+  Plugin-Prefix: "&6[&b建筑战争&6] "
+  Only-Command-Ingame-Is-Leave: "&c你需要离开建筑战争才能执行其他命令！当前唯一可用命令是：/bb leave ！"
+  Max-Entities-Limit-Reached: "&c你无法生成更多实体！"
+  Max-Particles-Limit-Reached: "&c你无法生成更多粒子！"
+  No-Permission-For-Particle: "&c你没有生成此粒子的权限！"
+  No-Permission-For-Biome: "&c你没有将场地设置为此生物群系的权限！"
+  Particle-Added: "&a成功生成粒子！"
+  Join-No-Permission: "&c你没有加入此场地的权限：&6%permission% &c！"
+  Full-Game-No-Permission: "&c你没有加入满人游戏场地的权限！"
+  No-Slots-For-Premium: "&c抱歉，此房间已被 VIP 玩家占满！"
+  Arena-Not-Configured: "&c游戏场地暂未完全配置！请联系服务器管理员！"
+  # Join cancelled via external plugin that uses BuildBattle API.
+  Join-Cancelled-Via-API: "&c你不能加入此场地！"
+  Join-As-Party-Member: "&c你跟随队伍队长一同加入场地：%ARENANAME% ！"
+  Nobody: "&e无人"
+  No-Theme-Yet: "&c投票中"
+  Floor-Item-Blacklisted: "&c你手持的物品无法被设置为地面样式！"
+  Spectator:
+    You-Are-Spectator: "&e你现在处于旁观者模式，可以四处飞行！"
+    Spectator-Menu-Name: "玩家列表"
+    Settings-Menu:
+      Inventory-Name: "&7旁观者设置"
+      Speed-Name: "&a速度"
+  Guess-The-Build:
+    Current-Builder: "&e建筑师：&7%BUILDER%"
+    Current-Round: "&e当前回合：&7%ROUND%/%MAXPLAYERS%"
+    Theme-Is-Long: "&e主题长度为 &7%NUM% &e个字符！"
+    Theme-Is-Name: "&e主题为：&e%THEME%"
+    Theme-Was-Name: "&e主题为：&a%THEME%&e！"
+    Theme-Was-Title: "&e主题为"
+    Theme-Was-Subtitle: "&a%THEME%！"
+    Theme-Guessed: "&e所有玩家都猜中了主题！"
+    Theme-Being-Selected: "&e选择主题中……"
+    Start-Guessing-Title: "&e开始猜主题吧！"
+    Plus-Points: "&a+%pts% 分！"
+    Chat:
+      Guessed-The-Theme: "&7%player% &e猜中了主题！"
+      Cant-Talk-When-Guessed: "&c猜中主题后你无法聊天！"
+      Cant-Talk-When-Building: "&c建筑时你无法聊天！"
+  NPC:
+    Floor-Change-NPC-Name: "&aNPC - 更改地面"
+    NPC-Created: "&a成功创建了更改地面的 NPC ！"
+    Install-Citizens: "&c请在创建 NPC 前先安装 Citizens 插件！"
+  Messages:
+    Time-Left-Subtitle: "&c剩余 %FORMATTEDTIME% 秒！"
+    Time-Left-To-Build: "&6建筑时间剩余 %FORMATTEDTIME% &7！"
+    Plot-Leave-Error: "&c你不能飞出自己的建筑区域！"
+    Already-Playing: "&c你正在游玩建筑战争了！"
+    Cant-Fly-Outside-Plot: "&c你不能在自己的建筑区域之外飞行！"
+    Join: "&7玩家 &b%PLAYER% &7加入了游戏 (%PLAYERSIZE%/%MAXPLAYERS%)！"
+    Join-Title: ""
+    Join-SubTitle: "&e%ARENANAME%"
+    Leave: "&7玩家 &b%PLAYER% &7离开了游戏 (%PLAYERSIZE%/%MAXPLAYERS%)！"
+    Lobby-Messages:
+      Waiting-For-Players: "&7等待更多玩家加入……需要 &b%MINPLAYERS% &7名玩家才能开始！"
+      Enough-Players-To-Start: "&7已拥有足够玩家，游戏即将开始！"
+      Not-Enough-Space-For-Party: "&c你的队伍人数超过了场地 %ARENANAME% 的剩余容纳人数！"
+      Game-Started: "&7游戏开始！尽力建造出最漂亮的建筑吧！"
+      Kicked-For-Premium-Slot: "&c玩家 VIP 玩家加入场地，玩家 %PLAYER% 被移出……"
+      You-Were-Kicked-For-Premium-Slot: "&c一名 VIP 玩家加入了场地，你的位置被取代……"
+    Voting-Messages:
+      Plot-Owner-Title: "&a建筑师：&7%player%"
+      Voting-For-Player-Plot: "&7现在正在为玩家 &e&l%PLAYER%'s &7的建筑投票！"
+      Voted-For-Player-Plot: "&7你成功为玩家 &e&l%PLAYER% &7的建筑投票！"
+      Vote-For-Next-Plot: "&7你现在能给下一个建筑投票了！"
+      Cant-Vote-Own-Plot: "&c你不能给你自己的建筑投票！"
+      Vote-Successful: "&a已成功投票！"
+      Winner-Title: "&e获胜者：&a%player%"
+      Summary:
+        - "&a&l&m-------------------------------------------"
+        - "&f&l建筑战争"
+        - ""
+        - "%place_one%"
+        - "%place_two%"
+        - "%place_three%"
+        - "&a&l&m-------------------------------------------"
+      Place-One: "&e&l第 1 名 &7- %player% (%number% points)"
+      Place-Two: "&6&l第 2 名 &7- %player% (%number% points)"
+      Place-Three: "&c&l第 3 名&7- %player% (%number% points)"
+      Summary-Other-Place: "&a你的名次：&7第 %number% 名"
+    Game-End-Messages:
+      Only-You-Playing: "&7你是该场地中唯一的一名玩家……已将你传送至大厅！"
+    Admin-Messages:
+      Set-Starting-In-To-0: "&b管理员将等待时间设为 0 ，游戏开始！"
+      Changed-Theme: "&b管理员将主题更改为 %THEME% ！"
+
+Menus:
+  Location-Message: "&a位置："
+  Option-Menu:
+    Inventory-Name: "&a选项菜单"
+    Go-Back-Button:
+      Item-Name: "&a点击打开选项"
+      Item-Lore: "&7点击返回主界面"
+    Items:
+      Particle:
+        Inventory-Name: "&a粒子菜单"
+        Item-Name: "&a选择粒子"
+        Item-Lore: "&7点击生成粒子"
+        In-Inventory-Item-Name: "&c移除粒子"
+        In-Inventory-Item-Lore: "&7右键打开菜单"
+        Particle-Removed: "&c成功移除粒子！"
+      Players-Heads:
+        Inventory-Name: "&a头颅菜单"
+        Item-Name: "&a获取头颅"
+        Item-Lore: "&7点击获取头颅"
+        No-Permission: "&c你没有相应的权限！"
+      Floor:
+        Item-Name: "&a地面样式"
+        Item-Lore: "&7把方块拖至此处更换地面材质！"
+        Floor-Changed: "&a成功更换地面材质！"
+      Time:
+        Inventory-Name: "&a设置时间"
+        Item-Name: "&a更改场地内的时间"
+        Item-Lore: "&7右键打开菜单"
+        Time-Type:
+          World-Time: "&e世界时间"
+          Day: "&e清晨 (1000 刻)"
+          Noon: "&e中午 (6000 刻)"
+          Sunset: "&e日落 (12000 刻)"
+          Night: "&e夜晚 (13000 刻)"
+          MidNight: "&e午夜 (18000 刻)"
+          Sunrise: "&e日出 (23000 刻)"
+        Time-Set: "&e已成功更改时间！"
+      Biome:
+        Inventory-Name: "&a设置生物群系"
+        Item-Name: "&a更改场地内生物群系"
+        Item-Lore: "&7右键打开菜单"
+        Biome-Set: "&e已更换生物群系！"
+      Weather:
+        Inventory-Name: "&a设置天气"
+        Item-Name: "&a更改场地内天气"
+        Item-Lore: "&7右键打开菜单"
+        Weather-Type:
+          Downfall: "&e雨天"
+          Clear: "&e晴天"
+        Weather-Set: "&e天气已切换！"
+      Banner-Creator:
+        Inventories:
+          Color-Choose: "&a选择颜色"
+          Add-Layer: "&a添加图样"
+          Add-Layer-Color: "&a添加图样颜色"
+        Item-Name: "&a设计旗帜"
+        Item-Lore: "&7右键打开菜单"
+        Create-Banner-Item:
+          Name: "&a放置旗帜"
+          Lore: "&7右键在此处放置该旗帜！"
+      Reset:
+        Item-Name: "&c重置区域"
+        Item-Lore: "&7完全重置你的建筑区域，&c&l无法撤销！"
+        Plot-Reset: "&c成功重置建筑区域！"
+  Theme-Voting:
+    Inventory-Name: "请选择建筑主题！"
+    Theme-Item-Name: "&6%theme%"
+    #use ; to move to next line
+    Theme-Item-Lore: "&7为主题 &b%theme% 投票;;&7剩余时间：&c%time-left%;&7当前票数：&c%percent%%;;&8&o票数百分比将在右侧展示;;&e点击为主题 &b%theme% &e投票！"
+    Voted-Successfully: "&a已成功投票！"
+    Already-Voted: "&c你已为此主题投票！"
+    Super-Vote-Item-Name: "&b超级投票"
+    Super-Vote-Item-Lore: "&7你拥有 &b%owned% 次超级投票&e机会！点击为主题 &b%theme% &e超级投票！"
+    Super-Vote-Used: "&7玩家 &e%player% &7对主题 &b%theme% &7使用了&b超级投票&7！游戏准备开始……"
+  Guess-The-Build-Theme-Selector:
+    Inventory-Name: "请选择建筑主题！"
+    Theme-Item-Name: "&b%theme%"
+    Theme-Item-Lore: "%difficulty%;;&b+%points% &7分（若有玩家猜中）;;&e点击选择此主题！"
+    Difficulties:
+      Easy: "&a简单"
+      Medium: "&e中等"
+      Hard: "&c困难"
+  Buttons:
+    Back-Button:
+      Name: "&c返回"
+      Lore: "&7点击返回！"
+
+Signs:
+  Please-Type-Arena-Name: "&c请在第二行输入场地名！"
+  Arena-Doesnt-Exists: "&c目标场地不存在！"
+  Sign-Created: "&a成功创建加入告示牌！"
+  Sign-Removed: "&a成功移除加入告示牌！"
+  Game-States:
+    Inactive: "&l不可用……"
+    In-Game: "&l游戏中"
+    Starting: "&e&l准备开始"
+    Full-Game: "&4&l玩家已满"
+    Ending: "&l结束中"
+    Restarting: "&c&l重置中"
+  Lines:
+    - "&b&l建筑战争"
+    - "%state%"
+    - "%mapname%"
+    - "&5[%playersize%/%maxplayers%]"
+
+Arena-Selector:
+  Inv-Title: "场地选择"
+  Item:
+    Name: "&f%mapname%"
+    Lore:
+      - "&b建筑战争 &f- &e%mapname%"
+      - " "
+      - " "
+      - "  &f玩家数： %playersize%/%maxplayers%"
+      - "  &f状态：%state%"
+      - "  &f模式：%type%"
+      - " "
+      - " "
+      - "&e点击加入此场地！"
+
+Placeholders:
+  Game-States:
+    Waiting: "&l等待玩家……"
+    Starting: "&e&l准备开始"
+    In-Game: "&l游戏中"
+    Ending: "&l结束中"
+    Restarting: "&c&l重置中"
+
+Plots:
+  Team:
+    Full: "队伍已满"
+    Empty: "可加入"
+    Inside: "你的队伍"
+    Name: "建筑区域 - %plot%"
+    Menu-Name: "建筑菜单"
+    Plot-Choose: "你所处的区域：%plot%"
+    Member: "你已经是队伍的一员了！"
+
+# Do not modify!
+File-Version-Do-Not-Edit: 25

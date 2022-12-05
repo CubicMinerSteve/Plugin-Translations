@@ -1,0 +1,455 @@
+{
+  "Enable": false,
+  "TickReloadInterval": 20,
+  "link": "play.beforever.top",
+  "RaceMode": {
+    "perState": {
+      "HOST_FINISHED": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RANK_PLAYER}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "WAITING": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u7ade\u901f\u6a21\u5f0f",
+          "",
+          "&c\u9700\u8981 {NEEDED_PLAYER} \u540d\u73a9\u5bb6\u5f00\u59cb\u6e38\u620f\u2026\u2026",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_SPECTATOR_FINISHED": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RANK_PLAYER_4}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RANK_PLAYER_5}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_WAITING": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u7ade\u901f\u6a21\u5f0f",
+          "",
+          "\u521b\u5efa\u73a9\u5bb6\uff1a{HOST}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "SPECTATOR_FINISHED": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RANK_PLAYER_4}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RANK_PLAYER_5}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_STARTING": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u7ade\u901f\u6a21\u5f0f",
+          "",
+          "\u521b\u5efa\u73a9\u5bb6\uff1a{HOST}",
+          "&c\u5c06\u5728 {STARTING_COUNTDOWN} \u79d2\u540e\u5f00\u59cb\u2026\u2026",
+          "",
+          "{LINK}"
+        ]
+      },
+      "STARTING": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u7ade\u901f\u6a21\u5f0f",
+          "",
+          "&c\u5c06\u5728 {STARTING_COUNTDOWN} \u79d2\u540e\u5f00\u59cb\u2026\u2026",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_SPECTATOR": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RACE_RANK_PLAYER_4}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RACE_RANK_PLAYER_5}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_STARTED": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RACE_RANK_PLAYER}",
+          "",
+          "\u8bb0\u5f55\u70b9\uff1a&6{SELF_CPS}/{MAX_CPS}",
+          "\u5708\u6570\uff1a&6{SELF_LAPS}/{MAX_LAPS}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "STARTED": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RACE_RANK_PLAYER}",
+          "",
+          "\u8bb0\u5f55\u70b9\uff1a&6{SELF_CPS}/{MAX_CPS}",
+          "\u5708\u6570\uff1a&6{SELF_LAPS}/{MAX_LAPS}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "SPECTATOR": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RACE_RANK_PLAYER_4}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RACE_RANK_PLAYER_5}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "FINISHED": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RANK_PLAYER}",
+          "",
+          "{LINK}"
+        ]
+      }
+    }
+  },
+  "GrandPrix": {
+    "perState": {
+      "WAITING": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u9526\u6807\u8d5b",
+          "\u573a\u6b21\uff1a1/{MAX_ROUND}",
+          "",
+          "&c\u9700\u8981 {NEEDED_PLAYER} \u540d\u73a9\u5bb6\u5f00\u59cb\u6e38\u620f\u2026\u2026",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_BETWEENROUND": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "\u4e0b\u4e00\u5f20\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "{CURRENT_MAP_DIFFICULTY}",
+          "&6\u4e2a\u4eba\u7eaa\u5f55\uff1a{SELF_MAP_PB}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RANK_PLAYER}",
+          "\u4f60\u7684\u5206\u6570\uff1a{SELF_RANK_PLAYER_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "SPECTATOR_FINISHED": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RANK_PLAYER_4} - {RANK_PLAYER_4_SCORE}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RANK_PLAYER_5} - {RANK_PLAYER_5_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_STARTING": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u9526\u6807\u8d5b",
+          "\u573a\u6b21\uff1a1/{MAX_ROUND}",
+          "",
+          "\u521b\u5efa\u73a9\u5bb6\uff1a{HOST}",
+          "&c\u5c06\u5728 {STARTING_COUNTDOWN} \u79d2\u540e\u5f00\u59cb\u2026\u2026",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_SPECTATOR_BETWEENROUND": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "\u4e0b\u4e00\u5f20\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "{CURRENT_MAP_DIFFICULTY}",
+          "&6\u4e2a\u4eba\u7eaa\u5f55\uff1a{SELF_MAP_PB}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RANK_PLAYER_4} - {RANK_PLAYER_4_SCORE}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RANK_PLAYER_5} - {RANK_PLAYER_5_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "SPECTATOR_BETWEENROUND": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "\u4e0b\u4e00\u5f20\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "{CURRENT_MAP_DIFFICULTY}",
+          "&6\u4e2a\u4eba\u7eaa\u5f55\uff1a{SELF_MAP_PB}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RANK_PLAYER_4} - {RANK_PLAYER_4_SCORE}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RANK_PLAYER_5} - {RANK_PLAYER_5_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "STARTING": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u9526\u6807\u8d5b",
+          "\u573a\u6b21\uff1a1/{MAX_ROUND}",
+          "",
+          "&c\u5c06\u5728 {STARTING_COUNTDOWN} \u79d2\u540e\u5f00\u59cb\u2026\u2026",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_STARTED": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "\u573a\u6b21\uff1a{CURRENT_ROUND}/{MAX_ROUND}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RACE_RANK_PLAYER}",
+          "",
+          "\u8bb0\u5f55\u70b9\uff1a&6{SELF_CPS}/{MAX_CPS}",
+          "\u5708\u6570\uff1a&6{SELF_LAPS}/{MAX_LAPS}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "STARTED": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "\u573a\u6b21\uff1a{CURRENT_ROUND}/{MAX_ROUND}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RACE_RANK_PLAYER}",
+          "",
+          "\u8bb0\u5f55\u70b9\uff1a&6{SELF_CPS}/{MAX_CPS}",
+          "\u5708\u6570\uff1a&6{SELF_LAPS}/{MAX_LAPS}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "BETWEENROUND": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "\u4e0b\u4e00\u5f20\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "{CURRENT_MAP_DIFFICULTY}",
+          "&6\u4e2a\u4eba\u7eaa\u5f55\uff1a{SELF_MAP_PB}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RANK_PLAYER}",
+          "\u4f60\u7684\u5206\u6570\uff1a{SELF_RANK_PLAYER_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "SPECTATOR": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "\u573a\u6b21\uff1a{CURRENT_ROUND}/{MAX_ROUND}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RACE_RANK_PLAYER_4}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RACE_RANK_PLAYER_5}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_FINISHED": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RANK_PLAYER}",
+          "\u4f60\u7684\u5206\u6570\uff1a{SELF_RANK_PLAYER_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_SPECTATOR_FINISHED": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RANK_PLAYER_4} - {RANK_PLAYER_4_SCORE}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RANK_PLAYER_5} - {RANK_PLAYER_5_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_WAITING": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "&f\u5730\u56fe\uff1a{CURRENT_MAP}",
+          "&f\u6a21\u5f0f\uff1a&a\u9526\u6807\u8d5b",
+          "\u573a\u6b21\uff1a1/{MAX_ROUND}",
+          "",
+          "\u521b\u5efa\u73a9\u5bb6\uff1a{HOST}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "HOST_SPECTATOR": {
+        "title": "{HOST_NAME}",
+        "lines": [
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u73a9\u5bb6\u6570\uff1a{CURRENT_PLAYER}/{MAX_PLAYER}",
+          "\u573a\u6b21\uff1a{CURRENT_ROUND}/{MAX_ROUND}",
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RACE_RANK_PLAYER_1}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RACE_RANK_PLAYER_2}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RACE_RANK_PLAYER_3}",
+          "&f\u7b2c\u0020\u0034\u0020\u540d - {RACE_RANK_PLAYER_4}",
+          "&f\u7b2c\u0020\u0035\u0020\u540d - {RACE_RANK_PLAYER_5}",
+          "",
+          "{LINK}"
+        ]
+      },
+      "FINISHED": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&e\u7b2c\u0020\u0031\u0020\u540d - {RANK_PLAYER_1} - {RANK_PLAYER_1_SCORE}",
+          "&7\u7b2c\u0020\u0032\u0020\u540d - {RANK_PLAYER_2} - {RANK_PLAYER_2_SCORE}",
+          "&6\u7b2c\u0020\u0033\u0020\u540d - {RANK_PLAYER_3} - {RANK_PLAYER_3_SCORE}",
+          "&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_RANK_PLAYER}",
+          "\u4f60\u7684\u5206\u6570\uff1a{SELF_RANK_PLAYER_SCORE}",
+          "",
+          "{LINK}"
+        ]
+      }
+    }
+  },
+  "Training": {
+    "perState": {
+      "TRAINING": {
+        "title": "&7\u9798\u7fc5\u98de\u884c",
+        "lines": [
+          "",
+          "&6\u4e2a\u4eba\u7eaa\u5f55\uff1a{SELF_MAP_PB}",
+          "&f&e\u4f60\u7684\u6392\u540d&3\uff1a{SELF_MAP_RANK}",
+          "",
+          "\u7eaa\u5f55\u4fdd\u6301\u8005\uff1a{MAP_WR_PLAYER}",
+          "&6\u65f6\u95f4\uff1a&c{MAP_WR_TIME}",
+          "",
+          "\u5269\u4f59\u65f6\u95f4\uff1a&c{TIME_LEFT}",
+          "&f\u96be\u5ea6\uff1a{CURRENT_MAP_DIFFICULTY}",
+          "\u8bb0\u5f55\u70b9\u4e2a\u6570\uff1a&6{SELF_CPS}/{MAX_CPS}",
+          "\u5708\u6570\uff1a&6{SELF_LAPS}/{MAX_LAPS}",
+          "",
+          "{LINK}"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,198 @@
+removed_category: '&cRemoved category &4%market_category_name% &cfrom your market!'
+
+command_syntax:
+  payments: payments [collect]
+  view: view <player>
+  search: search <keywords>
+  markets: /markets
+  block_item: block item [list]
+  list: list
+  confiscate: confiscate <player>
+  remove: remove
+  add_item: add item <category> <price> [priceIsForStack]
+  pay_upkeep: pay upkeep
+  reload: reload
+  set: set <name|desc|open> <value>
+  request: request <amount> <price>
+  help: help
+  add_category: add category <name> [description]
+  bank: bank [add] [-a]
+  create: create [name]
+  settings: settings
+  force_save: force save
+  showrequest: show request <player> [-l]
+
+command_description:
+  payments: Collect any payments of custom currency
+  add_item: Add a new item to your market
+  remove: Delete your market
+  settings: Open the in game config editor
+  reload: Reload lang and configuration files
+  bank: View your currency bank/add currency
+  help: Shows the help page
+  markets: Open the market menu
+  pay_upkeep: Pay your outstanding upkeep fee
+  view: Open a specific player's market
+  create: Create a market if you don't have one.
+  showrequest: Show requests made by a single player
+  force_save: Force save all data
+  request: Open a new item request
+  add_category: Create a new category inside your market.
+  confiscate: Confiscate an entire market's items
+  block_item: Blacklist an item or view all blocked items.
+  set: Update a specific market setting
+  search: Search for items in all markets
+  list: View all available player markets.
+
+updated_market_description: '&aSuccessfully updated market description'
+
+prompt:
+  enter_request_amount: '&eEnter the amount of items you''re requesting:'
+  enter_market_name: '&aEnter the new market name:'
+  enter_category_description: '&aEnter the new description for the category:'
+  enter_market_item_price: '&aEnter the new price:'
+  enter_rating_message: '&aPlease enter your rating message:'
+  enter_category_name: '&aEnter name for new category:'
+  enter_category_display_name: '&aEnter a new display name for the category:'
+  enter_withdraw_amount: '&aEnter the amount you wish to withdraw:'
+
+nothing_in_hand: '&cYou aren''t holding anything in your hand!'
+
+no_payments_to_collect: '&cYou do not have any payments to collect!'
+
+cannot_buy_from_own_market: '&cYou cannot buy from your own market!'
+
+select_market_category: '&cPlease select a market category'
+
+market_category_required: '&cYou need at least 1 category in your market!'
+
+removed_player_market: '&cSuccessfully removed &4%player%&c''s market!'
+
+money_add: '&a&l+ $%price%'
+
+misc:
+  search: '&aEnter search keywords into chat'
+  no_rating_message: '&cNo Message'
+  no_ratings: '&cNo Ratings'
+  default category description: Default Category Description
+  price is for stack:
+    'true': 'True'
+    'false': 'False'
+  default market description: '&7Welcome to my market!'
+  default market name: '%player%''s Market'
+  category not selected: '&cNone Selected'
+
+updated_market_to_close: '&aSuccessfully closed your market'
+
+not_enough_money_custom_currency: '&cYou do not have enough %currency_item% &cto buy that.'
+
+general:
+  prefix: '&8[&eMarkets&8]'
+  reloaded: '&aMarkets has been reloaded (%value%ms)'
+
+must_wait_to_change_rating: '&cYou must wait &4%remaining_days%d %remaining_hours%h %remaining_minutes%m %remaining_seconds%s &cbefore you can change your rating'
+
+added_item_to_category: '&aAdded &2%item_name% &ato market category&f: &2%market_category_name%'
+
+featured_market: '&aYou successfully featured your market'
+
+item_is_blocked: '&cYou cannot request/sell this item'
+
+cannot_fulfill_own: '&cYou cannot fulfill your own request'
+
+added_blocked_item: '&aAdded &2%item_name%&a to blacklist'
+
+updated_market_to_open: '&aSuccessfully opened your market'
+
+air:
+  currency: '&cYou cannot use air as the currency!'
+
+already_left_rating: '&cYou already left a rating on this market.'
+
+upkeep_fee_not_paid: '&cYou could not pay your market upkeep fee, your market has been locked until you do so.'
+
+updated_category_description: '&aSuccessfully updated category description.'
+
+created_category: '&aYou created a new category for your market called&f: &2%market_category_name%'
+
+click_currency_item_request: '&aPlease left/right click the item you wish to use as currency for this request'
+
+search_phrase_empty: '&cPlease enter a search phrase.'
+
+money_remove: '&c&l- $%price%'
+
+created_market: '&aYou''re now the owner of your very own market!'
+
+updated_market_item_currency: '&aSuccessfully currency for market item.'
+
+at_max_request_limit: '&cYou are not allowed to make any more requests'
+
+updated_market_name: '&aSuccessfully updated market name'
+
+place_sell_item: '&cPlease place the item you want to sell in the gui.'
+
+confiscated_market: '&cSuccessfully confiscated market items.'
+
+already_have_market: '&cYou cannot create a market since you already have one!'
+
+player_does_not_have_requests: '&cThat player doesn''t have any open requests'
+
+click_currency_item: '&aPlease left/right click the item you wish to use as currency for this market item.'
+
+not_a_number: '&cPlease enter a valid number'
+
+price_is_zero_or_less: '&cPlease enter a price greater than 0'
+
+place_currency_item: '&cPlease place item you wish to use as currency in the gui.'
+
+cannot_rate_own_market: '&cYou cannot rate your own market...'
+
+category_already_created: '&cYou already have a market category by the name&f: &4%market_category_name%'
+
+claim_currency: '&cPlease claim your outstanding payments first.'
+
+market_category_not_found: '&cCould not find a category in your market named&f: &4%market_category_name%'
+
+upkeep_already_paid: '&cYour market upkeep fee is already paid.'
+
+not_enough_items: '&cYou do not have enough items to fulfill the request.'
+
+created_request_broadcast: '&2%player% &acreated a request for x&2%request_amount% %request_item_name% &8[&eView&8]'
+
+money_remove_custom_currency: '&c&l- x%price% %currency_item%'
+
+currency_select_option: '&eClick me to select a currency item from a gui'
+
+market_required: '&cYou need to create a market to do that!'
+
+not_enough_money: '&cYou do not have enough money!'
+
+player_does_not_have_funds: '&4%player% &cdoes not have enough money to pay!'
+
+added_currency_to_bank: '&aYou added &2%amount% %currency_item% &ato your bank'
+
+rating_message_too_long: '&cYour rating message is too long'
+
+max_request_amount: '&cYou can only request &4%request_max_amount% &citems per request.'
+
+updated_category_icon: '&aSuccessfully updated category icon.'
+
+market_not_found: '&cCould not find a market owned by that player.'
+
+at_max_items_limit: '&cYou are not allowed to add any more items to your market'
+
+not_enough_money_create: '&cYou do not have enough money to create a market!'
+
+upkeep_fee_paid: '&aYou paid the market up keep fee of &2$%upkeep_fee%'
+
+money_add_custom_currency: '&a&l+ x%price% %currency_item%'
+
+player_not_found: '&cCould not find that player'
+
+created_request: '&aCreated a new request for x&2%request_amount% %request_item_name%'
+
+updated_category_name: '&aSuccessfully updated category display name.'
+
+removed_market: '&cYour market has been deleted!'
+
+market_closed: '&cThat player''s market is currently closed'

@@ -1,0 +1,198 @@
+removed_category: '&c已从全球市场中移除类别 &4%market_category_name% &c！'
+
+command_syntax:
+  payments: payments [collect]
+  view: view <玩家名>
+  search: search <关键词>
+  markets: /markets
+  block_item: block item [物品类型]
+  list: list
+  confiscate: confiscate <玩家名>
+  remove: remove
+  add_item: add item <类型> <价格> [是否整组价格]
+  pay_upkeep: pay upkeep
+  reload: reload
+  set: set <名称|描述|开放状态> <值>
+  request: request <数量> <价格>
+  help: help
+  add_category: add category <名称> [描述]
+  bank: bank [add] [数量]
+  create: create [名称]
+  settings: settings
+  force_save: force save
+  showrequest: show request <玩家名> [-l]
+
+command_description:
+  payments: 领取自定义货币报酬
+  add_item: 向市场中添加物品
+  remove: 删除市场
+  settings: 打开游戏内配置编辑器
+  reload: 重载语言与配置文件
+  bank: 查看你的银行储蓄 / 增加自定义货币数量
+  help: 显示帮助界面
+  markets: 打开全球市场主菜单
+  pay_upkeep: 缴纳未付的市场管理费
+  view: 打开指定玩家的全球市场
+  create: 创建新的市场（若无）
+  showrequest: 显示指定玩家创建的订单
+  force_save: 强制保存所有数据
+  request: 新建物品订单
+  add_category: 在你的市场中新建一个类别
+  confiscate: 没收指定玩家市场的所有物品
+  block_item: 把物品列入黑名单或显示物品黑名单
+  set: 更新指定的全球市场设置
+  search: 在全部市场中搜索指定物品
+  list: 显示服务器可用的所有市场
+
+updated_market_description: '&a成功更新市场描述！'
+
+prompt:
+  enter_request_amount: '&e请输入你需求的物品数量：'
+  enter_market_name: '&a请输入新市场名称：'
+  enter_category_description: '&a请为此类别补充描述：'
+  enter_market_item_price: '&a请输入新价格：'
+  enter_rating_message: '&a请输入你的评价:'
+  enter_category_name: '&a请为新的类别取名：'
+  enter_category_display_name: '&a请输入类别显示名称：'
+  enter_withdraw_amount: '&a请输入你想取出的数量：'
+
+nothing_in_hand: '&c你并未手持任何物品！'
+
+no_payments_to_collect: '&c你没有任何待领取报酬！'
+
+cannot_buy_from_own_market: '&c你不能从自己的市场上购买物品！'
+
+select_market_category: '&c请选择一种市场类别！'
+
+market_category_required: '&c你的市场内必须拥有至少一种类别！'
+
+removed_player_market: '&c成功移除了玩家 &4%player% &c的市场！'
+
+money_add: '&a&l+ $%price%'
+
+misc:
+  search: '&a请在聊天框输入待搜索内容！'
+  no_rating_message: '&c暂无评价描述'
+  no_ratings: '&c暂无评价'
+  default category description: 默认类别描述
+  price is for stack:
+    'true': '是'
+    'false': '否'
+  default market description: '&7欢迎来到我的市场！'
+  default market name: '%player% 的市场摊位'
+  category not selected: '&c未选择'
+
+updated_market_to_close: '&a成功关闭市场！'
+
+not_enough_money_custom_currency: '&c你没有足够的 %currency_item% &c以购买此物品！'
+
+general:
+  prefix: '&8[&e全球市场&8]'
+  reloaded: '&a全球市场已重新加载 (%value%ms)'
+
+must_wait_to_change_rating: '&c你需要等待 &4%remaining_days% 天 %remaining_hours% 时 %remaining_minutes% 分 %remaining_seconds% 秒 &c才能修改你的评价！'
+
+added_item_to_category: '&a已成功将物品 &2%item_name% &a添加到类别&f：&2%market_category_name%'
+
+featured_market: '&a已成功推广你的市场！'
+
+item_is_blocked: '&c你不能创建该物品的订单或出售该物品！'
+
+cannot_fulfill_own: '&c你不能接收或交付自己创建的订单！'
+
+added_blocked_item: '&a已添加 &2%item_name%&a 至黑名单……'
+
+updated_market_to_open: '&a成功打开市场界面！'
+
+air:
+  currency: '&c你不能使用空气作为自定义货币！'
+
+already_left_rating: '&c你已经对这个市场进行评价了！'
+
+upkeep_fee_not_paid: '&c由于你无法支付市场管理费，你的市场被暂时封锁直至补齐费用……'
+
+updated_category_description: '&a成功更新类别描述！'
+
+created_category: '&a成功在你的市场内创建新类别&f：&2%market_category_name%'
+
+click_currency_item_request: '&a请左键或右键点击物品以将其设置为此订单自定义交易货币！'
+
+search_phrase_empty: '&c请输入搜索关键字……'
+
+money_remove: '&c&l- $%price%'
+
+created_market: '&a你已经创建了一个市场了！'
+
+updated_market_item_currency: '&a已成功更新自定义交易货币！'
+
+at_max_request_limit: '&c你无法创建更多订单……'
+
+updated_market_name: '&a成功更新市场显示名！'
+
+place_sell_item: '&c请把待出售物品放在界面内……'
+
+confiscated_market: '&c成功收缴该市场内的所有物品！'
+
+already_have_market: '&c你已拥有一个市场，无法再次创建……'
+
+player_does_not_have_requests: '&c该玩家无任何可用订单……'
+
+click_currency_item: '&a请左键或右键点击物品以将其设置为此次自定义交易货币！'
+
+not_a_number: '&c请输入一个有效的数字！'
+
+price_is_zero_or_less: '&c请输入一个大于 0 的价格！'
+
+place_currency_item: '&c请把自定义货币物品放在界面内……'
+
+cannot_rate_own_market: '&c你不能评价自己的市场……'
+
+category_already_created: '&c你成功创建了一个新类别&f: &4%market_category_name%'
+
+claim_currency: '&c请先领取你的待领取报酬！'
+
+market_category_not_found: '&c无法找到名字为&f: &4%market_category_name% &c的指定类别……'
+
+upkeep_already_paid: '&c你已缴纳市场管理费！'
+
+not_enough_items: '&c你的物品不足，无法交付此订单！'
+
+created_request_broadcast: '&a玩家 &2%player% &a创建了一个新订单：&2%request_amount%x %request_item_name% &8[&e点此预览&8]'
+
+money_remove_custom_currency: '&c&l- x%price% %currency_item%'
+
+currency_select_option: '&e点击此处在图形界面中选择货币类型！'
+
+market_required: '&c你需要先创建一个属于自己的市场！'
+
+not_enough_money: '&c你的货币不足！'
+
+player_does_not_have_funds: '&4%player% &c由于余额不足无法支付购买费用……'
+
+added_currency_to_bank: '&a你向银行内存储了 &2%amount% 个 %currency_item% 。'
+
+rating_message_too_long: '&c评价信息过长，请删减后重试……'
+
+max_request_amount: '&c你最多只能在每笔订单中添加 &4%request_max_amount% 个 &citems per request.'
+
+updated_category_icon: '&a成功更新类别显示图标！'
+
+market_not_found: '&c无法找到指定玩家所有的市场……'
+
+at_max_items_limit: '&c物品已达上限，你无法你的市场添加更多物品！'
+
+not_enough_money_create: '&c你没有足够的游戏币以创建你的市场！'
+
+upkeep_fee_paid: '&a你支付了市场管理费，共计：&2$%upkeep_fee%'
+
+money_add_custom_currency: '&a&l+ x%price% %currency_item%'
+
+player_not_found: '&c无法找到指定玩家……'
+
+created_request: '&a已创建订单：&2%request_amount% 个 %request_item_name% ！'
+
+updated_category_name: '&a成功更新类别显示名！'
+
+removed_market: '&c你的市场已成功删除……'
+
+market_closed: '&c该玩家的市场已关闭……'

@@ -1,0 +1,693 @@
+# Resource page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+#
+# If you encounter any issues, please report them
+# to discord support server or via pm.
+# Bugs or issues are mostly fixed within hours.
+#
+#
+# Here you can edit the whole GUI.
+# You can set GUI titles, the size and
+# item names, lores, materials and slots.
+# Don't remove any values or keys.
+#
+# You also can add new items to your GUI.
+# This can be done under gui.<GUI>.s.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+#
+# gui:
+#   lands:
+#     title: '&8Your Lands'
+#     size: 27
+#     s:
+#       close:
+#         name: '&cClose'
+#         lore:
+#         - '&7Close this menu.'
+#         - ' '
+#         - '&8- &7You can open it again'
+#         - '  &7with &8/&3Lands menu&7.'
+#         material: 'RED_STAINED_GLASS_PANE'
+#         slot: 9
+#
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+#
+#
+# You also can apply new placeholders.
+# This can be done under gui.<GUI>.p.<YourItemName>
+# The name needs to be unique in this section.
+# Example:
+#
+# gui:
+#   lands:
+#     p:
+#       placeholder_1:
+#       material: 'GRAY_STAINED_GLASS_PANE'
+#       from: 1
+#       to: 9
+#
+# Please note: You need to set all values
+# otherwise Lands will auto generate values.
+# Also you can't set items where list items
+# are configured. Means if for example the
+# list in the Lands GUI goes from slot
+# 10 - 12 you can set any items with
+# the slot 10, 11, 12. They will be ignored.
+# Added enabled: false to a item to disable it.
+# You can set every item as a custom head:
+# Visit /https://minecraft-heads.com/custom-heads
+# Then copy the 'value:' and paste it at 'material:'
+#
+#
+# If you encounter any issues or you simply have
+# some questions, contact me via PM or Discord.
+# Discord: https://discord.gg/B4MAJVk
+
+general:
+  wYes: '&a是'
+  wNo: '&c否'
+  none: '&c无'
+  now: '&a当前'
+  enabled: '&a已启用'
+  disabled: '&c已禁用'
+  others: 其他
+  max: '&c已上限'
+  
+  role:
+    owner: '&4所有者'
+    admin: '&c管理员'
+    member: '&a成员'
+    visitor: '&7访客'
+
+physical-item:
+  farm:
+    name: '&a{type}'
+    lore:
+    - '&7把此物品放置在地上以创建一个 &a{type} &7！'
+    - ' '
+    - '&7详细信息：'
+    - '  &7所有者：&3{owner}'
+    - '  &7半径：&3{radius} &格'
+    - '  &7催熟周期：&5 {time}'
+    - '  &7存储空间：&3{storage} &7格'
+    - '  &7剩余燃料：&5{fuel}'
+    material: PLAYER_HEAD
+  currency:
+    name: ''
+    lore: []
+    material: GOLD_INGOT
+
+gui:
+  main:
+    title: '&8升级与管理'
+    size: 45
+    s:
+      close:
+        name: '&c关闭'
+        lore:
+        - '&7点击关闭菜单！'
+        - ' '
+        - '&7你可以右键农场标志打开此菜单！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+      upgrades:
+        name: '&e农场升级'
+        lore:
+        - '&7点击升级农场以提高效率！'
+        material: BEACON
+        slot: 11
+      management:
+        name: '&e农场管理'
+        lore:
+        - '&7点击管理农场或查看农场信息！'
+        material: COMMAND_BLOCK
+        slot: 29
+      trusted:
+        name: '&8> &6信任列表'
+        lore:
+        - '&7查看此农场的所有已信任玩家！'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZThiOGM2YTQ2ZDg3Y2Y4NmE1NWRmMjE0Y2Y4NGJmNDVjY2EyNWVkYjlhNjc2ZTk2MzY0ZGQ2YTZlZWEyMzViMyJ9fX0=
+        slot: 31
+    f:
+      public:
+        name: '&8> &6是否公开：{public}'
+        lore:
+        - '&7如果设置此农场为公开农场，'
+        - '&7所有玩家均将能够种植与收获作物！'
+        - ' '
+        - '&7他们仍然无法放置或破坏其他方块。'
+        material: OAK_DOOR
+        slot: 32
+      fuel:
+        name: '&8> &6农场燃料'
+        lore:
+        - '&7剩余时间：&5{time}'
+        - ' '
+        - '&7点击为农场补充燃料！'
+        - ' '
+        - '&8如果燃料耗尽，作物将停止生长。'
+        material: EMERALD
+        slot: 33
+      blocks:
+        name: '&8> &6可收获方块'
+        lore:
+        - '&7点击查看能被农场收获的方块！'
+        - ' '
+        - '&7这些方块需要被放置在农场的'
+        - '&7有效半径内才能被自动收获！'
+        material: PAPER
+        slot: 35
+      upgrade_interval:
+        name: '&8> &6催熟速度'
+        lore:
+        - '&7下一等级：&5{next}'
+        - '&7升级花费：&c{cost}'
+        - ' '
+        - '&7当前等级：{current}'
+        - ' '
+        - '&7缩短催熟周期，使作物更快地生长！'
+        material: CLOCK
+        slot: 13
+      upgrade_radius:
+        name: '&8> &6工作半径'
+        lore:
+        - '&7下一等级：&5{next}'
+        - '&7升级花费：&c{cost}'
+        - ' '
+        - '&7当前等级：{current}'
+        - ' '
+        - '&7扩大工作半径，种植更多的作物！'
+        material: FARMLAND
+        slot: 14
+      upgrade_storage:
+        name: '&8> &6存储容量'
+        lore:
+        - '&7下一等级：&5{next}'
+        - '&7升级花费：&c{cost}'
+        - ' '
+        - '&7当前等级：{current}'
+        - ' '
+        - '&7增加存储容量，储存更多的物品！'
+        material: CHEST
+        slot: 15
+    a:
+      failure_radius:
+        name: '&4升级失败：&c农场范围重叠'
+        lore:
+        - '&7无法进一步升级农场半径，农场升级后'
+        - '&7范围将与玩家 &3{owner} &7的农场重叠。'
+        material: FARMLAND
+        slot: 11
+      failure_untrusted:
+        name: '&4升级失败：&c农场范围无效'
+        lore:
+        - '&7无法进一步升级农场半径，农场升级后'
+        - '&7范围将与荒地或你无权建筑的区域重叠。'
+        material: FARMLAND
+        slot: 11
+      failure_max:
+        name: '&4升级失败：&c已满级'
+        lore:
+        - '&7无法进一步升级农场，'
+        - '&7此升级已达到最高级！'
+        - ' '
+        - '&8管理员可在配置文件中设置最高等级。'
+        material: RED_STAINED_GLASS_PANE
+      failure_cost:
+        name: '&4升级失败：&c游戏币不足'
+        lore:
+        - '&7你的游戏币不足，无法升级农场。'
+        - ' '
+        - '&7升级花费：&b{cost}'
+      failure_perm:
+        name: '&4升级失败：&c全局权限'
+        lore:
+        - '&7你缺少全局权限：{permission}，无法升级农场。'
+      failure_access:
+        name: '&4升级失败：&c农场权限'
+        lore:
+        - '&7你在此农场中的权限无权升级农场。'
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 45
+      placeholder_2:
+        material: BLACK_STAINED_GLASS_PANE
+        from: 12
+        to: 12
+      placeholder_3:
+        material: BLACK_STAINED_GLASS_PANE
+        from: 30
+        to: 30
+  
+  storage_9:
+    title: '&8农场存储'
+    size: 27
+    s:
+      close:
+        name: '&c关闭'
+        lore:
+        - '&7关闭此菜单！'
+        - ' '
+        - '&7通过蹲下并右键农场盔甲架'
+        - '&7以再次打开农场存储界面！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+    l:
+      object:
+        name: '占位物品'
+        lore:
+        - '请忽略此物品配置。'
+        material: STONE
+        from: 10
+        to: 18
+    a:
+      failure_inv_full:
+        name: '&4物品栏已满'
+        lore:
+        - '&7你的物品栏已满，无法取走此物品。'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  
+  storage_18:
+    title: '&8农场存储'
+    size: 36
+    s:
+      close:
+        name: '&c关闭'
+        lore:
+        - '&7关闭此菜单！'
+        - ' '
+        - '&7通过蹲下并右键农场盔甲架'
+        - '&7以再次打开农场存储界面！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+    l:
+      object:
+        name: '占位物品'
+        lore:
+        - '请忽略此物品配置。'
+        material: STONE
+        from: 10
+        to: 27
+    a:
+      failure_inv_full:
+        name: '&4物品栏已满'
+        lore:
+        - '&7你的物品栏已满，无法取走此物品。'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 28
+        to: 36
+  
+  storage_27:
+    title: '&8农场存储'
+    size: 45
+    s:
+      close:
+        name: '&c关闭'
+        lore:
+        - '&7关闭此菜单！'
+        - ' '
+        - '&7通过蹲下并右键农场盔甲架'
+        - '&7以再次打开农场存储界面！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+    l:
+      object:
+        name: '占位物品'
+        lore:
+        - '请忽略此物品配置。'
+        material: STONE
+        from: 10
+        to: 36
+    a:
+      failure_inv_full:
+        name: '&4物品栏已满'
+        lore:
+        - '&7你的物品栏已满，无法取走此物品。'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 36
+        to: 45
+  
+  storage_36:
+    title: '&8农场存储'
+    size: 54
+    s:
+      close:
+        name: '&c关闭'
+        lore:
+        - '&7关闭此菜单！'
+        - ' '
+        - '&7通过蹲下并右键农场盔甲架'
+        - '&7以再次打开农场存储界面！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 9
+    f:
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&3{previous}'
+        material: ARROW
+        slot: 48
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&3{next}'
+        material: ARROW
+        slot: 52
+    l:
+      object:
+        name: '占位物品'
+        lore:
+        - '请忽略此物品配置。'
+        material: STONE
+        from: 10
+        to: 45
+    a:
+      failure_inv_full:
+        name: '&4物品栏已满'
+        lore:
+        - '&7你的物品栏已满，无法取走此物品。'
+        material: RED_STAINED_GLASS_PANE
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 45
+        to: 54
+  
+  action-confirm:
+    title: '&8确认操作'
+    size: 27
+    s:
+      info:
+        name: '&8> &6确认操作'
+        lore:
+        - '&7点击&a&l确认&7以确定操作或'
+        - '&7点击&c&l取消&7中止操作。'
+        material: OAK_SIGN
+        slot: 14
+    l:
+      yes_farm-delete:
+        name: '&a&l确认'
+        lore:
+        - '&7确认移除农场操作，你将获得相应的物品。'
+        material: LIME_STAINED_GLASS_PANE
+        from: 10
+        to: 13
+      no_farm-delete:
+        name: '&c&l取消'
+        lore:
+        - '&7取消移除农场。'
+        material: RED_STAINED_GLASS_PANE
+        from: 15
+        to: 18
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 19
+        to: 27
+  
+  farm_trusted:
+    title: '&8信任列表'
+    size: 36
+    l:
+      object:
+        name: '&e{player}'
+        lore:
+        - '&7权限组别：{role}'
+        - ' '
+        - '&b点击左键'
+        - '&7▲ 提升权限'
+        - '&9点击右键'
+        - '&7▼ 降低权限'
+        - ' '
+        - '&8✖ &3丢弃物品'
+        - '&7取消信任'
+        material: PLAYER_HEAD
+        from: 10
+        to: 27
+      no-player:
+        name: '&c无信任玩家'
+        lore:
+        - '&7当前暂无已信任玩家……'
+        - ' '
+        - '&7点击下方的“信任”按钮以添加信任玩家。'
+        material: OAK_SIGN
+        from: 10
+        to: 27
+    a:
+      failure_priority:
+        name: '&4设置失败：&c优先级冲突'
+        lore:
+        - '&7你的权限较低，无法设置高级权限的玩家……'
+      noaccess_setrole:
+        name: '&4设置失败：&c权限不足'
+        lore:
+        - '&7你无法设置其他玩家在此农场中的权限……'
+        - ' '
+        - '&8农场所有者能够给予你相关的权限。'
+      noaccess_trust:
+        name: '&4设置失败：&c权限不足'
+        lore:
+        - '&7你无法添加此农场信任的玩家……'
+        - ' '
+        - '&农场所有者能够给予你相关的权限。'
+      failure_group:
+        name: '&4设置失败：&c权限组错误'
+        lore:
+        - '&7此玩家由权限组 &3{group} &7添加，'
+        - '&7请在权限组中编辑相关设置……'
+      noaccess_untrust:
+        name: '&4设置失败：&c权限不足'
+        lore:
+        - '&7你无法取消此农场信任的玩家……'
+        - ' '
+        - '&8农场所有者能够给予你相关的权限。'
+      failure_max:
+        name: '&4设置失败：&c已达到上限'
+        lore:
+        - '&7信任玩家数已达到 &3{max} &7位玩家的上限！'
+    
+    f:
+      trust:
+        name: '&8> &a添加玩家'
+        lore:
+        - '&7点击将一位玩家从添加至农场信任列表中！'
+        - ' '
+        - '&7玩家数：&3{players} &8/ &c{max}'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTkyZTMxZmZiNTljOTBhYjA4ZmM5ZGMxZmUyNjgwMjAzNWEzYTQ3YzQyZmVlNjM0MjNiY2RiNDI2MmVjYjliNiJ9fX0=
+        slot: 32
+      untrust:
+        name: '&8> &c移除玩家'
+        lore:
+        - '&7点击将一位玩家从农场信任列表中移除！'
+        material: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljZGI5YWYzOGNmNDFkYWE1M2JjOGNkYTc2NjVjNTA5NjMyZDE0ZTY3OGYwZjE5ZjI2M2Y0NmU1NDFkOGEzMCJ9fX0=
+        slot: 33
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回至{back}&7！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&3{previous}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&3{next}'
+        material: ARROW
+        slot: 35
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
+  
+  farm_fuel:
+    title: '&8燃料'
+    size: 36
+    s:
+      items:
+        name: '&8> &6燃料列表'
+        lore:
+        - '&7查看哪些物品能够为农场充能！'
+        material: COAL
+        slot: 33
+    f:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回至{back}&7！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&3{previous}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&3{next}'
+        material: ARROW
+        slot: 35
+      final-time:
+        name: '&8> &6工作时间'
+        lore:
+        - '&7充能后：&5{time}'
+        - '&7当前时间：{current}'
+        material: CLOCK
+        slot: 32
+    l:
+      object:
+        name: '&6{item}'
+        lore:
+        - '&7此物品能增加 &5{time} &7的农场工作时间！'
+        - ' '
+        - '&7点击移除此物品！'
+        material: PAPER
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
+  
+  farm_fuel_items:
+    title: '&8燃料列表'
+    size: 36
+    f:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回至{back}&7！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7前往上一页：&3{previous}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&3{next}'
+        material: ARROW
+        slot: 34
+    l:
+      object:
+        name: '&6{item}'
+        lore:
+        - '&7这种物品能为农场提供运行 &5{time} &7的燃料！'
+        material: PAPER
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36
+  
+  farm_blocks:
+    title: '&8可收获方块'
+    size: 36
+    f:
+      back:
+        name: '&c返回'
+        lore:
+        - '&7返回至{back}&7！'
+        material: RED_STAINED_GLASS_PANE
+        slot: 28
+      page_previous:
+        name: '&9上一页'
+        lore:
+        - '&7返回上一页：&3{previous}'
+        material: ARROW
+        slot: 30
+      page_next:
+        name: '&a下一页'
+        lore:
+        - '&7前往下一页：&3{next}'
+        material: ARROW
+        slot: 34
+    s:
+      info:
+        name: '&8> &6详细信息'
+        lore:
+        - '&7在农场半径内放置的这些方块将会被收获！'
+        material: PAPER
+        slot: 32
+    l:
+      object:
+        name: '&6{item}'
+        lore:
+        - '&7这些方块能被此种农场收获。'
+        material: PAPER
+        from: 10
+        to: 27
+    p:
+      placeholder_1:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 1
+        to: 9
+      placeholder_2:
+        material: GRAY_STAINED_GLASS_PANE
+        from: 29
+        to: 36

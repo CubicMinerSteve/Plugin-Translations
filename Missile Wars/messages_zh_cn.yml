@@ -1,0 +1,51 @@
+prefix: '&6•&e● 导弹战争 &8▎  &7'
+not_in_arena: '&c你现在不在游戏场地内！'
+game_quit: 你已离开游戏……
+not_enter_arena: '&c你现在无法加入此游戏……'
+game_starts_new_in: 新游戏将在 &e%seconds% &7秒后开始！
+game_ends_in_minutes: 游戏将在 &e%minutes% &7分钟后结束！
+game_ends_in_seconds: 游戏将在 &e%seconds% &7秒后结束！
+game_starts_in: 游戏将在 &e%seconds% &7秒后开始！
+not_enough_players: '&c由于在线玩家不足，倒计时停止……'
+teams_unequal: '&c队伍玩家分配不均，重新分配玩家中……'
+game_starts: '&a导弹战争开始！'
+fall_protection: '&c防摔落平台将在 %seconds% 秒后失效……'
+fall_protection_inactive: '&c请注意，防摔落平台已失效！'
+fall_protection_deactivated: '&c你潜行并解除了防摔落平台保护！'
+money: 你获得了 &e%money% &7枚游戏币！
+kick_inactivity: '&c检测到你在游戏中挂机，已将你移出游戏……'
+title_won: '%team%'
+subtitle_won: '&7获胜！'
+spectator: '&7你正在旁观游戏！'
+change_team_not_now: '&c你现在无法更换你的队伍！'
+already_in_team: '&c你已为此队伍的一员！'
+cannot_change_difference: '&c你无法更换你的队伍！'
+team_changed: 你已加入队伍 %team% ！
+team_assigned: 你已被分配到队伍 %team% 中！
+lobby_joined: '&e%player% &7加入了导弹战争！ &8(&7%players%&8/&7%max_players%&8)'
+not_higher: '&c你的高度过高。你无法离开游戏场地！'
+invalid_missile: '&c无效的导弹类型！'
+hurt_teammates: '&c你无法攻击你的队友！'
+died: '%player% &7被送去了幻♂想♂乡！'
+died_explosion: '%player% &7被炸飞了！'
+player_left: '%player% &7离开了导弹战争！'
+team_offline: 队伍 %team% &7的所有玩家均已离线……
+team_buffed: '队伍 %team% &7由于一名队员的离场获得了增益效果！'
+team_nerved: '队伍 %team% &7由于一名队员的加入获得了负面效果！'
+restart_after_game: '&7游戏地图将会在本场游戏后重置……'
+arena_leave: '&c你已抵达边界。你无法离开游戏场地！'
+missile_place_deny: '&c你无法在此处放置导弹！'
+sign:
+  '0': •● 导弹战争 ●•
+  '1': '%state%'
+  '2': '%arena%'
+  '3': '%players%/%max_players%'
+  state:
+    lobby: '&a等待中'
+    ingame: '&b游戏中'
+    ended: '&c重载中……'
+    error: '&c出现错误……'
+vote:
+  success: 你成功为地图 %map% 投了一票！
+  finished: 已选择地图 %map% &7作为游戏场地！
+  gui: 投票决定游戏场地！

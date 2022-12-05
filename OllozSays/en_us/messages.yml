@@ -1,0 +1,126 @@
+# The plugin prefix.
+prefix: '&7[&eOlloz &6Says&7] '
+commands:
+
+  # Sent when a non-player attempts to execute a player-only command
+  not-a-player: '&cYou must be a player to use this command!'
+
+  # Sent when a player attempts to run the command but has no permission
+  no-permission: '&cYou do not have permission to run this command!'
+
+  # Sent when an invalid player is supplied to a command
+  invalid-player: '&cInvalid player: &e{player}&c.'
+
+  # Sent when an invalid arena is supplied to a command
+  invalid-arena: '&cInvalid arena: &e{arena}&c.'
+
+  # Sent when an invalid task is supplied to a command
+  invalid-task: '&cInvalid task: &e{task}&c.'
+
+  # Sent when an invalid subcommand is passed
+  unknown-subcommand: '&cInvalid subcommand: &e{command}&c.'
+
+  # Sent when an incorrect number of arguments is supplied to a subcommand
+  invalid-usage: '&cInvalid usage. Try &e/{command} {command_usage}&c.'
+
+  # Sent when an invalid page number is supplied to the help command
+  invalid-help-page: '&cInvalid help page: &e{page}.'
+
+  # Sent when a non-player attempts to execute command that requires them to be an arena
+  not-in-arena: '&cYou are not in an arena!'
+
+  # Sent when a player attempts to join an arena but is already in one
+  already-in-arena: '&cYou are already in an arena!'
+
+  # Sent when a player attempts to create an arena with a specific key but that key is already used
+  arena-already-exists: '&cAn arena with key &e{key} &calready exists!'
+
+  # Sent when a player attempts to create an arena with no region selected
+  no-region-selected: '&cYou must select the arena using WorldEdit''s wand!'
+
+  # Sent when a player modifies the arena's building with /ollozsays editbuilding
+  successfully-edited-building: '&aSuccessfully overridden arena &e{arena}&a''s building'
+
+  # Sent when an arena is created
+  arena-created-successfully: '&aSuccessfully created arena with key &e{key}&a!'
+
+  # Sent when an arena is deleted
+  arena-deleted-successfully: '&aSuccessfully deleted arena &e{key}&a.'
+
+  # Sent when a spawnpoint in an arena is set
+  arena-spawnpoint-set: '&aRegistered spawnpoint for index &e{index} &afor arena &e{arena}&a.'
+
+  # Sent when a spawnpoint in an arena is set
+  arena-spawnpoint-set-all: '&aRegistered all spawn-points in arena &e{arena} &ato
+    your location.'
+
+  # Sent when the spectating location in an arena is set
+  arena-spectating-location-set: '&aSuccessfully set spectating location for arena
+    &e{arena}&a.'
+
+  # Sent when the finishing location for an arena is set
+  arena-finishing-location-set: '&aSuccessfully set the finishing location for arena
+    &e{arena}&a.'
+
+  # Sent when a task is added to an arena
+  arena-task-added: '&aSuccessfully added task &e{task} &ato arena &e{arena}&a.'
+
+  # Sent when a task cannot be added to an arena because it already contains it
+  arena-already-contains-task: '&cArena &e{arena} &calready contains task &e{task}&c.'
+
+  # Sent when a task is removed from an arena
+  arena-task-removed: '&aSuccessfully removed task &e{task} &afrom arena &e{arena}&a.'
+
+  # Sent when a task cannot be removed from an arena because it does contain it
+  arena-does-not-contain-task: '&cArena &e{arena} &cdoes not contain task &e{task}&c!'
+
+  # Sent on /ollozsays reload
+  reloaded-successfully: '&aPlugin reloaded!'
+
+  # Sent when a player attempts to join a random arena but no arena is available
+  no-available-arena: '&cI could not find an available arena for you :('
+
+  # Sent when a player leaves an arena (using an item or the command)
+  you-left: '&cYou left the arena'
+
+  # Sent when a player forcibly starts an arena with /ollozsays forcestart
+  forcibly-starting-arena: '&aForcibly starting arena!'
+
+  # Sent when an arena cannot be forcibly started
+  forcibly-starting-arena-failed: '&cCountdown hasn''t started yet!'
+
+  # Sent in /ollozsays blocks when the 2 corners are in different worlds
+  locations-in-different-worlds: '&cThe 2 locations are in different worlds!'
+arena:
+
+  # Sent when a player attempts to join an arena is not ready or is disabled
+  cannot-join: '&cYou cannot join this arena right now.'
+
+  # Sent when a player attempts to join a full arena
+  arena-full: '&cThis arena is full!'
+
+  # Sent when a player attempts to run a non-whitelisted command while in game
+  disallowed-command: '&cYou cannot run this command in-game!'
+
+  # Sent when a player attempts to join an arena but has items in their inventory. Only appears if 'RequireEmptyInventory' in config is true.
+  must-have-empty-inv: '&cYou must have an empty inventory!'
+
+  # Broadcasted (to the arena players) when a player joins an arena
+  player-joined: '&aPlayer &e{player} &ahas joined the game! &7(&e{arena_playercount}&8/&c{arena_maximum}&7)'
+
+  # Broadcasted (to the arena players) when a player leaves an arena
+  player-left: '&aPlayer &e{player} &aleft the game. &7(&e{arena_playercount}&8/&c{arena_maximum}&7)'
+
+  # Broadcasted (to the arena players) when a player is eliminated (run out of lives)
+  player-eliminated: '&cPlayer &e{player} &chas been eliminated!'
+
+  # Broadcasted (to the arena players) when there are enough players to start
+  countdown-started: '&aThere are enough players to start the game! Starting in &e{time}
+    seconds&a.'
+  not-enough:
+
+    # Broadcasted when the countdown is cancelled (due to the game not meeting the minimum player requirement)
+    players: '&eThere are not enough players to start the game! Countdown cancelled.'
+
+  # Broadcasted for each countdown
+  countdown: '&7The game starts in &e{time} &7second{plural}!'

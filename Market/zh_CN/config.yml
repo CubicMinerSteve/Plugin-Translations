@@ -1,0 +1,1115 @@
+# Default language file
+lang: en_US
+
+# Which economy should auction house use?
+# You have the following supported economy plugins installed: "Vault", "PlayerPoints", "Reserve".
+economy provider: Vault
+
+setting:
+
+  # Should Markets give the player all their items from the category
+  # back when they click the delete button?
+  give back items on category delete: true
+
+  # Should markets give the player all their items in all categories
+  # when they decide to delete their market?
+  give back items on market delete: true
+
+  # Should transactions be logged?
+  log transactions: true
+
+  # How many items can a player request per request creation?
+  max amount per request: 256
+
+  # If a player tries to access a the market menu without owning a market
+  # should markets automatically create a market for them?
+  auto create market: true
+  auto save:
+
+    # Should markets automatically save market data?
+    enabled: true
+
+    # How often (in seconds) should markets save data?
+    delay: 900
+
+  # If enabled, markets will limit the total amount of items a player can have in their market based on their permission
+  limit total market items by permission: true
+
+  # If enabled, markets will limit the total amount of requests a player can have active based on their permission
+  limit total requests by permission: true
+
+  # If limit total market items by permission is enabled, this is will be the default max allowed amount of items (individual stacks)
+  default max allowed market items: 64
+
+  # If limit total requests by permission is enabled, this is will be default allowed request amount
+  default max allowed requests: 12
+
+  # For whatever reason, if you want the market owner to buy their own items, enable this.
+  allow owner to buy own items: false
+
+  # For whatever reason, if you want the requester to fulfill their own request, enable this.
+  allow owner to fulfill requests: false
+  ratings:
+
+    # Should players be allowed to change their rating on a market?
+    allow change: true
+
+    # How many seconds must a player wait before they can change their rating?
+    change delay: 86400
+
+    # What is the max length a rating message can be?
+    max message length: 41
+
+  # How often (in seconds) should markets check for things like the upkeep charge?
+  run market check delay: 10
+
+  # Should clickable request messages be sent to everyone upon a new request creation?
+  broadcast request creation: true
+  feature:
+
+    # How much should it cost to feature a market?
+    cost: 20000
+
+    # How long should a market feature last (in seconds)
+    time: 3600
+
+  # Should empty markets be shown in the main listing?
+  display empty markets: false
+
+  # The formatting for currency
+  currency format: '%,.2f'
+
+  # Disable access to the view all markets menu
+  disable view all markets: false
+
+  # Every feature but requests will be disabled
+  request only mode: false
+
+  # If true, the close button will just outright close the menu
+  market close btn closes menu: false
+
+  # You can learn more about date formats by googling SimpleDateFormat patterns or visiting this link
+  # https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+  date format: MMM dd, yyyy hh:mm aa
+
+  # Should the main menu have a search button added to it?
+  add search to main: true
+  command:
+
+    invalid command: '&7命令格式错误或不存在！'
+
+    no permission: '&c你没有权限这么做……'
+
+    syntax error:
+    - '&c语法错误！'
+    - '&7正确语法：&6%syntax%&7.'
+  creation fee:
+
+    # Should markets charge players a fee to create their market?
+    enabled: true
+
+    # How much should the market creation fee be?
+    amount: 1000
+  upkeep fee:
+
+    # Should markets charge players after x amount of time to keep their market open?
+    use: false
+
+    # How much should the upkeep fee cost?
+    fee: 2500
+
+    # Adds to the total upkeep fee (ex. if they have 20 items, $ 20 * 5 would be added to the base fee)
+    additional item fee: 5
+
+    # How many seconds should pass before upkeep fees are collected?
+    delay: 604800
+  tax:
+
+    # If enabled, when a sale is made, percentage of the sale will be removed / added
+    enabled: false
+
+    # If enabled, markets will charge the buyer tax instead of the seller
+    tax buyer instead of seller: true
+
+    # This is a percentage, ex. 3 -> 3% tax
+    amount: 3
+
+  # If true, the auto save msg will be shown in the console
+  log save message: true
+
+  # If true, market transactions will show you how much money you spent
+  send money withdraw message: true
+
+  # If true, any sales will be told to the owner
+  send money deposit message: true
+
+  # How much should the item qty be increased by (btn 1)
+  increment one: 1
+
+  # How much should the item qty be increased by (btn 2)
+  increment two: 5
+
+  # How much should the item qty be decreased by (btn 1)
+  decrement one: 1
+
+  # How much should the item qty be decreased by (btn 2)
+  decrement two: 5
+  signs:
+
+    header: '[全球市场]'
+
+    activated header: '&8[&e全球市场&8]'
+
+    owner name colour: '&d'
+
+database:
+
+  # Should the plugin use a database to store shop data?
+  use database: false
+
+  # What is the connection url/host
+  host: kiranhart.com
+
+  # What is the port to database (default is 3306)
+  port: 3306
+
+  # What is the name of the database?
+  name: test_user
+
+  # What is the name of the user connecting?
+  username: test_database
+
+  # What is the password to the user connecting?
+  password: Password123.
+
+  # Should the database connection use ssl?
+  use ssl: true
+
+guis:
+  global items:
+    back button:
+
+      # Settings for the back button
+      item: ARROW
+
+      name: '&e<< 上一页'
+
+      lore:
+      - '&7点击此处返回上一页'
+    close button:
+
+      # Settings for the close button
+      item: BARRIER
+
+      name: '&c关闭'
+
+      lore:
+      - '&7点击此处关闭菜单'
+    next button:
+
+      # Settings for the next button
+      item: ARROW
+
+      name: '&e下一页 >>'
+
+      lore:
+      - '&7点击此处浏览下一页'
+  main:
+
+    title: '&e全球市场'
+
+    use border: true
+
+    fill slots: true
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      all markets:
+        item:
+
+          use custom head: false
+
+          custom head link: 1de9a8e5e6303cec956e37321ca0f7f7f9738211b8f570c3e76c929df5da18
+
+          item: NETHER_STAR
+
+        name: '&e全球市场'
+
+        lore:
+        - '&7点击浏览所有玩家设立的市场'
+      your market:
+
+        name: '&e你的市场'
+
+        lore:
+        - '&7点击编辑或浏览你的市场（若有）'
+      transactions:
+
+        item: BOOK
+
+        name: '&e交易记录'
+
+        lore:
+        - '&7点击此处查看你买卖物品的交易记录'
+      requests:
+
+        item: CHEST_MINECART
+
+        name: '&e你的订单'
+
+        lore:
+        - '&7点击此处查看你创建的物品订单'
+      open requests:
+
+        item: CHEST
+
+        name: '&e全部订单'
+
+        lore:
+        - '&7点击查看所有玩家创建的物品订单'
+      bank:
+
+        item: DIAMOND
+
+        name: '&e货币银行'
+
+        lore:
+        - '&7点击查看你在银行中交易货币的储蓄'
+      search:
+
+        item: COMPASS
+
+        name: '&e搜索物品'
+
+        lore:
+        - '&7点击搜索市场上的可用物品'
+  inspect:
+
+    title: '&7&l预览容器'
+
+    bg item: BLACK_STAINED_GLASS_PANE
+  market edit:
+
+    title: '&e编辑市场'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      edit name:
+
+        item: PAPER
+
+        name: '&e显示名称'
+
+        lore:
+        - '&7当前名称&F: %market_name%'
+        - '&7点击更改市场名称'
+      open enabled:
+
+        item: LIME_DYE
+
+        name: '&a市场已开放'
+
+        lore:
+        - '&7点击&c关闭&7市场'
+      open disabled:
+
+        item: RED_DYE
+
+        name: '&c市场已关闭'
+
+        lore:
+        - '&7点击&a开放&7市场'
+      add category:
+
+        item: NETHER_STAR
+
+        name: '&e新建类别'
+
+        lore:
+        - '&7点击在你的市场中添加一个新类别'
+      feature market:
+
+        item: FIREWORK_ROCKET
+
+        name: '&e推广市场'
+
+        lore:
+        - '&7点击花费 &a$%feature_cost% 推广你的市场（前置）'
+
+        lore already featured:
+        - '&7已将你的市场排在前列……'
+      all items:
+
+        item: CHEST
+
+        name: '&e查看所有物品'
+
+        lore:
+        - '&7点击查看你市场上的所有物品'
+      delete market:
+
+        item: FIRE_CHARGE
+
+        name: '&4删除市场'
+
+        lore:
+        - '&c右键删除你的市场；'
+        - '&c注意，此操作&c&l无法&c撤销！'
+      add item:
+
+        item: ENDER_EYE
+
+        name: '&e添加物品'
+
+        lore:
+        - '&7点击向你的市场中添加物品'
+      category:
+
+        name: '%category_display_name%'
+
+        lore:
+        - '&7点击编辑此类别'
+  category edit:
+
+    title: '&e你的市场 > %category_name%'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      edit name:
+
+        item: PAPER
+
+        name: '&e显示名称'
+
+        lore:
+        - '&7当前名称&F: %category_display_name%'
+        - '&7点击更改此类别的显示名称'
+      edit description:
+
+        item: WRITABLE_BOOK
+
+        name: '&e描述'
+
+        lore:
+        - '&7当前描述&F:'
+        - '%category_description%'
+        - '&7点击更改此类别的描述'
+      edit icon:
+
+        name: '&e图标'
+
+        lore:
+        - '&7点击更改此类别的图标'
+      add item:
+
+        item: ENDER_EYE
+
+        name: '&e添加物品'
+
+        lore:
+        - '&7点击向此类别中添加物品'
+      empty:
+
+        item: HOPPER
+
+        name: '&e清空物品'
+
+        lore:
+        - '&7点击清空此类别中的物品'
+      delete:
+
+        item: FIRE_CHARGE
+
+        name: '&4删除类别'
+
+        lore:
+        - '&c右键删除此类别；'
+        - '&c注意，此操作&c&l无法&c撤销！'
+      market item:
+
+        name: '&e%item_name%'
+
+        lore:
+        - '&7价格&f：&a$%market_item_price%'
+        - '&7整组价格&f：&e%market_item_price_for_stack%'
+        - ''
+        - '&7点击左键编辑商品价格'
+        - '&7按下 Q 键从市场中移除'
+        - '&7点击右键调整整组价格'
+
+        lore custom currency:
+        - '&7价格&f：&fx%market_item_price% %market_item_currency%'
+        - '&7整组价格&f：&e%market_item_price_for_stack%'
+        - ''
+        - '&7点击左键编辑商品价格'
+        - '&7按下 Q 键从市场中移除'
+        - '&7点击右键调整整组价格'
+        - '&7按住 Shift 点击右键编辑交易货币类型'
+  select material:
+
+    title: '&e选择物品'
+  confirm:
+
+    title: '&e确认'
+    items:
+      confirm:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&l确认'
+
+        lore:
+        - '&7点击确认'
+      cancel:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&l取消'
+
+        lore:
+        - '&7点击取消'
+  all items:
+
+    title: '&e%market_name%&f > 所有物品'
+
+    title edit: '&e你的市场 > 所有物品'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      market item:
+
+        name: '&e%item_name%'
+
+        edit lore:
+        - '&7价格&f：&a$%market_item_price%'
+        - '&7整组价格&f：&e%market_item_price_for_stack%'
+        - ''
+        - '&7点击左键编辑商品价格'
+        - '&7按下 Q 键从市场中移除'
+        - '&7点击右键调整整组价格'
+
+        edit lore custom currency:
+        - '&7价格&f: &a$%market_item_price% %market_item_currency%'
+        - '&7整组价格&f：&e%market_item_price_for_stack%'
+        - ''
+        - '&7点击左键编辑商品价格'
+        - '&7按下 Q 键从市场中移除'
+        - '&7点击右键调整整组价格'
+        - '&7按下 Shift 点击右键编辑交易货币类型'
+
+        lore:
+        - '&7价格&f：&a$%market_item_price%'
+        - '&7整组价格&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7点击购买此物品'
+
+        lore custom currency:
+        - '&7价格&f：&fx%market_item_price% %market_item_currency%'
+        - '&7整组价格&f：&e%market_item_price_for_stack%'
+        - ''
+        - '&7点击购买此物品'
+        - '&e！ 此物品需要一种自定义的货币进行交易'
+        - '&e点击右键查看所需自定义货币类型'
+
+        # This will only be added to the control lore if the item can be inspected (skulker box)
+        lore inspect:
+        - '&e按下 Shift 点击右键以预览容器'
+  market view:
+
+    title: '&e%market_name%'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      all items:
+
+        item: CHEST
+
+        name: '&e所有物品'
+
+        lore:
+        - '&7点击查看所有物品'
+      category:
+
+        name: '&e%category_display_name%'
+
+        lore:
+        - '%category_description%'
+        - ''
+        - '&7点击查看此类别中所有物品'
+      ratings:
+
+        # If enabled, markets will use a custom textured skull (star)
+        use custom skull: false
+
+        custom skull link: 1c8e0cfebc7f9c7e16fbaaae025d1b1d19d5ee633666bcf25fa0b40d5bd21bcd
+
+        item: PAPER
+
+        name: '&e市场评分'
+
+        # %average_rating_number% can be used instead of %average_rating_stars%
+        lore:
+        - '&7平均评分&f：&e%average_rating_stars%'
+        - ''
+        - '&7点击左键查看所有评分'
+        - '&7点击右键对其进行评分'
+  market list:
+
+    title: '&e市场列表'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    market name: '%market_name%'
+
+    market lore:
+    - '%market_description%'
+    - '&7所有者&f：&e%market_owner%'
+    - ''
+    - '&7点击查看市场内容'
+
+    market lore featured:
+    - '%market_description%'
+    - '&7所有者&f：&e%market_owner%'
+    - ''
+    - '&7点击查看市场内容'
+    - ''
+    - '&e&l已推广'
+  market category:
+
+    title: '&e%market_name% > %category_display_name%'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - '&7价格&f: &a$%market_item_price%'
+    - '&7整组价格&f：&e%market_item_price_for_stack%'
+    - ''
+    - '&7点击购买此物品'
+
+    item lore custom currency:
+    - '&7价格&f：&fx%market_item_price% %market_item_currency%'
+    - '&7整组价格&f：&e%market_item_price_for_stack%'
+    - ''
+    - '&7点击购买此物品'
+    - '&e！ 此物品需要一种自定义的货币进行交易'
+    - '&e点击右键查看所需自定义货币类型'
+
+    # This will only be added to the control lore if the item can be inspected (skulker box)
+    item lore inspect:
+    - '&e按下 Shift 点击右键以预览容器'
+  item purchase:
+
+    title: '&e购买物品'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      increment:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a+%increment_amount%'
+
+        lore:
+        - '&7点击&a增加 %increment_amount% &7购买数量'
+      decrement:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c-%decrement_amount%'
+
+        lore:
+        - '&7点击&c减少 %decrement_amount% &7购买数量'
+      purchase:
+
+        item: SUNFLOWER
+
+        name: '&e交易信息'
+
+        lore:
+        - '&7数量&f：&e%purchase_quantity%'
+        - '&7整组价格（以单价计）&f：&a$%stack_price%'
+        - '&7整组价格（实际标注）&f：&e%market_item_price_for_stack%'
+        - '&7最终价格&f：&a$%purchase_price%'
+        - ''
+        - '&7点击确认购买'
+
+        lore custom currency:
+        - '&7数量&f：&e%purchase_quantity%'
+        - '&7整组价格（以单价计）&f：x%stack_price% %market_item_currency%'
+        - '&7整组价格（实际标注）&f：&e%market_item_price_for_stack%'
+        - '&7最终价格&f：x%purchase_price% %market_item_currency%'
+        - ''
+        - '&7点击确认购买'
+  transactions:
+
+    title: '&e交易记录'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    transaction item: PAPER
+
+    transaction name: '&e交易信息'
+
+    transaction lore:
+    - '&7ID：&e%transaction_id%'
+    - '&7买家：&e%transaction_buyer%'
+    - '&7市场：&e%transaction_market%'
+    - '&7价格：&e%transaction_price%'
+    - '&7日期：&e%transaction_date%'
+  open request:
+
+    title: '&e你的订单'
+
+    title all: '&e所有开放订单'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      empty:
+
+        item: HOPPER
+
+        name: '&e取消订单'
+
+        lore:
+        - '&7点击取消所有开放订单'
+      collection:
+
+        item: CHEST
+
+        name: '&e确认订单'
+
+        lore:
+        - '&7点击查看待确认订单'
+      new:
+
+        item: LIME_DYE
+
+        name: '&e创建订单'
+
+        lore:
+        - '&7点击创建新的订单'
+      request:
+
+        name: '%request_item_name%'
+
+        lore:
+        - ''
+        - '&7订单需求&f：%request_item%'
+        - '&7需求数量&f：%request_amount%'
+        - ''
+        - '&7按下 Q 键取消订单'
+
+        lore all:
+        - ''
+        - '&7创建者&f：&e%request_requesting_player%'
+        - '&7订单需求&f: %request_item%'
+        - '&7需求数量&f: %request_amount%'
+        - ''
+        - '&7点击查看详细订单信息'
+  request fulfillment:
+
+    title: '&e市场订单 &f> &7需求物品'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    requested item lore:
+    - ''
+    - '&7创建者&f：&e%request_requesting_player%'
+    - '&7需求数量&f：&e%request_amount%'
+    - '&7价格&f：&a$%request_price%'
+    - ''
+    - '&7点击左键接受此订单'
+
+    requested item lore custom currency:
+    - ''
+    - '&7创建者&f：&e%request_requesting_player%'
+    - '&7需求数量&f：&e%request_amount%'
+    - '&7价格&f：&a%request_price%'
+    - '&7货币类型&f：%market_item_currency%'
+    - ''
+    - '&e点击右键查看所需自定义货币类型'
+    - '&7点击左键接受此订单'
+  blocked items:
+
+    title: '&e物品黑名单'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - ''
+    - '&7点击从黑名单中移除物品'
+  custom currency view:
+
+    title: '&e货币类型'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+  payment collection:
+
+    title: '&e领取报酬'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    glow border: true
+  category select:
+
+    title: '&e选择类别'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    category name: '%category_name%'
+
+    category lore:
+    - '%category_description%'
+    - '&7点击选择此类别'
+  new request:
+
+    title: '&e新建订单'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      amount:
+
+        item: SUNFLOWER
+
+        name: '&e&l需求数量'
+
+        lore:
+        - '&7需求数量&f：&a%request_amount%'
+        - '&7点击更改需求数量'
+      price:
+
+        item: SUNFLOWER
+
+        name: '&e&L订单报酬'
+
+        lore:
+        - '&7报酬&f：&a$%market_payment_price%'
+        - '&7点击更改报酬'
+      cancel add:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&L取消'
+
+        lore:
+        - '&7点击取消创建新订单'
+      confirm add:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&l确认'
+
+        lore:
+        - '&7点击创建新的订单'
+      use custom currency:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&L已启用自定义货币'
+
+          lore:
+          - '&7点击此处&c禁用&7自定义货币交易'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&L已禁用自定义货币'
+
+          lore:
+          - '&7点击此处&a启用&7自定义货币交易'
+      currency holder:
+
+        item: BARRIER
+
+        name: '&c&l不可用'
+
+        lore:
+        - '&7你需要&a启用&7自定义货币才能在此处放置物品'
+  new requests:
+    items:
+      price:
+
+        lore custom currency:
+        - '&7报酬&f：x%market_payment_price% %market_request_currency%'
+        - '&7点击更改报酬'
+  add item:
+
+    title: '&e添加市场物品'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      price:
+
+        item: SUNFLOWER
+
+        name: '&e&L物品价格'
+
+        lore:
+        - '&7当前价格&f：&a$%market_item_price%'
+        - '&7点击更改价格'
+
+        lore custom currency:
+        - '&7当前价格&f：x%market_item_price% %market_item_currency%'
+        - '&7点击更改价格'
+      price for stack:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&L整组价格：启用'
+
+          lore:
+          - '&7点击&c不设置&7整组价格'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&L整组价格：禁用'
+
+          lore:
+          - '&7点击&a设置&7整组价格'
+      selected category:
+
+        item: NETHER_STAR
+
+        name: '&e&L选择类别'
+
+        lore:
+        - '&7当前类别&f: &e%selected_market_category%'
+        - '&7点击更改类别'
+      use custom currency:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&L已启用自定义货币'
+
+          lore:
+          - '&7点击此处&c禁用&7自定义货币交易'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&L已禁用自定义货币'
+
+          lore:
+          - '&7点击此处&a启用&7自定义货币交易'
+      cancel add:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&L取消'
+
+        lore:
+        - '&7点击取消添加此物品'
+      confirm add:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&l确认'
+
+        lore:
+        - '&7点击向你的市场中添加此物品'
+      currency holder:
+
+        item: BARRIER
+
+        name: '&c&l不可用'
+
+        lore:
+        - '&7你需要&a启用&7自定义货币才能在此处放置物品'
+  bank:
+
+    title: '&e你的银行'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - '&7总计存款&f: &e%currency_amount%'
+    - '&7点击左键取出存款'
+    payment item:
+
+      item: PAPER
+
+      name: '&e领取报酬'
+
+      lore:
+      - '&7点击左键查看待领取报酬'
+  ratings list:
+
+    title: '&e全球市场 &f- &7评分'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    rating:
+
+      item: PAPER
+
+      name: '&e评分'
+
+      lore:
+      - '&7评分人&f：%rating_rater%'
+      - '&7星级&f：%rating_stars%'
+      - '&7评价描述&f：'
+      - '&e%rating_message%'
+  search:
+
+    title: '&e全球市场 &f- &7搜索结果'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item lore:
+    - '&7市场&f：&e%market_name%'
+    - '&7价格&f：&a$%market_item_price%'
+    - '&7整组价格&f：&e%market_item_price_for_stack%'
+    - ''
+    - '&7点击购买此物品'
+
+    item lore custom currency:
+    - '&7市场&f：&e%market_name%'
+    - '&7价格&f：&fx%market_item_price% %market_item_currency%'
+    - '&7整组价格&f：&e%market_item_price_for_stack%'
+    - ''
+    - '&7点击购买此物品'
+    - '&e！ 此物品需要一种自定义的货币进行交易'
+    - '&e点击右键查看所需自定义货币类型'
+  rating star select:
+
+    title: '&e评分星级'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+    star:
+
+      use custom skull: false
+      textures:
+        selected:
+
+          one: http://textures.minecraft.net/texture/88991697469653c9af8352fdf18d0cc9c67763cfe66175c1556aed33246c7
+
+          two: http://textures.minecraft.net/texture/5496c162d7c9e1bc8cf363f1bfa6f4b2ee5dec6226c228f52eb65d96a4635c
+
+          three: http://textures.minecraft.net/texture/c4226f2eb64abc86b38b61d1497764cba03d178afc33b7b8023cf48b49311
+
+          four: http://textures.minecraft.net/texture/f920ecce1c8cde5dbca5938c5384f714e55bee4cca866b7283b95d69eed3d2c
+
+          five: http://textures.minecraft.net/texture/a2c142af59f29eb35ab29c6a45e33635dcfc2a956dbd4d2e5572b0d38891b354
+        not selected:
+
+          one: http://textures.minecraft.net/texture/ca516fbae16058f251aef9a68d3078549f48f6d5b683f19cf5a1745217d72cc
+
+          two: http://textures.minecraft.net/texture/4698add39cf9e4ea92d42fadefdec3be8a7dafa11fb359de752e9f54aecedc9a
+
+          three: http://textures.minecraft.net/texture/fd9e4cd5e1b9f3c8d6ca5a1bf45d86edd1d51e535dbf855fe9d2f5d4cffcd2
+
+          four: http://textures.minecraft.net/texture/f2a3d53898141c58d5acbcfc87469a87d48c5c1fc82fb4e72f7015a3648058
+
+          five: http://textures.minecraft.net/texture/d1fe36c4104247c87ebfd358ae6ca7809b61affd6245fa984069275d1cba763
+
+      item: NETHER_STAR
+
+      name: '&e%star_number% 星'
+
+      lore:
+      - '&7点击评分 %star_number% 星'
+    message:
+
+      item: PAPER
+
+      name: '&e评价'
+
+      lore:
+      - '&7评价&f：&e%rating_message%'
+      - ''
+      - '&7点击更改评价描述'
+    confirm:
+
+      item: LIME_STAINED_GLASS_PANE
+
+      name: '&a确认评价'
+
+      lore:
+      - '&7点击确认评价'
+    cancel:
+
+      item: RED_STAINED_GLASS_PANE
+
+      name: '&c取消评价'
+
+      lore:
+      - '&7点击取消评价'

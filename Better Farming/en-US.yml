@@ -1,0 +1,167 @@
+# Here you can edit all chat messages
+# GUI items and menus can be found in <language>_gui.yml
+#
+# If you encounter any issues or have questions, contact plugin support.
+# Plugin page: https://www.spigotmc.org/resources/authors/315463/
+# Discord: https://discord.gg/B4MAJVk
+#
+# ###############################
+# About chat message type system:
+# Does only work for messages in
+# "message" or "command" section.
+# ###############################
+#
+# You can use some codes to set the type
+# of a message to title, actionbar or chat.
+# How does it work:
+#
+# For example we want to print a message as a title:
+# Set message to: '#t#Title[newline]Subtitle'(Set "#t#" in front of it; use [newline] to set the subtitle)
+#
+# You also send a message at the actionbar:
+# Set message to: '#a#This is a actionbar message.'
+# (Set #a# in front of it.)
+#
+# More information: https://github.com/Angeschossen/General/wiki/Messages
+
+general:
+  prefix:
+    normal: '&8[&aBetterFarming&8] '
+    help: '&8[&aBetterFarming&8] &7Usage: '
+  time:
+    seconds: second(s)
+    minutes: minute(s)
+    hours: hour(s)
+    days: day(s)
+  unlimited: '&aunlimited'
+
+message:
+  player-offline: '&cThe player&4 {player} &cis offline. &7Typo?'
+  created: '#t#&2Created{newline}&7{type}'
+  deleted: '#t#&cRemoved{newline}&7{type}'
+  
+  no-access:
+    general: '&cYou''re not allowed to do this for this farm. &7It belongs to player&3
+      {player}&7.'
+    delete: '&cYou''re not allowed to delete this farm. &7It belongs to player&3 {player}&7.'
+    block_break: '&cYou''re not allowed to break blocks in this farm. &7It belongs
+      to player&3 {player}&7.'
+    block_place: '&cYou''re not allowed to place blocks in this farm. &7It belongs
+      to player&3 {player}&7.'
+    interact: '&cYou''re not allowed to interact in this farm. &7It belongs to player&3
+      {player}&7.'
+    plant: '&cYou''re not allowed to plant in this farm. &7It belongs to player&3
+      {player}&7.'
+    harvest: '&cYou''re not allowed to harvest in this farm. &7It belongs to player&3
+      {player}&7.'
+    upgrade: '&cYou''re not allowed to upgrade this farm. &7It belongs to player&3
+      {player}&7.'
+    player_setrole: '&cYou''re not allowed to set role at this farm. &7It belongs
+      to player&3 {player}&7.'
+    player_trust: '&cYou''re not allowed to trust players at this farm. &7It belongs
+      to player&3 {player}&7.'
+    player_untrust: '&cYou''re not allowed to untrust players from this farm. &7It
+      belongs to player&3 {player}&7.'
+    configure: '&cYou''re not allowed to toggle settings for this farm. &7It belongs
+      to player&3 {player}&7.'
+  
+  creation:
+    spam: '&cPlease don''t spam farm creation. &7Farm creation cancelled.'
+    environment: '&cYou can''t create a farm in water or lava. &7Please place it somewhere
+      else.'
+    other-farm: '&cYou can''t do this here, since it overlaps with another farm of
+      player&4 {player}&c. &7Get some distance.'
+    max:
+      type: '&cYou''re not allowed to create any more {type}''s. &7You reached your
+        maximum amount of&3 {max} &7{type}''s. &8Permission: {permission}'
+      total: '&cYou''re not allowed to create any more farms. &7You''ve reached your
+        maximum amount of&3 {max} &7farm(s), no matter which type.'
+    owner: '&cYou can''t create a &4{type} &cwith this item. &7It belongs to&3 {owner}&7.'
+    world:
+      general: '&cYou can''t create farms in world&4 {world}&c. &7A administrator
+        needs to add this world to the config.'
+      blacklist: '&cThe placement of&4 {type} &cis disabled in this world ({world}).
+        &7You may place it in other worlds.'
+    only-land: |
+      &cYou can't create farms in the wilderness. &7You need to place it inside a land.
+
+       [T]&7Claim land: &3/lands claim &8[CLICK][H]&7Click here to claim at your current position.[/H][C]lands claim[/C][/T]
+    untrusted: '&cYou can''t create a farm at this position. &7You''re not trusted
+      in this land.'
+  
+  chat-input:
+    player: '#t#&6Enter the Name[newline]&7of the player in chat[newline]&7Enter "cancel"
+      to abort.'
+
+command:
+  general:
+    no-permission: '&cYou don''t have permission to do this. &8Missing permission:
+      {permission}'
+    cmd-not-exist: '&cThis subcommand doesn''t exist. &7Command&3 {command} &7doesn''t
+      exist.'
+    cant-afford: '&cYou can''t afford this. &7You need&c {cost} &7to pay this.'
+    player-offline: '&cCouldn''t find this player. &7Player&3 {player} &7is offline.'
+    invalid-number: '&cYou entered an invalid number at the&e {argument} &cargument.
+      &7Please insert a valid number there.'
+    type: '&cYou entered a invalid farm type&4 {input}&c. &7Available types: {types}'
+    player-not-exist: '&cThe player&4 {player} &cdoesn''t exist. &7Typo?'
+  
+  get:
+    confirm: |
+      &cPlease confirm this purchase. &7Buying these farm item(s) will cost you&c {costs}&7.
+
+      [T]&7Confirm: &8[&7CLICK&8][H]&7Click here to confirm this purchase.[/H][C]betterfarming get {type} confirm[/C][/T]
+    dropped: '&7You received a&a {type} &7item for&c {cost}&7. &cIt dropped to the
+      ground, because there was no space left in your inventory.'
+    success: '&7You received a&a {type} &7item for&c {cost}&7. It''s now in your inventory.'
+  give:
+    target:
+      success: '&7You received {items} &a{type} &7item(s). They were put in your inventory.'
+      dropped: '&7You received {items} &a{type} &7item(s). &cThey dropped to the ground,
+        because there was no space left in your inventory.'
+  untrust:
+    owner: '&cYou can''t untrust the owner&4 {player} &cfrom this farm.'
+  help:
+    header: '[NoPrefix][T]&7&m━━━━━━&r====&7&m━[H]&7Click here to navigate to the
+      previous page.[/H][C]{cmd} help {previous}[/C][/T] &aBetterFarming Help &7Page&3
+      {page} &8/&3 {pages} [T]&7&m━&r====&7&m━━━━━━[H]&7Click here to go to the next
+      page.[/H][C]{cmd} help {next}[/C][/T]'
+    footer: |
+      [NoPrefix]
+      &7Click on the arrows below to navigate.
+      [T]&7&m━━━━━━&e&l<<<<&7&m━[H]&7Click here to navigate to the previous page.[/H][C]{cmd} help {previous}[/C][/T] &aBetterFarming Help &7Page&3 {page} &8/&3 {pages} [T]&7&m━&e&l>>>>&7&m━━━━━━[H]&7Click here to go to the next page.[/H][C]{cmd} help {next}[/C][/T]
+    no-page: '&cThe page&4 {page} &cdoesn''t exist. &7Typo?'
+    cmd-unknown: |
+      &cThe command&4 {command} &cdoesn''t exist.
+        [T]&7✖ View commands: &3/{cmd} &8[CLICK][H]&7Click here to get a list of available commands[/H][C]betterfarming help[/C][/T]
+help:
+  command:
+    help: '[T]&e/farm help &8[&epage&8] - &7Get help[H]&7Click to execute.[/H][C]betterfarming
+      help[/C][/T]'
+    get: '[T]&e/farm get &8[&etype&8] - &7Get farm item[H]&7Click to copy.[/H][SC]betterfarming
+      get[/SC][/T]'
+    give: '[T]&e/farm give &8<&eplayer&8> [&etype&8] [&eamount&8] [&eradius-blocks&8]
+      [&egrowth-interval&8] [&estorage-slots&8] - &7Give farm item[H]&7Click to copy.[/H][SC]betterfarming
+      give[/SC][/T]'
+    admin:
+      reload: '[T]&e/farm reload &8- &7Reload configurations[H]&7Click to execute.[/H][C]betterfarming
+        reload[/C][/T]'
+
+list:
+  running:
+  - '&a{type}'
+  - '&7Remaining Fuel:'
+  - '&5{time}'
+  paused:
+    no-fuel:
+    - '&a{type}'
+    - '&cThis farm is out of fuel.'
+    - '&7Open the menu to charge it.'
+    no-blocks:
+    - '&a{type}'
+    - '&cThere are no blocks to harvest. &7Place'
+    - '&7some blocks that can be harvested.'
+    storage-full:
+    - '&a{type}'
+    - '&cThe storage is full.'
+    - '&cFarm paused.'

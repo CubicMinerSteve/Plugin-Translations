@@ -1,0 +1,114 @@
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+# ▒█▀▄▀█ ▒█░░▒█ ▒█▀▀▀█ ▀▀█▀▀ ▒█▀▀▀ ▒█▀▀█ ▒█░░▒█ ▒█▀▀█ ▒█▀▀▀█ ▀▄▒▄▀ ▒█▀▀▀ ▒█▀▀▀█
+# ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ░▒█░░ ▒█▀▀▀ ▒█▄▄▀ ▒█▄▄▄█ ▒█▀▀▄ ▒█░░▒█ ░▒█░░ ▒█▀▀▀ ░▀▀▀▄▄
+# ▒█░░▒█ ░░▒█░░ ▒█▄▄▄█ ░▒█░░ ▒█▄▄▄ ▒█░▒█ ░░▒█░░ ▒█▄▄█ ▒█▄▄▄█ ▄▀▒▀▄ ▒█▄▄▄ ▒█▄▄▄█
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+# ▒█▀▀█ ▒█░░▒█ 　 ▀▄▒▄▀ ▒█▀▀▀ ▒█▀▀█ ▀█▀ ▒█▀▀█ ▒█░▄▀ ▒█▀▀▀ ▒█▀▀█
+# ▒█▀▀▄ ▒█▄▄▄█ 　 ░▒█░░ ▒█▀▀▀ ▒█▄▄▀ ▒█░ ▒█░░░ ▒█▀▄░ ▒█▀▀▀ ▒█▄▄▀
+# ▒█▄▄█ ░░▒█░░ 　 ▄▀▒▀▄ ▒█▄▄▄ ▒█░▒█ ▄█▄ ▒█▄▄█ ▒█░▒█ ▒█▄▄▄ ▒█░▒█
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+# 感谢你支持 MysteryBoxes 插件的开发！简中翻译 By WaftingScent
+# Wiki: https://github.com/Eselyx/MysteryBoxes/wiki/Getting-Started
+# Discord: https://discord.com/invite/dcHEqzQJZp
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+
+general-messages:
+  invalid-arguments: '&8[&d神秘礼物盒&8]: &c你的指令好像缺少了一些变量！'
+  invalid-permission: '&8[&d神秘礼物盒&8]: &c你暂时没有权限这样做！'
+  invalid-sender: '&8[&d神秘礼物盒&8]: &c你必须是玩家才能这样做！'
+  player-not-found: '&8[&d神秘礼物盒&8]: &c未找到玩家！'
+  players-not-found: '&8[&d神秘礼物盒&8]: &c未找到玩家！'
+
+vault-messages:
+  vault-busy: '&8[&d神秘礼物盒&8]: &c同一时刻只能有一名玩家使用神秘盒！'
+
+dust-messages:
+  edit:
+    set: '&8[&d神秘礼物盒&8]: &e成功修改神秘尘个数！'
+    add: '&8[&d神秘礼物盒&8]: &e成功增加神秘尘！'
+    remove: '&8[&d神秘礼物盒&8]: &e成功移除神秘尘！'
+  edit-all:
+    set: '&8[&d神秘礼物盒&8]: &e成功修改所有玩家的神秘尘个数！'
+    add: '&8[&d神秘礼物盒&8]: &e成功增加所有玩家的神秘尘！'
+    remove: '&8[&d神秘礼物盒&8]: &e成功移除所有玩家的神秘尘！'
+
+box-messages:
+  edit:
+    set: '&8[&d神秘礼物盒&8]: &e成功修改神秘盒个数！'
+    add: '&8[&d神秘礼物盒&8]: &e成功增加神秘盒个数！'
+    remove: '&8[&d神秘礼物盒&8]: &e成功移除神秘盒！'
+  edit-all:
+    set: '&8[&d神秘礼物盒&8]: &e成功修改所有玩家的神秘盒个数！'
+    add: '&8[&d神秘礼物盒&8]: &e成功增加所有玩家的神秘盒个数！'
+    remove: '&8[&d神秘礼物盒&8]: &e成功移除所有玩家的神秘盒！'
+  random-edit:
+    add: '&8[&d神秘礼物盒&8]: &e已给予玩家随机神秘盒！'
+  random-edit-all:
+    add: '&8[&d神秘礼物盒&8]: &e已给予所有玩家随机神秘盒！'
+  opening:
+    player-during-opening: '&8[&d神秘礼物盒&8]: &c请先等待当前神秘盒开启完毕！'
+    console-during-opening: '&8[&d神秘礼物盒&8]: &c玩家正在开启一个神秘盒！'
+    player-cannot-open-box: '&8[&d神秘礼物盒&8]: &c你不能开启此神秘盒！'
+    console-cannot-open-box: '&8[&d神秘礼物盒&8]: &c此神秘盒无法打开！'
+  crafting:
+    player-during-crafting: '&8[&d神秘礼物盒&8]: &c请先等待当前神秘盒合成完毕！'
+    console-during-crafting: '&8[&d神秘礼物盒&8]: &c玩家正在合成一个神秘盒！'
+    player-cannot-craft: '&8[&d神秘礼物盒&8]: &c你不能合成此神秘盒！'
+    player-not-enough-dust: '&8[&d神秘礼物盒&8]: &c你的神秘尘不足！'
+    player-crafted: '&8[&d神秘礼物盒&8]: &e你已合成 &r{BOX_NAME}&e，前往最近的神秘盒打开它吧！'
+  not-enough-boxes:
+    player-not-enough-boxes: '&8[&d神秘礼物盒&8]: &c你的神秘盒不足！'
+    console-not-enough-boxes: '&8[&d神秘礼物盒&8]: &c玩家的神秘盒不足！'
+    player-no-boxes: '&8[&d神秘礼物盒&8]: &c玩家没有神秘盒！'
+    console-no-boxes: '&8[&d神秘礼物盒&8]: &c你没有神秘盒！'
+  invalid-arguments:
+    invalid-box-id: '&8[&d神秘礼物盒&8]: &c无效的神秘盒 ID！请输入 /mb listboxes 查看详细信息！'
+    invalid-loot-id: '&8[&d神秘礼物盒&8]: &c无效的奖励品 ID！请输入 /mb boxinfo <神秘盒 ID> 查看详细信息！'
+  other:
+    player-no-permission: '&8[&d神秘礼物盒&8]: &c玩家没有开启此神秘盒的权限！'
+    no-boxes-registered: '&8[&d神秘礼物盒&8]: &c找不到已注册的神秘盒！'
+
+gift-pack-messages:
+  edit:
+    set: '&8[&d神秘礼物盒&8]: &e成功设置礼包个数！'
+    add: '&8[&d神秘礼物盒&8]: &e成功增加礼包个数！'
+    remove: '&8[&d神秘礼物盒&8]: &e成功移除礼包！'
+  edit-all:
+    set: '&8[&d神秘礼物盒&8]: &e成功设置所有玩家的礼包个数！'
+    add: '&8[&d神秘礼物盒&8]: &e成功增加所有玩家的礼包个数！'
+    remove: '&8[&d神秘礼物盒&8]: &e成功移除所有玩家的礼包！'
+  random-edit:
+    add: '&8[&d神秘礼物盒&8]: &e已给予玩家随机礼包！'
+  random-edit-all:
+    add: '&8[&d神秘礼物盒&8]: &e已给予所有玩家随机礼包！'
+  send:
+    single:
+    - '&8[&d神秘礼物盒&8]: &e你已成功向 &a{RECEIVER} &e赠送礼包！'
+    title-single:
+      top: '&a礼包已赠送！'
+      bottom: '&e获赠者：&b{RECEIVER}'
+    multiple:
+    - '&8[&d神秘礼物盒&8]: &e你已成功向 &a{RECEIVER} &e赠送礼包！'
+    title-multiple:
+      top: '&a礼包已赠送！'
+      bottom: '&e获赠者：&b{RECEIVER}'
+  receive:
+    single:
+    - '&8[&d神秘礼物盒&8]: &e你收到了来自 &a{SENDER} &e的礼包！'
+    - '&8[&d神秘礼物盒&8]: &e前往最近的神秘盒打开它吧！'
+    title-single:
+      top: '&a获取新礼包！'
+      bottom: '&e来自：&b{SENDER}'
+    multiple:
+    - '&8[&d神秘礼物盒&8]: &e你收到了来自 &a{SENDER} &e的礼包！'
+    - '&8[&d神秘礼物盒&8]: &e前往最近的神秘盒打开它吧！'
+    title-multiple:
+      top: '&a获取新礼包！'
+      bottom: '&e来自：&b{SENDER}'
+
+slot-upgrade-messages:
+  upgrade:
+  - '&8[&d神秘礼物盒&8]: &e你成功升级了神秘盒栏位！'
+  - '&8[&d神秘礼物盒&8]: &e你能同时打开更多的神秘盒了！'
+  not-enough-dust:
+  - '&8[&d神秘礼物盒&8]: &c你的神秘尘不足！'

@@ -1,0 +1,123 @@
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+# ▒█▀▄▀█ ▒█░░▒█ ▒█▀▀▀█ ▀▀█▀▀ ▒█▀▀▀ ▒█▀▀█ ▒█░░▒█ ▒█▀▀█ ▒█▀▀▀█ ▀▄▒▄▀ ▒█▀▀▀ ▒█▀▀▀█
+# ▒█▒█▒█ ▒█▄▄▄█ ░▀▀▀▄▄ ░▒█░░ ▒█▀▀▀ ▒█▄▄▀ ▒█▄▄▄█ ▒█▀▀▄ ▒█░░▒█ ░▒█░░ ▒█▀▀▀ ░▀▀▀▄▄
+# ▒█░░▒█ ░░▒█░░ ▒█▄▄▄█ ░▒█░░ ▒█▄▄▄ ▒█░▒█ ░░▒█░░ ▒█▄▄█ ▒█▄▄▄█ ▄▀▒▀▄ ▒█▄▄▄ ▒█▄▄▄█
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+# ▒█▀▀█ ▒█░░▒█ 　 ▀▄▒▄▀ ▒█▀▀▀ ▒█▀▀█ ▀█▀ ▒█▀▀█ ▒█░▄▀ ▒█▀▀▀ ▒█▀▀█
+# ▒█▀▀▄ ▒█▄▄▄█ 　 ░▒█░░ ▒█▀▀▀ ▒█▄▄▀ ▒█░ ▒█░░░ ▒█▀▄░ ▒█▀▀▀ ▒█▄▄▀
+# ▒█▄▄█ ░░▒█░░ 　 ▄▀▒▀▄ ▒█▄▄▄ ▒█░▒█ ▄█▄ ▒█▄▄█ ▒█░▒█ ▒█▄▄▄ ▒█░▒█
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+# Thank you for supporting the development of 神秘礼物盒!
+# Wiki: https://github.com/Eselyx/神秘礼物盒/wiki/Getting-Started
+# Discord: https://discord.com/invite/dcHEqzQJZp
+# > ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ── ──
+
+general-messages:
+  invalid-arguments: '&8[&d神秘礼物盒&8]: &c你的指令好像缺少了一些变量！'
+  invalid-permission: '&8[&d神秘礼物盒&8]: &c你暂时没权限这样做！'
+  invalid-sender: '&8[&d神秘礼物盒&8]: &c你必须是玩家才能这样做！'
+  player-not-found: '&8[&d神秘礼物盒&8]: &c玩家未找到！'
+  players-not-found: '&8[&d神秘礼物盒&8]: &c玩家未找到！'
+
+vault-messages:
+  vault-busy: '&8[&d神秘礼物盒&8]: &cOnly one player can use the Mystery Vault at a time!'
+
+dust-messages:
+  edit:
+    set: '&8[&d神秘礼物盒&8]: &eMystery Dust has been set!'
+    add: '&8[&d神秘礼物盒&8]: &eMystery Dust has been added!'
+    remove: '&8[&d神秘礼物盒&8]: &eMystery Dust has been removed!'
+  edit-all:
+    set: '&8[&d神秘礼物盒&8]: &eMystery Dust has been set for everyone!'
+    add: '&8[&d神秘礼物盒&8]: &eMystery Dust has been added to everyone!'
+    remove: '&8[&d神秘礼物盒&8]: &eMystery Dust has been removed from everyone!'
+
+box-messages:
+  edit:
+    set: '&8[&d神秘礼物盒&8]: &eMystery Boxes have been set!'
+    add: '&8[&d神秘礼物盒&8]: &eMystery Boxes have been added!'
+    remove: '&8[&d神秘礼物盒&8]: &eMystery Boxes have been removed!'
+  edit-all:
+    set: '&8[&d神秘礼物盒&8]: &eMystery Boxes have been set for everyone!'
+    add: '&8[&d神秘礼物盒&8]: &eMystery Boxes have been added to everyone!'
+    remove: '&8[&d神秘礼物盒&8]: &eMystery Boxes have been removed from everyone!'
+  random-edit:
+    add: '&8[&d神秘礼物盒&8]: &eRandom Mystery Boxes have been given to the player!'
+  random-edit-all:
+    add: '&8[&d神秘礼物盒&8]: &eRandom Mystery Boxes have been give to the players!'
+  opening:
+    player-during-opening: '&8[&d神秘礼物盒&8]: &cWait for this Mystery Box to finish opening
+      first!'
+    console-during-opening: '&8[&d神秘礼物盒&8]: &cThe player is currently opening a Mystery
+      Box!'
+    player-cannot-open-box: '&8[&d神秘礼物盒&8]: &cYou can''t open this Mystery Box!'
+    console-cannot-open-box: '&8[&d神秘礼物盒&8]: &cThis Mystery Box can''t be opened!'
+  crafting:
+    player-during-crafting: '&8[&d神秘礼物盒&8]: &cWait for this Mystery Box to finish
+      crafting first!'
+    console-during-crafting: '&8[&d神秘礼物盒&8]: &cThe player is currently crafting a
+      Mystery Box!'
+    player-cannot-craft: '&8[&d神秘礼物盒&8]: &cYou can''t craft this Mystery Box!'
+    player-not-enough-dust: '&8[&d神秘礼物盒&8]: &cYou don''t have enough Mystery Dust!'
+    player-crafted: '&8[&d神秘礼物盒&8]: &eYou have crafted &r{BOX_NAME}&e. Head over to
+      the nearest Mystery Vault to open it!'
+  not-enough-boxes:
+    player-not-enough-boxes: '&8[&d神秘礼物盒&8]: &cYou don''t have enough Mystery Boxes!'
+    console-not-enough-boxes: '&8[&d神秘礼物盒&8]: &cThe player doesn''t have enough Mystery
+      Boxes!'
+    player-no-boxes: '&8[&d神秘礼物盒&8]: &cThe player doesn''t have Mystery Boxes!'
+    console-no-boxes: '&8[&d神秘礼物盒&8]: &cYou don''t have Mystery Boxes!'
+  invalid-arguments:
+    invalid-box-id: '&8[&d神秘礼物盒&8]: &cInvalid Mystery Box ID! Type ''/mb listboxes''
+      for more info.'
+    invalid-loot-id: '&8[&d神秘礼物盒&8]: &cInvalid Loot ID! Type ''/mb boxinfo <box ID>''
+      for more info.'
+  other:
+    player-no-permission: '&8[&d神秘礼物盒&8]: &cThe player doesn''t have permission to
+      open this Mystery Box!'
+    no-boxes-registered: '&8[&d神秘礼物盒&8]: &cThere are no Mystery Boxes registered!'
+
+gift-pack-messages:
+  edit:
+    set: '&8[&d神秘礼物盒&8]: &eGift Packs have been set!'
+    add: '&8[&d神秘礼物盒&8]: &eGift Packs have been added!'
+    remove: '&8[&d神秘礼物盒&8]: &eGift Packs have been removed!'
+  edit-all:
+    set: '&8[&d神秘礼物盒&8]: &eGift Packs have been set for everyone!'
+    add: '&8[&d神秘礼物盒&8]: &eGift Packs have been added to everyone!'
+    remove: '&8[&d神秘礼物盒&8]: &eGift Packs have been removed from everyone!'
+  random-edit:
+    add: '&8[&d神秘礼物盒&8]: &eRandom Gift Packs have been given to the player!'
+  random-edit-all:
+    add: '&8[&d神秘礼物盒&8]: &eRandom Gift Packs have been give to the players!'
+  send:
+    single:
+    - '&8[&d神秘礼物盒&8]: &eYou have sent the Gift Pack to &a{RECEIVER}&e!'
+    title-single:
+      top: '&aGift Pack Sent!'
+      bottom: '&eto &b{RECEIVER}'
+    multiple:
+    - '&8[&d神秘礼物盒&8]: &eYou have sent the Gift Pack to &a{RECEIVER}&e!'
+    title-multiple:
+      top: '&aGift Pack Sent!'
+      bottom: '&eto &b{RECEIVER}'
+  receive:
+    single:
+    - '&8[&d神秘礼物盒&8]: &eYou have received a Gift Pack from &a{SENDER}&e!'
+    - '&8[&d神秘礼物盒&8]: &eHead over to the nearest Mystery Vault to open it!'
+    title-single:
+      top: '&aNew Gift Pack!'
+      bottom: '&efrom &b{SENDER}'
+    multiple:
+    - '&8[&d神秘礼物盒&8]: &e你受到了一个来自&a{SENDER}&e的礼包'
+    - '&8[&d神秘礼物盒&8]: &eHead over to the nearest Mystery Vault to open it!'
+    title-multiple:
+      top: '&a新礼包获取！'
+      bottom: '&e来自 &b{SENDER}'
+
+slot-upgrade-messages:
+  upgrade:
+  - '&8[&d神秘礼物盒&8]: &eYou have upgraded your Slots!'
+  - '&8[&d神秘礼物盒&8]: &eYou can open more Mystery Boxes at the same time!'
+  not-enough-dust:
+  - '&8[&d神秘礼物盒&8]: &c你没有足够的相思尘'

@@ -1,0 +1,1127 @@
+# Default language file
+lang: en_US
+
+# Which economy should auction house use?
+# You have the following supported economy plugins installed: "Vault", "PlayerPoints", "Reserve".
+economy provider: Vault
+
+setting:
+
+  # Should Markets give the player all their items from the category
+  # back when they click the delete button?
+  give back items on category delete: true
+
+  # Should markets give the player all their items in all categories
+  # when they decide to delete their market?
+  give back items on market delete: true
+
+  # Should transactions be logged?
+  log transactions: true
+
+  # How many items can a player request per request creation?
+  max amount per request: 256
+
+  # If a player tries to access a the market menu without owning a market
+  # should markets automatically create a market for them?
+  auto create market: true
+  auto save:
+
+    # Should markets automatically save market data?
+    enabled: true
+
+    # How often (in seconds) should markets save data?
+    delay: 900
+
+  # If enabled, markets will limit the total amount of items a player can have in their market based on their permission
+  limit total market items by permission: true
+
+  # If enabled, markets will limit the total amount of requests a player can have active based on their permission
+  limit total requests by permission: true
+
+  # If limit total market items by permission is enabled, this is will be the default max allowed amount of items (individual stacks)
+  default max allowed market items: 64
+
+  # If limit total requests by permission is enabled, this is will be default allowed request amount
+  default max allowed requests: 12
+
+  # For whatever reason, if you want the market owner to buy their own items, enable this.
+  allow owner to buy own items: false
+
+  # For whatever reason, if you want the requester to fulfill their own request, enable this.
+  allow owner to fulfill requests: false
+  ratings:
+
+    # Should players be allowed to change their rating on a market?
+    allow change: true
+
+    # How many seconds must a player wait before they can change their rating?
+    change delay: 86400
+
+    # What is the max length a rating message can be?
+    max message length: 41
+
+  # How often (in seconds) should markets check for things like the upkeep charge?
+  run market check delay: 10
+
+  # Should clickable request messages be sent to everyone upon a new request creation?
+  broadcast request creation: true
+  feature:
+
+    # How much should it cost to feature a market?
+    cost: 20000
+
+    # How long should a market feature last (in seconds)
+    time: 3600
+
+  # Should empty markets be shown in the main listing?
+  display empty markets: false
+
+  # The formatting for currency
+  currency format: '%,.2f'
+
+  # Disable access to the view all markets menu
+  disable view all markets: false
+
+  # Every feature but requests will be disabled
+  request only mode: false
+
+  # If true, the close button will just outright close the menu
+  market close btn closes menu: false
+
+  # You can learn more about date formats by googling SimpleDateFormat patterns or visiting this link
+  # https://docs.oracle.com/javase/7/docs/api/java/text/SimpleDateFormat.html
+  date format: MMM dd, yyyy hh:mm aa
+
+  # Should the main menu have a search button added to it?
+  add search to main: true
+  command:
+
+    invalid command: '&7The command you entered does not exist or is spelt incorrectly.'
+
+    no permission: '&cYou do not have permission to do that..'
+
+    syntax error:
+    - '&cInvalid Syntax!'
+    - '&7The valid syntax is: &6%syntax%&7.'
+  creation fee:
+
+    # Should markets charge players a fee to create their market?
+    enabled: true
+
+    # How much should the market creation fee be?
+    amount: 1000
+  upkeep fee:
+
+    # Should markets charge players after x amount of time to keep their market open?
+    use: false
+
+    # How much should the upkeep fee cost?
+    fee: 2500
+
+    # Adds to the total upkeep fee (ex. if they have 20 items, $ 20 * 5 would be added to the base fee)
+    additional item fee: 5
+
+    # How many seconds should pass before upkeep fees are collected?
+    delay: 604800
+  tax:
+
+    # If enabled, when a sale is made, percentage of the sale will be removed / added
+    enabled: false
+
+    # If enabled, markets will charge the buyer tax instead of the seller
+    tax buyer instead of seller: true
+
+    # This is a percentage, ex. 13 -> 13% tax
+    amount: 13
+
+  # If true, the auto save msg will be shown in the console
+  log save message: true
+
+  # If true, market transactions will show you how much money you spent
+  send money withdraw message: true
+
+  # If true, any sales will be told to the owner
+  send money deposit message: true
+
+  # How much should the item qty be increased by (btn 1)
+  increment one: 1
+
+  # How much should the item qty be increased by (btn 2)
+  increment two: 5
+
+  # How much should the item qty be decreased by (btn 1)
+  decrement one: 1
+
+  # How much should the item qty be decreased by (btn 2)
+  decrement two: 5
+  signs:
+
+    header: '[market]'
+
+    activated header: '&8[&eMarket&8]'
+
+    owner name colour: '&d'
+
+database:
+
+  # Should the plugin use a database to store shop data?
+  use database: false
+
+  # What is the connection url/host
+  host: kiranhart.com
+
+  # What is the port to database (default is 3306)
+  port: 3306
+
+  # What is the name of the database?
+  name: test_user
+
+  # What is the name of the user connecting?
+  username: test_database
+
+  # What is the password to the user connecting?
+  password: Password123.
+
+  # Should the database connection use ssl?
+  use ssl: true
+
+guis:
+  global items:
+    back button:
+
+      # Settings for the back button
+      item: ARROW
+
+      name: '&e<< Back'
+
+      lore:
+      - '&7Click the button to go'
+      - '&7back to the previous page.'
+    close button:
+
+      # Settings for the close button
+      item: BARRIER
+
+      name: '&cClose'
+
+      lore:
+      - '&7Click to close this menu.'
+    next button:
+
+      # Settings for the next button
+      item: ARROW
+
+      name: '&eNext >>'
+
+      lore:
+      - '&7Click the button to go'
+      - '&7to the next page.'
+  main:
+
+    title: '&eMarkets'
+
+    use border: true
+
+    fill slots: true
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      all markets:
+        item:
+
+          use custom head: false
+
+          custom head link: 1de9a8e5e6303cec956e37321ca0f7f7f9738211b8f570c3e76c929df5da18
+
+          item: NETHER_STAR
+
+        name: '&e\u5168\u7403\u5546\u5e97'
+
+        lore:
+        - '&7Click to view the markets of'
+        - '&7player''s who have one.'
+      your market:
+
+        name: '&eView your market'
+
+        lore:
+        - '&7Click to edit or view information'
+        - '&7about your market if you have one.'
+      transactions:
+
+        item: BOOK
+
+        name: '&eTransaction History'
+
+        lore:
+        - '&7Click to view the transaction history'
+        - '&7for items you bought or sold.'
+      requests:
+
+        item: CHEST_MINECART
+
+        name: '&eYour Requests'
+
+        lore:
+        - '&7Click to view any item requests'
+        - '&7that you have made.'
+      open requests:
+
+        item: CHEST
+
+        name: '&eOpen Requests'
+
+        lore:
+        - '&7Click to view any open requests'
+        - '&7that player''s have made.'
+      bank:
+
+        item: DIAMOND
+
+        name: '&eCurrency Bank'
+
+        lore:
+        - '&7Click to view your bank containing'
+        - '&7custom currency for transactions'
+      search:
+
+        item: COMPASS
+
+        name: '&eSearch'
+
+        lore:
+        - '&7Click to search items in all markets'
+  inspect:
+
+    title: '&7&LInspecting Container'
+
+    bg item: BLACK_STAINED_GLASS_PANE
+  market edit:
+
+    title: '&eEditing your market'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      edit name:
+
+        item: PAPER
+
+        name: '&eDisplay Name'
+
+        lore:
+        - '&7Current name&F: %market_name%'
+        - '&7Click to change your market name.'
+      open enabled:
+
+        item: LIME_DYE
+
+        name: '&aMarket Open'
+
+        lore:
+        - '&7Click to &cclose &7market'
+      open disabled:
+
+        item: RED_DYE
+
+        name: '&cMarket Closed'
+
+        lore:
+        - '&7Click to &aOpen &7market'
+      add category:
+
+        item: NETHER_STAR
+
+        name: '&eNew Category'
+
+        lore:
+        - '&7Click to add a new category'
+        - '&7to your market.'
+      feature market:
+
+        item: FIREWORK_ROCKET
+
+        name: '&eFeature Market'
+
+        lore:
+        - '&7Click to feature your market'
+        - '&7for &a$%feature_cost%'
+
+        lore already featured:
+        - '&7Your market is already being featured'
+      all items:
+
+        item: CHEST
+
+        name: '&eView All Items'
+
+        lore:
+        - '&7Click to view all your market items.'
+      delete market:
+
+        item: FIRE_CHARGE
+
+        name: '&4Delete Market'
+
+        lore:
+        - '&cRight-Click to delete your market,'
+        - '&cthis action &c&lCANNOT &cbe undone!'
+      add item:
+
+        item: ENDER_EYE
+
+        name: '&eAdd Item'
+
+        lore:
+        - '&7Click to add an item to your market'
+      category:
+
+        name: '%category_display_name%'
+
+        lore:
+        - '&7Click to edit this category'
+  category edit:
+
+    title: '&eYour Market > %category_name%'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      edit name:
+
+        item: PAPER
+
+        name: '&eDisplay Name'
+
+        lore:
+        - '&7Current name&F: %category_display_name%'
+        - '&7Click to change this category''s display name.'
+      edit description:
+
+        item: WRITABLE_BOOK
+
+        name: '&eDescription'
+
+        lore:
+        - '&7Current Description&F:'
+        - '%category_description%'
+        - '&7Click to change this category''s description.'
+      edit icon:
+
+        name: '&eIcon'
+
+        lore:
+        - '&7Click to change this category''s icon'
+      add item:
+
+        item: ENDER_EYE
+
+        name: '&eAdd Item'
+
+        lore:
+        - '&7Click to add an item to this category'
+      empty:
+
+        item: HOPPER
+
+        name: '&eEmpty Items'
+
+        lore:
+        - '&7Click to empty all items from this category'
+      delete:
+
+        item: FIRE_CHARGE
+
+        name: '&4Delete Category'
+
+        lore:
+        - '&cRight-Click to delete this category,'
+        - '&cthis action &c&lCANNOT &cbe undone!'
+      market item:
+
+        name: '&e%item_name%'
+
+        lore:
+        - '&7Price&f: &a$%market_item_price%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Left-Click to edit price'
+        - '&7Press Q to remove item from market'
+        - '&7Right-Click to toggle price per stack'
+
+        lore custom currency:
+        - '&7Price&f: &fx%market_item_price% %market_item_currency%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Left-Click to edit price'
+        - '&7Press Q to remove item from market'
+        - '&7Right-Click to toggle price per stack'
+        - '&7Shift-Right Click to edit currency item.'
+  select material:
+
+    title: '&eSelect a material'
+  confirm:
+
+    title: '&eConfirm'
+    items:
+      confirm:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&lConfirm'
+
+        lore:
+        - '&7Click to confirm'
+      cancel:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&lCancel'
+
+        lore:
+        - '&7Click to cancel'
+  all items:
+
+    title: '&e%market_name%&f > All Items'
+
+    title edit: '&eYour Market > All Items'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      market item:
+
+        name: '&e%item_name%'
+
+        edit lore:
+        - '&7Price&f: &a$%market_item_price%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Left-Click to edit price'
+        - '&7Press Q to remove item from market'
+        - '&7Right-Click to toggle price per stack'
+
+        edit lore custom currency:
+        - '&7Price&f: &a$%market_item_price% %market_item_currency%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Left-Click to edit price'
+        - '&7Press Q to remove item from market'
+        - '&7Right-Click to toggle price per stack'
+        - '&7Shift-Right Click to edit currency item.'
+
+        lore:
+        - '&7Price&f: &a$%market_item_price%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Click to purchase this item.'
+
+        lore custom currency:
+        - '&7Price&f: &fx%market_item_price% %market_item_currency%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - ''
+        - '&7Click to purchase this item.'
+        - '&e(!) This is item has a custom currency'
+        - '&eRight-Click to view the required currency.'
+
+        # This will only be added to the control lore if the item can be inspected (skulker box)
+        lore inspect:
+        - '&eShift Right-Click to inspect'
+  market view:
+
+    title: '&e%market_name%'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      all items:
+
+        item: CHEST
+
+        name: '&eAll Items'
+
+        lore:
+        - '&7Click to view all items.'
+      category:
+
+        name: '&e%category_display_name%'
+
+        lore:
+        - '%category_description%'
+        - ''
+        - '&7Click to view items this in category'
+      ratings:
+
+        # If enabled, markets will use a custom textured skull (star)
+        use custom skull: false
+
+        custom skull link: 1c8e0cfebc7f9c7e16fbaaae025d1b1d19d5ee633666bcf25fa0b40d5bd21bcd
+
+        item: PAPER
+
+        name: '&eMarket Ratings'
+
+        # %average_rating_number% can be used instead of %average_rating_stars%
+        lore:
+        - '&7Average Rating&f: &e%average_rating_stars%'
+        - ''
+        - '&7Left-Click to view all ratings'
+        - '&7Right-Click to leave a rating'
+  market list:
+
+    title: '&eOpen Markets'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    market name: '%market_name%'
+
+    market lore:
+    - '%market_description%'
+    - '&7Owner&f: &e%market_owner%'
+    - ''
+    - '&7Click to view this market'
+
+    market lore featured:
+    - '%market_description%'
+    - '&7Owner&f: &e%market_owner%'
+    - ''
+    - '&7Click to view this market'
+    - ''
+    - '&e&lFEATURED'
+  market category:
+
+    title: '&e%market_name% > %category_display_name%'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - '&7Price&f: &a$%market_item_price%'
+    - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+    - ''
+    - '&7Click to purchase this item.'
+
+    item lore custom currency:
+    - '&7Price&f: &fx%market_item_price% %market_item_currency%'
+    - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+    - ''
+    - '&7Click to purchase this item.'
+    - '&e(!) This is item has a custom currency'
+    - '&eRight-Click to view the required currency.'
+
+    # This will only be added to the control lore if the item can be inspected (skulker box)
+    item lore inspect:
+    - '&eShift Right-Click to inspect'
+  item purchase:
+
+    title: '&ePurchasing Item'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      increment:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a+%increment_amount%'
+
+        lore:
+        - '&7Click to increase the purchase'
+        - '&7quantity by &a+%increment_amount%'
+      decrement:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c-%decrement_amount%'
+
+        lore:
+        - '&7Click to decrease the purchase'
+        - '&7quantity by &c-%decrement_amount%'
+      purchase:
+
+        item: SUNFLOWER
+
+        name: '&ePurchase Information'
+
+        lore:
+        - '&7Quantity&f: &e%purchase_quantity%'
+        - '&7Stack Price&f: &a$%stack_price%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - '&7Final Price&f: &a$%purchase_price%'
+        - ''
+        - '&7Click to make purchase.'
+
+        lore custom currency:
+        - '&7Quantity&f: &e%purchase_quantity%'
+        - '&7Stack Price&f: x%stack_price% %market_item_currency%'
+        - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+        - '&7Final Price&f: x%purchase_price% %market_item_currency%'
+        - ''
+        - '&7Click to make purchase.'
+  transactions:
+
+    title: '&eTransaction History'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    transaction item: PAPER
+
+    transaction name: '&eTransaction'
+
+    transaction lore:
+    - '&7ID: &e%transaction_id%'
+    - '&7Buyer: &e%transaction_buyer%'
+    - '&7Market: &e%transaction_market%'
+    - '&7Price: &e%transaction_price%'
+    - '&7Date: &e%transaction_date%'
+  open request:
+
+    title: '&eYour Requests'
+
+    title all: '&eAll Open Requests'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      empty:
+
+        item: HOPPER
+
+        name: '&eCancel Requests'
+
+        lore:
+        - '&7Click to cancel all open requests'
+      collection:
+
+        item: CHEST
+
+        name: '&eRequest Collection'
+
+        lore:
+        - '&7Click to view fulfilled requests'
+      new:
+
+        item: LIME_DYE
+
+        name: '&eNew Request'
+
+        lore:
+        - '&7Click to create request'
+      request:
+
+        name: '%request_item_name%'
+
+        lore:
+        - ''
+        - '&7Item Requested&f: %request_item%'
+        - '&7Amount Requested&f: %request_amount%'
+        - ''
+        - '&7Press Q to cancel request'
+
+        lore all:
+        - ''
+        - '&7Requester&f: &e%request_requesting_player%'
+        - '&7Item Requested&f: %request_item%'
+        - '&7Amount Requested&f: %request_amount%'
+        - ''
+        - '&7Click to view individual fulfillments'
+  request fulfillment:
+
+    title: '&eRequest &f> &7Fulfillment Items'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    requested item lore:
+    - ''
+    - '&7Requester&f: &e%request_requesting_player%'
+    - '&7Quantity&f: &e%request_amount%'
+    - '&7Price&f: &a$%request_price%'
+    - ''
+    - '&7Click to fulfill this request'
+
+    requested item lore custom currency:
+    - ''
+    - '&7Requester&f: &e%request_requesting_player%'
+    - '&7Quantity&f: &e%request_amount%'
+    - '&7Price&f: &a%request_price%'
+    - '&7Currency&f: %market_item_currency%'
+    - ''
+    - '&eRight-Click to view the required currency.'
+    - '&7Click to fulfill this request.'
+  blocked items:
+
+    title: '&eBlocked Items'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - ''
+    - '&7Click to remove item from blacklist'
+  custom currency view:
+
+    title: '&eRequired Currency'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+  payment collection:
+
+    title: '&ePayment Collection'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    glow border: true
+  category select:
+
+    title: '&eSelect Category'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    category name: '%category_name%'
+
+    category lore:
+    - '%category_description%'
+    - '&7Click to select this category'
+  new request:
+
+    title: '&eNew Request'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      amount:
+
+        item: SUNFLOWER
+
+        name: '&e&lRequest Amount'
+
+        lore:
+        - '&7Request Amount&f: &a%request_amount%'
+        - '&7Click to change the request amount'
+      price:
+
+        item: SUNFLOWER
+
+        name: '&e&LPayment'
+
+        lore:
+        - '&7Payment amount&f: &a$%market_payment_price%'
+        - '&7Click to change the payment'
+      cancel add:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&LCancel'
+
+        lore:
+        - '&7Click to cancel request creation'
+      confirm add:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&lConfirm'
+
+        lore:
+        - '&7Click to create request'
+      use custom currency:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&LCustom Currency Enabled'
+
+          lore:
+          - '&7Click to &cdisable &7custom currency'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&LCustom Currency Disabled'
+
+          lore:
+          - '&7Click to &aenable &7custom currency'
+      currency holder:
+
+        item: BARRIER
+
+        name: '&c&lDisabled'
+
+        lore:
+        - '&7You must &aenable &7custom currency to place an item here.'
+  new requests:
+    items:
+      price:
+
+        lore custom currency:
+        - '&7Payment amount&f: x%market_payment_price% %market_request_currency%'
+        - '&7Click to change the payment'
+  add item:
+
+    title: '&eAdding Market Item'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    items:
+      price:
+
+        item: SUNFLOWER
+
+        name: '&e&LItem Price'
+
+        lore:
+        - '&7Current Price&f: &a$%market_item_price%'
+        - '&7Click to change the price'
+
+        lore custom currency:
+        - '&7Current Price&f: x%market_item_price% %market_item_currency%'
+        - '&7Click to change the price'
+      price for stack:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&LPrice if for stack'
+
+          lore:
+          - '&7Click to set price for stack to &Cfalse'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&LPrice isn''t for stack'
+
+          lore:
+          - '&7Click to set price for stack to &Atrue'
+      selected category:
+
+        item: NETHER_STAR
+
+        name: '&e&LSelected Category'
+
+        lore:
+        - '&7Current category&f: &e%selected_market_category%'
+        - '&7Click to change the category'
+      use custom currency:
+        enabled:
+
+          item: LIME_DYE
+
+          name: '&a&LCustom Currency Enabled'
+
+          lore:
+          - '&7Click to &cdisable &7custom currency'
+        disabled:
+
+          item: RED_DYE
+
+          name: '&c&LCustom Currency Disabled'
+
+          lore:
+          - '&7Click to &aenable &7custom currency'
+      cancel add:
+
+        item: RED_STAINED_GLASS_PANE
+
+        name: '&c&LCancel'
+
+        lore:
+        - '&7Click to cancel adding a market item.'
+      confirm add:
+
+        item: LIME_STAINED_GLASS_PANE
+
+        name: '&a&lConfirm'
+
+        lore:
+        - '&7Click to add the item to the market.'
+      currency holder:
+
+        item: BARRIER
+
+        name: '&c&lDisabled'
+
+        lore:
+        - '&7You must &aenable &7custom currency to place an item here.'
+  bank:
+
+    title: '&eYour Bank'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item name: '%item_name%'
+
+    item lore:
+    - '&7Total Stored&f: &e%currency_amount%'
+    - '&7Left-Click to withdraw'
+    payment item:
+
+      item: PAPER
+
+      name: '&ePayment Collection'
+
+      lore:
+      - '&7Left-Click to view payments'
+  ratings list:
+
+    title: '&eMarket &f- &7Ratings'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+    rating:
+
+      item: PAPER
+
+      name: '&eRating'
+
+      lore:
+      - '&7Rater&f: %rating_rater%'
+      - '&7Stars&f: %rating_stars%'
+      - '&7Message&f:'
+      - '&e%rating_message%'
+  search:
+
+    title: '&eMarket &f- &7Search Results'
+
+    glow border: true
+
+    fill item: BLACK_STAINED_GLASS_PANE
+
+    border item: ORANGE_STAINED_GLASS_PANE
+
+    item lore:
+    - '&7Market&f: &e%market_name%'
+    - '&7Price&f: &a$%market_item_price%'
+    - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+    - ''
+    - '&7Click to purchase this item.'
+
+    item lore custom currency:
+    - '&7Market&f: &e%market_name%'
+    - '&7Price&f: &fx%market_item_price% %market_item_currency%'
+    - '&7Price is for stack&f: &e%market_item_price_for_stack%'
+    - ''
+    - '&7Click to purchase this item.'
+    - '&e(!) This is item has a custom currency'
+    - '&eRight-Click to view the required currency.'
+  rating star select:
+
+    title: '&eSelect Star Rating'
+
+    fill item: BLACK_STAINED_GLASS_PANE
+    star:
+
+      use custom skull: false
+      textures:
+        selected:
+
+          one: http://textures.minecraft.net/texture/88991697469653c9af8352fdf18d0cc9c67763cfe66175c1556aed33246c7
+
+          two: http://textures.minecraft.net/texture/5496c162d7c9e1bc8cf363f1bfa6f4b2ee5dec6226c228f52eb65d96a4635c
+
+          three: http://textures.minecraft.net/texture/c4226f2eb64abc86b38b61d1497764cba03d178afc33b7b8023cf48b49311
+
+          four: http://textures.minecraft.net/texture/f920ecce1c8cde5dbca5938c5384f714e55bee4cca866b7283b95d69eed3d2c
+
+          five: http://textures.minecraft.net/texture/a2c142af59f29eb35ab29c6a45e33635dcfc2a956dbd4d2e5572b0d38891b354
+        not selected:
+
+          one: http://textures.minecraft.net/texture/ca516fbae16058f251aef9a68d3078549f48f6d5b683f19cf5a1745217d72cc
+
+          two: http://textures.minecraft.net/texture/4698add39cf9e4ea92d42fadefdec3be8a7dafa11fb359de752e9f54aecedc9a
+
+          three: http://textures.minecraft.net/texture/fd9e4cd5e1b9f3c8d6ca5a1bf45d86edd1d51e535dbf855fe9d2f5d4cffcd2
+
+          four: http://textures.minecraft.net/texture/f2a3d53898141c58d5acbcfc87469a87d48c5c1fc82fb4e72f7015a3648058
+
+          five: http://textures.minecraft.net/texture/d1fe36c4104247c87ebfd358ae6ca7809b61affd6245fa984069275d1cba763
+
+      item: NETHER_STAR
+
+      name: '&e%star_number% Stars'
+
+      lore:
+      - '&7Click to rate %star_number% stars'
+    message:
+
+      item: PAPER
+
+      name: '&eMessage'
+
+      lore:
+      - '&7Message&f: &e%rating_message%'
+      - ''
+      - '&7Click to change your message'
+    confirm:
+
+      item: LIME_STAINED_GLASS_PANE
+
+      name: '&AConfirm Rating'
+
+      lore:
+      - '&7Click to post rating'
+    cancel:
+
+      item: RED_STAINED_GLASS_PANE
+
+      name: '&cCancel Rating'
+
+      lore:
+      - '&7Click to cancel rating'

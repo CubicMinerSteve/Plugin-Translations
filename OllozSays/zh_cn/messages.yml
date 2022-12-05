@@ -1,0 +1,122 @@
+# The plugin prefix.
+prefix: '&7[&e你说&6我做&7] '
+commands:
+
+  # Sent when a non-player attempts to execute a player-only command
+  not-a-player: '&c只有玩家才能执行此命令!'
+
+  # Sent when a player attempts to run the command but has no permission
+  no-permission: '&c你无权执行此命令!'
+
+  # Sent when an invalid player is supplied to a command
+  invalid-player: '&c无效的玩家: &e{player}&c.'
+
+  # Sent when an invalid arena is supplied to a command
+  invalid-arena: '&c无效的房间: &e{arena}&c.'
+
+  # Sent when an invalid task is supplied to a command
+  invalid-task: '&c无效的任务: &e{task}&c.'
+
+  # Sent when an invalid subcommand is passed
+  unknown-subcommand: '&c无效的子命令: &e{command}&c.'
+
+  # Sent when an incorrect number of arguments is supplied to a subcommand
+  invalid-usage: '&c无效的命令语法. 请输入 &e/{command} {command_usage}&c.'
+
+  # Sent when an invalid page number is supplied to the help command
+  invalid-help-page: '&c无效的帮助页面: &e{page}.'
+
+  # Sent when a non-player attempts to execute command that requires them to be an arena
+  not-in-arena: '&c你不在房间内!'
+
+  # Sent when a player attempts to join an arena but is already in one
+  already-in-arena: '&c你已经在房间内了!'
+
+  # Sent when a player attempts to create an arena with a specific key but that key is already used
+  arena-already-exists: '&c已存在以 &e{key} &c为名的房间!'
+
+  # Sent when a player attempts to create an arena with no region selected
+  no-region-selected: '&c你必须使用 WorldEdit 的选区工具选定范围!'
+
+  # Sent when a player modifies the arena's building with /ollozsays editbuilding
+  successfully-edited-building: '&a成功修改房间 &e{arena} &a的建筑!'
+
+  # Sent when an arena is created
+  arena-created-successfully: '&a成功创建房间 &e{key} &a!'
+
+  # Sent when an arena is deleted
+  arena-deleted-successfully: '&a成功删除房间 &e{key} &a!'
+
+  # Sent when a spawnpoint in an arena is set
+  arena-spawnpoint-set: '&a已设置房间 &e{arena} &a的 &e{index} &a号重生点!'
+
+  # Sent when a spawnpoint in an arena is set
+  arena-spawnpoint-set-all: '&a已将房间 &e{arena} &a的所有重生点设置到你当前的位置!'
+
+  # Sent when the spectating location in an arena is set
+  arena-spectating-location-set: '&成功设置房间 &e{arena} &a的旁观位置!'
+
+  # Sent when the finishing location for an arena is set
+  arena-finishing-location-set: '&a成功设置房间 &e{arena} &a的结束位置!'
+
+  # Sent when a task is added to an arena
+  arena-task-added: '&a成功添加任务 &e{task} &a至房间 &e{arena} &a中!'
+
+  # Sent when a task cannot be added to an arena because it already contains it
+  arena-already-contains-task: '&c房间 &e{arena} &c已包含任务 &e{task} &c!'
+
+  # Sent when a task is removed from an arena
+  arena-task-removed: '&a成功移除房间 &e{arena} &a的任务 &e{task} &a!'
+
+  # Sent when a task cannot be removed from an arena because it does contain it
+  arena-does-not-contain-task: '&c房间 &e{arena} &c不包含任务 &e{task} &c!'
+
+  # Sent on /ollozsays reload
+  reloaded-successfully: '&a成功重载插件!'
+
+  # Sent when a player attempts to join a random arena but no arena is available
+  no-available-arena: '&c无法找到可用房间…… :('
+
+  # Sent when a player leaves an arena (using an item or the command)
+  you-left: '&c你离开了房间!'
+
+  # Sent when a player forcibly starts an arena with /ollozsays forcestart
+  forcibly-starting-arena: '&a强制开始游戏!'
+
+  # Sent when an arena cannot be forcibly started
+  forcibly-starting-arena-failed: '&c未开始倒计时!'
+
+  # Sent in /ollozsays blocks when the 2 corners are in different worlds
+  locations-in-different-worlds: '&c两个位置处在不同的世界中!'
+arena:
+
+  # Sent when a player attempts to join an arena is not ready or is disabled
+  cannot-join: '&c你现在不能加入该房间!'
+
+  # Sent when a player attempts to join a full arena
+  arena-full: '&c该房间已满!'
+
+  # Sent when a player attempts to run a non-whitelisted command while in game
+  disallowed-command: '&c你不能在游戏中执行此命令!'
+
+  # Sent when a player attempts to join an arena but has items in their inventory. Only appears if 'RequireEmptyInventory' in config is true.
+  must-have-empty-inv: '&c你的背包必须为空!'
+
+  # Broadcasted (to the arena players) when a player joins an arena
+  player-joined: '&a玩家 &e{player} &a加入了游戏! &7(&e{arena_playercount}&8/&c{arena_maximum}&7)'
+
+  # Broadcasted (to the arena players) when a player leaves an arena
+  player-left: '&a玩家 &e{player} &a离开了游戏! &7(&e{arena_playercount}&8/&c{arena_maximum}&7)'
+
+  # Broadcasted (to the arena players) when a player is eliminated (run out of lives)
+  player-eliminated: '&c玩家 &e{player} &c被淘汰!'
+
+  # Broadcasted (to the arena players) when there are enough players to start
+  countdown-started: '&a玩家数达到要求! 游戏将在 &e{time} &a秒后开始!'
+  not-enough:
+
+    # Broadcasted when the countdown is cancelled (due to the game not meeting the minimum player requirement)
+    players: '&e玩家数不足! 倒计时取消!'
+
+  # Broadcasted for each countdown
+  countdown: '&7游戏将在 &e{time} &7秒后开始!'

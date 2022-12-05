@@ -1,0 +1,363 @@
+# In death messages, you can add a new death detection message if you want to！
+# Here is a list of death causes https://hub.spigotmc.org/javadocs/spigot/org/bukkit/event/entity/EntityDamageEvent.DamageCause.html
+
+Arena-Scoreboard:
+  Title: '&d%pointedstar% &6&l龙蛋战争 &d%pointedstar%'
+  Content:
+  - '&e&m-----------'
+  - '&a> %current_event%'
+  - '  %current_event_time%'
+  - ' '
+  - '&a> 玩家数：&f%players%'
+  - '&a> 地图：&f%arena%'
+  - '&a> 模式：%mode%'
+  - ' '
+  - '%teams%'
+  - ' '
+  - '&7%date%'
+  - '&e&m-----------'
+Scoreboard-Events:
+  Waiting: '&e等待中……'
+  Starting: 游戏开始于
+  Upgrades: 资源点升级于
+  Deathmatch: '&c决斗开始于'
+  Cage-Release: '&b笼子开启于'
+  Ending: '&c&l游戏结束于'
+  Finish: '&6&lGood Game!'
+Achievement-Unlock:
+- ' '
+- '%randomcolor%&m-----&4&k AA&e 解锁新成就 &4&kAA %randomcolor%&m-----'
+- '%randomcolor% 成就 -> &6%description%'
+- '%randomcolor% 奖励 -> &e%prize%'
+- ' '
+prefix: '&6[&a龙蛋战争&6] '
+Messages:
+  No-Permission: 你没有权限这么做！
+  Unknown-Command: 未知命令！输入 /ew 查看更多命令！
+  Player-Join: 你进入了游戏大厅！
+  Player-Leave: 你已离开游戏！
+  Lobby-Not-Set: 暂无任何设置的大厅！
+  Already-In-Game: 你已经在游戏中了！
+  Not-In-Game: 你还未在游戏中！
+  Not-In-Lobby: 你需要在大厅中才能这样做！
+  Coins-Update: 你的龙蛋币已更新！
+  Modifier-Update: 你的额外奖励倍率已更新！
+  Party-Must-Be-Leader: 你必须是队长才能这样做！
+  Party-Player-Not-Available: 队伍成员 &b%member% &6暂不可用！
+  No-Available-Arena: 找不到空闲的游戏场地！
+  Arena-No-Lobby: 此场地未设置游戏大厅！
+  Must-Have-Empty-Hand: 你必须空手才能右键牌子！
+  Invalid-Mystery-Box: 神秘盒中的某些设置无效！
+  Tracking-Player: '&e&l追踪玩家：&b%target% &6&l距离：&b%distance%'
+  Player-Teleport: '&a你已被传送！'
+  Invalid-Entity: 无效的实体类型……
+  Player-Kill: 你击杀了 &e%target% &6并获得 &d%coins% &6龙蛋币和 &d%exp% &6点经验！
+  Player-Kill-Error: '&c你击杀玩家 &e%player% &c的次数过多，本次击杀不纳入统计……'
+  Player-Spectate: 你正在旁观此场地！
+  Player-Spectate-Banned: 你无法旁观此场地！
+  Invalid-Item: 无效的物品类型……
+  Not-Enough-Coins: 你没有足够的龙蛋币！
+  Not-Enough-Space: 你的物品栏没有足够的空间！
+  Item-Purchase: 你&a成功&6购买了此物品！
+  Item-Select: '你已选择物品：&a%item%'
+  Item-Owned: '&c你已经购买了此物品！'
+  Cooldown: 你需要等待 &d%seconds% &6秒后才能再次执行此命令！
+  Unknown-Player: 无法找到此玩家！
+  No-Available-Items: 当前暂无你能够解锁的物品了！
+  Mystery-Box-Item-Unlock: '&a恭喜你！&6你解锁了新物品：%item%'
+  Killstreak-Award: '&a&l你获得了 &e&l%killstreak% &a&l连击杀玩家的奖励！'
+  Party-New-Leader: '&6玩家 &e%player% &6成为了新的队长！'
+  Party-Unknown-Player: 无法在你的队伍中找到此玩家！
+  Party-Self-Invite: 你无法邀请你自己加入队伍！
+  Player-Already-Invited: 已经邀请过此玩家加入队伍了！
+  Item-Sell: 你&a成功&6卖出此物品，并获得了 &b%value% &6龙蛋币！
+  Player-Inactive: 此玩家暂时不在游戏区域内！
+  Command-Block: 你在游戏中无法使用此命令！
+  Warning-Receive: '&c你已受到一次警告！ (%warnings%/%maxwarnings%)'
+  Warning-Exceed: 你受到的警告过多！
+  Player-Rank-Up: 你&a升级&6了！当前等级：&b%rank% &6！
+  Arena-Not-Available: 你暂时无法加入游戏场地！
+  Arena-Not-Enough-Teams: 游戏场地内团队不足！
+  Arena-Full: 此游戏场地人数已满！
+  Player-Join-Arena: '&6玩家 &e%player% &6加入了游戏！&d(%players%/%maxplayers%)'
+  Player-Select-Team: 你加入了 %team% &6团队！
+  Player-Select-Team-Error: 你现在无法加入此团队！
+  Player-Leave-Arena: '&6玩家 &e%player% &6离开了游戏！&d(%players%/%maxplayers%)'
+  Player-Leave-Team: '&6玩家 &e%player% &6离开了你的团队！&d(%teamsize%/%maxteamsize%)'
+  Player-Vote: '&6玩家 &d%player% &6投票给了 &e%option% &6！&c(%votes%)'
+  Leave-Arena-Error: 只有队伍的队长才能这么做！
+  Team-Notification: 你现在属于 %team% &6团队！
+  Countdown-Cancel: 由于玩家数量不足，倒计时取消！
+  Arena-Starting-Countdown: 游戏将在 &b%seconds% &6秒后开始！
+  Arena-Starting-Countdown-Shortening: 倒计时已跳转至 &b%seconds% &6秒！
+  Arena-Start: '&6&l游戏开始！'
+  Egg-Break-Global-Notification: '&l%team% &6&l团队的龙蛋已被破坏！'
+  Egg-Break-Team-Notification: '&c&l团队龙蛋已被破坏！'
+  Egg-Break-Error: 你无法破坏自己团队的龙蛋！
+  Egg-Break-Money-Earn: 你成功破坏了其他团队的龙蛋并获得了 &d%coins% 龙蛋币&6！
+  Egg-Auto-Destroy: '&c&l所有队伍的龙蛋已自毁！'
+  Spawner-Upgrade-Cost-Error: 你没有足够的 &b%cost% &6以升级此资源点！
+  Spawner-Upgrade-Deny: '&c你无法升级此资源点！'
+  Spawner-Upgrade-Error: 发生错误！无法升级此资源点！
+  Spawner-Upgrade: '&a你已成功升级此资源点！'
+  Villager-Shop-Open-Error: 无法找到此商店！
+  Villager-Shop-No-Required-Item: 你没有足够的 &b%cost% &6以购买此物品！
+  Spectator-Tip: 作为旁观者，你可以左键空气或右键方块打开&a&n旁观者菜单&6！
+  Kit-Receive: 你已获取职业 &a%kit% &6的物品！
+  Build-Error: 你无法在此处放置方块！
+  Game-Cancel: 时间到！游戏平局！
+  Arena-Borders-Leave: '&c你无法离开游戏场地边界！'
+  Arena-Borders-Outside: '&c你处在游戏场地之外！'
+  Arena-Finish: '&a&l恭喜！&6你已获得胜利！'
+  Arena-Finish-Prize: 你获得了 &d%coins% &6龙蛋币作为获胜的奖励！
+  Arena-Player-Eliminate: '&6玩家 &e%player% &c被最终击杀&6！'
+  Team-Player-Eliminate: '&6玩家 &e%player% &6从你的团队中消失了！&d(%teamsize%/%maxteamsize%)'
+  Team-Elimination: '&l%team% &6&l团队已被消灭！'
+  Generators-Auto-Upgrade: '&6&l资源点已升级！'
+  Party-Player-Leave: 你已离开队伍！
+  Party-Player-Leave-Alert: '&6玩家 &c%player% &6离开了队伍！'
+  Party-Full: 此队伍人数已满！
+  Party-Join: '&6玩家 &e%player% &6加入了队伍！'
+  Party-Not-Invited: 你未收到此队伍的邀请！
+  Party-Invite-Send: '&6玩家 &e%player% &6向 &a%target% &6发送了队伍邀请！'
+  Party-Invite-Receive: 你收到加入 &b%leader%&6 队伍的邀请！邀请将在 &d%seconds% &6秒后过期！
+  Party-Invitation-Expire: 队伍邀请已过期！
+  Party-Player-Kick: 你已被移出队伍！
+  Party-Player-Kick-Alert: '&6玩家 &e%leader% &6从队伍中移出了 &c%player% &6！'
+  Invalid-Party: 无效的队伍……
+  Invalid-Arena: 无效的房间……
+  Block-Break-Below-Team: '&c你无法破坏队友脚下的方块！'
+  Player-Move: 你移动了！操作&c取消！
+  Player-Movement-Disabled: 请在 &d%seconds% &6秒内不要移动！
+  Arrow-Hit: '&e%player% &6的生命值：&c%health% %heart%&e！'
+  Reload-Kick: 插件正在重新加载……
+  Booster-Activate: '&a&l %owner% 激活了 %duration% 小时的 %modifier% 倍额外奖励！'
+Death-Messages:
+  FALL: '&e%player% &6感受到了重力势能转化的动能！'
+  ENTITY_ATTACK: '&e%player% &6被怪物塞入牙缝！'
+  LAVA: '&e%player% &6在跳入岩浆前忘了喝抗火药水！'
+  SUFFOCATION: '&e%player% &6瞬移失败，卡在墙里！'
+  VOID: '&e%player% &6落入茫茫虚空之中！'
+  DROWNING: '&e%player% &6被水淹没，不知所措！'
+  FIRE: '&e%player% &6被烤得酥脆，隔壁苦力怕都馋哭了！'
+  FIRE_TICK: '&e%player% &6被烤得酥脆，隔壁苦力怕都馋哭了！'
+  ENTITY_EXPLOSION: '&e%player% &6随着一声巨响消失了！'
+  BLOCK_EXPLOSION: '&e%player% &6随着一声巨响消失了！'
+  UNKNOWN: '&e%player% &6被送去了幻♂想♂乡！'
+  PLAYER:
+    SUICIDE: '&e%player% &6认为自我了断方为上策！'
+    OTHER:
+    - '%player% &e被 %killer% &e击杀！'
+    - '%player% &e被 %killer% &e残忍谋杀！'
+    - '%player% &e的武器无法抵抗 %killer% &e！'
+    - '%killer% &e把 %player% &e推向死亡边缘！'
+    - '%killer% &e无法抵抗杀戮 %player% &e的欲望！'
+    - '%killer% &e让 %player% &e感受到了哲♂学的奥义！'
+Scoreboard:
+  Title: '&d%pointedstar% &6&l龙蛋战争 &d%pointedstar%'
+  Header: '&e&m-----------'
+  Footer: '&e&m-----------'
+  Tags:
+    Mode: '&a> 模式：'
+    Time: '&a> 时间：'
+    Players: '&a> 玩家数：'
+    Map: '&a> 地图：'
+    Next-Event: '&a> 下一事件：'
+    Upgrades: '%randomcolor% 升级'
+    Deathmatch: ' &c玩家决斗'
+    Cage-Release: ' &a笼子开启'
+    Ending: ' &c结束中'
+    Other-Teams: 其他团队
+Inventories:
+  Villager-Shop: '&9村民商店'
+  Spawner-Upgrade: '&c资源点升级'
+  Team-Selector: '&9选择团队'
+  Arena-Settings: '&9游戏设置'
+  Profile-Inventory: '&9你的信息'
+  Stats-Inventory: '&9统计数据'
+  Spectator-Menu: '&9旁观者菜单'
+  Quit-Inventory: '&c你确定要退出吗？'
+  Game-Inventory: '&9背包'
+  Achievements-Inventory: '&c成就'
+  Confirm-Purchase: '&c确认购买！'
+  Party-Settings: '&c队伍设置'
+  Party-Players: '&9队伍玩家：'
+  Party-Main-Menu: '&c选择队伍选项！'
+  Teleporter: '&c传送至玩家'
+  Boosters: 额外奖励倍率
+Signs:
+  Title: '&a&l[龙蛋战争]'
+  Leave: '&c&l离开'
+  Autojoin: '&c&l自动加入'
+  Join: '&c&l加入'
+  Arena-Color: l
+  Arena-Players: '&9%players%&d&l/&9%max_players%'
+  Leaderboard-Title: '&bTop #&4'
+  Leaderboard-Stat-Color: '4'
+States:
+  WAITING: '&a等待中……'
+  STARTING: '&e准备开始'
+  INGAME: '&c游戏中'
+  ENDING: '&c结束中'
+  ROLLBACKING: '&c重置中'
+  QUEUED: '&c队列中'
+  DISABLED: '&c不可用'
+Items:
+  Quit: 'MAGMA_CREAM : name:&c&l离开 : lore:&7点我离开游戏！'
+  Play: 'DIAMOND_AXE : name:&6&l加入 : lore:&7点我加入一个游戏！'
+  Shop: 'EMERALD : name:&a&l商店 : lore:&7点我购买物品！'
+  Profile: 'SKULL_ITEM:3 : name:&b&l信息 : lore:&7点我查看你的信息！'
+  Party: 'WORKBENCH : name:&d&l队伍 : lore:&7点我管理你的队伍！'
+  Teleporter: 'COMPASS : name:&b&l传送 : lore:&7点我传送至其他玩家！'
+  Autojoin: 'WATCH : name:&b&lAutojoin : lore:&7快速加入 : lore:&7点我快速加入游戏！'
+  Team-Selector: 'WHITE_WOOL : name:&6&l选择团队 : lore:&7点击加入指定颜色的团队！'
+  Back: 'EYE_OF_ENDER : name:&a&l返回 : lore:&7点击返回！'
+  Vote: 'WATCH : name:&d&l投票 : lore:&7点击对游戏设置进行投票！'
+  Stats: 'PAPER : name:&a统计数据'
+  Inventory: 'CHEST : name:&b背包'
+  Achievements: 'ENDER_CHEST : name:&d成就'
+  Confirm: 'STAINED_GLASS:5 : name:&a&l确认'
+  Cancel: 'STAINED_GLASS:14 : name:&c&l取消'
+  Next: 'STAINED_GLASS:5 : name:&a下一页'
+  Previous: 'STAINED_GLASS:14 : name:&c上一页'
+  Party-Create: 'BEACON : name:&a创建队伍 : lore:&7点击创建一个队伍！'
+  Party-Join: 'CHEST : name:&c加入队伍 : lore:&7点击加入一个队伍！'
+  Boosters: 'CHEST : name:&a&l奖励倍率 : lore:&6点击查看可用的额外奖励倍率！'
+Titles:
+  Starting: '&c将在 &e%seconds% &c秒后开始！'
+  Starting-Shortening: '&c倒计时跳转至 &6%seconds% &c秒！'
+  Start: '&c游戏开始！'
+  Finish: '&a恭喜你！'
+  Egg-Break: '&c你的龙蛋已被破坏……'
+  Team-Elimination: '&c%team% 团队已被消灭！'
+  Player-Spectate: '&c你正在旁观这个场地……'
+  Killstreak: '&c你获得了 &b%killstreak% &c连杀！'
+  Generators-Auto-Upgrade: '&6资源点升级'
+  Respawn: '&e将在 %time% 秒后重生！'
+Lores:
+  Description: '&e物品描述：'
+  Rarity: '&e稀有度：%rarity%'
+  Value: '&e价格：&d%price%$'
+  Armor: '&e护甲：'
+  Helmet: '&5 - &a头盔：&d%helmet%'
+  Chestplate: '&5 - &a胸甲：&d%chestplate%'
+  Leggings: '&5 - &a护腿：&d%leggings%'
+  Boots: '&5 - &a靴子：&d%boots%'
+  Items: '&e物品：'
+  Item: '&5 - &d%item%'
+  No-Items: '&d无'
+  Permission-Needed: '&c需要权限……'
+  Selling: '&c以 &e%coins% &c龙蛋币的价格卖出……'
+  Lines: '&b&m-------------'
+  Players: '&e玩家数：&b%players%&e/&b%maxplayers%'
+  Type: '&e模式：&d%type%'
+  State: '&e状态：%state%'
+  Cost: '&e花费龙蛋币：&d%cost%'
+  Content: '&e内容：'
+  Rarities: '&e稀有度：'
+  Inventory-Instructions: '&5- &b&n左键装备 &5/ &c&n右键出售'
+  Generator-Broken: '&c已损坏'
+  Generator-Level: '&7 - 等级：&f%level%'
+  Generator-Speed: '&7 - 速度：&f%speed%'
+  Generator-Fully-Upgraded: '&7 - &c已满级'
+  Generator-Upgrade-Description: '&7 - 升级至等级 %new_level% (&a%improvement%
+    增强&7)'
+  Generator-Requirement: '&7 - 需要：&b%requirement%'
+  Generator-Activation: '&7 - 待激活'
+  Generator-No-Fix: '&7 - &c无法修复'
+Chat-Prefixes:
+  Rank: '&7[&b%rank%&7] '
+  Shout: '&7[&6全部&7] '
+  Party: '&7[&d队伍&7] '
+  Lobby: '&7[大厅] '
+  Spectator: '&7[旁观者] '
+  Team: '&7[%teamname%&7] '
+Lobby-Scoreboard:
+  Title: '&d%pointedstar% &6&l龙蛋战争 &d%pointedstar%'
+  Content:
+  - '&e&m-----------'
+  - '&a> 击杀/死亡：'
+  - '%kills%/%deaths%'
+  - '&a> 胜场：'
+  - '%wins%'
+  - '&a> 经验/等级：'
+  - '%player_exp%/%player_rank%'
+  - ' '
+  - '&a> 职业：'
+  - '%selected_kit%'
+  - '&a> 箭迹：'
+  - '%selected_trail%'
+  - ' '
+  - '&eplay.beforever.top'
+  - '&e&m-----------'
+Match-Conclusion:
+- '%randomcolor%&m==============================='
+- ' '
+- '    &e%star% %winners% &7赢得了游戏！ &e%star%'
+- ' '
+- '&6    击杀第 1 名 - %topkiller1_name% - %topkiller1_kills%'
+- '&e    击杀第 2 名 - %topkiller2_name% - %topkiller2_kills%'
+- '&c    击杀第 3 名 - %topkiller3_name% - %topkiller3_kills%'
+- ' '
+- '%randomcolor%&m==============================='
+Arena-Settings:
+- '&3======== &b游戏设置 &3======='
+- '&b - &6时间：&e&l%votedTime%'
+- '&b - &6物品：&e&l%votedShop%'
+- '&b - &6生命值：&e&l%votedHealth%'
+- '&3============================'
+Stats:
+  KILLS: 击杀数
+  DEATHS: 死亡数
+  KDR: 击杀死亡比
+  COINS: 龙蛋币
+  WINS: 胜场
+  MODIFIER: 奖励倍数
+  PLAY_TIME: 游玩时间
+  PROJECTILES_HIT: 弹射物击中
+  PROJECTILES_LAUNCHED: 弹射物发射
+  ACCURACY: 精确度
+  PLAYER_EXP: 经验
+  RANK: 等级
+  NEXT_RANK_NEEDED_EXP: 升级还需经验
+  BLOCKS_PLACED: 放置方块数
+  BLOCKS_BROKEN: 破坏方块数
+  EGGS_BROKEN: 破坏龙蛋数
+Stats-Inventory-Styling:
+  Stat: '&a%stat%：'
+  Value: '&e%value%'
+Holographic-Leaderboard-Styling:
+  Header: ''
+  Body: '&7#&d1 &b%stat% &7- %player% - &e%score%'
+  Footer: '&7&m-------------------------'
+Holographic-Stats:
+- '&7&m---&a %player_name% &7stats &m---'
+- '&b击杀数 &7%arrow% &e%kills%'
+- '&b龙蛋币 &7%arrow% &e%coins%'
+- '&b死亡数 &7%arrow% &e%deaths%'
+- '&b胜场 &7%arrow% &e%wins%'
+- '&b弹射物发射 &7%arrow% &e%projectiles_launched%'
+- '&b弹射物击中 &7%arrow% &e%projectiles_hit%'
+- '&b经验 &7%arrow% &e%player_exp%'
+- '&b等级 &7%arrow% &e%player_rank%'
+- '&b放置方块数 &7%arrow% &e%blocks_placed%'
+- '&b破坏方块数 &7%arrow% &e%blocks_broken%'
+- '&b破坏龙蛋数 &7%arrow% &e%eggs_broken%'
+- '&7&m----------------------'
+Team-Names:
+  RED: '&c红色'
+  YELLOW: '&e黄色'
+  BLUE: '&9蓝色'
+  GREEN: '&a绿色'
+  BLACK: '&0精黑色'
+  DARK_GREEN: '&2深绿色'
+  DARK_RED: '&4深红色'
+  GOLD: '&6金色'
+  DARK_GRAY: '&8深灰色'
+  DARK_BLUE: '&1深蓝色'
+  DARK_AQUA: '&3深青色'
+  DARK_PURPLE: '&5深紫色'
+  GRAY: '&7灰色'
+  AQUA: '&b青色'
+  LIGHT_PURPLE: '&d紫色'
+  WHITE: '&f白色'

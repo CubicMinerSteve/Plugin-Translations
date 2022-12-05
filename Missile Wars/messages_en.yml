@@ -1,0 +1,51 @@
+prefix: '&6•&e● MissileWars &8▎  &7'
+not_in_arena: '&cYou are not in an arena right now'
+game_quit: You lef this game
+not_enter_arena: '&cYou may not enter this arena right now'
+game_starts_new_in: Game starts new in &e%seconds% &7seconds
+game_ends_in_minutes: Game ends in &e%minutes% &7minutes
+game_ends_in_seconds: Game ends in &e%seconds% &7seconds
+game_starts_in: Game starts in &e%seconds% &7seconds
+not_enough_players: '&cThere are not enough players online'
+teams_unequal: '&cThe teams are unequal distributed'
+game_starts: '&aThe game starts'
+fall_protection: '&cFall protection inactive in %seconds% seconds'
+fall_protection_inactive: '&cFall protection inactive'
+fall_protection_deactivated: '&cFall protection deactivated by sneaking'
+money: You received &e%money% &7coins
+kick_inactivity: '&cYou were inactive on missilewars'
+title_won: '%team%'
+subtitle_won: '&7has won the game'
+spectator: '&7You are now a spectator'
+change_team_not_now: '&cNow you cannot change your team anymore'
+already_in_team: '&cYou are already in this team'
+cannot_change_difference: '&cYou cannot change your team'
+team_changed: You are now in %team%
+team_assigned: You have been assigned to %team%
+lobby_joined: '&e%player% &7joined &8(&7%players%&8/&7%max_players%&8)'
+not_higher: '&cYou can not go higher'
+invalid_missile: '&cInvalid missile'
+hurt_teammates: '&cYou must not hurt your teammates'
+died: '%player% &7died'
+died_explosion: '%player% &7was blown up'
+player_left: '%player% &7left the game'
+team_offline: Everyone from %team% &7is offline
+team_buffed: '%team% &7was buffed as one player left the team'
+team_nerved: '%team% &7was nerved as one player joined the team'
+restart_after_game: '&7The server will restart after this game'
+arena_leave: '&cYou are not allowed to leave the arena'
+missile_place_deny: '&cYou are not allowed to place a missile here'
+sign:
+  '0': •● MissileWars ●•
+  '1': '%state%'
+  '2': '%arena%'
+  '3': '%players%/%max_players%'
+  state:
+    lobby: '&aLobby'
+    ingame: '&bIngame'
+    ended: '&cRestarting...'
+    error: '&cError...'
+vote:
+  success: You successfully voted for the map %map%
+  finished: The map %map% &7was elected
+  gui: Vote for a map

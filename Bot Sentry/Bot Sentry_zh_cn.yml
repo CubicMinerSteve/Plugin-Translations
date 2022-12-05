@@ -1,0 +1,231 @@
+#-------------------------------------------------------------------------------------------------------#
+#    _______    ______  ________         ______   ________  __    __  ________  _______  __      __     #
+#   |       \  /      \|        \       /      \ |        \|  \  |  \|        \|       \|  \    /  \    #
+#   | $$$$$$$\|  $$$$$$\\$$$$$$$$      |  $$$$$$\| $$$$$$$$| $$\ | $$ \$$$$$$$$| $$$$$$$\\$$\  /  $$    #
+#   | $$__/ $$| $$  | $$  | $$         | $$___\$$| $$__    | $$$\| $$   | $$   | $$__| $$ \$$\/  $$     #
+#   | $$    $$| $$  | $$  | $$          \$$    \ | $$  \   | $$$$\ $$   | $$   | $$    $$  \$$  $$      #
+#   | $$$$$$$\| $$  | $$  | $$          _\$$$$$$\| $$$$$   | $$\$$ $$   | $$   | $$$$$$$\   \$$$$       #
+#   | $$__/ $$| $$__/ $$  | $$         |  \__| $$| $$_____ | $$ \$$$$   | $$   | $$  | $$   | $$        #
+#   | $$    $$ \$$    $$  | $$          \$$    $$| $$     \| $$  \$$$   | $$   | $$  | $$   | $$        #
+#    \$$$$$$$   \$$$$$$    \$$           \$$$$$$  \$$$$$$$$ \$$   \$$    \$$    \$$   \$$    \$$        #
+#                                                                                                       #
+#              _________          _______  _        _______ _________ _______  _______                  #
+#              \__   __/|\     /|(  ___  )( (    /|(  ___  )\__   __/(  ___  )(  ____ \                 #
+#                 ) (   | )   ( || (   ) ||  \  ( || (   ) |   ) (   | (   ) || (    \/                 #
+#                 | |   | (___) || (___) ||   \ | || (___) |   | |   | |   | || (_____                  #
+#                 | |   |  ___  ||  ___  || (\ \) ||  ___  |   | |   | |   | |(_____  )                 #
+#                 | |   | (   ) || (   ) || | \   || (   ) |   | |   | |   | |      ) |                 #
+#                 | |   | )   ( || )   ( || )  \  || )   ( |   | |   | (___) |/\____) |                 #
+#                 )_(   |/     \||/     \||/    )_)|/     \|   )_(   (_______)\_______)                 #
+#                                                                                                       #
+#                                                                                                       #
+#                  若需要帮助或有任何疑问，欢迎加入我们的 Discord 聊天频道讨论!                         #
+#                                  https://discord.gg/uxRTwDa                                           #
+#                                                                                                       #
+#                                       社区翻译获取地址:                                               #
+#                        https://cyberdevelopment.es/BotSentry/translations                             #
+#                                                                                                       #
+#  Add our official Discord Bot to your DC server, the bot will send a message in your Discord Server   #
+#      and in your DMs when an attack occurs to your server, with statistics related to the attack      #
+#       https://discord.com/oauth2/authorize?client_id=750526188555993148&scope=bot&permissions=8       #
+#                                                                                                       #
+#-------------------------------------------------------------------------------------------------------#
+#    __  __ ______  _____ _____         _____ ______  _____
+#   |  \/  |  ____|/ ____/ ____|  /\   / ____|  ____|/ ____|
+#   | \  / | |__  | (___| (___   /  \ | |  __| |__  | (___
+#   | |\/| |  __|  \___ \\___ \ / /\ \| | |_ |  __|  \___ \
+#   | |  | | |____ ____) |___) / ____ \ |__| | |____ ____) |
+#   |_|  |_|______|_____/_____/_/    \_\_____|______|_____/
+#
+# 下一行的链接将自动取代断开连接界面的有关内容
+whitelisturl: "www.notbot.es"
+error:
+  startup: "&6BotSentry &7\u00BB &c连接至 &6&lBotSentry&c 时出现错误，错误代码: &4%1$d&c. &c若此错误仅出现两到三次，可选择忽略错误提示，若错误反复出现，请在 Discord 上联系我们 (/bs discord)."
+  config: "&6BotSentry &7\u00BB &c无法从 &6&lBotSentry&c 服务器下载默认配置. 正在自动生成无注释配置文件……"
+  mysql:
+    sqlerror: "&6BotSentry &7\u00BB &c出现 SQL 错误! MySQL 错误代码: %1$d"
+    credentials: "&6BotSentry &7\u00BB &c配置文件中的凭据不正确!"
+    classnotfound: "&6BotSentry &7\u00BB &c未找到 MySQL 类，请检查服务器版本!"
+  firewall:
+    command: "&6BotSentry &7\u00BB &c执行系统命令时出现错误!"
+    notunix: "&6BotSentry &7\u00BB &c服务器未在 unix 类型的系统上运行. 请检查防火墙的黑名单命令， 如有疑问请在 Discord 上联系我们 (/bs discord)."
+    setup: "&6BotSentry &7\u00BB &c设置防火墙黑名单时出现错误，请确保服务器运行时拥有 Root 权限，或确认你有权执行命令. 如有疑问请在 Discord 上联系我们 (/bs discord)."
+    unix:
+      install: "&6BotSentry &7\u00BB &c无法安装文件包. 请确保服务器运行时拥有 Root 权限，或确认你有权执行命令. 如有疑问请在 Discord 上联系我们 (/bs discord)."
+  filewriting: "&6BotSentry &7\u00BB &c在写入文件系统时出现错误: %1$s"
+blacklisted: "&8\u00AB &cBotSentry &8\u00BB\n&7连接请求分析完毕!\n&7-----------------------------------\n\n&c你的IP已被列入反压测系统的黑名单.\n\n&7-----------------------------------\n&7出现误报情况? 请前往以下网址完成 Google Captcha 验证:\n&e%1$s"
+commands:
+  bs:
+    whitelist:
+      add:
+        successful:
+          moved: "&6BotSentry &7\u00BB &a%1$s &7已由黑名单移至白名单!"
+          added: "&6BotSentry &7\u00BB &a%1$s &7已成功加入白名单!"
+        error:
+          invalid: "&6BotSentry &7\u00BB &c指定 IP 或玩家无效!"
+          already: "&6BotSentry &7\u00BB &c指定 IP 或玩家的 IP 已在白名单内!"
+      description: "正在添加至白名单……"
+      clear:
+        successful: "&6BotSentry &7\u00BB &a成功清除白名单内容!"
+        error: "&6BotSentry &7\u00BB &c命令无效，请使用: /bs whitelist clear %1$d"
+        confirm: "&6BotSentry &7\u00BB &c请输入命令以确认操作: /bs whitelist clear %1$d"
+        warning: "&6BotSentry &7\u00BB &4请注意! &c这将会从白名单上移除所有 IP!"
+      contains:
+        # 请勿翻译 true 与 false
+        successful:
+          'true': "&6BotSentry &7\u00BB &a%1$s 已列入白名单!"
+          'false': "&6BotSentry &7\u00BB &a%1$s 不在白名单上!"
+        error: "&6BotSentry &7\u00BB &c指定 IP 无效!"
+      remove:
+        error:
+          notinside: "&6BotSentry &7\u00BB &cIP 不在白名单上!"
+          invalid: "&6BotSentry &7\u00BB &c指定 IP 无效!"
+        successful: "&6BotSentry &7\u00BB &a成功从白名单上移除 IP %1$s !"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f你可以对白名单执行添加移除等操作，或查看某个 IP 是否在白名单上! \n&r\n&8\u00BB &6参数:\n&8- &badd&7: &f添加 IP 至白名单 (IP 或玩家名)\n&8- &bremove&7: &f从白名单上移除指定 IP\n&8- &bclear&7: &f清空白名单\n&8- &bcontains&7: &f查看某个 IP 是否在白名单上\n&8- &b[ip] &7- &f玩家 IP\n&r"
+      format: "whitelist <add:remove:clear:contains> [ip]"
+    # 请勿翻译 off
+    'off':
+      successful: "&6BotSentry &7\u00BB &a成功关闭反压测模式!"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f关闭反压测模式!\n&r"
+      description: "手动关闭反压测模式!"
+      format: "off"
+      error: "&6BotSentry &7\u00BB &c反压测模式已经处于关闭状态!"
+    # 请勿翻译 stats
+    stats:
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f返回黑白名单的 IP 数与详细列表，查看队列等操作.\n&r"
+      message:
+        version: "&r\n&r\n&8&m&l-------------&8&l<&r  &c&lBotSentry  &8&l>&8&m&l-------------\n&r\n&8\u00BB &6版本: &f%1$s"
+        whitelist: "&8\u00BB &6白名单 IP: &f%1$d "
+        blacklist: "&8\u00BB &6黑名单 IP: &f%1$d "
+        checking: "&8\u00BB &6队列中的 IP: &f%1$d "
+        checked: "&8\u00BB &6此会话中已检查的 IP: &f%1$d \n&8\u00BB &6此会话中检测为代理的 IP: &f%2$d "
+        server: "&8\u00BB &6服务器 IP 与端口: &f%1$s"
+        badpackets: "&8\u00BB &6此会话中拦截的错误数据包: &f%1$d "
+      description: "发送当前插件数据"
+      format: "stats"
+    apipassword:
+      error:
+        already: "&6BotSentry &7\u00BB &c服务器已设置此会话的 API 密码!"
+        unknown: "&6BotSentry &7\u00BB &c上传密码时出现未知错误!"
+        invalid: "&6BotSentry &7\u00BB &c密码无效! (最大长度为 14 ，需要字母数字的组合)"
+      successful: "&6BotSentry &7\u00BB &a成功设置此服务器的 API 密码! (IP: &c%1$s&a)"
+      description: "设置 API 密码"
+      format: "apipassword <password>"
+      uploading: "&6BotSentry &7\u00BB &b正在上传 API 密码……"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f执行命令以设置密码，以便你能够使用我们的公共 API，密码的最大长度为 14，并且必须是字母数字的组合.\n&r\n&f使用此 API ，你可以向以下网站发送网络请求: \n&7www.cyberdevelopment.es/BotSentry/publicapi/request.php\n&r\n&8&l(&4&l!&8&l) &每个会话只能执行一次此命令!\n&r"
+    blacklist:
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f你可以对黑名单执行添加移除等操作，或查看某个 IP 是否在黑名单上!\n&r\n&8\u00BB &6参数:\n&8- &badd&7: &f添加 IP 至黑名单 (IP 或玩家名)\n&8- &bremove&7: &f从黑名单上移除指定 IP\n&8- &bclear&7: &f清空黑名单\n&8- &bcontains&7: &f查看某个 IP 是否在黑名单上\n&8- &b[ip] &7- &f玩家 IP\n&r"
+      description: "正在添加至黑名单……"
+      clear:
+        confirm: "&6BotSentry &7\u00BB &c请输入命令以确认操作: /bs blacklist clear %1$d"
+        error: "&6BotSentry &7\u00BB &c命令无效，请使用: /bs blacklist clear %1$d"
+        successful: "&6BotSentry &7\u00BB &a成功清除黑名单内容!"
+        warning: "&6BotSentry &7\u00BB &4请注意! &c这将会从黑名单上移除所有 IP!"
+      format: "blacklist <add:remove:clear:contains> [ip]"
+      remove:
+        successful: "&6BotSentry &7\u00BB &a成功从黑名单上移除 IP %1$s !"
+        error:
+          notinside: "&6BotSentry &7\u00BB &c不在黑名单上!"
+          invalid: "&6BotSentry &7\u00BB &c指定 IP 无效!"
+      add:
+        error:
+          already: "&6BotSentry &7\u00BB &c指定 IP 或玩家的 IP 已在黑名单内!"
+          invalid: "&6BotSentry &7\u00BB &c指定 IP 或玩家无效!"
+        successful:
+          moved: "&6BotSentry &7\u00BB &a%1$s &7已由白名单移至黑名单!"
+          added: "&6BotSentry &7\u00BB &a%1$s &7已成功加入黑名单!"
+      contains:
+        successful:
+          # 请勿翻译 true 与 false
+          'false': "&6BotSentry &7\u00BB &a%1$s 不在黑名单上!"
+          'true': "&6BotSentry &7\u00BB &a%1$s 已列入黑名单!"
+        error: "&6BotSentry &7\u00BB &c指定 IP 无效!"
+    reload:
+      successful: "&6BotSentry &7\u00BB &a成功重载文件!"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f重载插件.\n&r\n&8\u00BB &6重载时执行操作:\n&8- &f保存并加载黑白名单.\n&8- &f从文件中加载文本与配置设置.\n&8- &f不重启正在运行的进程.\n&8- &f重新计算 Auto Purger 次数 (它们可被修改).\n&8- &f重新执行防火墙黑名单命令 (若可用).\n&r\n&8&l(&4&l!&8&l) &c无法在反压测模式开启时执行.\n&r"
+      format: "reload"
+      error: "&6BotSentry &7\u00BB &c反压测模式已开启，未重载文件!"
+      description: "重新加载配置设置!"
+    discord:
+      description: "显示插件官方 Discord 链接!"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f显示插件官方 Discord 帮助链接.\n&fDiscord: &a&nhttps://discord.gg/8f55U9k\n&r"
+      format: "discord"
+    # 请勿翻译 on
+    'on':
+      successful: "&6BotSentry &7\u00BB &a成功开启反压测模式"
+      format: "on"
+      error: "&6BotSentry &7\u00BB &c反压测模式已经处于开启状态"
+      description: "手动开启反压测模式"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f开启反压测模式. 不推荐手动开启，当需要时系统将自动开启反压测模式.\n&r"
+    notifications:
+      description: "切换物品栏提示模式"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f关闭/开启提示玩家当前服务器受到攻击，文本将在物品栏上方显示.\n&r\n&8&l(&4&l!&8&l) &c服务器版本不能低于 Minecraft 1.8 !\n&r"
+      successfully:
+        enabled: "&6BotSentry &7\u00BB &a成功开启消息通知!"
+        disabled: "&6BotSentry &7\u00BB &a成功取消消息通知!"
+      error:
+        version: "&6BotSentry &7\u00BB &c服务器版本不能低于 Minecraft 1.8!"
+      format: "notifications"
+    scan:
+      description: "显示指定 IP 的有关信息"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f显示指定玩家 IP 或指定 IP 的有关信息.\n&f数据由 BotSentry 的后端传回.\n&f若命令执行者拥有 botsentry.admin 权限，还将提供额外的操作选项.\n&f向后端发送请求存在冷却时间.\n&r\n&8\u00BB &6参数:\n&b<ip:player> &7- &f目标玩家或 IP.\n&r"
+      format: "scan <ip:player>"
+      message: "&r\n&r\n&8&m&l-------------&8&l<&r  &c&lBotSentry  &8&l>&8&m&l-------------\n&r\n&8\u00BB &6IP: &f%1$s\n&8\u00BB &6白名单: &f%2$s &7%3$s\n&8\u00BB &6黑名单: &f%4$s\n&8\u00BB &6代理: &f%5$s\n&8\u00BB &6ISO 代码: &f%6$s\n&8\u00BB &6地区: &f%7$s\n&8\u00BB &6运营提供商: &f%8$s\n&8\u00BB &6使用此 IP 的在线玩家: &f%9$d "
+      actions:
+        front: "&6点击此处将此 IP "
+        whitelist: "&a&l[加入白名单]"
+        blacklist: "&c&l[加入黑名单]"
+        kick: "&b&l[移出服务器]"
+        end: " &6!"
+      invalid: "&6BotSentry &7\u00BB &c指定 IP 或玩家无效!"
+      wait: "&6BotSentry &7\u00BB &c正在从后端传回数据，请稍等几秒……"
+      status:
+        'true': "&a是"
+        'false': "&c否"
+        temporarily: "(临时)"
+        permanent: "(永久)"
+        notavailable: "N/A"
+        playeritem: "    &6- &f%1$s"
+      busy: "&6BotSentry &7\u00BB &c系统繁忙，请稍候……"
+    kick:
+      description: "已移出指定 IP 的所有玩家!"
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f从服务器移出指定 IP 的所有玩家.\n\n&r\n&8\u00BB &6参数:\n&b<ip:player> &7- &f指定的目标 IP 或在线的玩家 IP .\n&r"
+      format: "kick <ip:player>" # 请勿翻译
+      invalid: "&6BotSentry &7\u00BB &c指定的 IP 或玩家无效!"
+      successful: "&6BotSentry &7\u00BB &7成功移出使用 IP &a%1$s &7的所有玩家!"
+    help:
+      fulldescription: "&r\n&8\u00BB &6描述:\n&f列出系统内所有可用命令.\n&f或某个指定命令的详细信息.\n&r\n&8\u00BB &6参数:\n&b[command] &7- &f指定的命令.\n&r"
+      format: "help [command]" # 请勿翻译
+      description: "打开命令帮助菜单!"
+    mainhelp: "&7\u00BB 所有命令及其详细信息:\n&r"
+    helpformat: "&8\u00BB &7/bs &6%1$s &8- &f%2$s"
+    # BotSentry 命令的列表头
+    header: "&r\n&r\n&8&m&l-------------&8&l<&r  &c&lBotSentry  &8&l>&8&m&l-------------&r\n&r"
+  bsw:
+    # BotSentry Wiki 的列表头
+    header: "&8&m&l-------------&8&l<&r  &c&lBotSentry &6&lWiki  &8&l>&8&m&l-------------"
+    search:
+      empty: "&6BotSentry &7\u00BB &c请添加查询内容: &7/bsw %1$s search <query>"
+
+consolefiltering:
+  update: "&6BotSentry &7\u00BB &f%1$d &b列入黑名单的 IP (上一秒) &7&l\u00BB &f%2$d &b加入服务器的 IP (上一秒) &7&l\u00BB &f%3$d &b查询 ping 值的 IP (上一秒)"
+  badpackets: "&6BotSentry &7\u00BB &f%1$d &b拦截的错误数据包 (上一秒)"
+antibotmode:
+  lockdown: "&8\u00AB &cBotSentry &8\u00BB\n&7服务器正在遭受压测攻击!\n&7-----------------------------------\n\n&c反压测模式已开启.\n&c服务器封锁将至少持续 &f%1$d &c秒.\n\n&7-----------------------------------\n&7想立即游玩? 请前往以下网址完成 Google Captcha 验证:\n&e%2$s"
+notifications:
+  attack: "&7\u00BB &c黑名单中的 IP: &f%1$d &7- &c前一秒的机器人数: &f%2$d &7- &c队列中的 IP: &f%3$d &7- &c此会话中拦截的错误数据包: &f%4$d &7\u00AB"
+  waiting: "&7\u00BB &6等待应对下一轮攻击…… &7\u00AB"
+# 若使用自定义 URL 链接请在此处注明
+notenougharguments: "&6BotSentry &7\u00BB &c变量不足: /%1$s, 使用 /%2$s 获取更多信息……"
+detection:
+  kick: "&8\u00AB &cBotSentry &8\u00BB\n&7正在分析你的连接请求!\n&7-----------------------------------\n\n&c检测到服务器存在异常活动，我们正在核查所有连接请求.\n&c请重新加入服务器.\n\n&7-----------------------------------\n&7如果仍然出现此问题，请前往以下网址完成 Google Captcha 验证:\n&e%1$s"
+  dolly: "&8\u00AB &cBotSentry &8\u00BB\n&7你的账号数已超过上限!\n&7-----------------------------------\n\n&c检测到你当前的 IP 同时登录数个不同账号，你已被暂时列入黑名单!\n\n&7-----------------------------------\n&7出现误报情况? 请前往以下网址完成 Google Captcha 验证:\n&e%1$s"
+  amazon: "&8\u00AB &cBotSentry &8\u00BB\n&7你的连接请求存疑!\n&7-----------------------------------\n\n&c检测到你的连接疑似异常请求.\n&c请重新加入服务器或重新启动 Minecraft !\n\n&7-----------------------------------\n&7出现误报情况?\n&e请联系服务器管理员."
+  illegalname: "&8\u00AB &cBotSentry &8\u00BB\n&7连接请求分析完毕!\n&7-----------------------------------\n\n&c你的名称中存在非法字符.\n可用字符如下: [a-zA-Z0-9_]*\n\n&7-----------------------------------\n&7出现误报情况?\n&e请联系服务器管理员."
+  firstjoin: "&8\u00AB &cBotSentry &8\u00BB\n&c正在分析你的连接请求!\n&7-----------------------------------\n\n&c由于这是你第一次游玩本服务器，我们正在分析你的请求.\n\n&7-----------------------------------\n&e为减小误报概率，请稍等几秒后再加入!"
+  antiproxy: "&8\u00AB &cBotSentry &8\u00BB\n&c检测到无效的 IP!\n&7-----------------------------------\n\n&c服务器通过某些设置禁止部分 IP 连接，请更换 IP 后重试.\n\n&7-----------------------------------\n&7出现误报情况?\n&e请联系服务器管理员."
+# 出于更多自定义设置的考虑，每条消息文本中均要更改
+prefix: ""
+nosubcommand: "&6BotSentry &7\u00BB &c未知子命令: %1$s "
+nopermission: "&6BotSentry &7\u00BB &c你没有足够的权限!"
+# Chinese Translation By WaftingScent 2022.1.10

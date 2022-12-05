@@ -1,0 +1,51 @@
+main: me.chocolf.moneyfrommobs.MoneyFromMobs
+name: MoneyFromMobs
+version: 4.5
+api-version: 1.13
+author: Chocolf
+description: 使生物掉落金币，支持修改掉落倍率。
+depend: [Vault]
+softdepend: [InfernalMobs,WorldEdit,WorldGuard,MythicMobs,PlaceholderAPI,RoseStacker,LorinthsRpgMobs,LevelledMobs]
+commands:
+  MfmHelp:
+    description: 显示 Money From Mobs 插件的所有命令。
+    permission: MoneyFromMobs.help
+    usage: "命令格式： /MfmHelp"
+    aliases: [mfm]
+  MfmReload:
+    description: 重载 Money From Mobs 插件的配置文件。
+    permission: MoneyFromMobs.reload
+    usage: "命令格式： /MfmReload"
+  MfmDrop:
+    description: 在世界的指定位置生成金币掉落物。
+    permission: MoneyFromMobs.drop
+    usage: "命令格式： /MfmDrop <金币掉落量> [掉落物个数] [世界名称] [X] [Y] [Z]"
+  MfmMute:
+    description: 切换是否显示掉落金币拾取的消息文本。
+    permission: MoneyFromMobs.mute
+    usage: "命令格式： /MfmMute"
+  MfmClear:
+    description: 移除地面上的所有金币掉落物，也可用来清除故障的全息信息。
+    permission: MoneyFromMobs.clear
+    usage: "命令格式： /MfmClear"
+  MfmEvent:
+    description: 开始或停止持续某时长的生物掉落金币加成活动。
+    permission: MoneyFromMobs.event
+    usage: "命令格式： /MfmEvent <Start(开始)/Stop(停止)> [额外掉落率] [持续时间] (例如：1h 10m 0s)"
+
+permissions:
+  MoneyFromMobs.use:
+    description: 允许玩家击杀生物或拾起其掉落的金币。
+    default: true
+  MoneyFromMobs.PreventMoneyDropOnDeath:
+    description: 防止玩家死亡时掉落金币。
+  MoneyFromMobs.reload:
+    description: 允许玩家使用 /MfmReload 命令。
+  MoneyFromMobs.drop:
+    description: 允许玩家使用 /MfmDrop <金币掉落量> [掉落物个数] 命令。
+  MoneyFromMobs.mute:
+    description: 允许玩家使用 /MfmMute 命令。
+  MoneyFromMobs.clear:
+    description: 允许玩家使用 /MfmClear 命令。
+  MoneyFromMobs.event:
+    description: 允许玩家使用 /MfmEvent <Start(开始)/Stop(停止)> [额外掉落率] [小时] [分钟] [秒] 命令。

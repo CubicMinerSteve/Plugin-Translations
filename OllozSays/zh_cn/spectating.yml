@@ -1,0 +1,37 @@
+Enabled: true
+GameMode: survival
+SpectatePlayerMenu:
+  Title: '&2观察玩家'
+  PlayerHeadInfo:
+    DisplayName: '&e{player}'
+    Lore:
+      - ''
+      - '&f生命: &a{player_health} &7HP'
+      - '&a点我传送!'
+SpectateItem:
+  Type: ender_portal_frame
+  Count: 1.0
+  Enchantments: [ ]
+  DisplayName: '&a旁观玩家'
+  Lore:
+    - ''
+    - '&e点我旁观其他玩家'
+  ItemFlags: [ ]
+  Unbreakable: false
+  Slot: 0.0
+ExitSpectatingItem:
+  Type: iron_door
+  Count: 1.0
+  Enchantments: [ ]
+  DisplayName: '&c退出旁观'
+  Lore: [ ]
+  ItemFlags: [ ]
+  Unbreakable: false
+  Slot: 8.0
+GivePotionEffects:
+  - Type: night_vision
+    Duration: -1 # never expires
+    Amplifier: 1
+  - Type: speed
+    Duration: -1 # never expires
+    Amplifier: 0
