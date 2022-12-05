@@ -1,0 +1,145 @@
+# A unique id that identifies what this task is based on.
+#
+# Do not touch!!!
+TaskID: ThrowItemOnPlayerTask
+
+# The task name
+Name: Throw item on player
+
+# The task duration in seconds
+Duration: 7
+
+# The item players must drop. Just make sure it's somewhere
+# in the GiveItems section below.
+TargetItem: diamond
+
+# The game-mode players are set to when the task begins.
+GameMode: adventure
+
+# Rewards settings
+Rewards:
+
+  # When are points rewarded. This has 2 values:
+  #
+  # 1. 'finished': All players who finish this task will be rewarded with the same
+  #                amount of points regardless of who finished first.
+  #                Must also define a 'Points' property with the amount of points
+  #                given to each player.
+  # 2. 'by_order': Players will be rewarded by the order in which finished first.
+  #                Points given to players can be defined in the config.yml.
+  #                Check the ArenaSettings -> RewardsByOrder
+  When: by_order
+
+  # The points given to players who finish this task. Only used if 'When' is set
+  # to 'finished'.
+  Points: 1
+
+# How the task is broadcasted to players
+Narration:
+
+  # The message broadcasted to players
+  Message: "&e朝其他玩家扔钻石!"
+
+  # Where it is broadcasted. Can be either:
+  #
+  # 1. ActionBar: Through the action bar
+  # 2. Title: Displays a title
+  # 3. Subtitle: Displays a subtitle (smaller than title)
+  # 4. Chat: Sent to players
+  # 5. None: Does nothing
+  #
+  # Note: If you choose title or subtitle, you can add "FadeIn", "Display", "FadeOut"
+  #       to customize titles.
+  BroadcastBy: Subtitle
+
+  # Properties to customize the title/subtitle.
+  FadeIn: 0
+  Display: 40
+  FadeOut: 5
+
+# Is pvp allowed for players in this task.
+#
+# Note: When the player finishes the task, they can no longer
+#       PvP other people.
+AllowPvP: false
+
+# Are players allowed to drop items in this task
+#
+# Note: When the player finishes the task, they can no longer
+#       drop items.
+AllowItemDropping: true
+
+# Are players allowed to place blocks while doing the task
+#
+# Note: When the player finishes the task, they can no longer
+#       place blocks.
+AllowBlockPlacing: false
+
+# Are players allowed break blocks while doing the task
+#
+# Note: When the player finishes the task, they can no longer
+#       break blocks.
+AllowBlockBreaking: false
+
+# Whether should the plugin announce right after a player finishes
+# (or fails in) the task.
+AnnounceOnFinishOrFail: true
+
+# Whether should the player's hotbar be shuffled when the
+# task begins.
+ShuffleHotbar: true
+
+# Whether should the arena regenerate once the task is over.
+RegenerateWhenFinished: false
+
+# Whether should players be teleported back to their spawn-point once
+# they finish the task.
+TeleportBackToSpawnPointWhenFinished: false
+
+# Items to give to players when the task starts
+#
+# Follows this template:
+# - Type: apple
+#   DisplayName: '&cApple'
+#   Lore: 
+#     - '&eThe legendary apple'
+#   Slot: 0 <-- slot to give the item in
+GiveItems:
+  - Type: diamond
+    Amount: 64
+    Slot: 0
+  - Type: iron_ingot
+    Amount: 64
+    Slot: 1
+  - Type: gold_ingot
+    Amount: 64
+    Slot: 2
+  - Type: stone
+    Amount: 64
+    Slot: 3
+  - Type: emerald
+    Amount: 64
+    Slot: 4
+  - Type: lapis_lazuli
+    Amount: 64
+    Slot: 5
+  - Type: enchanting_table
+    Amount: 64
+    Slot: 6
+  - Type: anvil
+    Amount: 64
+    Slot: 7
+  - Type: cooked_beef
+    Amount: 64
+    Slot: 8
+
+# The "rubbish" in the inventory
+#
+# Rubbish is basically items that repeatedly will fill the entire inventory,
+# with full stacks of 64.
+#
+# Specify the item types below, for example:
+# Rubbish:
+# - cookie
+# which will fill the whole inventory with cookies.
+Rubbish: [ ]
