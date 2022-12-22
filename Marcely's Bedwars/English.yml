@@ -301,6 +301,7 @@ PlayerData_Info.[6]: &eProperties:
 PlayerData_Info.[7]: {properties}
 PlayerData_Info_EarnedAchievements: Earned achievements
 PlayerData_Info_FetchTime: Fetch time
+PlayerData_Info_Game Stats: Game Stats
 PlayerData_Info_Properties: Properties
 PlayerData_Info_Stats: Stats
 PlayerData_NotFound: &cWe couldn't find any data for &4{target}
@@ -572,10 +573,12 @@ Stat_Default_FinalDeaths: Final Deaths
 Stat_Default_FinalKills: Final kills
 Stat_Default_KD: K/D
 Stat_Default_Kills: Kills
+Stat_Default_Kill_Streak: Current kill streak
 Stat_Default_Lost: Lost
 Stat_Default_PlayTime: Time played
 Stat_Default_Rank: Rank
 Stat_Default_RoundsPlayed: Rounds played
+Stat_Default_Top_Kill_Streak: Top kill streak
 Stat_Default_Top_Win_Streak: Top win streak
 Stat_Default_WL: W/L
 Stat_Default_Win_Streak: Win streak
