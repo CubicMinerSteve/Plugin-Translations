@@ -301,7 +301,7 @@ PlayerData_Info.[6]: '&e目标属性: '
 PlayerData_Info.[7]: {properties}
 PlayerData_Info_EarnedAchievements: '获得成就'
 PlayerData_Info_FetchTime: '获取时间'
-PlayerData_Info_GameStats: '游戏统计'
+PlayerData_Info_Game Stats: '游戏统计'
 PlayerData_Info_Properties: '目标属性'
 PlayerData_Info_Stats: '统计信息'
 PlayerData_NotFound: '&c未找到目标 &4{target} &c的任何信息……'
